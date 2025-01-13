@@ -27,7 +27,9 @@ class GitHubClient:
         response = await self.client.get(f"{self.base_url}/rate_limit")
         logger.info(response.text)
 
-    async def get_starred_repos(self, total_limit: int = 10, sort="updated") -> List[Dict]:
+    async def get_starred_repos(
+        self, total_limit: int = 10, sort="updated"
+    ) -> List[Dict]:
         """Fetch starred repositories for the authenticated user with pagination"""
         all_repos = []
         page = 1

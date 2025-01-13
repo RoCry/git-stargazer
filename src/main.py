@@ -10,6 +10,7 @@ from dotenv import load_dotenv
 
 load_dotenv()  # take environment variables from .env.
 
+
 async def main():
     # Initialize clients
     github_token = os.getenv("GITHUB_TOKEN")
@@ -57,7 +58,8 @@ async def main():
 
     # Generate report
     report_generator = ReportGenerator()
-    report = await report_generator.generate_full_report(repos_with_commits)
+    report_json = await report_generator.generate_report_json(repos_with_commits)
+    report = json_report_to_markdown(report_json)
 
     print("=" * 100)
     print(report)
@@ -75,6 +77,28 @@ async def main():
             f.write(f"report_file={report_file}\n")
 
     cache_manager.save()
+
+
+def json_report_to_markdown(json_report: Dict) -> str:
+    """Generate markdown report from report data dictionary"""
+    if not json_report["repos"]:
+        return "# Recent Activity in Starred Repositories\nNo recent activity found in starred repositories."
+
+    sections_md = []
+    for repo in json_report["repos"]:
+        section_md = (
+            f"## [{repo['name']}]({repo['url']})\n"
+            f"> 🔄 {repo['commit_count']} | 📅 {repo['last_commit_date']}\n\n"
+            f"{repo['summary']}\n"
+        )
+        sections_md.append(section_md)
+
+    return (
+        "# Recent Activity in Starred Repositories\n"
+        f"_Tracking {json_report['active_repos_count']}/{json_report['total_repos_count']} "
+        f"repos with {json_report['total_commits_count']} new commits_\n\n"
+        + "\n".join(sections_md)
+    )
 
 
 if __name__ == "__main__":
