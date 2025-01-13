@@ -73,11 +73,12 @@ If nothing meaningful, just return `NONE`.
                 )
                 sections.append(repo_info)
 
-        if not sections:
-            return "No recent activity found in starred repositories."
-
         return (
             "# Recent Activity in Starred Repositories\n"
             f"_Tracking {active_repos}/{total_repos} repos with {total_commits} new commits_\n\n"
-            + "\n".join(sections)
+            + (
+                "\n".join(sections)
+                if sections
+                else "No recent activity found in starred repositories."
+            )
         )

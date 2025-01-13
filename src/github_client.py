@@ -68,22 +68,32 @@ class GitHubClient:
     async def get_recent_commits(
         self,
         repo_full_name: str,
-        since_days: int = COMMITS_DEFAULT_SINCE_DAYS,
         exclude_bots: bool = True,
+        since_timestamp: str | None = None,
     ) -> List[Dict]:
         """Fetch recent commits for a repository
 
         Args:
             repo_full_name: Full name of the repository (e.g., 'owner/repo')
-            since_days: Number of days to look back for commits
+            since_days: Number of days to look back for commits (ignored if since_timestamp is provided)
             exclude_bots: If True, filters out commits from bot users (default: True)
+            since_timestamp: ISO format timestamp to fetch commits since (optional)
         """
-        since_date = (datetime.now() - timedelta(days=since_days)).isoformat()
+        params = {}
+
+        if since_timestamp:
+            # For subsequent runs, get commits after the last known commit
+            params["since"] = since_timestamp
+        else:
+            # For first run or when cache is expired, use the default time window
+            params["since"] = (
+                datetime.now() - timedelta(days=COMMITS_DEFAULT_SINCE_DAYS)
+            ).isoformat()
 
         response = await self.client.get(
             f"{self.base_url}/repos/{repo_full_name}/commits",
             headers=self.headers,
-            params={"since": since_date},
+            params=params,
         )
         response.raise_for_status()
         commits = response.json()
@@ -91,6 +101,14 @@ class GitHubClient:
         if exclude_bots:
             commits = [
                 commit for commit in commits if not self._is_commit_from_bot(commit)
+            ]
+
+        # If we're using a cached timestamp, remove the last known commit to avoid duplication
+        if since_timestamp and commits:
+            commits = [
+                commit
+                for commit in commits
+                if commit["commit"]["committer"]["date"] != since_timestamp
             ]
 
         return commits

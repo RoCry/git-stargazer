@@ -23,11 +23,25 @@ jobs:
     - name: Install dependencies
       run: |
         uv sync --all-extras --dev
+
+    - name: Restore commit timestamps cache
+      uses: actions/cache/restore@v4
+      with:
+        path: commit_timestamps.json
+        key: commit-timestamps-${{ github.run_id }}
+        restore-keys: |
+          commit-timestamps-
     
     - name: Generate report
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: python src/main.py
+    
+    - name: Save commit timestamps cache
+      uses: actions/cache/save@v4
+      with:
+        path: commit_timestamps.json
+        key: commit-timestamps-${{ github.run_id }}
     
     - name: Commit and push report
       run: |
