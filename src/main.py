@@ -1,4 +1,5 @@
 import asyncio
+import json
 import os
 from typing import List, Tuple, Dict
 from github_client import GitHubClient
@@ -61,13 +62,18 @@ async def main():
     report_json = await report_generator.generate_report_json(repos_with_commits)
     report = json_report_to_markdown(report_json)
 
+    today_data_str = datetime.now().strftime("%Y-%m-%d")
+
     print("=" * 100)
     print(report)
     print("=" * 100)
 
     # Save report
     os.makedirs("reports", exist_ok=True)
-    report_file = f"reports/recent_commits_{datetime.now().strftime('%Y-%m-%d')}.md"
+    report_json_file = f"reports/recent_commits_{today_data_str}.json"
+    report_file = f"reports/recent_commits_{today_data_str}.md"
+    with open(report_json_file, "w") as f:
+        json.dump(report_json, f, ensure_ascii=False, indent=2)
     with open(report_file, "w") as f:
         f.write(report)
 
@@ -75,6 +81,7 @@ async def main():
     if is_in_github_actions:
         with open(os.environ["GITHUB_OUTPUT"], "a") as f:
             f.write(f"report_file={report_file}\n")
+            f.write(f"report_json_file={report_json_file}\n")
 
     cache_manager.save()
 
