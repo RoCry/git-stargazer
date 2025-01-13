@@ -57,8 +57,9 @@ class GitHubClient:
     def _is_commit_from_bot(self, commit: Dict) -> bool:
         author = commit.get("author")
         if not author:
-            logger.info("No author found")
-            return False
+            # logger.info("No author found")
+            # assume it's a bot
+            return True
 
         if author.get("type") == "Bot":
             return True
