@@ -38,7 +38,8 @@ jobs:
     - name: Generate report
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: python src/main.py
+        REPO_LIMIT: ${{ vars.REPO_LIMIT }}
+      run: uv run src/main.py
       id: generate_report
     
     - name: Save commit timestamps cache
