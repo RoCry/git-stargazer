@@ -15,6 +15,9 @@ class ReportGenerator:
         """Generate a minimalistic summary for a single repository and its recent commits"""
         if not commits:
             return ""
+        # if there's only one commit, just return the message
+        if len(commits) == 1:
+            return commits[0]["commit"]["message"]
 
         commits_str = self._format_commits(commits)
 
