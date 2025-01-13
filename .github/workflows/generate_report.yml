@@ -53,8 +53,10 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
       run: |
-        # Get current date for release tag
         DATE=$(date +'%Y-%m-%d')
+        
+        # Delete existing release if it exists
+        gh release delete "${DATE}" --yes || true
         
         # Create a new release using the report file content
         gh release create "${DATE}" \
