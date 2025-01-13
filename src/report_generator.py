@@ -23,7 +23,7 @@ Recent commits: {len(commits)}
 Commit details:
 {self._format_commits(commits)}
 
-Please provide <ONE minimalistic title> to summarize the recent commit messages above.
+Please provide <ONE LINE minimalistic title with emoji> to summarize the recent commit messages above.
 If nothing meaningful, just return `NONE`.
         """
 
@@ -45,9 +45,14 @@ If nothing meaningful, just return `NONE`.
     async def generate_full_report(self, repos_with_commits: List[tuple[Dict, List[Dict]]]) -> str:
         """Generate a full report for all repositories"""
         sections = []
+        total_repos = len(repos_with_commits)
+        total_commits = 0
+        active_repos = 0
         
         for repo, commits in repos_with_commits:
             if commits:
+                total_commits += len(commits)
+                active_repos += 1
                 summary = await self.generate_repo_summary(repo, commits)
                 summary = summary.strip()
                 # remove start and end quotes/backticks
@@ -59,13 +64,9 @@ If nothing meaningful, just return `NONE`.
                     continue
                 # Add repository metadata
                 repo_info = (
-                    f"## [{repo['full_name']}]({repo['html_url']})\n\n"
-                    f"⭐ {repo['stargazers_count']} | "
-                    f"🔀 {repo['forks_count']} | "
-                    f"📝 {repo['language'] or 'N/A'}\n\n"
-                    f"{summary}\n\n"
-                    f"Recent commits: {len(commits)}\n"
-                    f"Last updated: {commits[0]['commit']['committer']['date'] if commits else 'N/A'}\n"
+                    f"## [{repo['full_name']}]({repo['html_url']})\n"
+                    f"> 🔄 {len(commits)} | 📅 {commits[0]['commit']['committer']['date'] if commits else 'N/A'}\n"
+                    f"{summary}\n"
                 )
                 sections.append(repo_info)
         
@@ -73,7 +74,7 @@ If nothing meaningful, just return `NONE`.
             return "No recent activity found in starred repositories."
             
         return (
-            "# Recent Activity in Starred Repositories\n\n"
-            "_Generated report of recent development activities in starred repositories_\n\n"
+            "# Recent Activity in Starred Repositories\n"
+            f"_Tracking {active_repos}/{total_repos} repos with {total_commits} new commits_\n\n"
             + "\n".join(sections)
         ) 

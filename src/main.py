@@ -28,7 +28,11 @@ async def main():
     # Generate report
     report_generator = ReportGenerator()
     report = await report_generator.generate_full_report(repos_with_commits)
-    
+
+    print("="*100)
+    print(report)    
+    print("="*100)
+
     # Save report
     os.makedirs("reports", exist_ok=True)
     with open("reports/recent_activity.md", "w") as f:
