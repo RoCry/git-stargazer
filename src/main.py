@@ -55,6 +55,11 @@ async def main():
     with open(report_file, "w") as f:
         f.write(report)
 
+    # Set output for GitHub Actions
+    if os.getenv("GITHUB_ACTIONS"):
+        with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+            f.write(f"report_file={report_file}\n")
+
     cache_manager.save()
 
 

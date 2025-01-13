@@ -36,6 +36,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: python src/main.py
+      id: generate_report
     
     - name: Save commit timestamps cache
       uses: actions/cache/save@v4
@@ -49,10 +50,9 @@ jobs:
       run: |
         # Get current date for release tag
         DATE=$(date +'%Y-%m-%d')
-        REPORT_FILE="reports/recent_commits_${DATE}.md"
         
-        # Create a new release
+        # Create a new release using the report file from the Python script
         gh release create "${DATE}" \
           --title "Activity Report ${DATE}" \
           --notes "Daily starred repositories activity report." \
-          "${REPORT_FILE}" 
+          "${{ steps.generate_report.outputs.report_file }}" 
