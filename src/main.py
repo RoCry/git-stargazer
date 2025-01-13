@@ -10,7 +10,9 @@ async def main():
     github_token = os.getenv("GITHUB_TOKEN")
     if not github_token:
         raise ValueError("GITHUB_TOKEN environment variable is required")
-    repo_limit = os.getenv("REPO_LIMIT", 10)
+    repo_limit = os.getenv("REPO_LIMIT")
+    repo_limit = int(repo_limit) if repo_limit else 10
+    
     
     async with GitHubClient(github_token) as github_client:
         # Fetch starred repositories

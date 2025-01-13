@@ -11,7 +11,7 @@ class ReportGenerator:
             raise ValueError(f"Missing keys in environment: {check['missing_keys']}")
 
     async def generate_repo_summary(self, repo_data: Dict, commits: List[Dict]) -> str:
-        """Generate a summary for a single repository and its recent commits"""
+        """Generate a minimalistic summary for a single repository and its recent commits"""
         if not commits:
             return ""
 
@@ -23,9 +23,8 @@ Recent commits: {len(commits)}
 Commit details:
 {self._format_commits(commits)}
 
-Please provide a brief summary of the recent development activity in this repository.
-Focus on the main changes and patterns in the commit messages.
-Keep the summary concise (2-3 sentences).
+Please provide <ONE minimalistic title> to summarize the recent commit messages above.
+If nothing meaningful, just return `NONE`.
         """
 
         logger.info(f"Generating summary for {repo_data['full_name']}, prompt: {prompt}")
@@ -50,6 +49,14 @@ Keep the summary concise (2-3 sentences).
         for repo, commits in repos_with_commits:
             if commits:
                 summary = await self.generate_repo_summary(repo, commits)
+                summary = summary.strip()
+                # remove start and end quotes/backticks
+                summary = summary.strip("`")
+                summary = summary.strip('"')
+                
+                if summary == "NONE":
+                    logger.info(f"Skipping {repo['full_name']} because the summary is empty")
+                    continue
                 # Add repository metadata
                 repo_info = (
                     f"## [{repo['full_name']}]({repo['html_url']})\n\n"

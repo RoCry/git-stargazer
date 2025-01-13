@@ -56,11 +56,13 @@ class GitHubClient:
             logger.info("No author found")
             return False
         
-        login = author.get("login", "")
-        if "[bot]" in login:
-            logger.info(f"'{login}' is a bot")
+        if author.get("type") == "Bot":
             return True
-        logger.info(f"'{login}' is not a bot")
+        
+        if login := author.get("login"):
+            if "[bot]" in login:
+                return True
+
         return False
 
     async def get_recent_commits(self, repo_full_name: str, since_days: int = 7, exclude_bots: bool = True) -> List[Dict]:
