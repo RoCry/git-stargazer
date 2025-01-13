@@ -2,8 +2,7 @@ from typing import List, Dict
 from datetime import datetime, timedelta
 import httpx
 from log import logger
-
-COMMITS_DEFAULT_SINCE_DAYS = 7
+from cache_manager import COMMITS_DEFAULT_SINCE_DAYS
 
 
 class GitHubClient:

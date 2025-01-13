@@ -5,7 +5,7 @@ from typing import Dict
 from log import logger
 
 CACHE_FILE = "commit_timestamps.json"
-COMMITS_DEFAULT_SINCE_DAYS = 7  # Import from github_client later
+COMMITS_DEFAULT_SINCE_DAYS = 7
 
 
 class CacheManager:
