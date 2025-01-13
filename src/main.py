@@ -21,6 +21,7 @@ async def main():
     cache_manager.load()
 
     async with GitHubClient(github_token) as github_client:
+        await github_client.print_rate_limit()
         # Fetch starred repositories
         starred_repos = await github_client.get_starred_repos(total_limit=repo_limit)
 
@@ -33,6 +34,8 @@ async def main():
                 commits = await github_client.get_recent_commits(
                     repo_name, since_timestamp=since_timestamp
                 )
+                # https://docs.github.com/en/rest/using-the-rest-api/best-practices-for-using-the-rest-api?apiVersion=2022-11-28#pause-between-mutative-requests
+                await asyncio.sleep(1)
 
                 if commits:
                     # Update cache with the latest commit timestamp

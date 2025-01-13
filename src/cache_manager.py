@@ -22,7 +22,9 @@ class CacheManager:
                     data = json.load(f)
                     # Check cache version
                     if data.get("__version__") != CACHE_VERSION:
-                        logger.warning("Cache version mismatch, starting with empty cache")
+                        logger.warning(
+                            "Cache version mismatch, starting with empty cache"
+                        )
                         self.timestamps = {}
                     else:
                         self.timestamps = data.get("timestamps", {})
@@ -47,10 +49,7 @@ class CacheManager:
         }
 
         # Save to file with version
-        data = {
-            "__version__": CACHE_VERSION,
-            "timestamps": self.timestamps
-        }
+        data = {"__version__": CACHE_VERSION, "timestamps": self.timestamps}
         with open(self.cache_file, "w") as f:
             json.dump(data, f, indent=2)
         logger.info(f"Saved {len(self.timestamps)} timestamps to cache")

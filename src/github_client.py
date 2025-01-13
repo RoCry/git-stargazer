@@ -22,6 +22,12 @@ class GitHubClient:
     async def __aexit__(self, exc_type, exc_val, exc_tb):
         await self.client.aclose()
 
+    async def print_rate_limit(self):
+        response = await self.client.get(
+            f"{self.base_url}/rate_limit", headers=self.headers
+        )
+        logger.info(response.text)
+
     async def get_starred_repos(self, total_limit: int = 10) -> List[Dict]:
         """Fetch starred repositories for the authenticated user with pagination"""
         all_repos = []
@@ -71,14 +77,6 @@ class GitHubClient:
         exclude_bots: bool = True,
         since_timestamp: str | None = None,
     ) -> List[Dict]:
-        """Fetch recent commits for a repository
-
-        Args:
-            repo_full_name: Full name of the repository (e.g., 'owner/repo')
-            exclude_bots: If True, filters out commits from bot users (default: True)
-            since_timestamp: ISO format timestamp to fetch commits since (optional)
-            limit: Maximum number of commits to return (default: 20)
-        """
         params = {}
 
         if since_timestamp:
@@ -97,16 +95,21 @@ class GitHubClient:
                     headers=self.headers,
                     params=params,
                 )
-                
-                if response.status_code == 403 and "X-RateLimit-Remaining" in response.headers:
+
+                if (
+                    response.status_code == 403
+                    and "X-RateLimit-Remaining" in response.headers
+                ):
                     # Handle rate limiting
                     reset_time = int(response.headers["X-RateLimit-Reset"])
                     wait_time = reset_time - datetime.now().timestamp()
                     if wait_time > 0:
-                        logger.warning(f"Rate limit hit. Waiting {wait_time:.0f} seconds...")
-                        await asyncio.sleep(wait_time + 1)  # Add 1 second buffer
+                        logger.warning(
+                            f"Rate limit hit. Waiting {wait_time:.0f} seconds..."
+                        )
+                        await asyncio.sleep(wait_time + 5)  # Add 5 second buffer
                         continue
-                
+
                 response.raise_for_status()
                 break
             except httpx.HTTPError as e:

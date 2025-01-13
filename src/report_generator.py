@@ -39,13 +39,15 @@ If nothing meaningful, just return `NONE`.
 
     def _format_commits(self, commits: List[Dict]) -> str:
         """Format commits for the prompt"""
+
         def __simplify_commit(commit: Dict) -> Optional[str]:
-            m = commit['commit']['message']
+            m = commit["commit"]["message"]
             if m.startswith("Merge pull request"):
                 return None
             if "\n" in m:
                 m = m.split("\n")[0]
             return f"- {m}"
+
         return "\n".join(filter(None, map(__simplify_commit, commits)))
 
     async def generate_full_report(
