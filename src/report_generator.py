@@ -1,6 +1,7 @@
 from typing import List, Dict
 import os
 from litellm import acompletion, validate_environment
+from log import logger
 
 class ReportGenerator:
     def __init__(self, model: str = None, api_key: str = None):
@@ -15,18 +16,19 @@ class ReportGenerator:
             return ""
 
         prompt = f"""
-        Repository: {repo_data['full_name']}
-        Description: {repo_data.get('description', 'No description')}
-        Recent commits: {len(commits)}
+Repository: {repo_data['full_name']}
+Description: {repo_data.get('description', 'No description')}
+Recent commits: {len(commits)}
 
-        Commit details:
-        {self._format_commits(commits)}
+Commit details:
+{self._format_commits(commits)}
 
-        Please provide a brief summary of the recent development activity in this repository.
-        Focus on the main changes and patterns in the commit messages.
-        Keep the summary concise (2-3 sentences).
+Please provide a brief summary of the recent development activity in this repository.
+Focus on the main changes and patterns in the commit messages.
+Keep the summary concise (2-3 sentences).
         """
 
+        logger.info(f"Generating summary for {repo_data['full_name']}, prompt: {prompt}")
         response = await acompletion(
             model=self.model,
             messages=[{"role": "user", "content": prompt}]
@@ -38,7 +40,7 @@ class ReportGenerator:
         """Format commits for the prompt"""
         return "\n".join(
             f"- {commit['commit']['message']}" 
-            for commit in commits[:5]  # Limit to last 5 commits for the prompt
+            for commit in commits
         )
 
     async def generate_full_report(self, repos_with_commits: List[tuple[Dict, List[Dict]]]) -> str:
@@ -48,9 +50,23 @@ class ReportGenerator:
         for repo, commits in repos_with_commits:
             if commits:
                 summary = await self.generate_repo_summary(repo, commits)
-                sections.append(f"## {repo['full_name']}\n\n{summary}\n")
+                # Add repository metadata
+                repo_info = (
+                    f"## [{repo['full_name']}]({repo['html_url']})\n\n"
+                    f"⭐ {repo['stargazers_count']} | "
+                    f"🔀 {repo['forks_count']} | "
+                    f"📝 {repo['language'] or 'N/A'}\n\n"
+                    f"{summary}\n\n"
+                    f"Recent commits: {len(commits)}\n"
+                    f"Last updated: {commits[0]['commit']['committer']['date'] if commits else 'N/A'}\n"
+                )
+                sections.append(repo_info)
         
         if not sections:
             return "No recent activity found in starred repositories."
             
-        return "# Recent Activity in Starred Repositories\n\n" + "\n".join(sections) 
+        return (
+            "# Recent Activity in Starred Repositories\n\n"
+            "_Generated report of recent development activities in starred repositories_\n\n"
+            + "\n".join(sections)
+        ) 
