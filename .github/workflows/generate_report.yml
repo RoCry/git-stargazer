@@ -37,8 +37,9 @@ jobs:
     
     - name: Generate report
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
         REPO_LIMIT: ${{ vars.REPO_LIMIT }}
+        DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
       run: uv run src/main.py
       id: generate_report
     
@@ -50,7 +51,7 @@ jobs:
     
     - name: Create Release
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
       run: |
         # Get current date for release tag
         DATE=$(date +'%Y-%m-%d')
