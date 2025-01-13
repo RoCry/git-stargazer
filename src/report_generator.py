@@ -40,7 +40,14 @@ If nothing meaningful, just return `NONE`.
             model=self.model, messages=[{"role": "user", "content": prompt}]
         )
 
-        return response.choices[0].message.content
+        summary = response.choices[0].message.content
+        if summary == "NONE":
+            return ""
+        summary = summary.strip()
+        # remove start and end quotes/backticks
+        summary = summary.strip("`")
+        summary = summary.strip('"')
+        return summary
 
     def _format_commits(self, commits: List[Dict]) -> str:
         """Format commits for the prompt"""
@@ -66,27 +73,24 @@ If nothing meaningful, just return `NONE`.
         active_repos = 0
 
         for repo, commits in repos_with_commits:
-            if commits:
-                total_commits += len(commits)
-                active_repos += 1
-                summary = await self.generate_repo_summary(repo, commits)
-                summary = summary.strip()
-                # remove start and end quotes/backticks
-                summary = summary.strip("`")
-                summary = summary.strip('"')
+            if not commits:
+                continue
 
-                if summary == "NONE":
-                    logger.info(
-                        f"Skipping {repo['full_name']} because the summary is empty"
-                    )
-                    continue
-                # Add repository metadata
-                repo_info = (
-                    f"## [{repo['full_name']}]({repo['html_url']})\n"
-                    f"> 🔄 {len(commits)} | 📅 {commits[0]['commit']['committer']['date'] if commits else 'N/A'}\n\n"
-                    f"{summary}\n"
+            total_commits += len(commits)
+            active_repos += 1
+            summary = await self.generate_repo_summary(repo, commits)
+            if not summary:
+                logger.info(
+                    f"Skipping {repo['full_name']} because the summary is empty"
                 )
-                sections.append(repo_info)
+                continue
+            # Add repository metadata
+            repo_info = (
+                f"## [{repo['full_name']}]({repo['html_url']})\n"
+                f"> 🔄 {len(commits)} | 📅 {commits[0]['commit']['committer']['date'] if commits else 'N/A'}\n\n"
+                f"{summary}\n"
+            )
+            sections.append(repo_info)
 
         return (
             "# Recent Activity in Starred Repositories\n"
