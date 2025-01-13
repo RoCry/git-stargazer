@@ -3,6 +3,7 @@ from datetime import datetime, timedelta
 import httpx
 from log import logger
 from cache_manager import COMMITS_DEFAULT_SINCE_DAYS
+import asyncio
 
 
 class GitHubClient:
@@ -74,9 +75,9 @@ class GitHubClient:
 
         Args:
             repo_full_name: Full name of the repository (e.g., 'owner/repo')
-            since_days: Number of days to look back for commits (ignored if since_timestamp is provided)
             exclude_bots: If True, filters out commits from bot users (default: True)
             since_timestamp: ISO format timestamp to fetch commits since (optional)
+            limit: Maximum number of commits to return (default: 20)
         """
         params = {}
 
@@ -89,12 +90,33 @@ class GitHubClient:
                 datetime.now() - timedelta(days=COMMITS_DEFAULT_SINCE_DAYS)
             ).isoformat()
 
-        response = await self.client.get(
-            f"{self.base_url}/repos/{repo_full_name}/commits",
-            headers=self.headers,
-            params=params,
-        )
-        response.raise_for_status()
+        while True:
+            try:
+                response = await self.client.get(
+                    f"{self.base_url}/repos/{repo_full_name}/commits",
+                    headers=self.headers,
+                    params=params,
+                )
+                
+                if response.status_code == 403 and "X-RateLimit-Remaining" in response.headers:
+                    # Handle rate limiting
+                    reset_time = int(response.headers["X-RateLimit-Reset"])
+                    wait_time = reset_time - datetime.now().timestamp()
+                    if wait_time > 0:
+                        logger.warning(f"Rate limit hit. Waiting {wait_time:.0f} seconds...")
+                        await asyncio.sleep(wait_time + 1)  # Add 1 second buffer
+                        continue
+                
+                response.raise_for_status()
+                break
+            except httpx.HTTPError as e:
+                if "rate limit" in str(e).lower():
+                    # Fallback rate limit handling if headers aren't available
+                    logger.warning("Rate limit hit. Waiting 60 seconds...")
+                    await asyncio.sleep(60)
+                    continue
+                raise
+
         commits = response.json()
 
         if exclude_bots:
