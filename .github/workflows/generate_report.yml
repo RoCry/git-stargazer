@@ -43,10 +43,16 @@ jobs:
         path: commit_timestamps.json
         key: commit-timestamps-${{ github.run_id }}
     
-    - name: Commit and push report
+    - name: Create Release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add reports/
-        git commit -m "Update recent activity report" || exit 0
-        git push 
+        # Get current date for release tag
+        DATE=$(date +'%Y-%m-%d')
+        REPORT_FILE="reports/recent_commits_${DATE}.md"
+        
+        # Create a new release
+        gh release create "${DATE}" \
+          --title "Activity Report ${DATE}" \
+          --notes "Daily starred repositories activity report." \
+          "${REPORT_FILE}" 

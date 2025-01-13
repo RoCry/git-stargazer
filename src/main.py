@@ -5,6 +5,7 @@ from github_client import GitHubClient
 from report_generator import ReportGenerator
 from cache_manager import CacheManager
 from log import logger
+from datetime import datetime
 
 
 async def main():
@@ -50,7 +51,8 @@ async def main():
 
     # Save report
     os.makedirs("reports", exist_ok=True)
-    with open("reports/recent_activity.md", "w") as f:
+    report_file = f"reports/recent_commits_{datetime.now().strftime('%Y-%m-%d')}.md"
+    with open(report_file, "w") as f:
         f.write(report)
 
     cache_manager.save()
