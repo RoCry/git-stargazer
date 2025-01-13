@@ -20,15 +20,35 @@ class GitHubClient:
         await self.client.aclose()
     
     async def get_starred_repos(self, total_limit: int = 10) -> List[Dict]:
-        # FIXME: pagination
-        """Fetch starred repositories for the authenticated user"""
-        response = await self.client.get(
-            f"{self.base_url}/user/starred",
-            headers=self.headers,
-            params={"per_page": total_limit}
-        )
-        response.raise_for_status()
-        return response.json()
+        """Fetch starred repositories for the authenticated user with pagination"""
+        all_repos = []
+        page = 1
+        per_page = min(100, total_limit)  # GitHub's max per_page is 100
+        
+        while len(all_repos) < total_limit:
+            response = await self.client.get(
+                f"{self.base_url}/user/starred",
+                headers=self.headers,
+                params={
+                    "per_page": per_page,
+                    "page": page
+                }
+            )
+            response.raise_for_status()
+            
+            repos = response.json()
+            if not repos:  # No more repos to fetch
+                break
+                
+            all_repos.extend(repos)
+            page += 1
+            
+            # Adjust per_page for the last request if needed
+            remaining = total_limit - len(all_repos)
+            if remaining < per_page:
+                per_page = remaining
+        
+        return all_repos[:total_limit]
     
     def _is_commit_from_bot(self, commit: Dict) -> bool:
         author = commit.get("author")

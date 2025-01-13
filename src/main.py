@@ -10,10 +10,11 @@ async def main():
     github_token = os.getenv("GITHUB_TOKEN")
     if not github_token:
         raise ValueError("GITHUB_TOKEN environment variable is required")
+    repo_limit = os.getenv("REPO_LIMIT", 10)
     
     async with GitHubClient(github_token) as github_client:
         # Fetch starred repositories
-        starred_repos = await github_client.get_starred_repos(total_limit=2)
+        starred_repos = await github_client.get_starred_repos(total_limit=repo_limit)
         
         # Fetch recent commits for each repository
         repos_with_commits: List[Tuple[Dict, List[Dict]]] = []
