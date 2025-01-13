@@ -1,4 +1,4 @@
-from typing import List, Dict, Tuple
+from typing import List, Dict, Tuple, Optional
 from datetime import datetime, timedelta
 import httpx
 from log import logger
@@ -28,7 +28,10 @@ class GitHubClient:
         logger.info(response.text)
 
     async def get_starred_repos(
-        self, total_limit: int = 10, sort="updated"
+        self,
+        exclude_repo_names: Optional[set[str]],
+        total_limit: int = 10,
+        sort="updated",
     ) -> List[Dict]:
         """Fetch starred repositories for the authenticated user with pagination"""
         all_repos = []
@@ -46,6 +49,10 @@ class GitHubClient:
             if not repos:  # No more repos to fetch
                 break
 
+            repos = [
+                repo for repo in repos if repo["full_name"] not in exclude_repo_names
+            ]
+
             all_repos.extend(repos)
             page += 1
 
@@ -54,6 +61,9 @@ class GitHubClient:
             if remaining < per_page:
                 per_page = remaining
 
+        logger.info(
+            f"Fetched {len(all_repos)} starred repos, excluding {len(exclude_repo_names)}, total limit: {total_limit}"
+        )
         return all_repos[:total_limit]
 
     def _is_commit_from_bot(self, commit: Dict) -> bool:

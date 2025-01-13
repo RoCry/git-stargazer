@@ -25,10 +25,24 @@ async def main():
     cache_manager = CacheManager()
     cache_manager.load()
 
+    today_data_str = datetime.now().strftime("%Y-%m-%d")
+    report_json_file = f"reports/recent_commits_{today_data_str}.json"
+    report_file = f"reports/recent_commits_{today_data_str}.md"
+
+    if os.path.exists(report_json_file):
+        logger.info(f"Report file {report_json_file} already exists")
+        with open(report_json_file, "r") as f:
+            existing_report_json = json.load(f)
+            existing_repo_names = set(
+                [repo["name"] for repo in existing_report_json["repos"]]
+            )
+
     async with GitHubClient(github_token) as github_client:
-        await github_client.print_rate_limit()
+        # await github_client.print_rate_limit()
         # Fetch starred repositories
-        starred_repos = await github_client.get_starred_repos(total_limit=repo_limit)
+        starred_repos = await github_client.get_starred_repos(
+            exclude_repo_names=existing_repo_names, total_limit=repo_limit
+        )
 
         # Fetch recent commits for each repository
         repos_with_commits: List[Tuple[Dict, List[Dict]]] = []
@@ -60,9 +74,9 @@ async def main():
     # Generate report
     report_generator = ReportGenerator()
     report_json = await report_generator.generate_report_json(repos_with_commits)
+    if existing_report_json:
+        report_json = merge_reports(existing_report_json, report_json)
     report = json_report_to_markdown(report_json)
-
-    today_data_str = datetime.now().strftime("%Y-%m-%d")
 
     print("=" * 100)
     print(report)
@@ -70,8 +84,6 @@ async def main():
 
     # Save report
     os.makedirs("reports", exist_ok=True)
-    report_json_file = f"reports/recent_commits_{today_data_str}.json"
-    report_file = f"reports/recent_commits_{today_data_str}.md"
     with open(report_json_file, "w") as f:
         json.dump(report_json, f, ensure_ascii=False, indent=2)
     with open(report_file, "w") as f:
@@ -86,6 +98,19 @@ async def main():
     cache_manager.save()
 
 
+def merge_reports(left: Dict, right: Dict) -> Dict:
+    logger.info(
+        f"Merging reports: {left['total_repos_count']} and {right['total_repos_count']}"
+    )
+    return {
+        "total_repos_count": left["total_repos_count"] + right["total_repos_count"],
+        "active_repos_count": left["active_repos_count"] + right["active_repos_count"],
+        "total_commits_count": left["total_commits_count"]
+        + right["total_commits_count"],
+        "repos": left["repos"] + right["repos"],
+    }
+
+
 def json_report_to_markdown(json_report: Dict) -> str:
     """Generate markdown report from report data dictionary"""
     if not json_report["repos"]:
@@ -93,11 +118,11 @@ def json_report_to_markdown(json_report: Dict) -> str:
 
     sections_md = []
     for repo in json_report["repos"]:
-        section_md = (
-            f"## [{repo['name']}]({repo['url']})\n"
-            f"> 🔄 {repo['commit_count']} | 📅 {repo['last_commit_date']}\n\n"
-            f"{repo['summary']}\n"
-        )
+        if repo["commit_count"] == 0:
+            continue
+        if not repo["summary"]:
+            continue
+        section_md = f"- [{repo['name']}]({repo['url']}) {repo['commit_count']}: {repo['summary']}"
         sections_md.append(section_md)
 
     return (

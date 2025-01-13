@@ -29,7 +29,7 @@ Recent commits: {len(commits)}
 Commit details:
 {commits_str}
 
-Please provide <ONE LINE minimalistic title with ONE emoji> to summarize the recent commit messages above.
+Please generate `<EXACTLY ONE emoji> <minimalistic title with no more than 80 characters>` to summarize the recent commit messages above.
 If nothing meaningful, just return `NONE`.
         """
 
@@ -64,7 +64,9 @@ If nothing meaningful, just return `NONE`.
         return "\n".join(filter(None, map(__simplify_commit, commits[:20])))
 
     async def generate_report_json(
-        self, repos_with_commits: List[tuple[Dict, List[Dict]]]
+        self,
+        repos_with_commits: List[tuple[Dict, List[Dict]]],
+        including_inactive: bool = True,
     ) -> Dict:
         """Generate a report data dictionary for all repositories"""
         repo_data_list = []
@@ -73,26 +75,18 @@ If nothing meaningful, just return `NONE`.
         active_repos_count = 0
 
         for repo, commits in repos_with_commits:
-            if not commits:
+            if not commits and not including_inactive:
                 continue
 
             total_commits_count += len(commits)
             active_repos_count += 1
             summary = await self.generate_repo_summary(repo, commits)
-            if not summary:
-                logger.info(
-                    f"Skipping {repo['full_name']} because the summary is empty"
-                )
-                continue
 
             repo_data_list.append(
                 {
                     "name": repo["full_name"],
                     "url": repo["html_url"],
                     "commit_count": len(commits),
-                    "last_commit_date": commits[0]["commit"]["committer"]["date"]
-                    if commits
-                    else "N/A",
                     "summary": summary,
                 }
             )
