@@ -29,7 +29,7 @@ Recent commits: {len(commits)}
 Commit details:
 {commits_str}
 
-Please provide <ONE LINE minimalistic title with emoji> to summarize the recent commit messages above.
+Please provide <ONE LINE minimalistic title with ONE emoji> to summarize the recent commit messages above.
 If nothing meaningful, just return `NONE`.
         """
 
@@ -53,7 +53,8 @@ If nothing meaningful, just return `NONE`.
                 m = m.split("\n")[0]
             return f"- {m}"
 
-        return "\n".join(filter(None, map(__simplify_commit, commits)))
+        # only using top 20 commits for now
+        return "\n".join(filter(None, map(__simplify_commit, commits[:20])))
 
     async def generate_full_report(
         self, repos_with_commits: List[tuple[Dict, List[Dict]]]
@@ -82,7 +83,7 @@ If nothing meaningful, just return `NONE`.
                 # Add repository metadata
                 repo_info = (
                     f"## [{repo['full_name']}]({repo['html_url']})\n"
-                    f"> 🔄 {len(commits)} | 📅 {commits[0]['commit']['committer']['date'] if commits else 'N/A'}\n"
+                    f"> 🔄 {len(commits)} | 📅 {commits[0]['commit']['committer']['date'] if commits else 'N/A'}\n\n"
                     f"{summary}\n"
                 )
                 sections.append(repo_info)
