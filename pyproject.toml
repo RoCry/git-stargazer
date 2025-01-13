@@ -5,7 +5,7 @@ description = "Generate activity reports for starred GitHub repositories"
 requires-python = ">=3.13"
 
 dependencies = [
-    "httpx",
+    "httpx[http2]>=0.27.2",
     "litellm",
 ]
 

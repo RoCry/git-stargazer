@@ -15,6 +15,7 @@ async def main():
         raise ValueError("GITHUB_TOKEN environment variable is required")
     repo_limit = os.getenv("REPO_LIMIT")
     repo_limit = int(repo_limit) if repo_limit else 10
+    is_in_github_actions = os.getenv("GITHUB_ACTIONS")
 
     # Initialize cache manager
     cache_manager = CacheManager()
@@ -31,13 +32,17 @@ async def main():
             try:
                 repo_name = repo["full_name"]
                 since_timestamp = cache_manager.get_timestamp(repo_name)
-                commits = await github_client.get_recent_commits(
+                commits, last_modified = await github_client.get_recent_commits(
                     repo_name, since_timestamp=since_timestamp
                 )
                 # https://docs.github.com/en/rest/using-the-rest-api/best-practices-for-using-the-rest-api?apiVersion=2022-11-28#pause-between-mutative-requests
-                await asyncio.sleep(1)
+                if is_in_github_actions:
+                    await asyncio.sleep(1)
 
-                if commits:
+                if last_modified:
+                    # Update cache with Last-Modified from response headers
+                    cache_manager.set_timestamp(repo_name, last_modified)
+                elif commits:
                     # Update cache with the latest commit timestamp
                     latest_timestamp = commits[0]["commit"]["committer"]["date"]
                     cache_manager.set_timestamp(repo_name, latest_timestamp)
@@ -63,7 +68,7 @@ async def main():
         f.write(report)
 
     # Set output for GitHub Actions
-    if os.getenv("GITHUB_ACTIONS"):
+    if is_in_github_actions:
         with open(os.environ["GITHUB_OUTPUT"], "a") as f:
             f.write(f"report_file={report_file}\n")
 

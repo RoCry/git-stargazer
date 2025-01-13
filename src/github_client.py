@@ -1,4 +1,4 @@
-from typing import List, Dict
+from typing import List, Dict, Tuple
 from datetime import datetime, timedelta
 import httpx
 from log import logger
@@ -9,12 +9,13 @@ import asyncio
 class GitHubClient:
     def __init__(self, token: str, timeout: int = 30):
         self.token = token
-        self.headers = {
+        headers = {
             "Authorization": f"Bearer {token}",
-            "Accept": "application/vnd.github.v3+json",
+            "Accept": "application/vnd.github+json",
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
         }
         self.base_url = "https://api.github.com"
-        self.client = httpx.AsyncClient(timeout=timeout)
+        self.client = httpx.AsyncClient(timeout=timeout, http2=True, headers=headers)
 
     async def __aenter__(self):
         return self
@@ -23,9 +24,7 @@ class GitHubClient:
         await self.client.aclose()
 
     async def print_rate_limit(self):
-        response = await self.client.get(
-            f"{self.base_url}/rate_limit", headers=self.headers
-        )
+        response = await self.client.get(f"{self.base_url}/rate_limit")
         logger.info(response.text)
 
     async def get_starred_repos(self, total_limit: int = 10) -> List[Dict]:
@@ -37,7 +36,6 @@ class GitHubClient:
         while len(all_repos) < total_limit:
             response = await self.client.get(
                 f"{self.base_url}/user/starred",
-                headers=self.headers,
                 params={"per_page": per_page, "page": page},
             )
             response.raise_for_status()
@@ -75,26 +73,46 @@ class GitHubClient:
         self,
         repo_full_name: str,
         exclude_bots: bool = True,
-        since_timestamp: str | None = None,
-    ) -> List[Dict]:
-        params = {}
+        since_timestamp: datetime | None = None,
+    ) -> Tuple[
+        List[Dict], datetime | None
+    ]:  # Modified return type to include timestamp
+        last_modified = None
 
-        if since_timestamp:
-            # For subsequent runs, get commits after the last known commit
-            params["since"] = since_timestamp
-        else:
-            # For first run or when cache is expired, use the default time window
-            params["since"] = (
-                datetime.now() - timedelta(days=COMMITS_DEFAULT_SINCE_DAYS)
-            ).isoformat()
+        t = (
+            since_timestamp
+            if since_timestamp
+            else (datetime.now() - timedelta(days=COMMITS_DEFAULT_SINCE_DAYS))
+        )
+        http_modified_since = t.strftime("%a, %d %b %Y %H:%M:%S GMT")
+
+        # parameter interfere with 304 responses, so we use headers to get better performance
+        # params["since"] = since_timestamp.isoformat()
 
         while True:
             try:
                 response = await self.client.get(
                     f"{self.base_url}/repos/{repo_full_name}/commits",
-                    headers=self.headers,
-                    params=params,
+                    headers={"if-modified-since": http_modified_since},
                 )
+
+                # Get Last-Modified from headers
+                last_modified = response.headers.get("Last-Modified")
+                if last_modified:
+                    last_modified = datetime.strptime(
+                        last_modified, "%a, %d %b %Y %H:%M:%S GMT"
+                    )
+                else:
+                    logger.warning(
+                        f"[{repo_full_name}] No Last-Modified header found: {response.headers}"
+                    )
+
+                # If content hasn't changed, return empty list
+                if response.status_code == 304:
+                    logger.info(
+                        f"[{repo_full_name}] got 304 since {http_modified_since}"
+                    )
+                    return [], last_modified
 
                 if (
                     response.status_code == 403
@@ -132,7 +150,7 @@ class GitHubClient:
             commits = [
                 commit
                 for commit in commits
-                if commit["commit"]["committer"]["date"] != since_timestamp
+                if commit["commit"]["committer"]["date"] != since_timestamp.isoformat()
             ]
 
-        return commits
+        return commits, last_modified

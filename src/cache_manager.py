@@ -5,7 +5,7 @@ from typing import Dict
 from log import logger
 
 CACHE_FILE = "commit_timestamps.json"
-COMMITS_DEFAULT_SINCE_DAYS = 7
+COMMITS_DEFAULT_SINCE_DAYS = 3
 CACHE_VERSION = 1
 
 
@@ -54,10 +54,13 @@ class CacheManager:
             json.dump(data, f, indent=2)
         logger.info(f"Saved {len(self.timestamps)} timestamps to cache")
 
-    def get_timestamp(self, repo: str) -> str | None:
+    def get_timestamp(self, repo: str) -> datetime | None:
         """Get the last commit timestamp for a repository"""
-        return self.timestamps.get(repo)
+        timestamp = self.timestamps.get(repo)
+        if timestamp:
+            return datetime.fromisoformat(timestamp)
+        return None
 
-    def set_timestamp(self, repo: str, timestamp: str) -> None:
+    def set_timestamp(self, repo: str, timestamp: datetime) -> None:
         """Set the last commit timestamp for a repository"""
-        self.timestamps[repo] = timestamp
+        self.timestamps[repo] = timestamp.isoformat()
