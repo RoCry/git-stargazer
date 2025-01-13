@@ -1,10 +1,13 @@
 [project]
 name = "git-stargazer"
 version = "0.1.0"
-description = "Add your description here"
-readme = "README.md"
+description = "Generate activity reports for starred GitHub repositories"
 requires-python = ">=3.13"
-dependencies = []
+
+dependencies = [
+    "httpx",
+    "litellm",
+]
 
 [dependency-groups]
 dev = [
