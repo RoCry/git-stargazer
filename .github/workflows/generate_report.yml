@@ -56,8 +56,7 @@ jobs:
         # Get current date for release tag
         DATE=$(date +'%Y-%m-%d')
         
-        # Create a new release using the report file from the Python script
+        # Create a new release using the report file content
         gh release create "${DATE}" \
           --title "Activity Report ${DATE}" \
-          --notes "Daily starred repositories activity report." \
-          "${{ steps.generate_report.outputs.report_file }}" 
+          --notes-file "${{ steps.generate_report.outputs.report_file }}" 
