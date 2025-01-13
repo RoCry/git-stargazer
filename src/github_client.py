@@ -27,7 +27,7 @@ class GitHubClient:
         response = await self.client.get(f"{self.base_url}/rate_limit")
         logger.info(response.text)
 
-    async def get_starred_repos(self, total_limit: int = 10) -> List[Dict]:
+    async def get_starred_repos(self, total_limit: int = 10, sort="updated") -> List[Dict]:
         """Fetch starred repositories for the authenticated user with pagination"""
         all_repos = []
         page = 1
@@ -36,7 +36,7 @@ class GitHubClient:
         while len(all_repos) < total_limit:
             response = await self.client.get(
                 f"{self.base_url}/user/starred",
-                params={"per_page": per_page, "page": page},
+                params={"per_page": per_page, "page": page, "sort": sort},
             )
             response.raise_for_status()
 
