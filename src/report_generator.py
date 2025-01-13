@@ -16,20 +16,22 @@ class ReportGenerator:
         if not commits:
             return ""
 
+        commits_str = self._format_commits(commits)
+
         prompt = f"""
 Repository: {repo_data['full_name']}
 Description: {repo_data.get('description', 'No description')}
 Recent commits: {len(commits)}
 
 Commit details:
-{self._format_commits(commits)}
+{commits_str}
 
 Please provide <ONE LINE minimalistic title with emoji> to summarize the recent commit messages above.
 If nothing meaningful, just return `NONE`.
         """
 
         logger.info(
-            f"Generating summary for {repo_data['full_name']}, prompt: {prompt}"
+            f"Generating summary for {repo_data['full_name']}, commits:\n{commits_str}"
         )
         response = await acompletion(
             model=self.model, messages=[{"role": "user", "content": prompt}]
