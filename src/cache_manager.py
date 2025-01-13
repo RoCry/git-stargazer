@@ -6,6 +6,7 @@ from log import logger
 
 CACHE_FILE = "commit_timestamps.json"
 COMMITS_DEFAULT_SINCE_DAYS = 7
+CACHE_VERSION = 1
 
 
 class CacheManager:
@@ -18,7 +19,13 @@ class CacheManager:
         if os.path.exists(self.cache_file):
             try:
                 with open(self.cache_file, "r") as f:
-                    self.timestamps = json.load(f)
+                    data = json.load(f)
+                    # Check cache version
+                    if data.get("__version__") != CACHE_VERSION:
+                        logger.warning("Cache version mismatch, starting with empty cache")
+                        self.timestamps = {}
+                    else:
+                        self.timestamps = data.get("timestamps", {})
                 logger.info(f"Loaded {len(self.timestamps)} timestamps from cache")
             except json.JSONDecodeError:
                 logger.warning("Failed to load cache file, starting with empty cache")
@@ -39,9 +46,13 @@ class CacheManager:
             if timestamp >= cutoff_date
         }
 
-        # Save to file
+        # Save to file with version
+        data = {
+            "__version__": CACHE_VERSION,
+            "timestamps": self.timestamps
+        }
         with open(self.cache_file, "w") as f:
-            json.dump(self.timestamps, f, indent=2)
+            json.dump(data, f, indent=2)
         logger.info(f"Saved {len(self.timestamps)} timestamps to cache")
 
     def get_timestamp(self, repo: str) -> str | None:
