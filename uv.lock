@@ -200,6 +200,7 @@ dependencies = [
 [package.dev-dependencies]
 dev = [
     { name = "gitpython" },
+    { name = "python-dotenv" },
 ]
 
 [package.metadata]
@@ -209,7 +210,10 @@ requires-dist = [
 ]
 
 [package.metadata.requires-dev]
-dev = [{ name = "gitpython", specifier = ">=3.1.44" }]
+dev = [
+    { name = "gitpython", specifier = ">=3.1.44" },
+    { name = "python-dotenv", specifier = ">=1.0.1" },
+]
 
 [[package]]
 name = "gitdb"

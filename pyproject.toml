@@ -12,4 +12,5 @@ dependencies = [
 [dependency-groups]
 dev = [
     "gitpython>=3.1.44",
+    "python-dotenv>=1.0.1",
 ]

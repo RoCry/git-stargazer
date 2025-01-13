@@ -6,7 +6,9 @@ from report_generator import ReportGenerator
 from cache_manager import CacheManager
 from log import logger
 from datetime import datetime
+from dotenv import load_dotenv
 
+load_dotenv()  # take environment variables from .env.
 
 async def main():
     # Initialize clients

@@ -9,6 +9,8 @@ wheels/
 # Virtual environments
 .venv
 
+.env
+
 ##########################
 reports/
 commit_timestamps.json
