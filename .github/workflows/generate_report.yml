@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: '0 0 * * *'  # Run daily at midnight
   workflow_dispatch:  # Allow manual trigger
+  push:
+    branches:
+      - master
 
 jobs:
   generate-report:
@@ -15,8 +18,8 @@ jobs:
     - name: Install uv
       uses: astral-sh/setup-uv@v5
     
-    - name: Set up Python
-      run: uv python install
+    - name: "Set up Python"
+      uses: actions/setup-python@v5
       with:
         python-version-file: "pyproject.toml"
     
