@@ -27,19 +27,23 @@ async def main():
         # Fetch recent commits for each repository
         repos_with_commits: List[Tuple[Dict, List[Dict]]] = []
         for repo in starred_repos:
-            repo_name = repo["full_name"]
-            since_timestamp = cache_manager.get_timestamp(repo_name)
-            commits = await github_client.get_recent_commits(
-                repo_name, since_timestamp=since_timestamp
-            )
+            try:
+                repo_name = repo["full_name"]
+                since_timestamp = cache_manager.get_timestamp(repo_name)
+                commits = await github_client.get_recent_commits(
+                    repo_name, since_timestamp=since_timestamp
+                )
 
-            if commits:
-                # Update cache with the latest commit timestamp
-                latest_timestamp = commits[0]["commit"]["committer"]["date"]
-                cache_manager.set_timestamp(repo_name, latest_timestamp)
+                if commits:
+                    # Update cache with the latest commit timestamp
+                    latest_timestamp = commits[0]["commit"]["committer"]["date"]
+                    cache_manager.set_timestamp(repo_name, latest_timestamp)
 
-            logger.info(f"Fetched {len(commits)} commits for {repo_name}")
-            repos_with_commits.append((repo, commits))
+                logger.info(f"Fetched {len(commits)} commits for {repo_name}")
+                repos_with_commits.append((repo, commits))
+            except Exception as e:
+                logger.error(f"Failed to fetch commits for {repo_name}: {str(e)}")
+                continue
 
     # Generate report
     report_generator = ReportGenerator()
