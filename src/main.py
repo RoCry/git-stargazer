@@ -1,6 +1,8 @@
 import asyncio
 import json
 import os
+import glob
+import time
 from typing import List, Tuple, Dict
 from github_client import GitHubClient
 from report_generator import ReportGenerator
@@ -33,11 +35,13 @@ async def main():
     existing_repo_names = set()
 
     if os.path.exists(report_json_file):
-        logger.info(f"Report file {report_json_file} already exists")
         with open(report_json_file, "r") as f:
             existing_report_json = json.load(f)
             existing_repo_names.update(
                 [repo["name"] for repo in existing_report_json["repos"]]
+            )
+            logger.info(
+                f"Found report file `{report_json_file}` from previous, will merge {existing_report_json['total_repos_count']} repos"
             )
 
     async with GitHubClient(github_token) as github_client:
@@ -98,6 +102,10 @@ async def main():
             f.write(f"report_file={report_file}\n")
             f.write(f"report_json_file={report_json_file}\n")
 
+    _cleanup_reports_folder(
+        exclude_files=[report_json_file, report_file],
+        dry_run=not is_in_github_actions,  # only remove files in github actions to reduce cache size
+    )
     cache_manager.save()
 
 
@@ -112,6 +120,36 @@ def merge_reports(left: Dict, right: Dict) -> Dict:
         + right["total_commits_count"],
         "repos": left["repos"] + right["repos"],
     }
+
+
+def _cleanup_reports_folder(
+    exclude_files: List[str],
+    dry_run: bool = False,  # do not remove files in dry run
+):
+    """Clean up old report files, keeping recently updated ones and excluded files"""
+    report_files = glob.glob("reports/*")
+    current_time = time.time()
+
+    for file_path in report_files:
+        # Skip if file is in exclude list
+        if file_path in exclude_files:
+            continue
+
+        # Skip if file was modified in last 12 hours
+        if current_time - os.path.getmtime(file_path) < 12 * 3600:
+            # the just updated file should be excluded
+            logger.warning(f"Skipping {file_path} as it was modified recently")
+            continue
+
+        if dry_run:
+            logger.info(f"Would remove old report file: {file_path}")
+            continue
+
+        try:
+            os.remove(file_path)
+            logger.info(f"Removed old report file: {file_path}")
+        except Exception as e:
+            logger.error(f"Failed to remove {file_path}: {str(e)}")
 
 
 def json_report_to_markdown(json_report: Dict) -> str:
