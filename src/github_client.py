@@ -5,6 +5,8 @@ from log import logger
 from cache_manager import COMMITS_DEFAULT_SINCE_DAYS
 import asyncio
 
+class RateLimitException(Exception):
+    pass
 
 class GitHubClient:
     def __init__(self, token: str, timeout: int = 30):
@@ -87,6 +89,7 @@ class GitHubClient:
         repo_full_name: str,
         exclude_bots: bool = True,
         since_timestamp: datetime | None = None,
+        rise_exception_on_rate_limit: bool = True,
     ) -> Tuple[
         List[Dict], datetime | None
     ]:  # Modified return type to include timestamp
@@ -131,6 +134,9 @@ class GitHubClient:
                     response.status_code == 403
                     and "X-RateLimit-Remaining" in response.headers
                 ):
+                    # sleep and wait for rate limit doesn't work, raise an exception to stop and try re-run later
+                    if rise_exception_on_rate_limit:
+                        raise RateLimitException(f"Rate limit hit: {response.headers}")
                     # Handle rate limiting
                     reset_time = int(response.headers["X-RateLimit-Reset"])
                     wait_time = reset_time - datetime.now().timestamp()

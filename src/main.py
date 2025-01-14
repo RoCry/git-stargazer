@@ -4,7 +4,7 @@ import os
 import glob
 import time
 from typing import List, Tuple, Dict
-from github_client import GitHubClient
+from github_client import GitHubClient, RateLimitException
 from report_generator import ReportGenerator
 from cache_manager import CacheManager
 from log import logger
@@ -58,7 +58,7 @@ async def main():
                 repo_name = repo["full_name"]
                 since_timestamp = cache_manager.get_timestamp(repo_name)
                 commits, last_modified = await github_client.get_recent_commits(
-                    repo_name, since_timestamp=since_timestamp
+                    repo_name, since_timestamp=since_timestamp, rise_exception_on_rate_limit=True,
                 )
                 # https://docs.github.com/en/rest/using-the-rest-api/best-practices-for-using-the-rest-api?apiVersion=2022-11-28#pause-between-mutative-requests
                 if is_in_github_actions:
@@ -74,6 +74,9 @@ async def main():
 
                 logger.info(f"Fetched {len(commits)} commits for {repo_name}")
                 repos_with_commits.append((repo, commits))
+            except RateLimitException as e:
+                logger.error(f"Rate limit hit: {str(e)}")
+                break
             except Exception as e:
                 logger.error(f"Failed to fetch commits for {repo_name}: {str(e)}")
                 continue
