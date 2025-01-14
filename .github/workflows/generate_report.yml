@@ -45,9 +45,10 @@ jobs:
     
     - name: Generate report
       env:
-        GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
-        REPO_LIMIT: ${{ vars.REPO_LIMIT }}
-        DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}  # required
+        DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}  # required
+        REPO_LIMIT: ${{ vars.REPO_LIMIT }}  # optional
+        EMPTY_REPO_CONSECUTIVE_LIMIT: ${{ vars.EMPTY_REPO_CONSECUTIVE_LIMIT }}  # optional
       run: uv run src/main.py
       id: generate_report
     

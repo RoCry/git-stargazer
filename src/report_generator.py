@@ -106,8 +106,10 @@ If nothing meaningful, just return `NONE`.
         )
         return {
             "total_repos_count": left["total_repos_count"] + right["total_repos_count"],
-            "active_repos_count": left["active_repos_count"] + right["active_repos_count"],
-            "total_commits_count": left["total_commits_count"] + right["total_commits_count"],
+            "active_repos_count": left["active_repos_count"]
+            + right["active_repos_count"],
+            "total_commits_count": left["total_commits_count"]
+            + right["total_commits_count"],
             "repos": left["repos"] + right["repos"],
         }
 

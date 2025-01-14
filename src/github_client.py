@@ -5,8 +5,10 @@ from log import logger
 from cache_manager import COMMITS_DEFAULT_SINCE_DAYS
 import asyncio
 
+
 class RateLimitException(Exception):
     pass
+
 
 class GitHubClient:
     def __init__(self, token: str, timeout: int = 30):
