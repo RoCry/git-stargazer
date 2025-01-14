@@ -14,100 +14,155 @@ from dotenv import load_dotenv
 load_dotenv()  # take environment variables from .env.
 
 
-async def main():
-    # Initialize clients
+# returns (github_token, repo_limit, is_in_github_actions)
+def get_configuration() -> tuple[str, int, bool]:
+    """Get configuration from environment variables"""
     github_token = os.getenv("GITHUB_TOKEN")
     if not github_token:
         raise ValueError("GITHUB_TOKEN environment variable is required")
     repo_limit = os.getenv("REPO_LIMIT")
     repo_limit = int(repo_limit) if repo_limit else 10
     is_in_github_actions = os.getenv("GITHUB_ACTIONS")
+    return github_token, repo_limit, bool(is_in_github_actions)
 
-    # Initialize cache manager
-    cache_manager = CacheManager()
-    cache_manager.load()
-
+# returns (report_json_file_path, report_file_path)
+def setup_report_files() -> tuple[str, str]:
+    """Set up report file paths"""
     today_data_str = datetime.now().strftime("%Y-%m-%d")
     report_json_file = f"reports/recent_commits_{today_data_str}.json"
     report_file = f"reports/recent_commits_{today_data_str}.md"
+    return report_json_file, report_file
 
-    existing_report_json = None
-    existing_repo_names = set()
+# returns (report_json, repo_names)
+def load_existing_report(report_json_file: str) -> tuple[dict | None, set]:
+    if not os.path.exists(report_json_file):
+        return None, set()
+    
+    with open(report_json_file, "r") as f:
+        existing_report_json = json.load(f)
+        existing_repo_names = set(
+            [repo["name"] for repo in existing_report_json["repos"]]
+        )
+        logger.info(
+            f"Found report file `{report_json_file}` from previous, will merge {existing_report_json['total_repos_count']} repos"
+        )
+        return existing_report_json, existing_repo_names
 
-    if os.path.exists(report_json_file):
-        with open(report_json_file, "r") as f:
-            existing_report_json = json.load(f)
-            existing_repo_names.update(
-                [repo["name"] for repo in existing_report_json["repos"]]
-            )
-            logger.info(
-                f"Found report file `{report_json_file}` from previous, will merge {existing_report_json['total_repos_count']} repos"
-            )
-
-    async with GitHubClient(github_token) as github_client:
-        # await github_client.print_rate_limit()
-        # Fetch starred repositories
-        starred_repos = await github_client.get_starred_repos(
-            exclude_repo_names=existing_repo_names, total_limit=repo_limit
+# returns (repo, commits)
+async def fetch_repo_commits(
+    github_client: GitHubClient,
+    cache_manager: CacheManager,
+    repo: dict,
+    is_in_github_actions: bool
+) -> tuple[dict, list[dict]] | None:
+    """Fetch recent commits for a single repository"""
+    try:
+        repo_name = repo["full_name"]
+        since_timestamp = cache_manager.get_timestamp(repo_name)
+        commits, last_modified = await github_client.get_recent_commits(
+            repo_name, since_timestamp=since_timestamp, rise_exception_on_rate_limit=True,
         )
 
-        # Fetch recent commits for each repository
-        repos_with_commits: List[Tuple[Dict, List[Dict]]] = []
-        for repo in starred_repos:
-            try:
-                repo_name = repo["full_name"]
-                since_timestamp = cache_manager.get_timestamp(repo_name)
-                commits, last_modified = await github_client.get_recent_commits(
-                    repo_name, since_timestamp=since_timestamp, rise_exception_on_rate_limit=True,
-                )
-                # https://docs.github.com/en/rest/using-the-rest-api/best-practices-for-using-the-rest-api?apiVersion=2022-11-28#pause-between-mutative-requests
-                if is_in_github_actions:
-                    await asyncio.sleep(1)
+        # https://docs.github.com/en/rest/using-the-rest-api/best-practices-for-using-the-rest-api?apiVersion=2022-11-28#pause-between-mutative-requests
+        if is_in_github_actions:
+            await asyncio.sleep(1)
 
-                if last_modified:
-                    # Update cache with Last-Modified from response headers
-                    cache_manager.set_timestamp(repo_name, last_modified)
-                elif commits:
-                    # Update cache with the latest commit timestamp
-                    latest_timestamp = commits[0]["commit"]["committer"]["date"]
-                    cache_manager.set_timestamp(repo_name, latest_timestamp)
+        # Update cache with new timestamp
+        if last_modified:
+            cache_manager.set_timestamp(repo_name, last_modified)
+        elif commits:
+            latest_timestamp = commits[0]["commit"]["committer"]["date"]
+            cache_manager.set_timestamp(repo_name, latest_timestamp)
 
-                logger.info(f"Fetched {len(commits)} commits for {repo_name}")
-                repos_with_commits.append((repo, commits))
-            except RateLimitException as e:
-                logger.error(f"Rate limit hit: {str(e)}")
-                break
-            except Exception as e:
-                logger.error(f"Failed to fetch commits for {repo_name}: {str(e)}")
-                continue
+        logger.info(f"Fetched {len(commits)} commits for {repo_name}")
+        return repo, commits
 
-    # Generate report
-    report_generator = ReportGenerator()
-    report_json = await report_generator.generate_report_json(repos_with_commits)
-    if existing_report_json:
-        report_json = merge_reports(existing_report_json, report_json)
-    report = json_report_to_markdown(report_json)
+    except RateLimitException as e:
+        logger.error(f"Rate limit hit: {str(e)}")
+        raise
+    except Exception as e:
+        logger.error(f"Failed to fetch commits for {repo_name}: {str(e)}")
+        return None
 
-    print("=" * 100)
-    print(report)
-    print("=" * 100)
+# returns [(repo, commits)]
+async def fetch_all_repo_commits(
+    github_client: GitHubClient,
+    cache_manager: CacheManager,
+    starred_repos: list[dict],
+    is_in_github_actions: bool
+) -> list[tuple[dict, list[dict]]]:
+    """Fetch recent commits for all starred repositories"""
+    repos_with_commits: list[tuple[dict, list[dict]]] = []
+    
+    for repo in starred_repos:
+        result = await fetch_repo_commits(
+            github_client, cache_manager, repo, is_in_github_actions
+        )
+        if result:
+            repos_with_commits.append(result)
+    return repos_with_commits
 
-    # Save report
+def save_reports(
+    report_json: dict,
+    report_json_file: str,
+    report_file: str,
+    is_in_github_actions: bool
+) -> None:
     os.makedirs("reports", exist_ok=True)
     with open(report_json_file, "w") as f:
         json.dump(report_json, f, ensure_ascii=False, indent=2)
+    
+    # Save Markdown report
     with open(report_file, "w") as f:
-        f.write(report)
+        f.write(json_report_to_markdown(report_json))
 
-    # Set output for GitHub Actions
+    # Set GitHub Actions output if running in CI
     if is_in_github_actions:
         with open(os.environ["GITHUB_OUTPUT"], "a") as f:
             f.write(f"report_file={report_file}\n")
             f.write(f"report_json_file={report_json_file}\n")
 
+async def main():
+    # Get configuration
+    github_token, repo_limit, is_in_github_actions = get_configuration()
+    
+    # Initialize cache manager
+    cache_manager = CacheManager()
+    cache_manager.load()
+
+    # Set up report files
+    report_json_file, report_file = setup_report_files()
+    
+    # Load existing report if it exists
+    existing_report_json, existing_repo_names = load_existing_report(report_json_file)
+
+    async with GitHubClient(github_token) as github_client:
+        # Fetch starred repositories
+        starred_repos = await github_client.get_starred_repos(
+            exclude_repo_names=existing_repo_names, total_limit=repo_limit
+        )
+
+        # Fetch recent commits for all repositories
+        repos_with_commits = await fetch_all_repo_commits(
+            github_client, cache_manager, starred_repos, is_in_github_actions
+        )
+
+    # Generate and save reports
+    report_generator = ReportGenerator()
+    report_json = await report_generator.generate_report_json(repos_with_commits)
+    if existing_report_json:
+        report_json = merge_reports(existing_report_json, report_json)
+
+    # print("=" * 100)
+    # print(json_report_to_markdown(report_json))
+    # print("=" * 100)
+
+    save_reports(report_json, report_json_file, report_file, is_in_github_actions)
+
+    # Clean up old reports and save cache
     _cleanup_reports_folder(
         exclude_files=[report_json_file, report_file],
-        dry_run=not is_in_github_actions,  # only remove files in github actions to reduce cache size
+        dry_run=not is_in_github_actions,
     )
     cache_manager.save()
 
