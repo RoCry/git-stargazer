@@ -34,6 +34,14 @@ jobs:
         key: commit-timestamps-${{ github.run_id }}
         restore-keys: |
           commit-timestamps-
+
+    - name: Restore report cache
+      uses: actions/cache/restore@v4
+      with:
+        path: reports/
+        key: report-cache-${{ github.run_id }}
+        restore-keys: |
+          report-cache-
     
     - name: Generate report
       env:
@@ -49,6 +57,12 @@ jobs:
         path: commit_timestamps.json
         key: commit-timestamps-${{ github.run_id }}
     
+    - name: Save report cache
+      uses: actions/cache/save@v4
+      with:
+        path: reports/
+        key: report-cache-${{ github.run_id }}
+    
     - name: Create Release
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
@@ -61,4 +75,4 @@ jobs:
         # Create a new release using the report file content
         gh release create "${DATE}" \
           --title "Activity Report ${DATE}" \
-          --notes-file "${{ steps.generate_report.outputs.report_file }}" 
+          --notes-file "${{ steps.generate_report.outputs.report_file }}"
