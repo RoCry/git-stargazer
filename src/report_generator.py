@@ -97,3 +97,38 @@ If nothing meaningful, just return `NONE`.
             "total_commits_count": total_commits_count,
             "repos": repo_data_list,
         }
+
+    @staticmethod
+    def merge_reports(left: Dict, right: Dict) -> Dict:
+        """Merge two report dictionaries"""
+        logger.info(
+            f"Merging reports: {left['total_repos_count']} and {right['total_repos_count']}"
+        )
+        return {
+            "total_repos_count": left["total_repos_count"] + right["total_repos_count"],
+            "active_repos_count": left["active_repos_count"] + right["active_repos_count"],
+            "total_commits_count": left["total_commits_count"] + right["total_commits_count"],
+            "repos": left["repos"] + right["repos"],
+        }
+
+    @staticmethod
+    def json_report_to_markdown(json_report: Dict) -> str:
+        """Generate markdown report from report data dictionary"""
+        if not json_report["repos"]:
+            return "# Recent Activity in Starred Repositories\nNo recent activity found in starred repositories."
+
+        sections_md = []
+        for repo in json_report["repos"]:
+            if repo["commit_count"] == 0:
+                continue
+            if not repo["summary"]:
+                continue
+            section_md = f"- [{repo['name']}]({repo['url']}) {repo['commit_count']}: {repo['summary']}"
+            sections_md.append(section_md)
+
+        return (
+            "# Recent Activity in Starred Repositories\n"
+            f"_Tracking {json_report['active_repos_count']}/{json_report['total_repos_count']} "
+            f"repos with {json_report['total_commits_count']} new commits_\n\n"
+            + "\n".join(sections_md)
+        )
