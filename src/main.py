@@ -6,9 +6,9 @@ import time
 from typing import List, Tuple, Dict
 from github_client import GitHubClient, RateLimitException
 from report_generator import ReportGenerator
-from cache_manager import CacheManager
+from cache_manager import CacheManager, COMMITS_DEFAULT_SINCE_DAYS
 from log import logger
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from dotenv import load_dotenv
 
 load_dotenv()  # take environment variables from .env.
@@ -51,6 +51,17 @@ def load_existing_report(report_json_file: str) -> tuple[dict | None, set]:
         return existing_report_json, existing_repo_names
 
 
+def _check_if_repo_is_active(repo: dict) -> bool:
+    """Check if a repository is active by checking if it was pushed in the last COMMITS_DEFAULT_SINCE_DAYS days"""
+    if not repo["pushed_at"]:
+        return False
+    pushed_at = datetime.fromisoformat(repo["pushed_at"])
+    if pushed_at.tzinfo is None:
+        pushed_at = pushed_at.replace(tzinfo=timezone.utc)
+    dateline = datetime.now(timezone.utc) - timedelta(days=COMMITS_DEFAULT_SINCE_DAYS)
+    return pushed_at > dateline
+
+
 # returns (repo, commits)
 async def fetch_repo_commits(
     github_client: GitHubClient,
@@ -59,6 +70,10 @@ async def fetch_repo_commits(
     is_in_github_actions: bool,
 ) -> tuple[dict, list[dict]] | None:
     """Fetch recent commits for a single repository"""
+    if not _check_if_repo_is_active(repo):
+        logger.info(f"Skipping {repo['full_name']} for push date {repo['pushed_at']}")
+        return None
+
     try:
         repo_name = repo["full_name"]
         since_timestamp = cache_manager.get_timestamp(repo_name)
