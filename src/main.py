@@ -112,9 +112,13 @@ async def fetch_all_repo_commits(
     )
 
     for repo in starred_repos:
-        result = await fetch_repo_commits(
-            github_client, cache_manager, repo, is_in_github_actions
-        )
+        try:
+            result = await fetch_repo_commits(
+                github_client, cache_manager, repo, is_in_github_actions
+            )
+        except RateLimitException:
+            logger.error("Rate limit hit, stopping fetching more commits")
+            break
         if not result:
             continue
 
