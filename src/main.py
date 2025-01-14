@@ -29,11 +29,14 @@ async def main():
     report_json_file = f"reports/recent_commits_{today_data_str}.json"
     report_file = f"reports/recent_commits_{today_data_str}.md"
 
+    existing_report_json = None
+    existing_repo_names = set()
+
     if os.path.exists(report_json_file):
         logger.info(f"Report file {report_json_file} already exists")
         with open(report_json_file, "r") as f:
             existing_report_json = json.load(f)
-            existing_repo_names = set(
+            existing_repo_names.update(
                 [repo["name"] for repo in existing_report_json["repos"]]
             )
 
