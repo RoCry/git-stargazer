@@ -33,8 +33,14 @@ Please generate `<EXACTLY ONE emoji> <minimalistic title with no more than 80 ch
 If nothing meaningful, just return `NONE`.
         """
 
+        lines = commits_str.split("\n")
+        commits_compact_str = (
+            "\n".join(lines)
+            if len(lines) < 5
+            else "\n".join(lines[:2]) + f"\n... and {len(lines) - 2} more commits ..."
+        )
         logger.info(
-            f"Generating summary for {repo_data['full_name']}, commits:\n{commits_str}"
+            f"Generating summary for {repo_data['full_name']}, commits:\n{commits_compact_str}"
         )
         response = await acompletion(
             model=self.model, messages=[{"role": "user", "content": prompt}]
