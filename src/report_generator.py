@@ -126,11 +126,11 @@ If nothing meaningful, just return `NONE`.
             return "# Recent Activity in Starred Repositories\nNo recent activity found in starred repositories."
 
         sections_md = []
-        for repo in json_report["repos"]:
-            if repo["commit_count"] == 0:
-                continue
-            if not repo["summary"]:
-                continue
+        # Filter and sort repos by name
+        active_repos = [repo for repo in json_report["repos"] if repo["commit_count"] > 0 and repo["summary"]]
+        active_repos.sort(key=lambda x: x["name"].lower())
+        
+        for repo in active_repos:
             section_md = f"- [{repo['name']}]({repo['url']}/commits) {repo['commit_count']}: {repo['summary']}"
             sections_md.append(section_md)
 
