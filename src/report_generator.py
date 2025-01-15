@@ -88,14 +88,16 @@ If nothing meaningful, just return `NONE`.
             active_repos_count += 1
             summary = await self.generate_repo_summary(repo, commits)
 
-            repo_data_list.append(
-                {
-                    "name": repo["full_name"],
-                    "url": repo["html_url"],
-                    "commit_count": len(commits),
-                    "summary": summary,
-                }
-            )
+            item = {
+                "name": repo["full_name"],
+                "url": repo["html_url"],
+                "commit_count": len(commits),
+                "summary": summary,
+            }
+            if repo["topics"]:
+                item["topics"] = repo["topics"]
+            
+            repo_data_list.append(item)
 
         return {
             "total_repos_count": total_repos_count,
@@ -129,7 +131,7 @@ If nothing meaningful, just return `NONE`.
         # Filter and sort repos by name
         active_repos = [repo for repo in json_report["repos"] if repo["commit_count"] > 0 and repo["summary"]]
         active_repos.sort(key=lambda x: x["name"].lower())
-        
+
         for repo in active_repos:
             section_md = f"- [{repo['name']}]({repo['url']}/commits) {repo['commit_count']}: {repo['summary']}"
             sections_md.append(section_md)
