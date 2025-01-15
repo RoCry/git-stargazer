@@ -127,18 +127,51 @@ If nothing meaningful, just return `NONE`.
         if not json_report["repos"]:
             return "# Recent Activity in Starred Repositories\nNo recent activity found in starred repositories."
 
-        sections_md = []
-        # Filter and sort repos by name
+        # Filter active repos
         active_repos = [repo for repo in json_report["repos"] if repo["commit_count"] > 0 and repo["summary"]]
-        active_repos.sort(key=lambda x: x["name"].lower())
-
+        
+        # Count topic frequencies
+        topic_counts = {}
         for repo in active_repos:
-            section_md = f"- [{repo['name']}]({repo['url']}/commits) {repo['commit_count']}: {repo['summary']}"
-            sections_md.append(section_md)
+            for topic in repo.get("topics", []):
+                topic_counts[topic] = topic_counts.get(topic, 0) + 1
+        
+        # Assign repos to topics
+        topic_repos = {}
+        for repo in active_repos:
+            topics = repo.get("topics", [])
+            if not topics:
+                main_topic = "Other"
+            else:
+                # Find most frequent topic for this repo
+                main_topic = max(topics, key=lambda t: topic_counts.get(t, 0))
+                # If topic only has one repo, move to Other
+                if topic_counts[main_topic] == 1:
+                    main_topic = "Other"
+                    
+            if main_topic not in topic_repos:
+                topic_repos[main_topic] = []
+            topic_repos[main_topic].append(repo)
+        
+        # Sort topics and repos
+        sections_md = []
+        sorted_topics = sorted(topic_repos.keys())
+        if "Other" in sorted_topics:
+            sorted_topics.remove("Other")
+            sorted_topics.append("Other")
+        
+        for topic in sorted_topics:
+            repos = topic_repos[topic]
+            repos.sort(key=lambda x: x["name"].lower())
+            
+            sections_md.append(f"\n## {topic}")
+            for repo in repos:
+                section_md = f"- [{repo['name']}]({repo['url']}/commits) {repo['commit_count']}: {repo['summary']}"
+                sections_md.append(section_md)
 
         return (
             "# Recent Activity in Starred Repositories\n"
             f"_Tracking {json_report['active_repos_count']}/{json_report['total_repos_count']} "
-            f"repos with {json_report['total_commits_count']} new commits_\n\n"
+            f"repos with {json_report['total_commits_count']} new commits_\n"
             + "\n".join(sections_md)
         )
