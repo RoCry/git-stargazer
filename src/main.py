@@ -3,6 +3,7 @@ import json
 import os
 import glob
 import time
+from datetime import datetime, timedelta, timezone
 from typing import List, Tuple, Dict
 from github_client import GitHubClient, RateLimitException
 from report_generator import ReportGenerator
@@ -13,12 +14,17 @@ from dotenv import load_dotenv
 
 load_dotenv()  # take environment variables from .env.
 
+IS_IN_GITHUB_ACTIONS = bool(os.getenv("GITHUB_ACTIONS"))
+
 # Get TODAY from environment variable
 TODAY = os.getenv("TODAY")
 if not TODAY:
-    raise ValueError("TODAY environment variable is required")
+    if IS_IN_GITHUB_ACTIONS:
+        raise ValueError("TODAY environment variable is required")
+    TODAY = datetime.now().strftime("%Y-%m-%d")
 
-# returns (github_token, repo_limit, is_in_github_actions)
+
+# returns (github_token, repo_limit)
 def get_configuration() -> tuple[str, int, bool]:
     """Get configuration from environment variables"""
     github_token = os.getenv("GITHUB_TOKEN")
@@ -26,8 +32,7 @@ def get_configuration() -> tuple[str, int, bool]:
         raise ValueError("GITHUB_TOKEN environment variable is required")
     repo_limit = os.getenv("REPO_LIMIT", "").strip()
     repo_limit = int(repo_limit) if repo_limit else 100
-    is_in_github_actions = os.getenv("GITHUB_ACTIONS")
-    return github_token, repo_limit, bool(is_in_github_actions)
+    return github_token, repo_limit
 
 
 # returns (report_json_file_path, report_file_path)
@@ -70,7 +75,6 @@ async def fetch_repo_commits(
     github_client: GitHubClient,
     cache_manager: CacheManager,
     repo: dict,
-    is_in_github_actions: bool,
 ) -> tuple[dict, list[dict]] | None:
     """Fetch recent commits for a single repository"""
     if not _check_if_repo_is_active(repo):
@@ -87,7 +91,7 @@ async def fetch_repo_commits(
         )
 
         # https://docs.github.com/en/rest/using-the-rest-api/best-practices-for-using-the-rest-api?apiVersion=2022-11-28#pause-between-mutative-requests
-        if is_in_github_actions:
+        if IS_IN_GITHUB_ACTIONS:
             await asyncio.sleep(1)
 
         # Update cache with new timestamp
@@ -113,7 +117,6 @@ async def fetch_all_repo_commits(
     github_client: GitHubClient,
     cache_manager: CacheManager,
     starred_repos: list[dict],
-    is_in_github_actions: bool,
 ) -> list[tuple[dict, list[dict]]]:
     repos_with_commits: list[tuple[dict, list[dict]]] = []
 
@@ -132,7 +135,9 @@ async def fetch_all_repo_commits(
     for repo in starred_repos:
         try:
             result = await fetch_repo_commits(
-                github_client, cache_manager, repo, is_in_github_actions
+                github_client,
+                cache_manager,
+                repo,
             )
         except RateLimitException:
             logger.error("Rate limit hit, stopping fetching more commits")
@@ -161,7 +166,6 @@ def save_reports(
     report_json: dict,
     report_json_file: str,
     report_file: str,
-    is_in_github_actions: bool,
 ) -> None:
     os.makedirs("reports", exist_ok=True)
     with open(report_json_file, "w") as f:
@@ -172,7 +176,7 @@ def save_reports(
         f.write(ReportGenerator.json_report_to_markdown(report_json))
 
     # Set GitHub Actions output if running in CI
-    if is_in_github_actions:
+    if IS_IN_GITHUB_ACTIONS:
         with open(os.environ["GITHUB_OUTPUT"], "a") as f:
             f.write(f"report_file={report_file}\n")
             f.write(f"report_json_file={report_json_file}\n")
@@ -180,7 +184,7 @@ def save_reports(
 
 async def main():
     # Get configuration
-    github_token, repo_limit, is_in_github_actions = get_configuration()
+    github_token, repo_limit = get_configuration()
 
     # Initialize cache manager
     cache_manager = CacheManager()
@@ -200,7 +204,9 @@ async def main():
 
         # Fetch recent commits for all repositories
         repos_with_commits = await fetch_all_repo_commits(
-            github_client, cache_manager, starred_repos, is_in_github_actions
+            github_client,
+            cache_manager,
+            starred_repos,
         )
 
     # Generate and save reports
@@ -209,12 +215,12 @@ async def main():
     if existing_report_json:
         report_json = ReportGenerator.merge_reports(existing_report_json, report_json)
 
-    save_reports(report_json, report_json_file, report_file, is_in_github_actions)
+    save_reports(report_json, report_json_file, report_file)
 
     # Clean up old reports and save cache
     _cleanup_reports_folder(
         exclude_files=[report_json_file, report_file],
-        dry_run=not is_in_github_actions,
+        dry_run=not IS_IN_GITHUB_ACTIONS,
     )
     cache_manager.save()
 
