@@ -96,7 +96,7 @@ If nothing meaningful, just return `NONE`.
             }
             if repo["topics"]:
                 item["topics"] = repo["topics"]
-            
+
             repo_data_list.append(item)
 
         return {
@@ -128,43 +128,76 @@ If nothing meaningful, just return `NONE`.
             return "# Recent Activity in Starred Repositories\nNo recent activity found in starred repositories."
 
         # Filter active repos
-        active_repos = [repo for repo in json_report["repos"] if repo["commit_count"] > 0 and repo["summary"]]
-        
+        active_repos = [
+            repo
+            for repo in json_report["repos"]
+            if repo["commit_count"] > 0 and repo["summary"]
+        ]
+
         # Count topic frequencies
         topic_counts = {}
         for repo in active_repos:
             for topic in repo.get("topics", []):
                 topic_counts[topic] = topic_counts.get(topic, 0) + 1
-        
-        # Assign repos to topics
-        topic_repos = {}
-        for repo in active_repos:
-            topics = repo.get("topics", [])
-            if not topics:
-                main_topic = "Other"
+
+        # Group repos by shared topics
+        topic_groups = {}
+        processed_repos = set()
+
+        for i, repo in enumerate(active_repos):
+            if repo["name"] in processed_repos:
+                continue
+
+            repo_topics = set(repo.get("topics", []))
+            if not repo_topics:
+                group_key = "Other"
+                if group_key not in topic_groups:
+                    topic_groups[group_key] = {"repos": [], "topics": set()}
+                topic_groups[group_key]["repos"].append(repo)
+                processed_repos.add(repo["name"])
+                continue
+
+            # Find similar repos based on shared topics
+            similar_repos = [repo]
+            common_topics = repo_topics.copy()
+
+            for other_repo in active_repos[i + 1 :]:
+                if other_repo["name"] in processed_repos:
+                    continue
+
+                other_topics = set(other_repo.get("topics", []))
+                if other_topics and common_topics & other_topics:
+                    similar_repos.append(other_repo)
+                    common_topics &= other_topics
+                    processed_repos.add(other_repo["name"])
+
+            # If no common topics or single repo, move to Other
+            if len(common_topics) == 0 or len(similar_repos) == 1:
+                group_key = "Other"
             else:
-                # Find most frequent topic for this repo
-                main_topic = max(topics, key=lambda t: topic_counts.get(t, 0))
-                # If topic only has one repo, move to Other
-                if topic_counts[main_topic] == 1:
-                    main_topic = "Other"
-                    
-            if main_topic not in topic_repos:
-                topic_repos[main_topic] = []
-            topic_repos[main_topic].append(repo)
-        
-        # Sort topics and repos
+                # Sort topics by frequency for consistent ordering
+                sorted_topics = sorted(
+                    common_topics, key=lambda t: (-topic_counts[t], t)
+                )
+                group_key = ", ".join(sorted_topics)
+
+            if group_key not in topic_groups:
+                topic_groups[group_key] = {"repos": [], "topics": common_topics}
+            topic_groups[group_key]["repos"].extend(similar_repos)
+            processed_repos.add(repo["name"])
+
+        # Generate markdown
         sections_md = []
-        sorted_topics = sorted(topic_repos.keys())
-        if "Other" in sorted_topics:
-            sorted_topics.remove("Other")
-            sorted_topics.append("Other")
-        
-        for topic in sorted_topics:
-            repos = topic_repos[topic]
-            repos.sort(key=lambda x: x["name"].lower())
-            
-            sections_md.append(f"\n## {topic}")
+        sorted_groups = sorted(topic_groups.keys())
+        if "Other" in sorted_groups:
+            sorted_groups.remove("Other")
+            sorted_groups.append("Other")
+
+        for group in sorted_groups:
+            repos = topic_groups[group]["repos"]
+            repos.sort(key=lambda x: (-x["commit_count"], x["name"].lower()))
+
+            sections_md.append(f"\n## {group}")
             for repo in repos:
                 section_md = f"- [{repo['name']}]({repo['url']}/commits) {repo['commit_count']}: {repo['summary']}"
                 sections_md.append(section_md)
