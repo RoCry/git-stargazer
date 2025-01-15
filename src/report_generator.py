@@ -131,7 +131,7 @@ If nothing meaningful, just return `NONE`.
                 continue
             if not repo["summary"]:
                 continue
-            section_md = f"- [{repo['name']}]({repo['url']}) {repo['commit_count']}: {repo['summary']}"
+            section_md = f"- [{repo['name']}]({repo['url']}/commits) {repo['commit_count']}: {repo['summary']}"
             sections_md.append(section_md)
 
         return (
