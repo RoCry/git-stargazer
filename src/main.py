@@ -8,11 +8,15 @@ from github_client import GitHubClient, RateLimitException
 from report_generator import ReportGenerator
 from cache_manager import CacheManager, COMMITS_DEFAULT_SINCE_DAYS
 from log import logger
-from datetime import datetime, timedelta, timezone
+
 from dotenv import load_dotenv
 
 load_dotenv()  # take environment variables from .env.
 
+# Get TODAY from environment variable
+TODAY = os.getenv("TODAY")
+if not TODAY:
+    raise ValueError("TODAY environment variable is required")
 
 # returns (github_token, repo_limit, is_in_github_actions)
 def get_configuration() -> tuple[str, int, bool]:
@@ -29,9 +33,8 @@ def get_configuration() -> tuple[str, int, bool]:
 # returns (report_json_file_path, report_file_path)
 def setup_report_files() -> tuple[str, str]:
     """Set up report file paths"""
-    today_data_str = datetime.now().strftime("%Y-%m-%d")
-    report_json_file = f"reports/recent_commits_{today_data_str}.json"
-    report_file = f"reports/recent_commits_{today_data_str}.md"
+    report_json_file = f"reports/recent_commits_{TODAY}.json"
+    report_file = f"reports/recent_commits_{TODAY}.md"
     return report_json_file, report_file
 
 

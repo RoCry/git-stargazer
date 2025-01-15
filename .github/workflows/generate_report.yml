@@ -43,6 +43,12 @@ jobs:
         restore-keys: |
           report-cache-
     
+    - name: Set TODAY variable
+      id: set_date
+      run: |
+        echo "TODAY=$(TZ=Asia/Shanghai date +'%Y-%m-%d')" >> $GITHUB_ENV
+        echo "TODAY=$(TZ=Asia/Shanghai date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+
     - name: Generate report
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}  # required
@@ -67,8 +73,9 @@ jobs:
     - name: Create Release
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+        TODAY: ${{ env.TODAY }}
       run: |
-        DATE=$(date +'%Y-%m-%d')
+        DATE=$TODAY
         
         # Delete existing release if it exists
         gh release delete "${DATE}" --yes || true
