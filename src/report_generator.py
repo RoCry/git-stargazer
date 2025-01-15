@@ -197,7 +197,16 @@ If nothing meaningful, just return `NONE`.
             repos = topic_groups[group]["repos"]
             repos.sort(key=lambda x: (-x["commit_count"], x["name"].lower()))
 
-            sections_md.append(f"\n## {group}")
+            if group == "Other":
+                sections_md.append(f"\n## {group}")
+            else:
+                # Create topic links for non-Other groups
+                topics = [
+                    f"[{topic}](https://github.com/topics/{topic})"
+                    for topic in group.split(", ")
+                ]
+                sections_md.append(f"\n## {', '.join(topics)}")
+
             for repo in repos:
                 section_md = f"- [{repo['name']}]({repo['url']}/commits) {repo['commit_count']}: {repo['summary']}"
                 sections_md.append(section_md)
