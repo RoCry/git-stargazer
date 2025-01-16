@@ -190,7 +190,7 @@ If nothing meaningful, just return `NONE`.
             sections.append(header)
 
             sections.extend(
-                f"- [{r['name']}]({r['url']}/commits) {r['commit_count']}: {r['summary']}"
+                f"- [{r['name']}]({r['url']}) [{r['commit_count']}]({r['url']}/commits): {r['summary']}"
                 for r in repos
             )
 
