@@ -167,11 +167,12 @@ class GitHubClient:
             ]
 
         # If we're using a cached timestamp, remove the last known commit to avoid duplication
-        if since_timestamp and commits:
-            commits = [
-                commit
-                for commit in commits
-                if commit["commit"]["committer"]["date"] != since_timestamp.isoformat()
-            ]
+        # seems we don't need this, since we're using the headers to get the last modified date
+        # if since_timestamp and commits:
+        #     commits = [
+        #         commit
+        #         for commit in commits
+        #         if commit["commit"]["committer"]["date"] != since_timestamp.isoformat()
+        #     ]
 
         return commits, last_modified
