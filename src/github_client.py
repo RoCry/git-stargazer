@@ -41,6 +41,7 @@ class GitHubClient:
         exclude_repo_names: Optional[set[str]],
         total_limit: int = 10,
         sort="updated",
+        direction="desc",
     ) -> List[Dict]:
         """Fetch starred repositories for the authenticated user with pagination"""
         all_repos = []
@@ -50,7 +51,7 @@ class GitHubClient:
         while len(all_repos) < total_limit:
             response = await self.client.get(
                 f"{self.base_url}/user/starred",
-                params={"per_page": per_page, "page": page, "sort": sort},
+                params={"per_page": per_page, "page": page, "sort": sort, "direction": direction},
             )
             response.raise_for_status()
 
