@@ -30,6 +30,10 @@ class GitHubClient:
     async def print_rate_limit(self):
         response = await self.client.get(f"{self.base_url}/rate_limit")
         logger.info(response.text)
+    
+    async def unstar_repo(self, repo_full_name: str):
+        response = await self.client.delete(f"{self.base_url}/user/starred/{repo_full_name}")
+        response.raise_for_status()
 
     async def get_repo(self, fullname: str) -> Dict:
         response = await self.client.get(f"{self.base_url}/repos/{fullname}")
