@@ -49,9 +49,17 @@ class GitHubClient:
         per_page = min(100, total_limit)  # GitHub's max per_page is 100
 
         while len(all_repos) < total_limit:
+            logger.debug(
+                f"Fetching /user/starred page={page}, per_page={per_page}, sort={sort}, direction={direction}"
+            )
             response = await self.client.get(
                 f"{self.base_url}/user/starred",
-                params={"per_page": per_page, "page": page, "sort": sort, "direction": direction},
+                params={
+                    "per_page": per_page,
+                    "page": page,
+                    "sort": sort,
+                    "direction": direction,
+                },
             )
             response.raise_for_status()
 
@@ -59,9 +67,12 @@ class GitHubClient:
             if not repos:  # No more repos to fetch
                 break
 
-            repos = [
-                repo for repo in repos if repo["full_name"] not in exclude_repo_names
-            ]
+            if exclude_repo_names:
+                repos = [
+                    repo
+                    for repo in repos
+                    if repo["full_name"] not in exclude_repo_names
+                ]
 
             all_repos.extend(repos)
             page += 1
@@ -72,7 +83,7 @@ class GitHubClient:
                 per_page = remaining
 
         logger.info(
-            f"Fetched {len(all_repos)} starred repos, excluding {len(exclude_repo_names)}, total limit: {total_limit}"
+            f"Fetched {len(all_repos)} starred repos, excluding {len(exclude_repo_names) if exclude_repo_names else 0}, total limit: {total_limit}"
         )
         return all_repos[:total_limit]
 
