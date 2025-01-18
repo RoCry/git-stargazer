@@ -97,12 +97,12 @@ class GitHubClient:
     ]:  # Modified return type to include timestamp
         last_modified = None
 
-        t = (
+        must_since_timestamp = (
             since_timestamp
             if since_timestamp
             else (datetime.now() - timedelta(days=COMMITS_DEFAULT_SINCE_DAYS))
         )
-        http_modified_since = t.strftime("%a, %d %b %Y %H:%M:%S GMT")
+        http_modified_since = must_since_timestamp.strftime("%a, %d %b %Y %H:%M:%S GMT")
 
         # parameter interfere with 304 responses, so we use headers to get better performance
         # params["since"] = since_timestamp.isoformat()
@@ -165,6 +165,15 @@ class GitHubClient:
             commits = [
                 commit for commit in commits if not self._is_commit_from_bot(commit)
             ]
+
+        # remove the commits before must_since_timestamp.
+        # since we're using the headers to get the last modified date and github will return more commits
+        must_since_ts = must_since_timestamp.timestamp()
+        commits = [
+            commit
+            for commit in commits
+            if datetime.fromisoformat(commit["commit"]["committer"]["date"]).timestamp() >= must_since_ts
+        ]
 
         # If we're using a cached timestamp, remove the last known commit to avoid duplication
         # seems we don't need this, since we're using the headers to get the last modified date
