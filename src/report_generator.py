@@ -196,7 +196,6 @@ If nothing meaningful, just return `NONE`.
 
         return (
             "# Recent Activity in Starred Repositories\n"
-            f"_Tracking {json_report['active_repos_count']}/{json_report['total_repos_count']} "
-            f"repos with {json_report['total_commits_count']} new commits_\n"
+            f"_{json_report['active_repos_count']} active repos with {json_report['total_commits_count']} new commits_\n"
             + "\n".join(sections)
         )
