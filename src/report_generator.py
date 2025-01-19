@@ -15,11 +15,14 @@ class ReportGenerator:
         """Generate a minimalistic summary for a single repository and its recent commits"""
         if not commits:
             return ""
-        # if there's only one commit, just return the message
-        if len(commits) == 1:
-            return commits[0]["commit"]["message"]
 
-        commits_str = self._format_commits(commits)
+        lines_of_commits = self._format_commits(commits)
+
+        # if there's only one commit, just return the message
+        if len(lines_of_commits) == 1:
+            return lines_of_commits[0]
+        
+        bullet_commits_str = "\n".join([f"- {c}" for c in lines_of_commits])
 
         prompt = f"""
 Repository: {repo_data["full_name"]}
@@ -27,17 +30,17 @@ Description: {repo_data.get("description", "No description")}
 Recent commits: {len(commits)}
 
 Commit details:
-{commits_str}
+{bullet_commits_str}
 
 Please generate `<EXACTLY ONE emoji> <minimalistic title with no more than 80 characters>` to summarize the recent commit messages above.
 If nothing meaningful, just return `NONE`.
         """
 
-        lines = commits_str.split("\n")
         commits_compact_str = (
-            "\n".join(lines)
-            if len(lines) < 5
-            else "\n".join(lines[:2]) + f"\n... and {len(lines) - 2} more commits ..."
+            "\n".join(lines_of_commits)
+            if len(lines_of_commits) < 5
+            else "\n".join(lines_of_commits[:2])
+            + f"\n... and {len(lines_of_commits) - 2} more commits ..."
         )
         logger.info(
             f"Generating summary for {repo_data['full_name']}, commits:\n{commits_compact_str}"
@@ -55,7 +58,7 @@ If nothing meaningful, just return `NONE`.
         summary = summary.strip('"')
         return summary
 
-    def _format_commits(self, commits: List[Dict]) -> str:
+    def _format_commits(self, commits: List[Dict]) -> List[str]:
         """Format commits for the prompt"""
 
         def __simplify_commit(commit: Dict) -> Optional[str]:
@@ -64,10 +67,10 @@ If nothing meaningful, just return `NONE`.
                 return None
             if "\n" in m:
                 m = m.split("\n")[0]
-            return f"- {m}"
+            return m
 
         # only using top 20 commits for now
-        return "\n".join(filter(None, map(__simplify_commit, commits[:20])))
+        return list(filter(None, map(__simplify_commit, commits[:20])))
 
     async def generate_report_json(
         self,

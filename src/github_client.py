@@ -31,6 +31,11 @@ class GitHubClient:
         response = await self.client.get(f"{self.base_url}/rate_limit")
         logger.info(response.text)
 
+    async def get_repo(self, fullname: str) -> Dict:
+        response = await self.client.get(f"{self.base_url}/repos/{fullname}")
+        response.raise_for_status()
+        return response.json()
+
     async def get_starred_repos(
         self,
         exclude_repo_names: Optional[set[str]],
