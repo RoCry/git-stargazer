@@ -2,7 +2,7 @@ name: Generate Starred Repos Report
 
 on:
   schedule:
-    - cron: '0 20 * * *'  # Run daily at 4am UTC+8
+    - cron: '0 22 * * *'  # Run daily at 6am UTC+8
   workflow_dispatch:  # Allow manual trigger
   push:
     branches:
