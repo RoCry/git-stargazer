@@ -71,16 +71,13 @@ jobs:
         key: report-cache-${{ github.run_id }}
     
     - name: Create Release
+      uses: softprops/action-gh-release@v2
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
-        TODAY: ${{ env.TODAY }}
-      run: |
-        DATE=$TODAY
-        
-        # Delete existing release if it exists
-        gh release delete "${DATE}" --yes || true
-        
-        # Create a new release using the report file content
-        gh release create "${DATE}" \
-          --title "Activity Report ${DATE}" \
-          --notes-file "${{ steps.generate_report.outputs.report_file }}"
+      with:
+        name: "Activity Report ${{ env.TODAY }}"
+        tag_name: ${{ env.TODAY }}
+        body_path: ${{ steps.generate_report.outputs.report_file }}
+        files: |
+          ${{ steps.generate_report.outputs.report_file }}
+          ${{ steps.generate_report.outputs.report_json_file }}
