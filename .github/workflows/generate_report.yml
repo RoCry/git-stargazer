@@ -4,16 +4,20 @@ on:
   schedule:
     - cron: '30 22 * * *'  # Run daily at 6:30am UTC+8
   workflow_dispatch:  # Allow manual trigger
-  push:
-    branches:
-      - master
+  # push:
+  #   branches:
+  #     - master
 
 jobs:
   generate-report:
     runs-on: ubuntu-latest
-    
+    permissions:
+      contents: write
+      
     steps:
     - uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.RELEASE_TOKEN }}
 
     - name: Install uv
       uses: astral-sh/setup-uv@v5
@@ -81,3 +85,29 @@ jobs:
         files: |
           ${{ steps.generate_report.outputs.report_file }}
           ${{ steps.generate_report.outputs.report_json_file }}
+
+    - name: Create latest symbolic link
+      run: |
+        cp ${{ steps.generate_report.outputs.report_json_file }} reports/recent_commits_latest.json
+
+    - name: Copy latest report to docs
+      run: |
+        cp reports/recent_commits_latest.json docs/recent_commits_latest.json
+
+    - name: Upload latest report
+      uses: softprops/action-gh-release@v2
+      env:
+        GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+      with:
+        tag_name: latest
+        files: |
+          reports/recent_commits_latest.json
+        prerelease: true
+
+    - name: Commit and push if there are changes
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add docs/recent_commits_latest.json
+        git commit -m "Update docs/recent_commits_latest.json" || exit 0
+        git push

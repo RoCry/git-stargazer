@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Stargazer Report</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .repo-group {
+            margin-bottom: 30px;
+        }
+        .repo-group h2 {
+            color: #0366d6;
+            border-bottom: 2px solid #e1e4e8;
+            padding-bottom: 8px;
+            margin-bottom: 16px;
+        }
+        .repo-item {
+            margin-bottom: 12px;
+            padding: 12px;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+        }
+        .repo-item:hover {
+            background-color: #f6f8fa;
+        }
+        .repo-name {
+            color: #0366d6;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .commit-count {
+            color: #586069;
+            font-size: 0.9em;
+        }
+        .summary {
+            margin-top: 4px;
+            color: #24292e;
+        }
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #586069;
+        }
+        .error {
+            color: #cb2431;
+            text-align: center;
+            padding: 20px;
+        }
+        .meta-info {
+            text-align: center;
+            color: #586069;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Git Stargazer Report</h1>
+        <div id="meta-info" class="meta-info"></div>
+        <div id="content">
+            <div class="loading">Loading latest report...</div>
+        </div>
+    </div>
+
+    <script>
+async function fetchLatestRelease() {
+    try {
+        // Fetch the latest report from the local path
+        const reportResponse = await fetch('recent_commits_latest.json');
+        if (!reportResponse.ok) {
+            throw new Error(`Failed to fetch report data: ${reportResponse.status}`);
+        }
+        const reportData = await reportResponse.json();
+        
+        return reportData;
+    } catch (error) {
+        console.error('Error fetching latest release:', error);
+        throw error;
+    }
+}
+
+function renderReport(data) {
+    const metaInfo = document.getElementById('meta-info');
+    const content = document.getElementById('content');
+    
+    // Update meta info
+    metaInfo.textContent = `${data.active_repos_count} active repos with ${data.total_commits_count} new commits`;
+    
+    // Group repos by topics
+    const repoGroups = {};
+    data.repos.forEach(repo => {
+        if (repo.commit_count === 0) return; // Skip inactive repos
+        
+        let groupKey = 'Other';
+        if (repo.topics && repo.topics.length > 0) {
+            // Filter out 'hacktoberfest' from topics
+            const relevantTopics = repo.topics.filter(t => t !== 'hacktoberfest');
+            if (relevantTopics.length > 0) {
+                groupKey = relevantTopics.join(', ');
+            }
+        }
+        
+        if (!repoGroups[groupKey]) {
+            repoGroups[groupKey] = [];
+        }
+        repoGroups[groupKey].push(repo);
+    });
+    
+    // Generate HTML
+    const html = Object.entries(repoGroups)
+        .map(([group, repos]) => {
+            const reposHtml = repos
+                .sort((a, b) => b.commit_count - a.commit_count)
+                .map(repo => `
+                    <div class="repo-item">
+                        <a href="${repo.url}" class="repo-name" target="_blank">${repo.name}</a>
+                        <span class="commit-count">[${repo.commit_count} commits]</span>
+                        ${repo.summary ? `<div class="summary">${repo.summary}</div>` : ''}
+                    </div>
+                `).join('');
+            
+            return `
+                <div class="repo-group">
+                    <h2>${group}</h2>
+                    ${reposHtml}
+                </div>
+            `;
+        }).join('');
+    
+    content.innerHTML = html;
+}
+
+// Initialize
+fetchLatestRelease()
+    .then(renderReport)
+    .catch(error => {
+        document.getElementById('content').innerHTML = `
+            <div class="error">
+                Error loading report: ${error.message}
+            </div>
+        `;
+    });
+    </script>
+</body>
+</html>
