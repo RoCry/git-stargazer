@@ -21,7 +21,7 @@ class ReportGenerator:
         # if there's only one commit, just return the message
         if len(lines_of_commits) == 1:
             return lines_of_commits[0]
-        
+
         bullet_commits_str = "\n".join([f"- {c}" for c in lines_of_commits])
 
         prompt = f"""
@@ -137,17 +137,18 @@ If nothing meaningful, just return `NONE`.
         topic_groups = {"Other": {"repos": [], "topics": set()}}
         processed = set()
 
-        # Build topic frequency map
+        # Build topic frequency map, excluding 'hacktoberfest'
         for repo in active_repos:
             for topic in repo.get("topics", []):
-                topic_freq[topic] = topic_freq.get(topic, 0) + 1
+                if topic != "hacktoberfest":
+                    topic_freq[topic] = topic_freq.get(topic, 0) + 1
 
         # Group repositories by common topics
         for i, repo in enumerate(active_repos):
             if repo["name"] in processed:
                 continue
 
-            topics = set(repo.get("topics", []))
+            topics = set(t for t in repo.get("topics", []) if t != "hacktoberfest")
             if not topics:
                 topic_groups["Other"]["repos"].append(repo)
                 processed.add(repo["name"])

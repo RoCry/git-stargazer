@@ -30,9 +30,11 @@ class GitHubClient:
     async def print_rate_limit(self):
         response = await self.client.get(f"{self.base_url}/rate_limit")
         logger.info(response.text)
-    
+
     async def unstar_repo(self, repo_full_name: str):
-        response = await self.client.delete(f"{self.base_url}/user/starred/{repo_full_name}")
+        response = await self.client.delete(
+            f"{self.base_url}/user/starred/{repo_full_name}"
+        )
         response.raise_for_status()
 
     async def get_repo(self, fullname: str) -> Dict:
@@ -193,7 +195,8 @@ class GitHubClient:
         commits = [
             commit
             for commit in commits
-            if datetime.fromisoformat(commit["commit"]["committer"]["date"]).timestamp() >= must_since_ts
+            if datetime.fromisoformat(commit["commit"]["committer"]["date"]).timestamp()
+            >= must_since_ts
         ]
 
         # If we're using a cached timestamp, remove the last known commit to avoid duplication
