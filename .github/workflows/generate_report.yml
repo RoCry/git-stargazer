@@ -81,3 +81,17 @@ jobs:
         files: |
           ${{ steps.generate_report.outputs.report_file }}
           ${{ steps.generate_report.outputs.report_json_file }}
+
+    - name: Create latest symbolic link
+      run: |
+        cp ${{ steps.generate_report.outputs.report_json_file }} reports/recent_commits_latest.json
+
+    - name: Upload latest report
+      uses: softprops/action-gh-release@v2
+      env:
+        GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+      with:
+        tag_name: latest
+        files: |
+          reports/recent_commits_latest.json
+        prerelease: true
