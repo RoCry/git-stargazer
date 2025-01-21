@@ -107,18 +107,10 @@ jobs:
           reports/recent_commits_latest.md
         prerelease: true
 
-    - name: Create and switch to pages branch
+    - name: Force update pages branch
       run: |
-        git fetch origin pages || true
-        if git rev-parse --verify origin/pages >/dev/null 2>&1; then
-          git checkout pages
-          git pull origin pages
-        else
-          git checkout -b pages
-        fi
-        
-    - name: Commit and push changes
-      run: |
+        git branch -D pages || true
+        git checkout -b pages
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         git add docs/recent_commits_latest.json docs/recent_commits_latest.md
