@@ -4,9 +4,9 @@ on:
   schedule:
     - cron: '30 22 * * *'  # Run daily at 6:30am UTC+8
   workflow_dispatch:  # Allow manual trigger
-  push:
-    branches:
-      - master
+  # push:
+  #   branches:
+  #     - master
 
 jobs:
   generate-report:
