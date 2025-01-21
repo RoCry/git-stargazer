@@ -108,15 +108,36 @@ function renderReport(data) {
     
     // Group repos by topics
     const repoGroups = {};
+    const topicFreq = {};
+    
+    // First, build topic frequency map
     data.repos.forEach(repo => {
-        if (repo.commit_count === 0) return; // Skip inactive repos
+        if (repo.commit_count === 0) return;
+        if (repo.topics) {
+            repo.topics.forEach(topic => {
+                if (topic !== 'hacktoberfest') {
+                    topicFreq[topic] = (topicFreq[topic] || 0) + 1;
+                }
+            });
+        }
+    });
+    
+    // Then group repos
+    data.repos.forEach(repo => {
+        if (repo.commit_count === 0) return;
         
         let groupKey = 'Other';
         if (repo.topics && repo.topics.length > 0) {
-            // Filter out 'hacktoberfest' from topics
-            const relevantTopics = repo.topics.filter(t => t !== 'hacktoberfest');
+            // Filter out 'hacktoberfest' and find topics that appear more than once
+            const relevantTopics = repo.topics
+                .filter(t => t !== 'hacktoberfest' && topicFreq[t] > 1);
+            
             if (relevantTopics.length > 0) {
-                groupKey = relevantTopics.join(', ');
+                groupKey = relevantTopics.sort((a, b) => {
+                    // Sort by frequency (descending) and then alphabetically
+                    const freqDiff = topicFreq[b] - topicFreq[a];
+                    return freqDiff !== 0 ? freqDiff : a.localeCompare(b);
+                }).join(', ');
             }
         }
         
