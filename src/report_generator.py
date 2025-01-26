@@ -8,9 +8,14 @@ from log import logger
 class ReportGenerator:
     def __init__(self, model: str = None, api_key: str = None):
         self.model = model or os.getenv("LLM_MODEL", "deepseek/deepseek-chat")
-        check = validate_environment(self.model)
-        if not check["keys_in_environment"]:
-            raise ValueError(f"Missing keys in environment: {check['missing_keys']}")
+        try:
+            check = validate_environment(self.model)
+            if not check["keys_in_environment"]:
+                self.model = None
+                logger.warning("LLM model not available, will use commit message as summary")
+        except Exception as e:
+            self.model = None
+            logger.warning(f"Failed to initialize LLM model: {e}, will use commit message as summary")
 
     async def generate_repo_summary(self, repo_data: Dict, commits: List[Dict]) -> str:
         """Generate a minimalistic summary for a single repository and its recent commits"""
@@ -24,6 +29,10 @@ class ReportGenerator:
             return lines_of_commits[0]
 
         bullet_commits_str = "\n".join([f"- {c}" for c in lines_of_commits])
+
+        # If LLM is not available, just return the first commit message
+        if not self.model:
+            return lines_of_commits[0] if lines_of_commits else ""
 
         prompt = f"""
 Repository: {repo_data["full_name"]}
