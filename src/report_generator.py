@@ -132,7 +132,7 @@ If nothing meaningful, just return `NONE`.
             "version": "https://jsonfeed.org/version/1.1",
             "title": "GitHub Starred Repositories Activity",
             "home_page_url": "https://github.com/RoCry/git-stargazer/releases/latest",
-            "feed_url": "https://github.com/RoCry/git-stargazer/releases/download/2025-01-26/recent_commits_2025-01-26.json",
+            "feed_url": "https://github.com/RoCry/git-stargazer/releases/download/latest/feed.json",
             "items": []
         }
 

@@ -177,7 +177,7 @@ def save_reports(
 
     # Save RSS feed
     feed_json = ReportGenerator.generate_rss_feed(report_json)
-    feed_file = "reports/recent_commits_feed.json"
+    feed_file = "reports/feed.json"
     with open(feed_file, "w") as f:
         json.dump(feed_json, f, ensure_ascii=False, indent=2)
 

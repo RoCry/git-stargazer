@@ -85,6 +85,7 @@ jobs:
         files: |
           ${{ steps.generate_report.outputs.report_file }}
           ${{ steps.generate_report.outputs.report_json_file }}
+          reports/feed.json
 
     - name: Create latest symbolic links
       run: |
@@ -105,6 +106,7 @@ jobs:
         files: |
           reports/recent_commits_latest.json
           reports/recent_commits_latest.md
+          reports/feed.json
         prerelease: true
 
     - name: Force update pages branch
