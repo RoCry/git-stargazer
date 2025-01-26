@@ -1,5 +1,6 @@
 from typing import List, Dict, Optional
 import os
+from datetime import datetime
 from litellm import acompletion, validate_environment
 from log import logger
 
@@ -123,6 +124,31 @@ If nothing meaningful, just return `NONE`.
             + right["total_commits_count"],
             "repos": left["repos"] + right["repos"],
         }
+
+    @staticmethod
+    def generate_rss_feed(json_report: Dict) -> Dict:
+        """Generate RSS feed from report data dictionary"""
+        feed = {
+            "version": "https://jsonfeed.org/version/1.1",
+            "title": "GitHub Starred Repositories Activity",
+            "home_page_url": "https://github.com/RoCry/git-stargazer/releases/latest",
+            "feed_url": "https://github.com/RoCry/git-stargazer/releases/download/2025-01-26/recent_commits_2025-01-26.json",
+            "items": []
+        }
+
+        for repo in json_report.get("repos", []):
+            if repo.get("commit_count", 0) > 0 and repo.get("summary"):
+                item = {
+                    "id": repo["url"],
+                    "url": f"{repo['url']}/commits",
+                    "title": repo["name"],
+                    "content_text": f"{repo['summary']} ({repo['commit_count']} new commits)",
+                    "date_published": datetime.now().isoformat(),
+                    "tags": repo.get("topics", [])
+                }
+                feed["items"].append(item)
+
+        return feed
 
     @staticmethod
     def json_report_to_markdown(json_report: Dict) -> str:

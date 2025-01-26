@@ -175,11 +175,18 @@ def save_reports(
     with open(report_file, "w") as f:
         f.write(ReportGenerator.json_report_to_markdown(report_json))
 
+    # Save RSS feed
+    feed_json = ReportGenerator.generate_rss_feed(report_json)
+    feed_file = "reports/recent_commits_feed.json"
+    with open(feed_file, "w") as f:
+        json.dump(feed_json, f, ensure_ascii=False, indent=2)
+
     # Set GitHub Actions output if running in CI
     if IS_IN_GITHUB_ACTIONS:
         with open(os.environ["GITHUB_OUTPUT"], "a") as f:
             f.write(f"report_file={report_file}\n")
             f.write(f"report_json_file={report_json_file}\n")
+            f.write(f"feed_file={feed_file}\n")
 
 
 async def main():
