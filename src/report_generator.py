@@ -12,10 +12,14 @@ class ReportGenerator:
             check = validate_environment(self.model)
             if not check["keys_in_environment"]:
                 self.model = None
-                logger.warning("LLM model not available, will use commit message as summary")
+                logger.warning(
+                    "LLM model not available, will use commit message as summary"
+                )
         except Exception as e:
             self.model = None
-            logger.warning(f"Failed to initialize LLM model: {e}, will use commit message as summary")
+            logger.warning(
+                f"Failed to initialize LLM model: {e}, will use commit message as summary"
+            )
 
     async def generate_repo_summary(self, repo_data: Dict, commits: List[Dict]) -> str:
         """Generate a minimalistic summary for a single repository and its recent commits"""
@@ -100,12 +104,21 @@ If nothing meaningful, just return `NONE`.
             total_commits_count += len(commits)
             active_repos_count += 1
             summary = await self.generate_repo_summary(repo, commits)
+            simple_commits = [
+                {
+                    "sha": c["sha"],
+                    "message": c["commit"]["message"],
+                    "date": c["commit"]["author"]["date"],
+                }
+                for c in commits
+            ]
 
             item = {
                 "name": repo["full_name"],
                 "url": repo["html_url"],
                 "commit_count": len(commits),
                 "summary": summary,
+                "commits": simple_commits,
             }
             if repo["topics"]:
                 item["topics"] = repo["topics"]
@@ -142,20 +155,39 @@ If nothing meaningful, just return `NONE`.
             "title": "GitHub Starred Repositories Activity",
             "home_page_url": "https://github.com/RoCry/git-stargazer/releases/latest",
             "feed_url": "https://github.com/RoCry/git-stargazer/releases/download/latest/feed.json",
-            "items": []
+            "items": [],
         }
 
         for repo in json_report.get("repos", []):
-            if repo.get("commit_count", 0) > 0 and repo.get("summary"):
-                item = {
-                    "id": repo["url"],
-                    "url": f"{repo['url']}/commits",
-                    "title": repo["name"],
-                    "content_text": f"{repo['summary']} ({repo['commit_count']} new commits)",
-                    "date_published": datetime.now().isoformat(),
-                    "tags": repo.get("topics", [])
-                }
-                feed["items"].append(item)
+            if repo.get("commit_count", 0) == 0:
+                continue
+
+            commit_url = f"{repo['url']}/commits"
+            title = repo["name"]
+            content_lines = [
+                f"# {repo['name']}",
+                f"_[{repo['commit_count']} commits]({commit_url})_\n",
+            ]
+            if repo.get("summary"):
+                title += f": {repo['summary']}"
+                content_lines.append(f"### {repo['summary']}\n")
+            else:
+                title += f": {repo['commit_count']} commits"
+            for commit in repo.get("commits", []):
+                if not commit.get("message"):
+                    continue
+                content_lines.append(
+                    f"- {commit['message']} [{commit['sha'][:7]}]({repo['url']}/commit/{commit['sha']})"
+                )
+            item = {
+                "id": repo["url"],
+                "url": repo["url"],
+                "title": title,
+                "content_text": "\n".join(content_lines),
+                "date_published": datetime.now().isoformat(),
+                "tags": repo.get("topics", []),
+            }
+            feed["items"].append(item)
 
         return feed
 
