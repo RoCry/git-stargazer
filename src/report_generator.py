@@ -21,22 +21,16 @@ class ReportGenerator:
                 f"Failed to initialize LLM model: {e}, will use commit message as summary"
             )
 
-    async def generate_repo_summary(self, repo_data: Dict, commits: List[Dict]) -> str:
-        """Generate a minimalistic summary for a single repository and its recent commits"""
-        if not commits:
-            return ""
+    async def generate_repo_summary(self, repo_data: Dict, commits: List[Dict]) -> Optional[str]:
+        # if LLM is not available, no summary
+        if not self.model:
+            return None
+        # if there's only one commit, no summary
+        if len(lines_of_commits) == 1:
+            return None
 
         lines_of_commits = self._format_commits(commits)
-
-        # if there's only one commit, just return the message
-        if len(lines_of_commits) == 1:
-            return lines_of_commits[0]
-
         bullet_commits_str = "\n".join([f"- {c}" for c in lines_of_commits])
-
-        # If LLM is not available, just return the first commit message
-        if not self.model:
-            return lines_of_commits[0] if lines_of_commits else ""
 
         prompt = f"""
 Repository: {repo_data["full_name"]}
@@ -64,8 +58,8 @@ If nothing meaningful, just return `NONE`.
         )
 
         summary = response.choices[0].message.content
-        if summary == "NONE":
-            return ""
+        if summary.upper() == "NONE":
+            return None
         summary = summary.strip()
         # remove start and end quotes/backticks
         summary = summary.strip("`")
@@ -198,7 +192,7 @@ If nothing meaningful, just return `NONE`.
             return "# Recent Activity in Starred Repositories\nNo recent activity found in starred repositories."
 
         active_repos = [
-            r for r in json_report["repos"] if r["commit_count"] > 0 and r["summary"]
+            r for r in json_report["repos"] if r["commit_count"] > 0
         ]
         topic_freq = {}
         topic_groups = {"Other": {"repos": [], "topics": set()}}
@@ -260,10 +254,17 @@ If nothing meaningful, just return `NONE`.
             )
             sections.append(header)
 
-            sections.extend(
-                f"- [{r['name']}]({r['url']}) [{r['commit_count']}]({r['url']}/commits): {r['summary']}"
-                for r in repos
-            )
+            for repo in repos:
+                # Get the summary message; if it doesn't exist, use the commit message from the first commit
+                message = repo.get("summary")
+                if not message:
+                    commits = repo.get("commits", [{}])
+                    message = commits[0].get("message")
+                if not message:
+                    continue
+                sections.append(
+                    f"- [{repo['name']}]({repo['url']}) [{repo['commit_count']}]({repo['url']}/commits): {message}"
+                )
 
         return (
             "# Recent Activity in Starred Repositories\n"

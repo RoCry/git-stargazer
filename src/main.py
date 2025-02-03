@@ -248,7 +248,7 @@ def _cleanup_reports_folder(
         # Skip if file was modified in last 12 hours
         if current_time - os.path.getmtime(file_path) < 12 * 3600:
             # the just updated file should be excluded
-            logger.warning(f"Skipping {file_path} as it was modified recently")
+            logger.info(f"Skipping {file_path} as it was modified recently")
             continue
 
         if dry_run:
