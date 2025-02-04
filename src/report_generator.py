@@ -25,11 +25,12 @@ class ReportGenerator:
         # if LLM is not available, no summary
         if not self.model:
             return None
+
+        lines_of_commits = self._format_commits(commits)
         # if there's only one commit, no summary
         if len(lines_of_commits) == 1:
             return None
 
-        lines_of_commits = self._format_commits(commits)
         bullet_commits_str = "\n".join([f"- {c}" for c in lines_of_commits])
 
         prompt = f"""
