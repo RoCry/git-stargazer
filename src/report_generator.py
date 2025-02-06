@@ -21,7 +21,9 @@ class ReportGenerator:
                 f"Failed to initialize LLM model: {e}, will use commit message as summary"
             )
 
-    async def generate_repo_summary(self, repo_data: Dict, commits: List[Dict]) -> Optional[str]:
+    async def generate_repo_summary(
+        self, repo_data: Dict, commits: List[Dict]
+    ) -> Optional[str]:
         # if LLM is not available, no summary
         if not self.model:
             return None
@@ -161,7 +163,7 @@ If nothing meaningful, just return `NONE`.
             title = repo["name"]
             content_lines = [
                 f"# {repo['name']}",
-                f"_[{repo['commit_count']} commits]({commit_url})_\n",
+                f"{repo['commit_count']} commits",
             ]
             content_html_lines = [
                 f"<h1>{repo['name']}</h1>",
@@ -177,9 +179,7 @@ If nothing meaningful, just return `NONE`.
                 if not commit.get("message"):
                     continue
                 commit_link = f"{repo['url']}/commit/{commit['sha']}"
-                content_lines.append(
-                    f"- {commit['message']} [{commit['sha'][:7]}]({commit_link})"
-                )
+                content_lines.append(f"- {commit['message']}")
                 content_html_lines.append(
                     f'<p>• {commit["message"]} <a href="{commit_link}"><code>{commit["sha"][:7]}</code></a></p>'
                 )
@@ -202,9 +202,7 @@ If nothing meaningful, just return `NONE`.
         if not json_report["repos"]:
             return "# Recent Activity in Starred Repositories\nNo recent activity found in starred repositories."
 
-        active_repos = [
-            r for r in json_report["repos"] if r["commit_count"] > 0
-        ]
+        active_repos = [r for r in json_report["repos"] if r["commit_count"] > 0]
         topic_freq = {}
         topic_groups = {"Other": {"repos": [], "topics": set()}}
         processed = set()
