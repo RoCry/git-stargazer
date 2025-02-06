@@ -162,8 +162,8 @@ If nothing meaningful, just return `NONE`.
             commit_url = f"{repo['url']}/commits"
             title = repo["name"]
             content_lines = [
-                f"# {repo['name']}",
-                f"{repo['commit_count']} commits",
+                f"# {repo['name']}\n",
+                f"{repo['commit_count']} commits\n",
             ]
             content_html_lines = [
                 f"<h1>{repo['name']}</h1>",
@@ -179,9 +179,10 @@ If nothing meaningful, just return `NONE`.
                 if not commit.get("message"):
                     continue
                 commit_link = f"{repo['url']}/commit/{commit['sha']}"
-                content_lines.append(f"- {commit['message']}")
+                message = commit["message"].split("\n")[0].strip()
+                content_lines.append(f"- {message}")
                 content_html_lines.append(
-                    f'<p>• {commit["message"]} <a href="{commit_link}"><code>{commit["sha"][:7]}</code></a></p>'
+                    f'<p>• {message} <a href="{commit_link}"><code>{commit["sha"][:7]}</code></a></p>'
                 )
             item = {
                 "id": repo["url"],
