@@ -163,22 +163,32 @@ If nothing meaningful, just return `NONE`.
                 f"# {repo['name']}",
                 f"_[{repo['commit_count']} commits]({commit_url})_\n",
             ]
+            content_html_lines = [
+                f"<h1>{repo['name']}</h1>",
+                f'<p><em><a href="{commit_url}">{repo["commit_count"]} commits</a></em></p>',
+            ]
             if repo.get("summary"):
                 title += f": {repo['summary']}"
                 content_lines.append(f"### {repo['summary']}\n")
+                content_html_lines.append(f"<h3>{repo['summary']}</h3>")
             else:
                 title += f": {repo['commit_count']} commits"
             for commit in repo.get("commits", []):
                 if not commit.get("message"):
                     continue
+                commit_link = f"{repo['url']}/commit/{commit['sha']}"
                 content_lines.append(
-                    f"- {commit['message']} [{commit['sha'][:7]}]({repo['url']}/commit/{commit['sha']})"
+                    f"- {commit['message']} [{commit['sha'][:7]}]({commit_link})"
+                )
+                content_html_lines.append(
+                    f'<p>• {commit["message"]} <a href="{commit_link}"><code>{commit["sha"][:7]}</code></a></p>'
                 )
             item = {
                 "id": repo["url"],
                 "url": repo["url"],
                 "title": title,
                 "content_text": "\n".join(content_lines),
+                "content_html": "\n".join(content_html_lines),
                 "date_published": datetime.now().isoformat(),
                 "tags": repo.get("topics", []),
             }
