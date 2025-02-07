@@ -165,12 +165,7 @@ If nothing meaningful, just return `NONE`.
                 f"# {repo['name']}\n",
                 f"{repo['commit_count']} commits\n",
             ]
-            content_html_lines = [
-                '<div class="repo-header">',
-                f"<h1>{repo['name']}</h1>",
-                f'<p><em><a href="{commit_url}">{repo["commit_count"]} commits</a></em></p>',
-                '</div>'
-            ]
+            content_html_lines = []
             if repo.get("summary"):
                 title += f": {repo['summary']}"
                 content_lines.append(f"### {repo['summary']}\n")
@@ -179,8 +174,6 @@ If nothing meaningful, just return `NONE`.
                     f"<h3>{repo['summary']}</h3>",
                     '</div>'
                 ])
-            else:
-                title += f": {repo['commit_count']} commits"
 
             # Start commits section
             content_html_lines.append('<div class="commit-list">')
@@ -194,6 +187,13 @@ If nothing meaningful, just return `NONE`.
                     f'<div class="commit-item">• {message} <a href="{commit_link}"><code>{commit["sha"][:7]}</code></a></div>'
                 )
             content_html_lines.append('</div>')  # End commits section
+
+            # Add footer at the bottom
+            content_html_lines.extend([
+                '<div class="repo-footer">',
+                f'<p><em><a href="{commit_url}">{repo["commit_count"]} commits</a></em></p>',
+                '</div>'
+            ])
 
             item = {
                 "id": repo["url"],
