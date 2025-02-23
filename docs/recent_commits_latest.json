@@ -1,0 +1,3157 @@
+{
+  "total_repos_count": 99,
+  "active_repos_count": 99,
+  "total_commits_count": 316,
+  "repos": [
+    {
+      "name": "panva/jose",
+      "url": "https://github.com/panva/jose",
+      "commit_count": 17,
+      "summary": "🔧 Refactor and document base64url, JWK, and security updates",
+      "commits": [
+        {
+          "sha": "445a525860e50089af0235180e8fa00b5669d1a9",
+          "message": "chore(release): 6.0.6",
+          "date": "2025-02-23T22:24:38Z"
+        },
+        {
+          "sha": "3b8ff717ad2054c1c50f72bcc866f08cd672b49d",
+          "message": "docs: add various exported symbol descriptions",
+          "date": "2025-02-23T22:23:34Z"
+        },
+        {
+          "sha": "fc4e7dab4c7021d5d2f23a55de93c9ed35b79cef",
+          "message": "docs: add various exported symbol descriptions",
+          "date": "2025-02-23T22:18:51Z"
+        },
+        {
+          "sha": "74f02c833e057ab419173be7b8b8140eddcfc19f",
+          "message": "docs: add various exported symbol descriptions",
+          "date": "2025-02-23T22:16:56Z"
+        },
+        {
+          "sha": "e1350eff8786b92eead82258dc2d5b9db128b523",
+          "message": "refactor: move base64url around",
+          "date": "2025-02-23T22:04:19Z"
+        },
+        {
+          "sha": "03d72c8a5578bd442190724ca05994b0856432d5",
+          "message": "docs: update base64url function descriptions",
+          "date": "2025-02-23T18:21:35Z"
+        },
+        {
+          "sha": "f6042ad05cb75b40eb2c75b389387d425e8b5334",
+          "message": "chore(release): 6.0.5",
+          "date": "2025-02-23T18:13:47Z"
+        },
+        {
+          "sha": "f52c2ff0c3edbe30b32a4c9858199bfbc9f9367e",
+          "message": "docs: add various exported symbol descriptions",
+          "date": "2025-02-23T18:12:32Z"
+        },
+        {
+          "sha": "adcad3338767b0367a8ed32f776622d1566cf4a0",
+          "message": "chore: update bug report issue template",
+          "date": "2025-02-23T13:17:20Z"
+        },
+        {
+          "sha": "d86efd15a91d9d28d9a198685046c54d6c98d942",
+          "message": "chore: add SECURITY.md",
+          "date": "2025-02-23T12:58:06Z"
+        },
+        {
+          "sha": "7b291c1f0001f469411c91b38244679019cf48a2",
+          "message": "chore: update bug report issue template",
+          "date": "2025-02-23T12:42:13Z"
+        },
+        {
+          "sha": "bb6ccfed3efd5c84c540c2a1f621b9d2951f2b84",
+          "message": "refactor(types): make JWKParameters.kty compatible with @types/node and @types/web\n\nIt is still a required property but this way the interface is compatible\nwith @types/node crypto.JsonWebKey type and @types/web WebCryptoAPI's\nJsonWebKey dictionary",
+          "date": "2025-02-23T11:16:59Z"
+        },
+        {
+          "sha": "0c74cb65c17d87ec9dcdc2eef075d0c57efeac62",
+          "message": "test: cover more of encrypt/decrypt",
+          "date": "2025-02-23T11:07:44Z"
+        },
+        {
+          "sha": "f2886ebd27adb19164bc515529f6a8618b6d897f",
+          "message": "chore(release): 6.0.4",
+          "date": "2025-02-22T23:57:51Z"
+        },
+        {
+          "sha": "92392a0aa278ecf419a8b0b6a984c72d071125ad",
+          "message": "refactor: update getSPKI to use crypto.createPublicKey when available\n\nfixes #752",
+          "date": "2025-02-22T23:23:47Z"
+        },
+        {
+          "sha": "f3ba4c715f3ff5baef624bbb62771398de488166",
+          "message": "refactor: use Double HMAC pattern for AES-CBC tag comparison\n\nfixes #752",
+          "date": "2025-02-22T22:29:36Z"
+        },
+        {
+          "sha": "8a0da6968ec2813ced80962e847a89676ef9e8af",
+          "message": "refactor: optimize base64 with tc39/proposal-arraybuffer-base64\n\nfixes #752",
+          "date": "2025-02-22T22:04:26Z"
+        }
+      ],
+      "topics": [
+        "browser",
+        "bun",
+        "cloudflare-workers",
+        "deno",
+        "hacktoberfest",
+        "jose",
+        "jsonwebtoken",
+        "jwa",
+        "jwe",
+        "jwk",
+        "jwks",
+        "jws",
+        "jwt",
+        "node"
+      ]
+    },
+    {
+      "name": "browser-use/browser-use",
+      "url": "https://github.com/browser-use/browser-use",
+      "commit_count": 30,
+      "summary": "🛠️ Refine system prompts and task handling",
+      "commits": [
+        {
+          "sha": "d7993efa4f2eb40e191024812cd696c7cc758c96",
+          "message": "updated docs",
+          "date": "2025-02-23T22:22:28Z"
+        },
+        {
+          "sha": "b81f3f423777e98e4d18eaafd3d9cf5b3b527c6f",
+          "message": "Merge pull request #829 from Varun270/Update_Doc\n\nUpdated the incorrect redirecting link for Langchain Models",
+          "date": "2025-02-23T21:54:53Z"
+        },
+        {
+          "sha": "bd94288c84431041af04b87467a8863d7c930e22",
+          "message": "Merge pull request #831 from D-Yuva/patch-2\n\nCreate README.md",
+          "date": "2025-02-23T21:54:29Z"
+        },
+        {
+          "sha": "40a9243cbe8c979c9c323cfa51d5439d81f885e6",
+          "message": "Merge pull request #840 from browser-use/system-prompt-interface\n\nAdd flexible system prompt customization options",
+          "date": "2025-02-23T20:25:58Z"
+        },
+        {
+          "sha": "2a6416f2722be97e6633196362b4ee524c38e750",
+          "message": "Add flexible system prompt customization options\n\n- Modify SystemPrompt class to support optional system message override and extension\n- Update Agent and AgentSettings to include new system prompt customization parameters\n- Update documentation and example to demonstrate new system prompt customization methods\n- Remove deprecated system_prompt_class parameter\n- Provide two ways to customize system prompt: extend or override completely",
+          "date": "2025-02-23T20:25:33Z"
+        },
+        {
+          "sha": "3076ba0e83f30b45971af58fe2aeff64472da812",
+          "message": "Merge pull request #836 from browser-use/MagMueller-patch-2\n\nUpdate pyproject.toml",
+          "date": "2025-02-23T18:00:45Z"
+        },
+        {
+          "sha": "b9f47861694dd8b6ec4b3787f202209e697d13bb",
+          "message": "Update pyproject.toml",
+          "date": "2025-02-23T18:00:35Z"
+        },
+        {
+          "sha": "4518d2541770b43ea9d883b42ff282d8d4e90189",
+          "message": "Merge pull request #835 from browser-use/force-done-output\n\nForce done output",
+          "date": "2025-02-23T17:57:38Z"
+        },
+        {
+          "sha": "5f84512d74bd8b6f8dafe188b234c12e1833b63b",
+          "message": "Enhance last step warning message clarity\n\n- Add example for setting success to false when task is not fully completed\n- Provide more explicit guidance on reporting task completion status\n- Improve readability of last step instructions",
+          "date": "2025-02-23T17:56:41Z"
+        },
+        {
+          "sha": "17fcfe2559bd7361465264e65dad434ba75d618c",
+          "message": "Refine last step warning message for agent service\n\n- Update last step instructions to emphasize single action requirement\n- Clarify guidance for using the \"done\" action\n- Improve wording to highlight task completion and success status reporting",
+          "date": "2025-02-23T17:53:19Z"
+        },
+        {
+          "sha": "65e165c915822c4a08ceecba5a379b57b0853b42",
+          "message": "Simplify last step instructions for agent service\n\n- Refactor last step warning message to be more concise and direct\n- Clarify instructions for using the \"done\" function\n- Improve guidance on task completion and success status reporting",
+          "date": "2025-02-23T17:48:35Z"
+        },
+        {
+          "sha": "d129a7f27a8cc1a2a9c1b55fb90494d2c07d2bad",
+          "message": "Refine last step instructions and model testing configuration\n\n- Update last step warning message in service.py to provide clearer, more explicit instructions for the \"done\" action\n- Modify test_models.py to comment out DeepSeek model and adjust model testing configuration\n- Enhance guidance on task completion, success status, and action requirements",
+          "date": "2025-02-23T17:43:55Z"
+        },
+        {
+          "sha": "ac07642b6cb7c811a73a37e947d3634b045b6f53",
+          "message": "Improve type safety and clarify task completion instructions\n\n- Add type hints and type ignore comments in service.py for image message handling\n- Update system prompt to provide clearer guidance on done action usage\n- Refine action description for done action in controller service\n- Enhance documentation for task completion scenarios",
+          "date": "2025-02-23T17:31:01Z"
+        },
+        {
+          "sha": "84f5f1cf8b1583ce072c28317094584c10aa07dd",
+          "message": "Instruction for unfinished tasks",
+          "date": "2025-02-23T17:15:40Z"
+        },
+        {
+          "sha": "f2f8cf850d8717d46faf371db412e13846dd7fee",
+          "message": "Eval models",
+          "date": "2025-02-23T17:15:28Z"
+        },
+        {
+          "sha": "88f018ad817cd7a16e85c88e74800a791c678551",
+          "message": "Update system prompt and service for task completion handling\n\n- Modify system prompt to clarify done action usage when max steps are reached\n- Update service to provide more descriptive action description for task completion\n- Add explicit handling for task success status in done action\n- Enhance documentation for done action to indicate task completion state",
+          "date": "2025-02-23T17:03:59Z"
+        },
+        {
+          "sha": "10de9663f2db22eca7c2c72dc4a531912152fc32",
+          "message": "Enhance test model search and API key handling\n\n- Update conftest.py to use SecretStr for OpenAI API key\n- Modify test_models.py to improve model testing and error reporting\n- Reorder model test parameters and IDs for better readability\n- Add done and successful status tracking in model search test\n- Improve error handling and logging in test model search function",
+          "date": "2025-02-23T17:03:50Z"
+        },
+        {
+          "sha": "061e701922a5589f294839d67e65cb964ef41875",
+          "message": "Add asyncio marker and refactor test fixtures\n\n- Add 'asyncio' marker to pytest configuration\n- Simplify LLM fixture by removing FakeListChatModel\n- Update logging and code style in conftest.py",
+          "date": "2025-02-23T16:37:44Z"
+        },
+        {
+          "sha": "58cd755b8f7b83e1a087051ac6a7f348977bb9f3",
+          "message": "Refine action parsing and validation in agent service\n\n- Update service to conditionally limit actions based on max_actions_per_step\n- Modify views to use json_schema_extra for action validation\n- Improve action list handling to prevent unnecessary slicing",
+          "date": "2025-02-23T16:29:21Z"
+        },
+        {
+          "sha": "12ed8da8fac28c7cc741ae92b4c7f3810517f354",
+          "message": "Removed parameter",
+          "date": "2025-02-23T16:21:04Z"
+        },
+        {
+          "sha": "bdb59feab26c5a09ecc8c924d16a1388a8bc49f4",
+          "message": "Refactor agent service tool calling and message handling\n\n- Add support for 'raw' and 'json_mode' tool calling methods\n- Introduce new methods for setting message context and tool calling method\n- Modify input message conversion for specific model names\n- Update tool calling method detection logic\n- Extend ToolCallingMethod type to include new methods",
+          "date": "2025-02-23T16:13:47Z"
+        },
+        {
+          "sha": "601151d159cd252783ff19d4ddfd9820540e8a37",
+          "message": "Refactor task completion logging in Agent service\n\n- Extract common task completion logging into a new `log_completion()` method\n- Simplify duplicate logging code in `run()` and `run_with_max_steps()` methods\n- Maintain existing logging behavior for task completion status",
+          "date": "2025-02-23T15:49:41Z"
+        },
+        {
+          "sha": "d881b9f61d8aa06eb75ae72246cf00fc5e26a3b1",
+          "message": "Enhance agent task completion and max steps handling\n\n- Add support for creating a done-only action model\n- Modify logging to distinguish between successful and unfinished tasks\n- Update agent to switch to done action model when max steps are reached\n- Improve system prompt to clarify done action usage in max steps scenario\n- Extend registry action model creation to support filtering actions",
+          "date": "2025-02-23T15:46:21Z"
+        },
+        {
+          "sha": "cc34c45f65adfc793d02d478244cc6f6f2b7bcae",
+          "message": "Improve version detection\n\n- Enhance browser-use version detection to prioritize git repository check",
+          "date": "2025-02-23T15:24:14Z"
+        },
+        {
+          "sha": "e1b51196a07206aabd16250ac40ff237b249e343",
+          "message": "Enhance agent history tracking\n\n- Update telemetry event to include more comprehensive agent performance metrics\n- Modify `AgentEndTelemetryEvent` to capture total input tokens and duration\n- Refactor `is_successful()` method to return `None` if agent is not done\n- Adjust `ActionResult` default success value to `None`",
+          "date": "2025-02-23T15:18:30Z"
+        },
+        {
+          "sha": "52e8c96d456e0d6e22e889dd643b89e51428f6a3",
+          "message": "Track token count before model output generation\n\n- Capture token count before generating model output\n- Store tokens in a local variable to ensure accurate input token tracking\n- Modify metadata logging to use the pre-computed token count",
+          "date": "2025-02-23T15:07:31Z"
+        },
+        {
+          "sha": "ddd8648aaaa16bd0970c1a11f1c2102a3f2917b5",
+          "message": "Refactor message position handling and improve last step messaging\n\n- Update `_add_message_with_tokens` and `add_message` methods to support `None` as default position\n- Modify last step warning message in agent service\n- Add logging for last step completion\n- Improve type hints for message position parameters",
+          "date": "2025-02-23T15:03:01Z"
+        },
+        {
+          "sha": "2890a006a6f269a3c669a1c9aa0e11c3b5f0cbd9",
+          "message": "Create README.md",
+          "date": "2025-02-23T09:45:06Z"
+        },
+        {
+          "sha": "c07b5c9a94ac49b41551c879e13ebce83c0daaac",
+          "message": "Add last step warning and enhance action result tracking\n\n- Introduce warning message for the last step in the agent\n- Add `success` parameter to `ActionResult` and `DoneAction`\n- Modify `AgentStepInfo` to check for last step\n- Update `AgentHistoryList` methods to handle optional values and success status",
+          "date": "2025-02-23T07:43:41Z"
+        },
+        {
+          "sha": "fdb868e5c7b686f7622bbfed06319db188d2b877",
+          "message": "Merge pull request #830 from browser-use/Metadata-in-history\n\nMetadata in history",
+          "date": "2025-02-23T06:41:31Z"
+        }
+      ],
+      "topics": [
+        "ai-agents",
+        "ai-tools",
+        "browser-automation",
+        "llm",
+        "python"
+      ]
+    },
+    {
+      "name": "jpsim/Yams",
+      "url": "https://github.com/jpsim/Yams",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "ios",
+        "libyaml",
+        "linux",
+        "macos",
+        "swift",
+        "yaml"
+      ]
+    },
+    {
+      "name": "BerriAI/litellm",
+      "url": "https://github.com/BerriAI/litellm",
+      "commit_count": 5,
+      "summary": "🔧 Fixes and updates for LLM APIs and proxy server",
+      "commits": [
+        {
+          "sha": "566d9354aab4215091b2e51ad0333e948125fa1b",
+          "message": "fix(proxy/_types.py): fixes issue where internal user able to escalat… (#8740)\n\n* fix(proxy/_types.py): fixes issue where internal user able to escalate their role with ui key\n\nFixes https://github.com/BerriAI/litellm/issues/8029\n\n* style: cleanup\n\n* test: handle bedrock instability",
+          "date": "2025-02-23T06:59:58Z"
+        },
+        {
+          "sha": "09462ba80c302c3311b94ef4390887450d4e525e",
+          "message": "Add cohere v2/rerank support (#8421) (#8605)\n\n* Add cohere v2/rerank support (#8421)\n\n* Support v2 endpoint cohere rerank\n\n* Add tests and docs\n\n* Make v1 default if old params used\n\n* Update docs\n\n* Update docs pt 2\n\n* Update tests\n\n* Add e2e test\n\n* Clean up code\n\n* Use inheritence for new config\n\n* Fix linting issues (#8608)\n\n* Fix cohere v2 failing test + linting (#8672)\n\n* Fix test and unused imports\n\n* Fix tests\n\n* fix: fix linting errors\n\n* test: handle tgai instability\n\n* fix: skip service unavailable err\n\n* test: print logs for unstable test\n\n* test: skip unreliable tests\n\n---------\n\nCo-authored-by: vibhavbhat <vibhavb00@gmail.com>",
+          "date": "2025-02-23T06:25:29Z"
+        },
+        {
+          "sha": "c2aec21b4dcfd22181340defaa841c016ee4e1c1",
+          "message": "fix(amazon_deepseek_transformation.py): remove </think> from stream o… (#8717)\n\n* fix(amazon_deepseek_transformation.py): remove </think> from stream output - cleanup user facing stream\n\n* fix(key_managenet_endpoints.py): return `/key/list` sorted by created_at\n\nmakes it easier to see created key\n\n* style: cleanup team table\n\n* feat(key_edit_view.tsx): support setting model specific tpm/rpm limits on keys",
+          "date": "2025-02-23T05:46:55Z"
+        },
+        {
+          "sha": "21ea52105a338345a02c5c764341627f259a8315",
+          "message": "Support arize phoenix on litellm proxy (#7756) (#8715)\n\n* Update opentelemetry.py\n\nwip\n\n* Update test_opentelemetry_unit_tests.py\n\n* fix a few paths and tests\n\n* fix path\n\n* Update litellm_logging.py\n\n* accidentally removed code\n\n* Add type for protocol\n\n* Add and update tests\n\n* minor changes\n\n* update and add additional arize phoenix test\n\n* update existing test\n\n* address feedback\n\n* use standard_logging_object\n\n* address feedback\n\nCo-authored-by: Nate Mar <67926244+nate-mar@users.noreply.github.com>",
+          "date": "2025-02-23T04:55:11Z"
+        },
+        {
+          "sha": "d8d8a12b5d2e667fe3ab64b56400b4afed820d09",
+          "message": "bump: version 1.61.14 → 1.61.15",
+          "date": "2025-02-22T03:48:04Z"
+        }
+      ],
+      "topics": [
+        "ai-gateway",
+        "anthropic",
+        "azure-openai",
+        "bedrock",
+        "gateway",
+        "langchain",
+        "llm",
+        "llm-gateway",
+        "llmops",
+        "openai",
+        "openai-proxy",
+        "vertex-ai"
+      ]
+    },
+    {
+      "name": "dune3d/dune3d",
+      "url": "https://github.com/dune3d/dune3d",
+      "commit_count": 4,
+      "summary": "🖼️ Add picture import and improve selection handling",
+      "commits": [
+        {
+          "sha": "0c3a0bd84493484b5f552ebea04c3920e2edf89f",
+          "message": "add picture import\n\nchangelog: New Features/Editor: Add bitmap picture import",
+          "date": "2025-02-23T18:53:53Z"
+        },
+        {
+          "sha": "9fbe9958d7e508b02a8b20dd7174c0f3e6ff8aa5",
+          "message": "canvas: properly clear hover selection when disabling selection",
+          "date": "2025-02-23T15:13:10Z"
+        },
+        {
+          "sha": "0ba77c0f97353bff21a1d09fc5a04ca22b425ca1",
+          "message": "add IEntityDeletePoint",
+          "date": "2025-02-22T10:24:51Z"
+        },
+        {
+          "sha": "369d3d0dda6d2a79b177fdfd17f384cb1c398c69",
+          "message": "editor: force-end tool when closing the current document\n\nchangelog: Bugfixes/Editor: don't crash when closing the current document while a tool is active\n\nfixes #155",
+          "date": "2025-02-20T18:35:08Z"
+        }
+      ]
+    },
+    {
+      "name": "Kiln-AI/Kiln",
+      "url": "https://github.com/Kiln-AI/Kiln",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "ai",
+        "chain-of-thought",
+        "collaboration",
+        "dataset-generation",
+        "fine-tuning",
+        "machine-learning",
+        "macos",
+        "ml",
+        "ollama",
+        "openai",
+        "prompt",
+        "prompt-engineering",
+        "python",
+        "rlhf",
+        "synthetic-data",
+        "windows"
+      ]
+    },
+    {
+      "name": "AugmentOS-Community/AugmentOS",
+      "url": "https://github.com/AugmentOS-Community/AugmentOS",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "activelook",
+        "conversational-ai",
+        "rayneo",
+        "smart-glasses",
+        "smartglasses",
+        "vuzix",
+        "vuzix-shield",
+        "vuzix-ultralite",
+        "wearable",
+        "wearables"
+      ]
+    },
+    {
+      "name": "RfidResearchGroup/proxmark3",
+      "url": "https://github.com/RfidResearchGroup/proxmark3",
+      "commit_count": 6,
+      "summary": "🔧 Wiegand format updates and decoding improvements",
+      "commits": [
+        {
+          "sha": "c498d38b82b095aa216ddcd06d95d86c66f7d12f",
+          "message": "the wiegand formats unpack functions now clears the struct after sanity checking is done. Also adapted testing wiegand formats which might just have a preamble bit but not a sentinel bit like iclass credentials",
+          "date": "2025-02-23T22:13:08Z"
+        },
+        {
+          "sha": "98f6b263ffe8629d2f7bb9c312030bf48c3031a5",
+          "message": "wiegand decode now accepts `--new` parameter to decode new padding format  <len 1byte><pacs bytes>  where len denotes number of zeros bits added in the end of the pacs bytes.  You will need to shift accordingly.",
+          "date": "2025-02-23T22:10:13Z"
+        },
+        {
+          "sha": "66b1a4853679e2499886349c76dd65d95544cc83",
+          "message": "style",
+          "date": "2025-02-23T20:16:34Z"
+        },
+        {
+          "sha": "2fcdea68d1fa7dd2ab25fc3cc84584c5dcb2b366",
+          "message": "style and text",
+          "date": "2025-02-23T20:08:16Z"
+        },
+        {
+          "sha": "14d50f7ac5fd1c7e3a9cb44f56af7da3bfa413e0",
+          "message": "change mem spiffs tree to show id number in decimal. Previously shown in hex.",
+          "date": "2025-02-23T20:05:09Z"
+        },
+        {
+          "sha": "323a4284ff1d862c125c2bbdcbed56a9e00c1069",
+          "message": "modified weigand formats to include number of bits",
+          "date": "2025-02-22T17:28:38Z"
+        }
+      ],
+      "topics": [
+        "125khz",
+        "clone",
+        "contactless",
+        "darkside",
+        "hitag2",
+        "iceman",
+        "iclass",
+        "iso14443a",
+        "iso14443b",
+        "iso15693",
+        "mifare",
+        "nfc",
+        "pm3",
+        "proxmark",
+        "proxmark3",
+        "rdv40",
+        "rfid",
+        "rrg",
+        "simulate",
+        "sniffer"
+      ]
+    },
+    {
+      "name": "vi/websocat",
+      "url": "https://github.com/vi/websocat",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "cli",
+        "command-line",
+        "command-line-tool",
+        "curl",
+        "netcat",
+        "proxy",
+        "rfc-6455",
+        "socat",
+        "websocket-client",
+        "websocket-server",
+        "websockets"
+      ]
+    },
+    {
+      "name": "RooVetGit/Roo-Code",
+      "url": "https://github.com/RooVetGit/Roo-Code",
+      "commit_count": 8,
+      "summary": "🛠️ Update CODEOWNERS, stabilize tests, add Knip check",
+      "commits": [
+        {
+          "sha": "e413a59ae0b28fbc25e52b1ce27a0922e9471e4d",
+          "message": "Merge pull request #1128 from RooVetGit/cte/stabilize-tests-in-ci",
+          "date": "2025-02-23T16:45:02Z"
+        },
+        {
+          "sha": "02f17b553251c5430279880d2cbc7376ee971a7b",
+          "message": "Merge pull request #1130 from RooVetGit/chore/updateCodeOwners\n\nUpdating CODEOWNERS to better reflect the current state",
+          "date": "2025-02-23T16:17:47Z"
+        },
+        {
+          "sha": "873720f0a7a7fbea210af31104c2775dc3f6861b",
+          "message": "Updating CODEOWNERS to better reflect the current state",
+          "date": "2025-02-23T16:12:03Z"
+        },
+        {
+          "sha": "f11c0afa1e68da80b6d31d293ad30e0dedbfc535",
+          "message": "Stabilize tests in CI",
+          "date": "2025-02-23T10:28:10Z"
+        },
+        {
+          "sha": "47fc67941348c16dbbe497e569aeebeb59a7fd31",
+          "message": "Merge pull request #1126 from RooVetGit/knip\n\nAdd Knip check for unused files",
+          "date": "2025-02-23T06:06:16Z"
+        },
+        {
+          "sha": "816847c5c0d40d3b7d69be014966a19729d7e151",
+          "message": "Add Knip check for unused files",
+          "date": "2025-02-23T05:30:03Z"
+        },
+        {
+          "sha": "dddac90721719c5e54100e80205e30f3a4738b96",
+          "message": "Merge pull request #1125 from hannesrudolph/change_order_apply_diff\n\nImproved diff editing use consistency",
+          "date": "2025-02-23T05:54:51Z"
+        },
+        {
+          "sha": "1c9dcaddc417b3ce48c2c39bf7ecc8484e1aa063",
+          "message": "Merge pull request #1117 from RooVetGit/changeset-release/main\n\nChangeset version bump",
+          "date": "2025-02-22T05:13:11Z"
+        }
+      ]
+    },
+    {
+      "name": "Frix-x/klippain-shaketune",
+      "url": "https://github.com/Frix-x/klippain-shaketune",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "accelerometer",
+        "axis",
+        "klippain",
+        "klipper",
+        "machine",
+        "resonance",
+        "tuning",
+        "vibrations"
+      ]
+    },
+    {
+      "name": "rtr7/router7",
+      "url": "https://github.com/rtr7/router7",
+      "commit_count": 2,
+      "summary": "🔄 Serve /perm via rsync and bump Go version to 1.24",
+      "commits": [
+        {
+          "sha": "07b85b96243b78f9b672a83dcf2e15ecb15478ff",
+          "message": "backupd: serve /perm via rsync, too\n\nThis allows for more efficient incremental backup.",
+          "date": "2025-02-23T21:28:01Z"
+        },
+        {
+          "sha": "fe43422499c6fbd1edf16d1265007c19a1002fd5",
+          "message": "go.mod: bump language version to 1.24",
+          "date": "2025-02-23T21:27:37Z"
+        }
+      ],
+      "topics": [
+        "golang",
+        "homelab",
+        "networking"
+      ]
+    },
+    {
+      "name": "simplisticton/v2-2566config",
+      "url": "https://github.com/simplisticton/v2-2566config",
+      "commit_count": 3,
+      "summary": "🔧 Updated configs for toolhead, homing, and CANBus",
+      "commits": [
+        {
+          "sha": "2a7689790cee49bf175f0eed0da42fbe3e0a9999",
+          "message": "moved neopixel config to toolhead config file T0.cfg",
+          "date": "2025-02-23T21:05:10Z"
+        },
+        {
+          "sha": "e71e90972e58764cf5efb682eecf64cb5d1d7c13",
+          "message": "added config files and updates for sensorless homing and CANBus toolhead",
+          "date": "2025-02-23T21:04:23Z"
+        },
+        {
+          "sha": "74cfcd4c16c4e178a7d666328a10b0abcee3ab6a",
+          "message": "disabled Spoolman",
+          "date": "2025-02-23T21:03:19Z"
+        }
+      ]
+    },
+    {
+      "name": "openshwprojects/OpenBK7231T_App",
+      "url": "https://github.com/openshwprojects/OpenBK7231T_App",
+      "commit_count": 2,
+      "summary": "🔧 PWM script and LN882H pin update",
+      "commits": [
+        {
+          "sha": "1ea3519307dce672bc37550e7e50d5541eaf03de",
+          "message": "script pwm",
+          "date": "2025-02-23T19:35:18Z"
+        },
+        {
+          "sha": "80111be27e34a3df00b532e6c64a6c08647e86fc",
+          "message": "Update hal_pins_ln882h.c",
+          "date": "2025-02-20T07:35:07Z"
+        }
+      ],
+      "topics": [
+        "bk7231",
+        "bk7231n",
+        "bk7231t",
+        "bl602",
+        "home-assistant",
+        "iot",
+        "ln882h",
+        "mqtt",
+        "smart-home",
+        "tasmota",
+        "tuya",
+        "w600",
+        "w601",
+        "w800",
+        "w801",
+        "wifi",
+        "xr809"
+      ]
+    },
+    {
+      "name": "buildroot/buildroot",
+      "url": "https://github.com/buildroot/buildroot",
+      "commit_count": 14,
+      "summary": "🔧 Buildroot updates: toolchain fixes, package bumps, and new defconfigs",
+      "commits": [
+        {
+          "sha": "544249ff7761db2df61783c8731e834574df957a",
+          "message": "package/fontconfig: fix build with toolchains without pthread\n\n../test/test-crbug1004254.c:28:10: fatal error: pthread.h: No such file or directory\n   28 | #include <pthread.h>\n      |          ^~~~~~~~~~~\n\nCommit cef7358 \"package/fontconfig: fix compilation on targets without pthread support\"\nfixed compilation for targets without pthread support, but that was apparently nog enough.\n\nBack then, I tested all the targets by using `./utils/test-pkg -p fontconfig -a`,\nbut somehow these targets didn't enable the fontconfig tests, so I didn't see this\ncompile failure. Fix it now by explicitly disabling the fontconfig tests.\n\nFixes:\n -  https://autobuild.buildroot.org/results/5f0/5f0c716c20788ba49a3a9f185251ded373a764cd/build-end.log\n\nSigned-off-by: Thomas Devoogdt <thomas@devoogdt.com>\n[Julien: reword commit log title]\nSigned-off-by: Julien Olivain <ju.o@free.fr>",
+          "date": "2025-02-07T14:46:36Z"
+        },
+        {
+          "sha": "6faa08a9e3f3ad170b70439a14bf8da6256f887e",
+          "message": "package/python-dbus-fast: bump to 2.33.0\n\nSee [1] for changelog.\n\n[1] https://github.com/bluetooth-devices/dbus-fast/blob/main/CHANGELOG.md\n\nSigned-off-by: Marcin Niestroj <m.niestroj@grinn-global.com>\nSigned-off-by: Julien Olivain <ju.o@free.fr>",
+          "date": "2025-02-17T11:01:31Z"
+        },
+        {
+          "sha": "ac83fdcb29f64af79839bb8efffbaae71f0cc3cc",
+          "message": "package/foot: support soft-float architecture\n\nArchitecture using soft float don't support the math FE_* exceptions.\nThis commit adds a patch to conditionnally build the FE_* exception\nhandling.\n\nFixes:\n    https://autobuild.buildroot.org/results/88d/88d764dd12bdbdbe633ebc703c461ebe95b75693/\n\nSigned-off-by: Thomas Bonnefille <thomas.bonnefille@bootlin.com>\nSigned-off-by: Julien Olivain <ju.o@free.fr>",
+          "date": "2025-02-17T18:43:34Z"
+        },
+        {
+          "sha": "fefb6a6785ccc7fd2818158ba443bbce80628364",
+          "message": "package/pkg-autotools: remove redundant configs\n\nSince the following commit:\nhttps://github.com/buildroot/buildroot/commit/b07030a708293756e25edd6432ed02cc53ff758e\n\nThe following host configs are included with $$(HOST_CONFIGURE_OPTS)\n\tCFLAGS=\"$$(HOST_CFLAGS)\"\n\tLDFLAGS=\"$$(HOST_LDFLAGS)\"\n\nAs they are redundant, we can remove them from the autotools infrastructure.\n\nSigned-off-by: Neal Frager <neal.frager@amd.com>\nSigned-off-by: Julien Olivain <ju.o@free.fr>",
+          "date": "2025-02-18T06:30:01Z"
+        },
+        {
+          "sha": "41734e00c0cc36f4df2f492e72b535a0716d4048",
+          "message": "configs/friendlyarm_nanopi_r3s_defconfig: new defconfig\n\nThis patch adds basic support for the new FriendlyARM NanoPi R3S board:\n - https://www.friendlyelec.com/index.php?route=product/product&product_id=303\n - https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R3S\n\nHardware Spec:\n - CPU: Rockchip RK3566, Quad-core Cortex-A55\n - RAM: 2GB LPDDR4X\n - Ethernet: one Native Gigabit Ethernet, and one PCIe Gigabit Ethernet\n - USB3.0 Host: Type-A x1\n - Storage: MicroSD Slot x 1, and on-board 32GB eMMC\n - Debug Serial Port: 3.3V TTL, 3-pin 2.54mm pitch connector, 1500000 bauds\n - LED: LED x 3\n - RTC: One low-power RTC, support backup battery input\n - Buttons: 1x User button, 1x MASK button for eMMC flashing via USB-C\n - Display: 1x MIPI-DSI 30-Pin FPC connector\n\nBSP includes the following components:\n - mainline ATF v2.12\n - mainline U-Boot v2025.04-rc2\n - mainline Linux kernel v6.13.4\n\nNote: this defconfig is using U-Boot v2025.04-rc2 because the\nNanoPi R3S support was added in upstream commit [1] first included\nin v2025.04-rc1.\n\n[1] https://source.denx.de/u-boot/u-boot/-/commit/bf4a33e725ae02cae064a03ea90c45779780f323\n\nSigned-off-by: Sergey Kuzminov <kuzminov.sergey81@gmail.com>\nSigned-off-by: Julien Olivain <ju.o@free.fr>",
+          "date": "2025-02-23T14:46:25Z"
+        },
+        {
+          "sha": "ee91e37299a79c330675e516231f07734d0b862c",
+          "message": "DEVELOPERS: fix cyclonedx script name\n\nIn commit dbab39e2d908 (support/scripts/generate-cyclonedx.py: add\nscript to generate CycloneDX-style SBOM), the script was renamed while\napplying thr patch, but the entry in DEVELOPERS was not updated\naccordingly:\n\n    $ ./utils/docker-run ./utils/get-developers -v\n    WARNING: 'utils/generate-cyclonedx.py' doesn't match any file, line 3179\n\nFix that.\n\nSigned-off-by: Yann E. MORIN <yann.morin.1998@free.fr>\nCc: Arnout Vandecappelle (Essensium/Mind) <arnout@mind.be>\nCc: Thomas Perale <thomas.perale@mind.be>\nSigned-off-by: Julien Olivain <ju.o@free.fr>",
+          "date": "2025-02-23T12:59:26Z"
+        },
+        {
+          "sha": "c8eb4c63a77131e83ab9fed8c9e5ba2dc76a83d9",
+          "message": "package/postgis: bump to version 3.5.2\n\nChangelog: https://github.com/postgis/postgis/blob/3.5.2/NEWS\n\nSigned-off-by: Maxim Kochetkov <fido_max@inbox.ru>\nSigned-off-by: Julien Olivain <ju.o@free.fr>",
+          "date": "2025-02-18T05:37:18Z"
+        },
+        {
+          "sha": "1e8955e12c10e68d9eb119ebae99692dd2432fa0",
+          "message": "package/jbig2dec: bump to version 0.20\n\nStarting from this version newer releases are only available at a new\ndedicated repository, so the site is updated accordingly.\n\nHash files no longer exist in the new repo, so remove the related\ncomment.\n\nIt turns out that install-sh has been available in the tarball since\nversion 0.19, so remove JBIG2DEC_AUTORECONF.\n\nSigned-off-by: Raphaël Mélotte <raphael.melotte@mind.be>\nSigned-off-by: Julien Olivain <ju.o@free.fr>",
+          "date": "2025-02-18T22:20:55Z"
+        },
+        {
+          "sha": "f8fb0b5942421af6f64d061e6384590b7149f400",
+          "message": "package/zabbix: update to 7.2.3\n\nSee here for a changelog:\nhttps://www.zabbix.com/rn/rn7.2.3\n\nSigned-off-by: Waldemar Brodkorb <wbx@openadk.org>\nSigned-off-by: Julien Olivain <ju.o@free.fr>",
+          "date": "2025-02-22T08:17:07Z"
+        },
+        {
+          "sha": "bee34e7bd0954634ba3a9534104482c6dd5e6229",
+          "message": "package/timescaledb: bump version to 2.18.2\n\nRelease notes: https://github.com/timescale/timescaledb/blob/2.18.2/CHANGELOG.md\n\nSigned-off-by: Scott Fan <fancp2007@gmail.com>\nReviewed-by: Maxim Kochetkov <fido_max@inbox.ru>\nSigned-off-by: Julien Olivain <ju.o@free.fr>",
+          "date": "2025-02-22T08:02:45Z"
+        },
+        {
+          "sha": "dd824f6254fa7b1156cb872b115ded6ab67bab54",
+          "message": "package/qt6/qt6multimedia: fix ffmpeg configure option typo\n\nBuildroot commit 553c55e9bd3cfa05cb84fa4cdfc5d25d51c3486b added this\npackage with a typo in the configure option to disable ffmpeg support.\n\nSigned-off-by: Bernd Kuhls <bernd@kuhls.net>\nSigned-off-by: Julien Olivain <ju.o@free.fr>",
+          "date": "2025-02-23T08:36:10Z"
+        },
+        {
+          "sha": "9d544ef3bd8e96cafc68b98ad8d06e32ab546ea4",
+          "message": "configs/imx8mp-evk_defconfig: new defconfig\n\nAdd a new defconfig for the imx8mp-evk board that uses upstream\ncomponents, such as:\n\n- Linux Kernel: Upstream version 6.12.16\n- U-boot: Upstream version 2025.01\n- ATF: Upstream version 2.12\n\nBased on bcc799328334 (\"configs/polyhex_debix_model_a_defconfig: new\ndefconfig\") from Gilles Talis.\n\nSigned-off-by: Fabio Estevam <festevam@gmail.com>\n[Julien:\n - replace linux-headers.hash with a symlink to linux.hash\n - update kernel hash to 6.12.16 to match defconfig version\n]\nSigned-off-by: Julien Olivain <ju.o@free.fr>",
+          "date": "2025-02-22T21:28:24Z"
+        },
+        {
+          "sha": "7340b91a5e358f0b8b279a29327d79a2368f4e97",
+          "message": "configs/polyhex_debix_model_a_defconfig: Remove BR2_PACKAGE_HOST_IMX_MKIMAGE\n\nThe BR2_PACKAGE_HOST_IMX_MKIMAGE is only needed when the NXP U-Boot\nversion is used.\n\npolyhex_debix_model_a_defconfig uses mainline U-Boot, which builds flash.bin\ndirectly, without using the NXP imx-mkimage tool.\n\nRemove such unneeded package.\n\nSigned-off-by: Fabio Estevam <festevam@gmail.com>\nSigned-off-by: Julien Olivain <ju.o@free.fr>",
+          "date": "2025-02-22T21:28:37Z"
+        },
+        {
+          "sha": "2578cf368e604211bacaef27738ea96dcaba7572",
+          "message": "package/containerd: use --no-pie on musl\n\nDisable PIE on musl to fix \"read-only segment has dynamic relocations\"\nerrors during linking [1] that appeared after major version bump to v2.\n\n[1] https://github.com/golang/go/issues/17847\n\nFixes: 9c2e146ca9a21f0de3c97981113a57c58c3a5bd5\nSigned-off-by: Fiona Klute (WIWA) <fiona.klute@gmx.de>\nReviewed-by: Yann E. MORIN <yann.morin@orange.com>\nSigned-off-by: Romain Naour <romain.naour@smile.fr>",
+          "date": "2025-02-05T13:58:25Z"
+        }
+      ]
+    },
+    {
+      "name": "espressif/esp-idf",
+      "url": "https://github.com/espressif/esp-idf",
+      "commit_count": 0,
+      "summary": null,
+      "commits": []
+    },
+    {
+      "name": "Automattic/simplenote-macos",
+      "url": "https://github.com/Automattic/simplenote-macos",
+      "commit_count": 0,
+      "summary": null,
+      "commits": []
+    },
+    {
+      "name": "mediar-ai/screenpipe",
+      "url": "https://github.com/mediar-ai/screenpipe",
+      "commit_count": 12,
+      "summary": "🚀 Enhance FTS, fix builds, add endpoints, streamline vision usage",
+      "commits": [
+        {
+          "sha": "fe11df09e57e41e910b38588f0d71bfa01bea178",
+          "message": "feat: use FTS for window and app name #964",
+          "date": "2025-02-23T20:04:51Z"
+        },
+        {
+          "sha": "b093323c4d357a294cfb3ae5edd5f61329aacdb0",
+          "message": "docs: add LLM links",
+          "date": "2025-02-23T19:19:35Z"
+        },
+        {
+          "sha": "88aa5d6fc9572966d1c3059377fa6a6c14924ae0",
+          "message": "release-app fix embedding endpoint",
+          "date": "2025-02-23T18:33:09Z"
+        },
+        {
+          "sha": "3ab702a7b92e52cac3f594f0bb77a769eaa10505",
+          "message": "release-app - make streamVision use 0 GB down from 15 gb, and stream browser url, and add example next js to use it and fix linux build",
+          "date": "2025-02-23T03:31:22Z"
+        },
+        {
+          "sha": "2e27e84b7cf45832fe2789efcf8ac01666558270",
+          "message": "release-app fix build",
+          "date": "2025-02-23T01:45:49Z"
+        },
+        {
+          "sha": "cb4a0cd4a9982fe735bbd4756df3c0c79d7d2c06",
+          "message": "release-app",
+          "date": "2025-02-23T01:04:58Z"
+        },
+        {
+          "sha": "4d086bb6cdbb639c397f5f3a78bb7dc70cf07af0",
+          "message": "release-app",
+          "date": "2025-02-23T01:03:43Z"
+        },
+        {
+          "sha": "99bcf70aece19a44208e589d441e433850ff61db",
+          "message": "feat: endpoint to register function calling on shortcuts",
+          "date": "2025-02-23T01:01:05Z"
+        },
+        {
+          "sha": "ff5764b5e133b033727e914427a347f1276dcc2a",
+          "message": "feat: add close window endpoint",
+          "date": "2025-02-22T23:27:23Z"
+        },
+        {
+          "sha": "d2c7b8c12ace1cc4880cf1108a8121d0b89ebd5a",
+          "message": "release-app",
+          "date": "2025-02-22T23:25:17Z"
+        },
+        {
+          "sha": "ad3d7bf2d2fca42d089146049fbe0a45807a2632",
+          "message": "release-app",
+          "date": "2025-02-22T22:43:20Z"
+        },
+        {
+          "sha": "5b447b1b46c7716b68b0bb27e7ed7e86b62c4e3e",
+          "message": "fix: most tests and ci",
+          "date": "2025-02-22T22:03:29Z"
+        }
+      ],
+      "topics": [
+        "agents",
+        "agi",
+        "ai",
+        "computer-vision",
+        "llm",
+        "machine-learning",
+        "ml",
+        "multimodal",
+        "vision"
+      ]
+    },
+    {
+      "name": "guysoft/OctoPi",
+      "url": "https://github.com/guysoft/OctoPi",
+      "commit_count": 2,
+      "summary": "🔗 Update URLs and mention Le Potato",
+      "commits": [
+        {
+          "sha": "2f27bdfb3d4ca88888f153f23b0d4902ec747815",
+          "message": "Fix links to https and raspian links fixes #845",
+          "date": "2025-02-23T19:44:10Z"
+        },
+        {
+          "sha": "d51ea4f172571a591683cf42e51b92850ccc230c",
+          "message": "Update raspbian.org old url to rpi os. Also mention le potato",
+          "date": "2025-02-23T14:55:34Z"
+        }
+      ]
+    },
+    {
+      "name": "actix/actix",
+      "url": "https://github.com/actix/actix",
+      "commit_count": 1,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "51b826a1e71e20c844bb23cb59057d49850e87fe",
+          "message": "ci: remove public-api-diff job",
+          "date": "2025-02-23T19:21:51Z"
+        }
+      ],
+      "topics": [
+        "actix",
+        "actor",
+        "actor-model",
+        "concurrency",
+        "hacktoberfest",
+        "rust"
+      ]
+    },
+    {
+      "name": "cline/cline",
+      "url": "https://github.com/cline/cline",
+      "commit_count": 0,
+      "summary": null,
+      "commits": []
+    },
+    {
+      "name": "pontusab/directories",
+      "url": "https://github.com/pontusab/directories",
+      "commit_count": 9,
+      "summary": "🔧 Fix build & add files",
+      "commits": [
+        {
+          "sha": "8105298e9251159fad8640283e653854c0472f1b",
+          "message": "Fix build",
+          "date": "2025-02-23T19:16:07Z"
+        },
+        {
+          "sha": "b7062ac4379c1bb8c4bca6cd066e70c481e4a0ab",
+          "message": "Merge pull request #193 from pontusab/feature/official-rules\n\nOfficial Rules",
+          "date": "2025-02-23T19:09:09Z"
+        },
+        {
+          "sha": "c6c61ad67b86f79fc848f0714657e7979bafd1d9",
+          "message": "Add files",
+          "date": "2025-02-23T19:08:06Z"
+        },
+        {
+          "sha": "9067e707c161eea8413c1de88684793f829e6bb8",
+          "message": "Fix import",
+          "date": "2025-02-23T19:02:03Z"
+        },
+        {
+          "sha": "325073ffe86d58fda831384949aa901a484d8820",
+          "message": "wip",
+          "date": "2025-02-23T18:58:40Z"
+        },
+        {
+          "sha": "f0f76a31b69aff7ad5695903c77ba1707ff4e991",
+          "message": "wip",
+          "date": "2025-02-23T18:25:45Z"
+        },
+        {
+          "sha": "a28f88702bb78d39909441d68812ffb5a22c9554",
+          "message": "Add videos",
+          "date": "2025-02-23T12:44:28Z"
+        },
+        {
+          "sha": "9ecde67b05f0a5268c52fbd6be729a41baaf1c8c",
+          "message": "Add sitemap",
+          "date": "2025-02-23T11:59:52Z"
+        },
+        {
+          "sha": "b0c3f07323c2bec5451333d2457a0a47dc93c7d8",
+          "message": "Merge pull request #191 from alexmarqs/main",
+          "date": "2025-02-22T13:41:22Z"
+        }
+      ]
+    },
+    {
+      "name": "esphome/esphome",
+      "url": "https://github.com/esphome/esphome",
+      "commit_count": 3,
+      "summary": "🛠️ Bump API, OTA version, load external component",
+      "commits": [
+        {
+          "sha": "bfa3254d6c5ab2f555196a3b4f8e245800d85724",
+          "message": "Bump aioesphomeapi to 29.1.1 (#8274)",
+          "date": "2025-02-23T18:34:20Z"
+        },
+        {
+          "sha": "990d1e3bb025448f236f3a32544b3e715fb84d06",
+          "message": "[ota] set USE_OTA_VERSION 2 in defines (#8299)",
+          "date": "2025-02-23T18:33:52Z"
+        },
+        {
+          "sha": "755b0bbfc7d404d9ce1a4a02ee8c99c4c838e63f",
+          "message": "[core, dashboard] load external component to get get_download_types (#8139)",
+          "date": "2025-02-22T20:19:17Z"
+        }
+      ],
+      "topics": [
+        "esp32",
+        "esp8266",
+        "hacktoberfest",
+        "home-assistant",
+        "home-automation",
+        "iot",
+        "mqtt",
+        "platformio",
+        "python",
+        "yaml"
+      ]
+    },
+    {
+      "name": "groue/GRDB.swift",
+      "url": "https://github.com/groue/GRDB.swift",
+      "commit_count": 12,
+      "summary": "🔄 Merge, updates, and deprecations in GRDB.swift",
+      "commits": [
+        {
+          "sha": "6eba24d16952452a8a54f6a639491f3c8215527f",
+          "message": "Merge branch 'development'",
+          "date": "2025-02-23T18:53:59Z"
+        },
+        {
+          "sha": "bd3ac9ef75f7e4762d38a3d864de9a611842f8eb",
+          "message": "v7.3.0",
+          "date": "2025-02-23T10:31:30Z"
+        },
+        {
+          "sha": "392137c35786051dd41eebdb878fd1c08246e661",
+          "message": "XCTestExpectation is Sendable starting Xcode 16.3 beta",
+          "date": "2025-02-23T10:29:05Z"
+        },
+        {
+          "sha": "b48a56ae03473b71cba873f54409ba548e7d7ca2",
+          "message": "Revert \"Merge pull request #1732 from groue/dev/sending-closures\"\n\nThis reverts commit bbd1eab402581fa8c4b8271520bb00efbf4449c4, reversing\nchanges made to 9b09c5342e7c5643743a609c9af68512471e84c6.",
+          "date": "2025-02-23T17:42:48Z"
+        },
+        {
+          "sha": "bbd1eab402581fa8c4b8271520bb00efbf4449c4",
+          "message": "Merge pull request #1732 from groue/dev/sending-closures\n\nAsync database accesses no longer require Sendable closures.",
+          "date": "2025-02-23T14:33:54Z"
+        },
+        {
+          "sha": "53c9d12d290b482fe12fc156b9c21fc58faca741",
+          "message": "Async database access no longer require Sendable closures.",
+          "date": "2025-02-23T14:02:55Z"
+        },
+        {
+          "sha": "9b09c5342e7c5643743a609c9af68512471e84c6",
+          "message": "Merge pull request #1731 from groue/dev/virtual-table-options\n\nSupport for temporary virtual tables",
+          "date": "2025-02-23T12:59:48Z"
+        },
+        {
+          "sha": "aed22fe0bc03ec64067b5761a0cc27fddd95494b",
+          "message": "Support for temporary virtual tables.",
+          "date": "2025-02-23T12:40:23Z"
+        },
+        {
+          "sha": "eec220b6528954406b28a9f5a3aca03a7d6dd12e",
+          "message": "Merge pull request #1730 from groue/dev/issue-1728\n\nUndeprecate Date coding strategies based on DateFormatter",
+          "date": "2025-02-23T10:13:02Z"
+        },
+        {
+          "sha": "79a782038e2474911fed1119a603213be0df5d66",
+          "message": "Undeprecate Date coding strategies based on DateFormatter\n\nhttps://github.com/swiftlang/swift/issues/78635#issuecomment-2676324549\n> DateFormatter is indeed thread safe and its conformance to Sendable is correct",
+          "date": "2025-02-23T10:08:26Z"
+        },
+        {
+          "sha": "618e72d153cb5423fc6a955eccc347232d4efa19",
+          "message": "Merge pull request #1729 from groue/dev/issue-1728\n\nDeprecate Date coding strategies based on DateFormatter",
+          "date": "2025-02-22T13:29:08Z"
+        },
+        {
+          "sha": "824100990f9729be4f5f066370ee8beda11ad301",
+          "message": "Deprecate Date coding strategies based on DateFormatter\n\nFix #1728",
+          "date": "2025-02-22T12:45:42Z"
+        }
+      ],
+      "topics": [
+        "database",
+        "database-observation",
+        "grdb",
+        "spm",
+        "sql",
+        "sql-builder",
+        "sqlite",
+        "sqlite-databases"
+      ]
+    },
+    {
+      "name": "xinnan-tech/xiaozhi-esp32-server",
+      "url": "https://github.com/xinnan-tech/xiaozhi-esp32-server",
+      "commit_count": 7,
+      "summary": "🐛 Fix opuslib and module issues",
+      "commits": [
+        {
+          "sha": "1226e8be47eb55a99a80492d1857c446f97d8aee",
+          "message": "Fix opuslib (#122)\n\n* fixed:ModuleNotFoundError: No module named 'opuslib'\n\n* update:格式化文档\n\n---------\n\nCo-authored-by: hrz <1710360675@qq.com>",
+          "date": "2025-02-23T12:14:46Z"
+        },
+        {
+          "sha": "22ff7a92b87d8e85e29163ef33d6a0e54df9eb08",
+          "message": "fixed:ModuleNotFoundError: No module named 'opuslib' (#121)\n\nCo-authored-by: hrz <1710360675@qq.com>",
+          "date": "2025-02-23T11:59:26Z"
+        },
+        {
+          "sha": "2d01812f8d76d0cba46e6af0c7b2e91da46e904b",
+          "message": "Performance test (#118)\n\n* update: optimize performance test files\n\n* update:异步测试方法\n\n* update:改回默认FunASR\n\n---------\n\nCo-authored-by: Alexisxty <alexisty233@gmail.com>\nCo-authored-by: hrz <1710360675@qq.com>",
+          "date": "2025-02-23T08:22:21Z"
+        },
+        {
+          "sha": "3bc0b821a199da5054a149650f828f6e13d80911",
+          "message": "update: 修改了服务组件的性能测试代码 (#111)\n\n* update: optimize performance test files\n\n* update:异步测试方法\n\n---------\n\nCo-authored-by: hrz <1710360675@qq.com>",
+          "date": "2025-02-23T08:07:33Z"
+        },
+        {
+          "sha": "148578399ff891a1469a12624fecc2c37fd4a4ed",
+          "message": "使用配置文件设置日志参数 (#116)\n\n* 使用配置文件设置日志参数\n\n* update：优化\n\n---------\n\nCo-authored-by: 欣南科技 <huangrongzhuang@xin-nan.com>\nCo-authored-by: hrz <1710360675@qq.com>",
+          "date": "2025-02-23T07:18:59Z"
+        },
+        {
+          "sha": "6c3fbd7a8fe4a49e2f8b5e9d0fcad431776e2f37",
+          "message": "Doubao asr (#117)\n\n* 添加豆包在线 ASR (#82)\n---------\nCo-authored-by: 胡垚 <qsct9501@163.com>",
+          "date": "2025-02-23T06:38:21Z"
+        },
+        {
+          "sha": "f054f66d92ceda551117c4a65cb54e994d0bb4de",
+          "message": "Docker build (#115)\n\n* update:配置docker自动编译\n\n* update:修改docker编译参数\n\n* update:测试docker编译\n\n* update：优化docker自动编译\n\n---------\n\nCo-authored-by: hrz <1710360675@qq.com>",
+          "date": "2025-02-22T14:12:02Z"
+        }
+      ],
+      "topics": [
+        "dify",
+        "esp32",
+        "xiaozhi-esp32"
+      ]
+    },
+    {
+      "name": "RedisBloom/RedisBloom",
+      "url": "https://github.com/RedisBloom/RedisBloom",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "bloom-filter",
+        "redis",
+        "redis-module",
+        "redisbloom"
+      ]
+    },
+    {
+      "name": "arendst/Tasmota",
+      "url": "https://github.com/arendst/Tasmota",
+      "commit_count": 4,
+      "summary": "🛠️ Fixes and enhancements for Tasmota firmware",
+      "commits": [
+        {
+          "sha": "375864b23bccec14b90e513394bfd2d58a12f087",
+          "message": "Berry 'tasmota.when_network_up()' and simplified Matter using it (#23057)",
+          "date": "2025-02-23T18:19:42Z"
+        },
+        {
+          "sha": "788ac574ac267852fdacbfae9ead686421b34ab7",
+          "message": "remove tagging gemu2015 for every opened bug report",
+          "date": "2025-02-23T13:27:42Z"
+        },
+        {
+          "sha": "5aa7d08c91f88943c2052ba9587e5a2102ad605e",
+          "message": "Fix too many zeros in RCSwitch received data regression from v14.4.1.4 (#23050)",
+          "date": "2025-02-23T12:54:39Z"
+        },
+        {
+          "sha": "b4c61325cb06413c4da60c8d2032cc9fbdd83bd3",
+          "message": "Add optional WizMote commission",
+          "date": "2025-02-22T17:12:36Z"
+        }
+      ],
+      "topics": [
+        "arduino",
+        "automation",
+        "esp32",
+        "esp8266",
+        "firmware",
+        "iot",
+        "knx",
+        "mqtt",
+        "ota",
+        "smart-home",
+        "sonoff",
+        "tasmota",
+        "tuya"
+      ]
+    },
+    {
+      "name": "simonw/til",
+      "url": "https://github.com/simonw/til",
+      "commit_count": 9,
+      "summary": "🔧 Using Tailscale exit node with GitHub Actions",
+      "commits": [
+        {
+          "sha": "02c860fc2f8d857f2b5a4d0feaa712fb97b558e5",
+          "message": "Removed exit-node-allow-lan-access=true\n\nIt works without this.",
+          "date": "2025-02-23T18:14:23Z"
+        },
+        {
+          "sha": "874a1a8660bc6a3adacc304fc599afa58ac698f4",
+          "message": "typo",
+          "date": "2025-02-23T04:50:54Z"
+        },
+        {
+          "sha": "a393dcd94f283c8cfd6d95569d0ce1e83b4b58e4",
+          "message": "Using the exit node's name instead of an IP address",
+          "date": "2025-02-23T04:47:50Z"
+        },
+        {
+          "sha": "6e3f23646e2c3c5084da76f897ba462d3431fa15",
+          "message": "Added missing comma\n\nThanks https://hachyderm.io/@llimllib/114051109409520394",
+          "date": "2025-02-23T04:33:00Z"
+        },
+        {
+          "sha": "e3ae8b8de719095e310aac62ce00aee72a095d1f",
+          "message": "Clarify tag JSON first",
+          "date": "2025-02-23T04:31:21Z"
+        },
+        {
+          "sha": "34b89e3d4f49796f4f6aa3e1cba0738cc0456639",
+          "message": "Needs auth keys scopes too",
+          "date": "2025-02-23T04:28:48Z"
+        },
+        {
+          "sha": "5319f69f6d35c562f7bc754375c9b424c832fb82",
+          "message": "Updated README",
+          "date": "2025-02-23T02:30:23Z"
+        },
+        {
+          "sha": "146d156d93d6db593648782e44683929147d75ff",
+          "message": "Using a Tailscale exit node with GitHub Actions",
+          "date": "2025-02-23T02:29:31Z"
+        },
+        {
+          "sha": "30ad5f37e25f7b13a6d054a80fd8d9b3684b5296",
+          "message": "Update s3-triggers-dynamodb.md",
+          "date": "2025-02-19T23:19:49Z"
+        }
+      ],
+      "topics": [
+        "datasette",
+        "til"
+      ]
+    },
+    {
+      "name": "square/Valet",
+      "url": "https://github.com/square/Valet",
+      "commit_count": 1,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "036197fb8c90e2b24d804daaf960cbd38f888a05",
+          "message": "Use executableURL in build script (#337)",
+          "date": "2025-02-23T17:37:38Z"
+        }
+      ],
+      "topics": [
+        "crypto",
+        "face-id",
+        "ios",
+        "keychain",
+        "macos",
+        "security",
+        "touch-id",
+        "tvos",
+        "watchos"
+      ]
+    },
+    {
+      "name": "yannbertrand/macos-defaults",
+      "url": "https://github.com/yannbertrand/macos-defaults",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "hacktoberfest",
+        "macos",
+        "macos-commands",
+        "macos-defaults",
+        "macos-setup",
+        "vuepress"
+      ]
+    },
+    {
+      "name": "xyproto/algernon",
+      "url": "https://github.com/xyproto/algernon",
+      "commit_count": 9,
+      "summary": "🛠️ Update dependencies, add Markdown lang support, and optimize build",
+      "commits": [
+        {
+          "sha": "c968032c0bd3860d8548b8779b1fbf1ab2069ca1",
+          "message": "Add a friendly message when serving README.md files without -m.",
+          "date": "2025-02-23T17:11:08Z"
+        },
+        {
+          "sha": "4af8ead173a6e701a479b8861243698f4e3dc994",
+          "message": "Build with '-ldflags \"-s -w\" -buildvcs=false' by default",
+          "date": "2025-02-23T16:40:37Z"
+        },
+        {
+          "sha": "2618dd9a86ef31dfb21bb2aa05e3eee53eecbfff",
+          "message": "Remove unused code",
+          "date": "2025-02-23T16:37:27Z"
+        },
+        {
+          "sha": "9c549d3a22bebb3912f9ef14635ff1fc8ae19882",
+          "message": "Update dependencies",
+          "date": "2025-02-23T16:37:24Z"
+        },
+        {
+          "sha": "054cb5497c1062e4d4b17df90005fcf3607012e4",
+          "message": "Add lang=\"en\" to 3 of the samples",
+          "date": "2025-02-23T16:28:53Z"
+        },
+        {
+          "sha": "1e75fdff1ae74f157653be72d13f8689366e92c4",
+          "message": "Add support for ie. \"lang: en\" and \"language: en\" in Markdown files",
+          "date": "2025-02-23T16:27:53Z"
+        },
+        {
+          "sha": "54a132618d2d83bafa5e3534db0913c2392de0ed",
+          "message": "Remove a blank line",
+          "date": "2025-02-23T16:28:41Z"
+        },
+        {
+          "sha": "2a93dc40b76012f4a9cdf21a01b5dcde10b03313",
+          "message": "Update dependencies",
+          "date": "2025-02-23T16:00:36Z"
+        },
+        {
+          "sha": "d094d5575d8e1a60939f5da003bb8f83aaa7efce",
+          "message": "Minor change",
+          "date": "2025-02-20T11:28:59Z"
+        }
+      ],
+      "topics": [
+        "algernon",
+        "buildless",
+        "cross-platform",
+        "fasthttp",
+        "go",
+        "http2",
+        "http3",
+        "live-reload",
+        "llm",
+        "lua",
+        "mysql",
+        "ollama",
+        "pongo2",
+        "postgresql",
+        "quic",
+        "redis",
+        "server-sent-events",
+        "sqlite",
+        "tls13"
+      ]
+    },
+    {
+      "name": "dchristl/macless-haystack",
+      "url": "https://github.com/dchristl/macless-haystack",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "esp32",
+        "findmy",
+        "openhaystack"
+      ]
+    },
+    {
+      "name": "RayWangQvQ/BiliBiliToolPro",
+      "url": "https://github.com/RayWangQvQ/BiliBiliToolPro",
+      "commit_count": 4,
+      "summary": "🛠️ Fix Qinglong script compatibility",
+      "commits": [
+        {
+          "sha": "6b454767edef6a46f8ffcc29ac5705ad3ef42dc5",
+          "message": "Merge pull request #854 from RayWangQvQ/develop\n\nFix qinglong script remain 6.0",
+          "date": "2025-02-23T02:57:23Z"
+        },
+        {
+          "sha": "d3bd67088bda72ccf10e89a1901fe437d99e117a",
+          "message": "Merge branch 'main' into develop",
+          "date": "2025-02-23T02:57:11Z"
+        },
+        {
+          "sha": "1bebbaefd3348f4c784206faa5252f865553061c",
+          "message": "fix qinglong script remain 6.0",
+          "date": "2025-02-23T02:56:17Z"
+        },
+        {
+          "sha": "fbe551de7126ad52493f1ccd1628ef8deea80e89",
+          "message": "Merge pull request #853 from RayWangQvQ/develop\n\nrm PublishTrimmed",
+          "date": "2025-02-22T17:09:44Z"
+        }
+      ],
+      "topics": [
+        "bilibili",
+        "netcore"
+      ]
+    },
+    {
+      "name": "cmliu/edgetunnel",
+      "url": "https://github.com/cmliu/edgetunnel",
+      "commit_count": 1,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "3a1f4b0f302419128bb4521c002c0cd5e155c7f0",
+          "message": "优化 CF随机节点生成逻辑，增加 Loon 订阅地址支持",
+          "date": "2025-02-23T16:52:13Z"
+        }
+      ],
+      "topics": [
+        "v2ray",
+        "v2ray-worker",
+        "vless",
+        "vless-ws-tls"
+      ]
+    },
+    {
+      "name": "dora-rs/dora",
+      "url": "https://github.com/dora-rs/dora",
+      "commit_count": 9,
+      "summary": "🚀 Enhance tests, fix bugs, and update dependencies in DORA",
+      "commits": [
+        {
+          "sha": "b9b8ced620c0d65459fe5fa4107103a189ef4b6a",
+          "message": "Adding a test for checking on the latency when used timeout and queue at the same time (#783)\n\nThis PR is a follow of issue https://github.com/dora-rs/dora/issues/774\nand indeed it seems that the latency is higher than what we would\nexpect.",
+          "date": "2025-02-23T15:32:46Z"
+        },
+        {
+          "sha": "33ba7a37f64ac8c3d98553b584ab3c59c87237f0",
+          "message": "Add uv flag within start cli command (#788)\n\nThis allows using up and start with uv:\n\n## How to use:\n\n```bash\ncd examples/python-dataflow\ndora up\ndora start dataflow.yaml --uv\n```\n\nFixes: https://github.com/dora-rs/dora/issues/780\n\nThis would help the CI as well",
+          "date": "2025-02-23T15:26:58Z"
+        },
+        {
+          "sha": "3fca6f9e2cd35f362b84cc86602c0718f2762b00",
+          "message": "Add time limit for test of 10s",
+          "date": "2025-02-23T15:14:02Z"
+        },
+        {
+          "sha": "b4021d0c9a0fe59b1abdd3a19d09f2828640797a",
+          "message": "Limit pip release ci to strict minimum (#791)\n\nIn order to accelerate our workflow, this PR reduces the CI pip release\ncross platform check to work that correspond to python dependent work.",
+          "date": "2025-02-23T14:38:48Z"
+        },
+        {
+          "sha": "d0cefcbe20ae75fdce40072b7f67fc301af6aa7a",
+          "message": "Adding float for env variable and metadata parameters (#786)\n\nThis PR adds support for float64, Listfloat metadata parameters as well\nas float64 environment variables.",
+          "date": "2025-02-23T14:38:22Z"
+        },
+        {
+          "sha": "f33ee1e811dffcd8bcb551d6072fb98e6d8da80a",
+          "message": "Fix scheduler not being used when called through node timeout",
+          "date": "2025-02-23T14:33:09Z"
+        },
+        {
+          "sha": "be82fc94079c2ade0c580031e2e96d467a76a462",
+          "message": "Fix bounding box for rerun viewer and clear the viewer if no bounding box is detected (#787)\n\nThis PR fixes an issue that bounding box are not cleared when there is\nnothing detected.",
+          "date": "2025-02-23T14:02:27Z"
+        },
+        {
+          "sha": "cf88bcd8faf2fce9ff6d6c60139e8b9a49705458",
+          "message": "Update dependency transformers to >=4.48.0,<=4.48.0 [SECURITY] - abandoned (#778)\n\nThis PR contains the following updates:\n\n| Package | Change | Age | Adoption | Passing | Confidence |\n|---|---|---|---|---|---|\n| [transformers](https://redirect.github.com/huggingface/transformers) |\n`>=4.43.0,<=4.43.3` -> `>=4.48.0,<=4.48.0` |\n[![age](https://developer.mend.io/api/mc/badges/age/pypi/transformers/4.48.0?slim=true)](https://docs.renovatebot.com/merge-confidence/)\n|\n[![adoption](https://developer.mend.io/api/mc/badges/adoption/pypi/transformers/4.48.0?slim=true)](https://docs.renovatebot.com/merge-confidence/)\n|\n[![passing](https://developer.mend.io/api/mc/badges/compatibility/pypi/transformers/4.43.0/4.48.0?slim=true)](https://docs.renovatebot.com/merge-confidence/)\n|\n[![confidence](https://developer.mend.io/api/mc/badges/confidence/pypi/transformers/4.43.0/4.48.0?slim=true)](https://docs.renovatebot.com/merge-confidence/)\n|\n\n### GitHub Vulnerability Alerts\n\n#### [CVE-2024-11392](https://nvd.nist.gov/vuln/detail/CVE-2024-11392)\n\nHugging Face Transformers MobileViTV2 Deserialization of Untrusted Data\nRemote Code Execution Vulnerability. This vulnerability allows remote\nattackers to execute arbitrary code on affected installations of Hugging\nFace Transformers. User interaction is required to exploit this\nvulnerability in that the target must visit a malicious page or open a\nmalicious file.\n\nThe specific flaw exists within the handling of configuration files. The\nissue results from the lack of proper validation of user-supplied data,\nwhich can result in deserialization of untrusted data. An attacker can\nleverage this vulnerability to execute code in the context of the\ncurrent user. Was ZDI-CAN-24322.\n\n#### [CVE-2024-11394](https://nvd.nist.gov/vuln/detail/CVE-2024-11394)\n\nHugging Face Transformers Trax Model Deserialization of Untrusted Data\nRemote Code Execution Vulnerability. This vulnerability allows remote\nattackers to execute arbitrary code on affected installations of Hugging\nFace Transformers. User interaction is required to exploit this\nvulnerability in that the target must visit a malicious page or open a\nmalicious file.\n\nThe specific flaw exists within the handling of model files. The issue\nresults from the lack of proper validation of user-supplied data, which\ncan result in deserialization of untrusted data. An attacker can\nleverage this vulnerability to execute code in the context of the\ncurrent user. Was ZDI-CAN-25012.\n\n#### [CVE-2024-11393](https://nvd.nist.gov/vuln/detail/CVE-2024-11393)\n\nHugging Face Transformers MaskFormer Model Deserialization of Untrusted\nData Remote Code Execution Vulnerability. This vulnerability allows\nremote attackers to execute arbitrary code on affected installations of\nHugging Face Transformers. User interaction is required to exploit this\nvulnerability in that the target must visit a malicious page or open a\nmalicious file.\n\nThe specific flaw exists within the parsing of model files. The issue\nresults from the lack of proper validation of user-supplied data, which\ncan result in deserialization of untrusted data. An attacker can\nleverage this vulnerability to execute code in the context of the\ncurrent user. Was ZDI-CAN-25191.\n\n---\n\n### Release Notes\n\n<details>\n<summary>huggingface/transformers (transformers)</summary>\n\n###\n[`v4.48.0`](https://redirect.github.com/huggingface/transformers/releases/tag/v4.48.0):\n: ModernBERT, Aria, TimmWrapper, ColPali, Falcon3, Bamba, VitPose,\nDinoV2 w/ Registers, Emu3, Cohere v2, TextNet, DiffLlama, PixtralLarge,\nMoonshine\n\n[Compare\nSource](https://redirect.github.com/huggingface/transformers/compare/v4.47.1...v4.48.0)\n\n#### New models\n\n##### ModernBERT\n\nThe ModernBert model was proposed in [Smarter, Better, Faster, Longer: A\nModern Bidirectional Encoder for Fast, Memory Efficient, and Long\nContext Finetuning and Inference](https://arxiv.org/abs/2412.13663) by\nBenjamin Warner, Antoine Chaffin, Benjamin Clavié, Orion Weller, Oskar\nHallström, Said Taghadouini, Alexis Galalgher, Raja Bisas, Faisal\nLadhak, Tom Aarsen, Nathan Cooper, Grifin Adams, Jeremy Howard and\nIacopo Poli.\n\nIt is a refresh of the traditional encoder architecture, as used in\nprevious models such as\n[BERT](https://huggingface.co/docs/transformers/en/model_doc/bert) and\n[RoBERTa](https://huggingface.co/docs/transformers/en/model_doc/roberta).\n\nIt builds on BERT and implements many modern architectural improvements\nwhich have been developed since its original release, such as:\n\n- [Rotary Positional\nEmbeddings](https://huggingface.co/blog/designing-positional-encoding)\nto support sequences of up to 8192 tokens.\n- [Unpadding](https://arxiv.org/abs/2208.08124) to ensure no compute is\nwasted on padding tokens, speeding up processing time for batches with\nmixed-length sequences.\n- [GeGLU](https://arxiv.org/abs/2002.05202) Replacing the original MLP\nlayers with GeGLU layers, shown to improve performance.\n- [Alternating Attention](https://arxiv.org/abs/2004.05150v2) where most\nattention layers employ a sliding window of 128 tokens, with Global\nAttention only used every 3 layers.\n- [Flash\nAttention](https://redirect.github.com/Dao-AILab/flash-attention) to\nspeed up processing.\n- A model designed following recent [The Case for Co-Designing Model\nArchitectures with Hardware](https://arxiv.org/abs/2401.14489), ensuring\nmaximum efficiency across inference GPUs.\n- Modern training data scales (2 trillion tokens) and mixtures\n(including code ande math data)\n\n\n![image](https://redirect.github.com/user-attachments/assets/4256c0b1-9b40-4d71-ac42-fc94827d5e9d)\n\n- Add ModernBERT to Transformers by\n[@&#8203;warner-benjamin](https://redirect.github.com/warner-benjamin)\nin\n[#&#8203;35158](https://redirect.github.com/huggingface/transformers/issues/35158)\n\n##### Aria\n\nThe Aria model was proposed in [Aria: An Open Multimodal Native\nMixture-of-Experts Model](https://huggingface.co/papers/2410.05993) by\nLi et al. from the Rhymes.AI team.\n\nAria is an open multimodal-native model with best-in-class performance\nacross a wide range of multimodal, language, and coding tasks. It has a\nMixture-of-Experts architecture, with respectively 3.9B and 3.5B\nactivated parameters per visual token and text token.\n\n- Add Aria by\n[@&#8203;aymeric-roucher](https://redirect.github.com/aymeric-roucher)\nin\n[#&#8203;34157](https://redirect.github.com/huggingface/transformers/issues/34157)\n\n![image](https://redirect.github.com/user-attachments/assets/ef41fcc9-2c5f-4a75-ab1a-438f73d3d7e2)\n\n##### TimmWrapper\n\nWe add a `TimmWrapper` set of classes such that timm models can be\nloaded in as transformer models into the library.\n\nHere's a general usage example:\n\n```py\nimport torch\nfrom urllib.request import urlopen\nfrom PIL import Image\nfrom transformers import AutoConfig, AutoModelForImageClassification, AutoImageProcessor\n\ncheckpoint = \"timm/resnet50.a1_in1k\"\nimg = Image.open(urlopen(\n    'https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/beignets-task-guide.png'\n))\n\nimage_processor = AutoImageProcessor.from_pretrained(checkpoint)\ninputs = image_processor(img, return_tensors=\"pt\")\nmodel = AutoModelForImageClassification.from_pretrained(checkpoint)\n\nwith torch.no_grad():\n    logits = model(**inputs).logits\n\ntop5_probabilities, top5_class_indices = torch.topk(logits.softmax(dim=1) * 100, k=5)\n```\n\nThanks to this, timm models now have access to pipelines, as well as\n`Trainer`, accelerate device maps, quantization, etc:\n\n```py\nimport torch\nfrom urllib.request import urlopen\nfrom PIL import Image\n\nfrom transformers import pipeline\n\nimg = Image.open(urlopen(\n    'https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/beignets-task-guide.png'\n))\npipe = pipeline(\"image-classification\", model=\"timm/resnet18.a1_in1k\")\nprint(pipe(img))\n```\n\n- Add TimmWrapper by\n[@&#8203;qubvel](https://redirect.github.com/qubvel) and\n[@&#8203;amyeroberts](https://redirect.github.com/amyeroberts) in\n[#&#8203;34564](https://redirect.github.com/huggingface/transformers/issues/34564)\n\n##### Pixtral-Large\n\nPixtral modeling and checkpoint conversion code has been updated to\nsupport the new\n[Pixtral-Large](https://huggingface.co/mistralai/Pixtral-Large-Instruct-2411)\nmodel.\n\n- Update Pixtral conversion script to support large format! by\n[@&#8203;arthurzucker](https://redirect.github.com/arthurzucker) in\n[#&#8203;34801](https://redirect.github.com/huggingface/transformers/issues/34801)\n\n##### ColPali\n\nThe ColPali model was proposed in [ColPali: Efficient Document Retrieval\nwith Vision Language Models](https://doi.org/10.48550/arXiv.2407.01449)\nby Manuel Faysse\\*, Hugues Sibille\\*, Tony Wu\\*, Bilel Omrani, Gautier\nViaud, Céline Hudelot, Pierre Colombo (\\* denotes equal contribution).\nWork lead by ILLUIN Technology.\n\nIn the proposed ColPali approach, the authors leverage VLMs to construct\nefficient multi-vector embeddings directly from document images\n(“screenshots”) for document retrieval. They train the model to maximize\nthe similarity between these document embeddings and the corresponding\nquery embeddings, using the late interaction method introduced in\nColBERT.\n\n\n![colpali_architecture](https://redirect.github.com/user-attachments/assets/545ed1d7-ea82-4d0d-80c1-4fcbb1c828cd)\n\n- Add ColPali to 🤗 transformers by\n[@&#8203;tonywu71](https://redirect.github.com/tonywu71) and\n[@&#8203;yonigozlan](https://redirect.github.com/yonigozlan) in\n[#&#8203;33736](https://redirect.github.com/huggingface/transformers/issues/33736)\n\n##### Falcon3\n\nFalcon3 represents a natural evolution from previous releases,\nemphasizing expanding the models’ science, math, and code capabilities.\nThis iteration includes five base models: Falcon3-1B-Base,\nFalcon3-3B-Base, Falcon3-Mamba-7B-Base, Falcon3-7B-Base, and\nFalcon3-10B-Base. In developing these models, the authors incorporated\nseveral key innovations aimed at improving the models’ performances\nwhile reducing training costs:\n\nOne pre-training: They conducted a single large-scale pretraining run on\nthe 7B model, using 2048 H100 GPU chips, leveraging 14 trillion tokens\nfeaturing web, code, STEM, and curated high-quality and multilingual\ndata. Depth up-scaling for improved reasoning: Building on recent\nstudies on the effects of model depth, they upscaled the 7B model to a\n10B parameters model by duplicating the redundant layers and continuing\npre-training with 2TT of high-quality data. This yielded\nFalcon3-10B-Base which achieves state-of-the-art zero-shot and few-shot\nperformance for models under 13B parameters. Knowledge distillation for\nbetter tiny models: To provide compact and efficient alternatives, we\ndeveloped Falcon3-1B-Base and Falcon3-3B-Base by leveraging pruning and\nknowledge distillation techniques, using less than 100GT of curated\nhigh-quality data, thereby redefining pre-training efficiency.\n\n- Add Falcon3 documentation by\n[@&#8203;mokeddembillel](https://redirect.github.com/mokeddembillel) in\n[#&#8203;35307](https://redirect.github.com/huggingface/transformers/issues/35307)\n\n##### Bamba\n\nBamba-9B is a decoder-only language model based on the\n[Mamba-2](https://redirect.github.com/state-spaces/mamba) architecture\nand is designed to handle a wide range of text generation tasks. It is\ntrained from scratch using a two-stage training approach. In the first\nstage, the model is trained on 2 trillion tokens from the Dolma v1.7\ndataset. In the second stage, it undergoes additional training on 200\nbillion tokens, leveraging a carefully curated blend of high-quality\ndata to further refine its performance and enhance output quality.\n\nCheckout all Bamba-9B model checkpoints\n[here](https://redirect.github.com/foundation-model-stack/bamba).\n\n- Add the Bamba Model by\n[@&#8203;fabianlim](https://redirect.github.com/fabianlim) in\n[#&#8203;34982](https://redirect.github.com/huggingface/transformers/issues/34982)\n\n##### VitPose\n\nViTPose is a state-of-the-art vision transformer-based model for human\npose estimation, introduced by Yufei Xu, Jing Zhang, Qiming Zhang, and\nDacheng Tao in [\"ViTPose: Simple Vision Transformer Baselines for Human\nPose Estimation”](https://arxiv.org/abs/2204.12484).\n\nThe model leverages the capabilities of vision transformers to\naccurately predict 2D human keypoints. Adopting a top-down approach,\nViTPose estimates keypoints locations for each detected person, allowing\nit to be easily used with any object detection model.\n\n\n![vitpose](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/vitpose-architecture.png)\n\n- Add VitPose by\n[@&#8203;SangbumChoi](https://redirect.github.com/SangbumChoi) and\n[@&#8203;NielsRogge](https://redirect.github.com/NielsRogge) in\n[#&#8203;30530](https://redirect.github.com/huggingface/transformers/issues/30530)\n\n##### DINOv2 with registers\n\nThe DINOv2 with Registers model was proposed in [Vision Transformers\nNeed Registers](https://arxiv.org/abs/2309.16588) by Timothée Darcet,\nMaxime Oquab, Julien Mairal, Piotr Bojanowski.\n\nThe [Vision\nTransformer](https://huggingface.co/docs/transformers/main/en/model_doc/vit)\n(ViT) is a transformer encoder model (BERT-like) originally introduced\nto do supervised image classification on ImageNet.\n\nNext, people figured out ways to make ViT work really well on\nself-supervised image feature extraction (i.e. learning meaningful\nfeatures, also called embeddings) on images without requiring any\nlabels. Some example papers here include\n[DINOv2](https://huggingface.co/docs/transformers/main/en/model_doc/dinov2)\nand\n[MAE](https://huggingface.co/docs/transformers/main/en/model_doc/vit_mae).\n\nThe authors of DINOv2 noticed that ViTs have artifacts in attention\nmaps. It’s due to the model using some image patches as “registers”. The\nauthors propose a fix: just add some new tokens (called “register”\ntokens), which you only use during pre-training (and throw away\nafterwards). This results in:\n\n-   no artifacts\n-   interpretable attention maps\n-   and improved performances.\n\n<!---->\n\n- Add DINOv2 with registers by\n[@&#8203;NielsRogge](https://redirect.github.com/NielsRogge) in\n[#&#8203;35348](https://redirect.github.com/huggingface/transformers/issues/35348)\n\n##### Emu3\n\nThe Emu3 model was proposed in [Emu3: Next-Token Prediction is All You\nNeed](https://arxiv.org/abs/2409.18869) by Xinlong Wang, Xiaosong Zhang,\nZhengxiong Luo, Quan Sun, Yufeng Cui, Jinsheng Wang, Fan Zhang, Yueze\nWang, Zhen Li, Qiying Yu, Yingli Zhao, Yulong Ao, Xuebin Min, Tao Li,\nBoya Wu, Bo Zhao, Bowen Zhang, Liangdong Wang, Guang Liu, Zheqi He, Xi\nYang, Jingjing Liu, Yonghua Lin, Tiejun Huang, Zhongyuan Wang.\n\nEmu3 sets a new standard in multimodal AI by using next-token prediction\nto handle images, text, and videos. It simplifies multimodal modeling by\ntokenizing all data into a unified format and training a single\ntransformer. Visual data is tokenized using vector quantization methods\nbased on [VQ-VAE](https://arxiv.org/abs/1711.00937) model. Discretized\nvisual tokens are later fused with text token ids for image and text\ngeneration.\n\nEmu3 outperforms leading models like SDXL and LLaVA-1.6 in both\ngeneration and perception tasks, without relying on diffusion or\ncompositional methods..\n\n- Add Emu3 by\n[@&#8203;zucchini-nlp](https://redirect.github.com/zucchini-nlp) in\n[#&#8203;33770](https://redirect.github.com/huggingface/transformers/issues/33770)\n\n##### Cohere2\n\nA new Cohere update was added through a new \"Cohere2\" set of classes.\n\n- Add Cohere2 model by\n[@&#8203;alexrs-cohere](https://redirect.github.com/alexrs-cohere) in\n[#&#8203;35224](https://redirect.github.com/huggingface/transformers/issues/35224)\n\n##### TextNet\n\n[TextNet](https://arxiv.org/abs/2111.02394) is a lightweight and\nefficient architecture designed specifically for text detection,\noffering superior performance compared to traditional models like\nMobileNetV3. With variants TextNet-T, TextNet-S, and TextNet-B (6.8M,\n8.0M, and 8.9M parameters respectively), it achieves an excellent\nbalance between accuracy and inference speed.\n\n- Add TextNet by\n[@&#8203;jadechoghari](https://redirect.github.com/jadechoghari) in\n[#&#8203;34979](https://redirect.github.com/huggingface/transformers/issues/34979)\n\n##### DiffLlama\n\n[Differential Transformer](https://arxiv.org/abs/2410.05258) combines\nthe Llama architecture with Differential Transformer's Attention.\n\n- Add DiffLllama by\n[@&#8203;weak-kajuma](https://redirect.github.com/weak-kajuma) in\n[#&#8203;34083](https://redirect.github.com/huggingface/transformers/issues/34083)\n\n##### PixtralLarge\n\nThe conversion script needed a few update, while the modeling code was\nbarely changed!\n\n- \\[PixtralLarge] Update Pixtral conversion script to support large\nformat!\n([#&#8203;34801](https://redirect.github.com/huggingface/transformers/issues/34801))\n\n##### Moonshine\n\nMoonshine is an autoregressive speech recognition encoder-decoder model\nthat improves upon Whisper's architecture. Namely, it replaces absolute\nposition embeddings with Rotary Position Embeddings (RoPE). This allows\nMoonshine to handle audio inputs of any length, unlike Whisper, which is\nrestricted to fixed 30-second windows. It was introduced by Nat\nJeffries, Evan King, Manjunath Kudlur, Guy Nicholson, James Wang, and\nPete Warden in [Moonshine: Speech Recognition for Live Transcription and\nVoice Commands\n](https://arxiv.org/abs/2410.15608).\n\n- Add Moonshine by [@&#8203;eustlb](https://redirect.github.com/eustlb)\nin\n[#&#8203;34784](https://redirect.github.com/huggingface/transformers/issues/34784)\n\n#### Quantization methods\n\n##### VPTQ Quantization\n\nFrom the VPTQ contributors:\n\n> VPTQ is a novel Post-Training Quantization method that leverages\nVector Quantization to high accuracy on LLMs at an extremely low\nbit-width (<2-bit). VPTQ can compress 70B, even the 405B model, to 1-2\nbits without retraining and maintain high accuracy.. More details here:\nhttps://github.com/microsoft/vptq\n\n- FEAT : Adding VPTQ quantization method to HFQuantizer by\n[@&#8203;wejoncy](https://redirect.github.com/wejoncy) in\n[#&#8203;34770](https://redirect.github.com/huggingface/transformers/issues/34770)\n\n##### HIGGS Quantization\n\nFrom the contributors:\n\n> HIGGS is a new 0-shot quantization algorithm that combines Hadamard\npreprocessing with MSE-Optimal quantization grids to achieve lower\nquantization error and SOTA performance. You can find more information\nin the [paper](https://arxiv.org/abs/2411.17525).\n>\n> Runtime support for HIGGS is implemented through\n[FLUTE](https://arxiv.org/abs/2407.10960), and its\n[library](https://redirect.github.com/HanGuo97/flute?tab=readme-ov-file).\n>\n> This PR adds support for HIGGS+FLUTE into transformers allowing for\nlow-error 0-shot quantization and fast LLM inference.\n\n- HIGGS Quantization Support by\n[@&#8203;BlackSamorez](https://redirect.github.com/BlackSamorez) in\n[#&#8203;34997](https://redirect.github.com/huggingface/transformers/issues/34997)\n\n#### Cleanup\n\nWe merged a cleanup for vision language models, to make sure it all\nmodels are standardized.\n\n- VLMs: major clean up 🧼\n([#&#8203;34502](https://redirect.github.com/huggingface/transformers/issues/34502))\n\n#### Breaking changes\n\n##### Conversion scripts\n\nMany models in Transformers include scripts to convert the original\nmodel checkpoints into a Transformers-compatible format. These scripts\ncan be found in the repo using the glob pattern\n`models/**/convert_*.py`. They were a recurring source of vulnerability\nreports and CVEs because many models were originally released using\ninsecure formats like older PyTorch `.bin` weights or `pickle` files.\nThe conversion scripts had to open these formats, and this meant that\nthey were vulnerable to maliciously crafted inputs.\n\nIn practice, we do not see this as a serious vulnerability. The\nconversion scripts are never imported or called by the rest of the\nlibrary; each script is standalone, and so the only way to exploit the\nvulnerability is to create a malicious checkpoint, induce a user to\ndownload it, and then also induce them to manually call a specific\nconversion script on it.\n\nHowever, even if there is little practical risk of an exploit, we are\naware that open vulnerability reports create a compliance problem for\nusers, and so beginning with this release we will be excluding these\nconversion scripts from release branches and wheels. They will remain\naccessible to developers on the `main` branch.\n\n- 🚨🚨🚨 Delete conversion scripts when making release wheels by\n[@&#8203;Rocketknight1](https://redirect.github.com/Rocketknight1) in\n[#&#8203;35296](https://redirect.github.com/huggingface/transformers/issues/35296)\n\n##### Backtracking in Nougat\n\nA regular expression used within the Nougat code has been modified to\nensure it does not hang. The method should output the same results but\nwe cannot guarantee it; we recommend upgrading to the latest\ntransformers if you use this model to ensure your code is\nperformance-optimized.\n\n- 🚨🚨🚨 Limit backtracking in Nougat regexp by\n[@&#8203;qubvel](https://redirect.github.com/qubvel) in\n[#&#8203;35264](https://redirect.github.com/huggingface/transformers/issues/35264)\n\n##### Whisper decoding\n\nThis PR finalizes work that aimes to enable short-form (< 30 secs) and\nlong-form generation using temperature fallback. It is a significant\nimprovement to the whisper codebase, but it does result in the following\nbreaking changes:\n\n➡️ **Previously:**\\\n• Short-form: Returned a `ModelOutput` or `torch.LongTensor`, including\ndecoder input IDs and the EOS token ID.\\\n• Long-form: Returned a `Dict` or `torch.LongTensor`, excluding decoder\ninput IDs and the EOS token ID.\n\n➡️ **From now on:**\\\nShort-form and long-form generation are now treated identically, meaning\noutput differentiation based on these modes is no longer applicable.\n\nDecoder input IDs and EOS token IDs are never returned, except in two\nspecific cases: when `return_dict_in_generate=True` and\n(`return_timestamps=False` or `force_unique_generate_call=True`).\n\nIn this case, the output will be a `ModelOutput`, which is the result of\nthe underlying call to GenerationMixin’s generate. Indeed,\n`return_timestamps=False` ensures no seeking occurs; only a single call\nto generate is made. Therefore, this output includes both decoder input\nIDs and the EOS token ID.\n\n- \\[Whisper] 🚨 Fix whisper decoding 🚨 by\n[@&#8203;eustlb](https://redirect.github.com/eustlb) in\n[#&#8203;34135](https://redirect.github.com/huggingface/transformers/issues/34135)\n\n##### Attention refactor\n\nIn order to have a cleaner, isolated, future-proof code for the\nattention layers, they have been refactored so as to keep the model\nattention code within their files; but attention definitions relating to\nSDPA, Flash Attention, and other types of attention have been moved to a\ncommon file.\n\n- 🚨All attention refactor🚨 by\n[@&#8203;ArthurZucker](https://redirect.github.com/ArthurZucker) in\n[#&#8203;35235](https://redirect.github.com/huggingface/transformers/issues/35235)\n\n#### Bugfixes and improvements\n\n- \\[tokenizers] Ensure that add_prefix_space is propagated to\nbackend_tokenizer.pre_tokenizer\n([#&#8203;35593](https://redirect.github.com/huggingface/transformers/issues/35593))\n- Setup loss_type in config at model init time\n([#&#8203;34616](https://redirect.github.com/huggingface/transformers/issues/34616))\n- \\[docs] Update Python version in translations by\n[@&#8203;jla524](https://redirect.github.com/jla524) in\n[#&#8203;35096](https://redirect.github.com/huggingface/transformers/issues/35096)\n- \\[docs] top_p, top_k, temperature docstrings by\n[@&#8203;stevhliu](https://redirect.github.com/stevhliu) in\n[#&#8203;35065](https://redirect.github.com/huggingface/transformers/issues/35065)\n- Fix private forked repo. CI by\n[@&#8203;ydshieh](https://redirect.github.com/ydshieh) in\n[#&#8203;35114](https://redirect.github.com/huggingface/transformers/issues/35114)\n- Add feature dim attributes to BitLinear for easier PEFT integration by\n[@&#8203;agostinv](https://redirect.github.com/agostinv) in\n[#&#8203;34946](https://redirect.github.com/huggingface/transformers/issues/34946)\n- Update I-JEPA checkpoints path by\n[@&#8203;qubvel](https://redirect.github.com/qubvel) in\n[#&#8203;35120](https://redirect.github.com/huggingface/transformers/issues/35120)\n- Fix GA loss bugs and add unit test by\n[@&#8203;techkang](https://redirect.github.com/techkang) in\n[#&#8203;35121](https://redirect.github.com/huggingface/transformers/issues/35121)\n- \\[I-JEPA] Update docs by\n[@&#8203;NielsRogge](https://redirect.github.com/NielsRogge) in\n[#&#8203;35148](https://redirect.github.com/huggingface/transformers/issues/35148)\n- Corrected typo in agent system prompts by\n[@&#8203;Uvi-12](https://redirect.github.com/Uvi-12) in\n[#&#8203;35143](https://redirect.github.com/huggingface/transformers/issues/35143)\n- Option to set 'non_blocking' for to(device) in BatchEncoding and\nBatchFeature by\n[@&#8203;daniel-bogdoll](https://redirect.github.com/daniel-bogdoll) in\n[#&#8203;34883](https://redirect.github.com/huggingface/transformers/issues/34883)\n- Fix typo in EETQ Tests by\n[@&#8203;MekkCyber](https://redirect.github.com/MekkCyber) in\n[#&#8203;35160](https://redirect.github.com/huggingface/transformers/issues/35160)\n- Cleanup: continue the init refactor by\n[@&#8203;LysandreJik](https://redirect.github.com/LysandreJik) in\n[#&#8203;35167](https://redirect.github.com/huggingface/transformers/issues/35167)\n- Super tiny fix logging message by\n[@&#8203;fzyzcjy](https://redirect.github.com/fzyzcjy) in\n[#&#8203;35132](https://redirect.github.com/huggingface/transformers/issues/35132)\n- Fixed typo of 'avilable' in prompts.py by\n[@&#8203;Uvi-12](https://redirect.github.com/Uvi-12) in\n[#&#8203;35145](https://redirect.github.com/huggingface/transformers/issues/35145)\n- \\[CI] Fix bnb quantization tests with accelerate>=1.2.0 by\n[@&#8203;matthewdouglas](https://redirect.github.com/matthewdouglas) in\n[#&#8203;35172](https://redirect.github.com/huggingface/transformers/issues/35172)\n- Fix `num_items_in_batch` not being an integer by\n[@&#8203;xspirus](https://redirect.github.com/xspirus) in\n[#&#8203;35115](https://redirect.github.com/huggingface/transformers/issues/35115)\n- Assisted decoding multi-gpu by\n[@&#8203;zucchini-nlp](https://redirect.github.com/zucchini-nlp) in\n[#&#8203;35116](https://redirect.github.com/huggingface/transformers/issues/35116)\n- Fix file path for shard_num 1 with mllama converter by\n[@&#8203;strangiato](https://redirect.github.com/strangiato) in\n[#&#8203;35053](https://redirect.github.com/huggingface/transformers/issues/35053)\n- Support BatchNorm in Hubert pos_conv_emb as in fairseq by\n[@&#8203;gallilmaimon](https://redirect.github.com/gallilmaimon) in\n[#&#8203;34389](https://redirect.github.com/huggingface/transformers/issues/34389)\n- Remove unnecessary masked_fill in deberta models by\n[@&#8203;xadupre](https://redirect.github.com/xadupre) in\n[#&#8203;35182](https://redirect.github.com/huggingface/transformers/issues/35182)\n- Fix DBRX LayerNorm init method by\n[@&#8203;hgt312](https://redirect.github.com/hgt312) in\n[#&#8203;35177](https://redirect.github.com/huggingface/transformers/issues/35177)\n- Fixing GGUF support for StableLm by\n[@&#8203;MekkCyber](https://redirect.github.com/MekkCyber) in\n[#&#8203;35060](https://redirect.github.com/huggingface/transformers/issues/35060)\n- \\[i18n-ar] Translated file : `docs/source/ar/community.md` into Arabic\nby [@&#8203;AhmedAlmaghz](https://redirect.github.com/AhmedAlmaghz) in\n[#&#8203;33027](https://redirect.github.com/huggingface/transformers/issues/33027)\n- Multiple typo fixes in NLP, Audio docs by\n[@&#8203;henryhmko](https://redirect.github.com/henryhmko) in\n[#&#8203;35181](https://redirect.github.com/huggingface/transformers/issues/35181)\n- Only import torch.distributed if it is available by\n[@&#8203;GaetanLepage](https://redirect.github.com/GaetanLepage) in\n[#&#8203;35133](https://redirect.github.com/huggingface/transformers/issues/35133)\n- \\[i18n-<languageCode>] Translating Benchmarks.md to Chinese by\n[@&#8203;asdkfjsd](https://redirect.github.com/asdkfjsd) in\n[#&#8203;35137](https://redirect.github.com/huggingface/transformers/issues/35137)\n- \\[docs] Fix FlashAttention link by\n[@&#8203;stevhliu](https://redirect.github.com/stevhliu) in\n[#&#8203;35171](https://redirect.github.com/huggingface/transformers/issues/35171)\n- Update data collator docstrings to accurately reference Nvidia tensor\ncore compute capability version by\n[@&#8203;johngrahamreynolds](https://redirect.github.com/johngrahamreynolds)\nin\n[#&#8203;35188](https://redirect.github.com/huggingface/transformers/issues/35188)\n- \\[i18n-<languageCode>] Translating agents.md to Chinese by\n[@&#8203;HMJ0628](https://redirect.github.com/HMJ0628) in\n[#&#8203;35139](https://redirect.github.com/huggingface/transformers/issues/35139)\n- BLIP: enable device map by\n[@&#8203;zucchini-nlp](https://redirect.github.com/zucchini-nlp) in\n[#&#8203;34850](https://redirect.github.com/huggingface/transformers/issues/34850)\n- 🧹 Remove deprecated RotaryEmbedding parts in the Attention layers by\n[@&#8203;Cyrilvallez](https://redirect.github.com/Cyrilvallez) in\n[#&#8203;34858](https://redirect.github.com/huggingface/transformers/issues/34858)\n- \\[PEFT] Better Trainer error when prompt learning with loading best\nmodel at the end by\n[@&#8203;BenjaminBossan](https://redirect.github.com/BenjaminBossan) in\n[#&#8203;35087](https://redirect.github.com/huggingface/transformers/issues/35087)\n- Cleanup: continue the init refactor by\n[@&#8203;LysandreJik](https://redirect.github.com/LysandreJik) in\n[#&#8203;35170](https://redirect.github.com/huggingface/transformers/issues/35170)\n- Fix CI by\n[@&#8203;Cyrilvallez](https://redirect.github.com/Cyrilvallez) in\n[#&#8203;35208](https://redirect.github.com/huggingface/transformers/issues/35208)\n- Fix seamless TTS generate by\n[@&#8203;ylacombe](https://redirect.github.com/ylacombe) in\n[#&#8203;34968](https://redirect.github.com/huggingface/transformers/issues/34968)\n- docs: clarify initializer_range parameter description in\nIdefics3VisionConfig by\n[@&#8203;h3110Fr13nd](https://redirect.github.com/h3110Fr13nd) in\n[#&#8203;35215](https://redirect.github.com/huggingface/transformers/issues/35215)\n- Fixed typo of 'indentifier' in audio_utils.py by\n[@&#8203;Uvi-12](https://redirect.github.com/Uvi-12) in\n[#&#8203;35226](https://redirect.github.com/huggingface/transformers/issues/35226)\n- Fix type hints for apply_chat_template by\n[@&#8203;Rocketknight1](https://redirect.github.com/Rocketknight1) in\n[#&#8203;35216](https://redirect.github.com/huggingface/transformers/issues/35216)\n- Support Python 3.10+ Union style in chat template type hints parsing\nby [@&#8203;RezaRahemtola](https://redirect.github.com/RezaRahemtola) in\n[#&#8203;35103](https://redirect.github.com/huggingface/transformers/issues/35103)\n- Refactoring `AssistedCandidateGenerator` for Improved Modularity and\nReusability by\n[@&#8203;keyboardAnt](https://redirect.github.com/keyboardAnt) and\n[@&#8203;jmamou](https://redirect.github.com/jmamou) in\n[#&#8203;35009](https://redirect.github.com/huggingface/transformers/issues/35009)\n- Change back to `Thread` for SF conversion by\n[@&#8203;ydshieh](https://redirect.github.com/ydshieh) in\n[#&#8203;35236](https://redirect.github.com/huggingface/transformers/issues/35236)\n- \\[Init refactor] Modular changes by\n[@&#8203;LysandreJik](https://redirect.github.com/LysandreJik) in\n[#&#8203;35240](https://redirect.github.com/huggingface/transformers/issues/35240)\n- Fix typo in chat template example by\n[@&#8203;EricWinsorDSIT](https://redirect.github.com/EricWinsorDSIT) in\n[#&#8203;35250](https://redirect.github.com/huggingface/transformers/issues/35250)\n- Run model as compressed/uncompressed mode by\n[@&#8203;horheynm](https://redirect.github.com/horheynm) in\n[#&#8203;34719](https://redirect.github.com/huggingface/transformers/issues/34719)\n- skip Fuyu from test_generate by\n[@&#8203;nhamanasu](https://redirect.github.com/nhamanasu) in\n[#&#8203;35246](https://redirect.github.com/huggingface/transformers/issues/35246)\n- \\[tests] fix \"Tester object has no attribute '\\_testMethodName'\" by\n[@&#8203;faaany](https://redirect.github.com/faaany) in\n[#&#8203;34910](https://redirect.github.com/huggingface/transformers/issues/34910)\n- Use `rsfE` with `pytest` by\n[@&#8203;ydshieh](https://redirect.github.com/ydshieh) in\n[#&#8203;35119](https://redirect.github.com/huggingface/transformers/issues/35119)\n- Update AMD docker image (rocm 6.1) by\n[@&#8203;ivarflakstad](https://redirect.github.com/ivarflakstad) in\n[#&#8203;35259](https://redirect.github.com/huggingface/transformers/issues/35259)\n- Fixed typos in Audio Classification Documentation by\n[@&#8203;Uvi-12](https://redirect.github.com/Uvi-12) in\n[#&#8203;35263](https://redirect.github.com/huggingface/transformers/issues/35263)\n- Translating agents_advanced.md to Chinese by\n[@&#8203;HMJ0628](https://redirect.github.com/HMJ0628) in\n[#&#8203;35231](https://redirect.github.com/huggingface/transformers/issues/35231)\n- Fix FSDP no longer working by\n[@&#8203;muellerzr](https://redirect.github.com/muellerzr) in\n[#&#8203;35212](https://redirect.github.com/huggingface/transformers/issues/35212)\n- don't use no_sync when deepspeed doesn't support it for certain zero\nstages by [@&#8203;winglian](https://redirect.github.com/winglian) in\n[#&#8203;35157](https://redirect.github.com/huggingface/transformers/issues/35157)\n- \\[i18n-Chinese] Translating perf_train_cpu.md to Chinese by\n[@&#8203;asdkfjsd](https://redirect.github.com/asdkfjsd) in\n[#&#8203;35242](https://redirect.github.com/huggingface/transformers/issues/35242)\n- Fall back to slow image processor in ImageProcessingAuto when no fast\nprocessor available by\n[@&#8203;yonigozlan](https://redirect.github.com/yonigozlan) in\n[#&#8203;34785](https://redirect.github.com/huggingface/transformers/issues/34785)\n- Aggeregate test summary files in CircleCI workflow runs by\n[@&#8203;ydshieh](https://redirect.github.com/ydshieh) in\n[#&#8203;34989](https://redirect.github.com/huggingface/transformers/issues/34989)\n- Blip: fix offloading and MP tests by\n[@&#8203;zucchini-nlp](https://redirect.github.com/zucchini-nlp) in\n[#&#8203;35239](https://redirect.github.com/huggingface/transformers/issues/35239)\n- Fix : model used to test ggml conversion of Falcon-7b is incorrect by\n[@&#8203;MekkCyber](https://redirect.github.com/MekkCyber) in\n[#&#8203;35083](https://redirect.github.com/huggingface/transformers/issues/35083)\n- Temporarily disable amd push ci by\n[@&#8203;ivarflakstad](https://redirect.github.com/ivarflakstad) in\n[#&#8203;35293](https://redirect.github.com/huggingface/transformers/issues/35293)\n- Delete redundancy for loop checks. by\n[@&#8203;zhanluxianshen](https://redirect.github.com/zhanluxianshen) in\n[#&#8203;35288](https://redirect.github.com/huggingface/transformers/issues/35288)\n- \\[Whisper] patch float type on mps by\n[@&#8203;eustlb](https://redirect.github.com/eustlb) in\n[#&#8203;35295](https://redirect.github.com/huggingface/transformers/issues/35295)\n- Fix typos in Translated Audio Classification Docs by\n[@&#8203;jla524](https://redirect.github.com/jla524) in\n[#&#8203;35287](https://redirect.github.com/huggingface/transformers/issues/35287)\n- Translating \"translate perf_infer_gpu_multi.md\" to Chinese by\n[@&#8203;HMJ0628](https://redirect.github.com/HMJ0628) in\n[#&#8203;35271](https://redirect.github.com/huggingface/transformers/issues/35271)\n- Fix wrongs in quicktour\\[zh] by\n[@&#8203;zhanluxianshen](https://redirect.github.com/zhanluxianshen) in\n[#&#8203;35272](https://redirect.github.com/huggingface/transformers/issues/35272)\n- Improved documentation of Automatic speech recognition by\n[@&#8203;Uvi-12](https://redirect.github.com/Uvi-12) in\n[#&#8203;35268](https://redirect.github.com/huggingface/transformers/issues/35268)\n- fix modular order by\n[@&#8203;ArthurZucker](https://redirect.github.com/ArthurZucker) in\n[#&#8203;35297](https://redirect.github.com/huggingface/transformers/issues/35297)\n- Add sdpa for Beit by\n[@&#8203;OmarManzoor](https://redirect.github.com/OmarManzoor) in\n[#&#8203;34941](https://redirect.github.com/huggingface/transformers/issues/34941)\n- Support for SDPA for SAM models by\n[@&#8203;MagnusS0](https://redirect.github.com/MagnusS0) in\n[#&#8203;34110](https://redirect.github.com/huggingface/transformers/issues/34110)\n- remove `benchmark` job in `push-important-models.yml` by\n[@&#8203;ydshieh](https://redirect.github.com/ydshieh) in\n[#&#8203;35292](https://redirect.github.com/huggingface/transformers/issues/35292)\n- Fix typos in translated quicktour docs by\n[@&#8203;jla524](https://redirect.github.com/jla524) in\n[#&#8203;35302](https://redirect.github.com/huggingface/transformers/issues/35302)\n- Fix image preview in multi-GPU inference docs by\n[@&#8203;jla524](https://redirect.github.com/jla524) in\n[#&#8203;35303](https://redirect.github.com/huggingface/transformers/issues/35303)\n- Fix remove unused parameter in docs by\n[@&#8203;zzzzzsa](https://redirect.github.com/zzzzzsa) in\n[#&#8203;35306](https://redirect.github.com/huggingface/transformers/issues/35306)\n- Add Cohere2 docs details by\n[@&#8203;alexrs-cohere](https://redirect.github.com/alexrs-cohere) in\n[#&#8203;35294](https://redirect.github.com/huggingface/transformers/issues/35294)\n- Fixed typo in audio_classification.md by\n[@&#8203;Uvi-12](https://redirect.github.com/Uvi-12) in\n[#&#8203;35305](https://redirect.github.com/huggingface/transformers/issues/35305)\n- \\[docs] Improve register_pipeline by\n[@&#8203;stevhliu](https://redirect.github.com/stevhliu) in\n[#&#8203;35300](https://redirect.github.com/huggingface/transformers/issues/35300)\n- Fix loading with only state dict and low_cpu_mem_usage = True by\n[@&#8203;SunMarc](https://redirect.github.com/SunMarc) in\n[#&#8203;35217](https://redirect.github.com/huggingface/transformers/issues/35217)\n- \\[tests] make cuda-only tests device-agnostic by\n[@&#8203;faaany](https://redirect.github.com/faaany) in\n[#&#8203;35222](https://redirect.github.com/huggingface/transformers/issues/35222)\n- Trigger GitHub CI with a comment on PR by\n[@&#8203;ydshieh](https://redirect.github.com/ydshieh) in\n[#&#8203;35211](https://redirect.github.com/huggingface/transformers/issues/35211)\n- change bnb tests by\n[@&#8203;jiqing-feng](https://redirect.github.com/jiqing-feng) in\n[#&#8203;34713](https://redirect.github.com/huggingface/transformers/issues/34713)\n- \\[Whisper] fix docstrings typo by\n[@&#8203;eustlb](https://redirect.github.com/eustlb) in\n[#&#8203;35319](https://redirect.github.com/huggingface/transformers/issues/35319)\n- feat: add `benchmarks_entrypoint.py` by\n[@&#8203;McPatate](https://redirect.github.com/McPatate) in\n[#&#8203;34495](https://redirect.github.com/huggingface/transformers/issues/34495)\n- Fix documentation for ColPali by\n[@&#8203;tonywu71](https://redirect.github.com/tonywu71) in\n[#&#8203;35321](https://redirect.github.com/huggingface/transformers/issues/35321)\n- Update comment CI bot by\n[@&#8203;ydshieh](https://redirect.github.com/ydshieh) in\n[#&#8203;35323](https://redirect.github.com/huggingface/transformers/issues/35323)\n- PaliGemma: Make sure to add <eos> to suffix if <image> is present in\n`text` by [@&#8203;probicheaux](https://redirect.github.com/probicheaux)\nin\n[#&#8203;35201](https://redirect.github.com/huggingface/transformers/issues/35201)\n- Fix some fa2 tests by\n[@&#8203;ArthurZucker](https://redirect.github.com/ArthurZucker) in\n[#&#8203;35340](https://redirect.github.com/huggingface/transformers/issues/35340)\n- Modernbert Release Fixes by\n[@&#8203;warner-benjamin](https://redirect.github.com/warner-benjamin)\nin\n[#&#8203;35344](https://redirect.github.com/huggingface/transformers/issues/35344)\n- \\[`docs`] Add link to ModernBERT Text Classification GLUE finetuning\nscript by [@&#8203;tomaarsen](https://redirect.github.com/tomaarsen) in\n[#&#8203;35347](https://redirect.github.com/huggingface/transformers/issues/35347)\n- fix onnx export of speech foundation models by\n[@&#8203;nikosanto13](https://redirect.github.com/nikosanto13) in\n[#&#8203;34224](https://redirect.github.com/huggingface/transformers/issues/34224)\n- \\[`Mamba2`] Fix caching, slow path, and multi-gpu by\n[@&#8203;vasqu](https://redirect.github.com/vasqu) in\n[#&#8203;35154](https://redirect.github.com/huggingface/transformers/issues/35154)\n- Reduce CircleCI usage by\n[@&#8203;ydshieh](https://redirect.github.com/ydshieh) in\n[#&#8203;35355](https://redirect.github.com/huggingface/transformers/issues/35355)\n- Implement AsyncTextIteratorStreamer for asynchronous streaming by\n[@&#8203;CISC](https://redirect.github.com/CISC) in\n[#&#8203;34931](https://redirect.github.com/huggingface/transformers/issues/34931)\n- Cleaner attention interfaces by\n[@&#8203;Cyrilvallez](https://redirect.github.com/Cyrilvallez) in\n[#&#8203;35342](https://redirect.github.com/huggingface/transformers/issues/35342)\n- Add Tensor Parallel support for Qwen2VL by\n[@&#8203;jla524](https://redirect.github.com/jla524) in\n[#&#8203;35050](https://redirect.github.com/huggingface/transformers/issues/35050)\n- fix zoedepth initialization error under deepspeed zero3 by\n[@&#8203;Tavish9](https://redirect.github.com/Tavish9) in\n[#&#8203;35011](https://redirect.github.com/huggingface/transformers/issues/35011)\n- Aurevoir PyTorch 1 by\n[@&#8203;ydshieh](https://redirect.github.com/ydshieh) in\n[#&#8203;35358](https://redirect.github.com/huggingface/transformers/issues/35358)\n- bugfix: torch.export failure caused by `_make_causal_mask` by\n[@&#8203;jiwoong-choi](https://redirect.github.com/jiwoong-choi) in\n[#&#8203;35291](https://redirect.github.com/huggingface/transformers/issues/35291)\n- update codecarbon by\n[@&#8203;nhamanasu](https://redirect.github.com/nhamanasu) in\n[#&#8203;35243](https://redirect.github.com/huggingface/transformers/issues/35243)\n- Update test fetcher when we want to test all by\n[@&#8203;ArthurZucker](https://redirect.github.com/ArthurZucker) in\n[#&#8203;35364](https://redirect.github.com/huggingface/transformers/issues/35364)\n- Use `weights_only=True` with `torch.load` for `transfo_xl` by\n[@&#8203;ydshieh](https://redirect.github.com/ydshieh) in\n[#&#8203;35241](https://redirect.github.com/huggingface/transformers/issues/35241)\n- Make `test_generate_with_static_cache` even less flaky by\n[@&#8203;ydshieh](https://redirect.github.com/ydshieh) in\n[#&#8203;34995](https://redirect.github.com/huggingface/transformers/issues/34995)\n- Improve modular transformers documentation by\n[@&#8203;joelpaulkoch](https://redirect.github.com/joelpaulkoch) in\n[#&#8203;35322](https://redirect.github.com/huggingface/transformers/issues/35322)\n- Improved Documentation Of Audio Classification by\n[@&#8203;Uvi-12](https://redirect.github.com/Uvi-12) in\n[#&#8203;35368](https://redirect.github.com/huggingface/transformers/issues/35368)\n- \\[docs] Follow up register_pipeline by\n[@&#8203;stevhliu](https://redirect.github.com/stevhliu) in\n[#&#8203;35310](https://redirect.github.com/huggingface/transformers/issues/35310)\n- owlvit/2 dynamic input resolution by\n[@&#8203;bastrob](https://redirect.github.com/bastrob) in\n[#&#8203;34764](https://redirect.github.com/huggingface/transformers/issues/34764)\n- Fix new FA2 if `is_causal` is passed explicitly by\n[@&#8203;Cyrilvallez](https://redirect.github.com/Cyrilvallez) in\n[#&#8203;35390](https://redirect.github.com/huggingface/transformers/issues/35390)\n- bitsandbytes: simplify 8bit dequantization by\n[@&#8203;matthewdouglas](https://redirect.github.com/matthewdouglas) in\n[#&#8203;35068](https://redirect.github.com/huggingface/transformers/issues/35068)\n- make LlamaModel.\\_update_causal_mask torch compilable by\n[@&#8203;winglian](https://redirect.github.com/winglian) in\n[#&#8203;35187](https://redirect.github.com/huggingface/transformers/issues/35187)\n- Patch GPTNeoX to use adequate FA2 if position_ids is provided by\n[@&#8203;taha-yassine](https://redirect.github.com/taha-yassine) in\n[#&#8203;35318](https://redirect.github.com/huggingface/transformers/issues/35318)\n- uniformize kwargs for SAM by\n[@&#8203;tibor-reiss](https://redirect.github.com/tibor-reiss) in\n[#&#8203;34578](https://redirect.github.com/huggingface/transformers/issues/34578)\n- Deprecate \\_is_quantized_training_enabled by\n[@&#8203;MekkCyber](https://redirect.github.com/MekkCyber) in\n[#&#8203;34991](https://redirect.github.com/huggingface/transformers/issues/34991)\n- Scale loss before backward by\n[@&#8203;qgallouedec](https://redirect.github.com/qgallouedec) in\n[#&#8203;35207](https://redirect.github.com/huggingface/transformers/issues/35207)\n- Fix typing in docstring for `PaliGemmaProcessor` by\n[@&#8203;alvarobartt](https://redirect.github.com/alvarobartt) in\n[#&#8203;35278](https://redirect.github.com/huggingface/transformers/issues/35278)\n- Fix : VPTQ test by\n[@&#8203;MekkCyber](https://redirect.github.com/MekkCyber) in\n[#&#8203;35394](https://redirect.github.com/huggingface/transformers/issues/35394)\n- add bnb support for Ascend NPU by\n[@&#8203;statelesshz](https://redirect.github.com/statelesshz) in\n[#&#8203;31512](https://redirect.github.com/huggingface/transformers/issues/31512)\n- bugfix Idefics3 processor - handle gracefully cases with text and no\nimages by [@&#8203;mfarre](https://redirect.github.com/mfarre) in\n[#&#8203;35363](https://redirect.github.com/huggingface/transformers/issues/35363)\n- Adding logger.info about update_torch_dtype in some quantizers by\n[@&#8203;MekkCyber](https://redirect.github.com/MekkCyber) in\n[#&#8203;35046](https://redirect.github.com/huggingface/transformers/issues/35046)\n- Add compile test for fast image processor by\n[@&#8203;yonigozlan](https://redirect.github.com/yonigozlan) in\n[#&#8203;35184](https://redirect.github.com/huggingface/transformers/issues/35184)\n- Disable `.github/workflows/self-comment-ci.yml` for now by\n[@&#8203;ydshieh](https://redirect.github.com/ydshieh) in\n[#&#8203;35366](https://redirect.github.com/huggingface/transformers/issues/35366)\n- enable non-cuda awq model support without modify version by\n[@&#8203;jiqing-feng](https://redirect.github.com/jiqing-feng) in\n[#&#8203;35334](https://redirect.github.com/huggingface/transformers/issues/35334)\n- \\[`GPTQ`, `CompressedTensors`] Fix unsafe imports and metada check by\n[@&#8203;vasqu](https://redirect.github.com/vasqu) in\n[#&#8203;34815](https://redirect.github.com/huggingface/transformers/issues/34815)\n- Drop inplace operation for loss computation with gradient accumulation\nby [@&#8203;qgallouedec](https://redirect.github.com/qgallouedec) in\n[#&#8203;35416](https://redirect.github.com/huggingface/transformers/issues/35416)\n- Fix: Rename keyword argument in_channels to num_channels by\n[@&#8203;ningyuv](https://redirect.github.com/ningyuv) in\n[#&#8203;35289](https://redirect.github.com/huggingface/transformers/issues/35289)\n- CLIP conversion script - Change fairseq to OpenAI by\n[@&#8203;gau-nernst](https://redirect.github.com/gau-nernst) in\n[#&#8203;35384](https://redirect.github.com/huggingface/transformers/issues/35384)\n- Fix f-string to show `ACCELERATE_MIN_VERSION` on error by\n[@&#8203;KSafran](https://redirect.github.com/KSafran) in\n[#&#8203;35189](https://redirect.github.com/huggingface/transformers/issues/35189)\n- Fix `model_accepts_loss_kwargs` for timm model by\n[@&#8203;qubvel](https://redirect.github.com/qubvel) in\n[#&#8203;35257](https://redirect.github.com/huggingface/transformers/issues/35257)\n- Update perf_infer_gpu_one.md: fix a typo by\n[@&#8203;martin0258](https://redirect.github.com/martin0258) in\n[#&#8203;35441](https://redirect.github.com/huggingface/transformers/issues/35441)\n- Add compute_loss_func to Seq2SeqTrainer by\n[@&#8203;d223302](https://redirect.github.com/d223302) in\n[#&#8203;35136](https://redirect.github.com/huggingface/transformers/issues/35136)\n- Update docs for `sdpa_kernel` by\n[@&#8203;jla524](https://redirect.github.com/jla524) in\n[#&#8203;35410](https://redirect.github.com/huggingface/transformers/issues/35410)\n- \\[i18n-ar] Translated file:\n`docs/source/ar/tasks/question_answering.md` into Arabic by\n[@&#8203;AhmedAlmaghz](https://redirect.github.com/AhmedAlmaghz) in\n[#&#8203;35196](https://redirect.github.com/huggingface/transformers/issues/35196)\n- \\[i18n-ar] Translated file: `docs/source/ar/tasks/summarization.md`\ninto Arabic by\n[@&#8203;AhmedAlmaghz](https://redirect.github.com/AhmedAlmaghz) in\n[#&#8203;35195](https://redirect.github.com/huggingface/transformers/issues/35195)\n- Update translated docs for `sdpa_kernel` by\n[@&#8203;jla524](https://redirect.github.com/jla524) in\n[#&#8203;35461](https://redirect.github.com/huggingface/transformers/issues/35461)\n- Reintroduce Python 3.9 support for ModernBERT by\n[@&#8203;tomaarsen](https://redirect.github.com/tomaarsen) in\n[#&#8203;35458](https://redirect.github.com/huggingface/transformers/issues/35458)\n- Fix new BNB test failures by\n[@&#8203;matthewdouglas](https://redirect.github.com/matthewdouglas) in\n[#&#8203;35345](https://redirect.github.com/huggingface/transformers/issues/35345)\n- Fix docs typos. by\n[@&#8203;zhanluxianshen](https://redirect.github.com/zhanluxianshen) in\n[#&#8203;35465](https://redirect.github.com/huggingface/transformers/issues/35465)\n- Fix paligemma warning message by\n[@&#8203;hiyouga](https://redirect.github.com/hiyouga) in\n[#&#8203;35486](https://redirect.github.com/huggingface/transformers/issues/35486)\n\n#### Significant community contributions\n\nThe following contributors have made significant changes to the library\nover the last release:\n\n-   [@&#8203;ydshieh](https://redirect.github.com/ydshieh)\n- Fix private forked repo. CI\n([#&#8203;35114](https://redirect.github.com/huggingface/transformers/issues/35114))\n- Change back to `Thread` for SF conversion\n([#&#8203;35236](https://redirect.github.com/huggingface/transformers/issues/35236))\n- Use `rsfE` with `pytest`\n([#&#8203;35119](https://redirect.github.com/huggingface/transformers/issues/35119))\n- Aggeregate test summary files in CircleCI workflow runs\n([#&#8203;34989](https://redirect.github.com/huggingface/transformers/issues/34989))\n- remove `benchmark` job in `push-important-models.yml`\n([#&#8203;35292](https://redirect.github.com/huggingface/transformers/issues/35292))\n- Trigger GitHub CI with a comment on PR\n([#&#8203;35211](https://redirect.github.com/huggingface/transformers/issues/35211))\n- Update comment CI bot\n([#&#8203;35323](https://redirect.github.com/huggingface/transformers/issues/35323))\n- Reduce CircleCI usage\n([#&#8203;35355](https://redirect.github.com/huggingface/transformers/issues/35355))\n- Aurevoir PyTorch 1\n([#&#8203;35358](https://redirect.github.com/huggingface/transformers/issues/35358))\n- Use `weights_only=True` with `torch.load` for `transfo_xl`\n([#&#8203;35241](https://redirect.github.com/huggingface/transformers/issues/35241))\n- Make `test_generate_with_static_cache` even less flaky\n([#&#8203;34995](https://redirect.github.com/huggingface/transformers/issues/34995))\n- Disable `.github/workflows/self-comment-ci.yml` for now\n([#&#8203;35366](https://redirect.github.com/huggingface/transformers/issues/35366))\n- [@&#8203;aymeric-roucher](https://redirect.github.com/aymeric-roucher)\n- Add Aria\n([#&#8203;34157](https://redirect.github.com/huggingface/transformers/issues/34157))\n-   [@&#8203;NielsRogge](https://redirect.github.com/NielsRogge)\n- \\[I-JEPA] Update docs\n([#&#8203;35148](https://redirect.github.com/huggingface/transformers/issues/35148))\n- Add DINOv2 with registers\n([#&#8203;35348](https://redirect.github.com/huggingface/transformers/issues/35348))\n-   [@&#8203;HMJ0628](https://redirect.github.com/HMJ0628)\n- \\[i18n-<languageCode>] Translating agents.md to Chinese\n([#&#8203;35139](https://redirect.github.com/huggingface/transformers/issues/35139))\n- Translating agents_advanced.md to Chinese\n([#&#8203;35231](https://redirect.github.com/huggingface/transformers/issues/35231))\n- Translating \"translate perf_infer_gpu_multi.md\" to Chinese\n([#&#8203;35271](https://redirect.github.com/huggingface/transformers/issues/35271))\n-   [@&#8203;alexrs-cohere](https://redirect.github.com/alexrs-cohere)\n- Add Cohere2 model\n([#&#8203;35224](https://redirect.github.com/huggingface/transformers/issues/35224))\n- Add Cohere2 docs details\n([#&#8203;35294](https://redirect.github.com/huggingface/transformers/issues/35294))\n-   [@&#8203;ArthurZucker](https://redirect.github.com/ArthurZucker)\n- fix modular order\n([#&#8203;35297](https://redirect.github.com/huggingface/transformers/issues/35297))\n- 🚨All attention refactor🚨\n([#&#8203;35235](https://redirect.github.com/huggingface/transformers/issues/35235))\n- Fix some fa2 tests\n([#&#8203;35340](https://redirect.github.com/huggingface/transformers/issues/35340))\n- Update test fetcher when we want to test all\n([#&#8203;35364](https://redirect.github.com/huggingface/transformers/issues/35364))\n-   [@&#8203;tonywu71](https://redirect.github.com/tonywu71)\n- Add ColPali to 🤗 transformers\n([#&#8203;33736](https://redirect.github.com/huggingface/transformers/issues/33736))\n- Fix documentation for ColPali\n([#&#8203;35321](https://redirect.github.com/huggingface/transformers/issues/35321))\n-   [@&#8203;OmarManzoor](https://redirect.github.com/OmarManzoor)\n- Add sdpa for Beit\n([#&#8203;34941](https://redirect.github.com/huggingface/transformers/issues/34941))\n-   [@&#8203;fabianlim](https://redirect.github.com/fabianlim)\n- Add the Bamba Model\n([#&#8203;34982](https://redirect.github.com/huggingface/transformers/issues/34982))\n- [@&#8203;warner-benjamin](https://redirect.github.com/warner-benjamin)\n- Add ModernBERT to Transformers\n([#&#8203;35158](https://redirect.github.com/huggingface/transformers/issues/35158))\n- Modernbert Release Fixes\n([#&#8203;35344](https://redirect.github.com/huggingface/transformers/issues/35344))\n-   [@&#8203;wejoncy](https://redirect.github.com/wejoncy)\n- FEAT : Adding VPTQ quantization method to HFQuantizer\n([#&#8203;34770](https://redirect.github.com/huggingface/transformers/issues/34770))\n-   [@&#8203;bastrob](https://redirect.github.com/bastrob)\n- owlvit/2 dynamic input resolution\n([#&#8203;34764](https://redirect.github.com/huggingface/transformers/issues/34764))\n-   [@&#8203;BlackSamorez](https://redirect.github.com/BlackSamorez)\n- HIGGS Quantization Support\n([#&#8203;34997](https://redirect.github.com/huggingface/transformers/issues/34997))\n\n###\n[`v4.47.1`](https://redirect.github.com/huggingface/transformers/releases/tag/v4.47.1)\n\n[Compare\nSource](https://redirect.github.com/huggingface/transformers/compare/v4.47.0...v4.47.1)\n\n### Patch release v4.47.1\n\nWe waited a little bit to make sure it was stable, thanks\n[@&#8203;winglian](https://redirect.github.com/winglian) for double\nchecking and everyone for the fixes!\n\n- Fix GA loss bugs and add unit test\n([#&#8203;35121](https://redirect.github.com/your-repo/pull/35121))\nContributed by [@&#8203;techkang](https://redirect.github.com/techkang)\nand [@&#8203;ArthurZucker](https://redirect.github.com/ArthurZucker).\n\n- Fix num_items_in_batch not being an integer\n([#&#8203;35115](https://redirect.github.com/your-repo/pull/35115))\nContributed by [@&#8203;xspirus](https://redirect.github.com/xspirus).\n\n- Fix FSDP no longer working\n([#&#8203;35212](https://redirect.github.com/your-repo/pull/35212))\nContributed by\n[@&#8203;muellerzr](https://redirect.github.com/muellerzr).\n\n- Don't use no_sync when DeepSpeed doesn't support it for certain ZeRO\nconfigurations\n([#&#8203;35212](https://redirect.github.com/your-repo/pull/35212))\nContributed by [@&#8203;winglian](https://redirect.github.com/winglian).\n\n- Only import torch.distributed if it is available\n([#&#8203;35133](https://redirect.github.com/your-repo/pull/35133))\nContributed by\n[@&#8203;GaetanLepage](https://redirect.github.com/GaetanLepage).\n\n- \\[Whisper] Patch float type on MPS\n([#&#8203;35295](https://redirect.github.com/your-repo/pull/35295))\nContributed by [@&#8203;eustlb](https://redirect.github.com/eustlb). 🔜\nwe should probably have MPS CIs to avoid repeating this!\n\n###\n[`v4.47.0`](https://redirect.github.com/huggingface/transformers/releases/tag/v4.47.0):\nv4.47.0: PaliGemma-2, I-JEPA, OLMo-2, LayerSkip, Tensor Parallel\n\n[Compare\nSource](https://redirect.github.com/huggingface/transformers/compare/v4.46.3...v4.47.0)\n\n#### New models\n\n##### PaliGemma-2\n\nPaliGemma 2 and PaliGemma are lightweight open vision-language models\n(VLM) inspired by [PaLI-3](https://arxiv.org/abs/2310.09199), and based\non open components like the [SigLIP vision\nmodel](https://arxiv.org/abs/2303.15343) and the [Gemma language\nmodel](https://arxiv.org/abs/2403.08295). PaliGemma takes both images\nand text as inputs and can answer questions about images with detail and\ncontext, meaning that PaliGemma can perform deeper analysis of images\nand provide useful insights, such as captioning for images and short\nvideos, object detection, and reading text embedded within images.\n\nPaliGemma 2 is available in 3B, 10B, and 28B parameter sizes, which are\nbased on Gemma 2 2B, 9B, and 27B models, respectively. The original\nPaliGemma models are available in the 3B size. For more information on\nGemma model variants, see the [Gemma models\nlist](https://ai.google.dev/gemma/docs/get_started#models-list).\nPaliGemma model variants support different pixel resolutions for image\ninputs, including 224 x 224, 448 x 448, and 896 x 896 pixels.\n\n<img width=\"743\" alt=\"image\"\nsrc=\"https://github.com/user-attachments/assets/55cda8a6-b463-4a58-b7d3-f7d50ee2fa11\">\n\n##### I-JEPA\n\nThe I-JEPA model was proposed in [Image-based Joint-Embedding Predictive\nArchitecture](https://arxiv.org/pdf/2301.08243.pdf) by Mahmoud Assran,\nQuentin Duval, Ishan Misra, Piotr Bojanowski, Pascal Vincent, Michael\nRabbat, Yann LeCun, Nicolas Ballas. I-JEPA is a self-supervised learning\nmethod that predicts the representations of one part of an image based\non other parts of the same image. This approach focuses on learning\nsemantic features without relying on pre-defined invariances from\nhand-crafted data transformations, which can bias specific tasks, or on\nfilling in pixel-level details, which often leads to less meaningful\nrepresentations.\n\n<img width=\"413\" alt=\"image\"\nsrc=\"https://github.com/user-attachments/assets/561ca9d7-0327-477a-96b8-61d2af0caf34\">\n\n- Add I-JEPA by [@&#8203;jmtzt](https://redirect.github.com/jmtzt) in\n[#&#8203;33125](https://redirect.github.com/huggingface/transformers/issues/33125)\n\n##### OLMo 2\n\n<img width=\"833\" alt=\"image\"\nsrc=\"https://github.com/user-attachments/assets/1abdde92-0aae-404a-b83e-77ec8bd13b7f\">\n\nThe OLMo2 model is the successor of the OLMo model, which was proposed\nin [OLMo: Accelerating the Science of Language\nModels](https://arxiv.org/abs/2402.00838).\n\nThe architectural chan\n\n</details>\n\n---\n\n### Configuration\n\n📅 **Schedule**: Branch creation - \"\" (UTC), Automerge - At any time (no\nschedule defined).\n\n🚦 **Automerge**: Disabled by config. Please merge this manually once you\nare satisfied.\n\n♻ **Rebasing**: Whenever PR becomes conflicted, or you tick the\nrebase/retry checkbox.\n\n🔕 **Ignore**: Close this PR and you won't be reminded about this update\nagain.\n\n---\n\n- [ ] <!-- rebase-check -->If you want to rebase/retry this PR, check\nthis box\n\n---\n\nThis PR was generated by [Mend Renovate](https://mend.io/renovate/).\nView the [repository job\nlog](https://developer.mend.io/github/dora-rs/dora).\n\n<!--renovate-debug:eyJjcmVhdGVkSW5WZXIiOiIzOS4xNjQuMSIsInVwZGF0ZWRJblZlciI6IjM5LjE2NC4xIiwidGFyZ2V0QnJhbmNoIjoibWFpbiIsImxhYmVscyI6W119-->",
+          "date": "2025-02-23T13:54:16Z"
+        },
+        {
+          "sha": "27f6ab52d93613bf1767bd599e35d78685edc0d4",
+          "message": "Fix typo in reachy node (#789)",
+          "date": "2025-02-21T17:43:41Z"
+        }
+      ],
+      "topics": [
+        "dataflow",
+        "embodied-ai",
+        "low-latency",
+        "robotics",
+        "rust"
+      ]
+    },
+    {
+      "name": "mlfoundations/open_clip",
+      "url": "https://github.com/mlfoundations/open_clip",
+      "commit_count": 5,
+      "summary": "🚀 Release 2.31.0 with SigLIP2 models and updates",
+      "commits": [
+        {
+          "sha": "614b75087cd3a435b31881d5de7fed1b562cdd58",
+          "message": "Release 2.31.0",
+          "date": "2025-02-23T16:24:48Z"
+        },
+        {
+          "sha": "5eb34737ac6f38340eee4a91fe899d06a4339643",
+          "message": "Update requirements-training.txt",
+          "date": "2025-02-23T05:08:07Z"
+        },
+        {
+          "sha": "71255462697a81d11ed51a81868817b797787823",
+          "message": "Update SigLIP2 pretrained and tokenizer entries for uploaded weights",
+          "date": "2025-02-21T18:28:31Z"
+        },
+        {
+          "sha": "f53b44bff560b6d169a1139e949020117ca79f4a",
+          "message": "Change deprecated upload-artifact@v3 -> v4",
+          "date": "2025-02-20T20:16:01Z"
+        },
+        {
+          "sha": "008046c6b9c96e664f164efcfc75c352fe0f7d56",
+          "message": "Add SigLIP2 models",
+          "date": "2025-02-20T16:52:11Z"
+        }
+      ],
+      "topics": [
+        "computer-vision",
+        "contrastive-loss",
+        "deep-learning",
+        "language-model",
+        "multi-modal-learning",
+        "pretrained-models",
+        "pytorch",
+        "zero-shot-classification"
+      ]
+    },
+    {
+      "name": "lhndo/LH-Stinger",
+      "url": "https://github.com/lhndo/LH-Stinger",
+      "commit_count": 3,
+      "summary": "🛠️ Fixing top panel and filament change tracking",
+      "commits": [
+        {
+          "sha": "5e6e0baa2cdff2bb86730cb2a69ca7fd55a4504b",
+          "message": "fixing Top A orientation",
+          "date": "2025-02-23T16:11:44Z"
+        },
+        {
+          "sha": "cb5f88057bd50cf8463ab788659550b78956ee19",
+          "message": "adding missing top panel",
+          "date": "2025-02-23T16:01:47Z"
+        },
+        {
+          "sha": "98e466c6e4c0447e5d492bf6bcafd00614afcb31",
+          "message": "adding print_start_change variable which tracks if a filament change was required at print start",
+          "date": "2025-02-21T18:49:19Z"
+        }
+      ],
+      "topics": [
+        "3d-printer",
+        "3d-printing",
+        "engineering",
+        "fdm-3d-printing",
+        "technology"
+      ]
+    },
+    {
+      "name": "pyannote/pyannote-audio",
+      "url": "https://github.com/pyannote/pyannote-audio",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "overlapped-speech-detection",
+        "pretrained-models",
+        "pytorch",
+        "speaker-change-detection",
+        "speaker-diarization",
+        "speaker-embedding",
+        "speaker-recognition",
+        "speaker-verification",
+        "speech-activity-detection",
+        "speech-processing",
+        "voice-activity-detection"
+      ]
+    },
+    {
+      "name": "SwiftOldDriver/iOS-Weekly",
+      "url": "https://github.com/SwiftOldDriver/iOS-Weekly",
+      "commit_count": 12,
+      "summary": "� 修复多个问题 & 新一期模版创建",
+      "commits": [
+        {
+          "sha": "723ee6d986ee0016356d1fad3f0f16e92fdd9b99",
+          "message": "Merge pull request #4908 from SwiftOldDriver/revert-4907-david/edit\n\nRevert \"Fix #4905\"",
+          "date": "2025-02-23T15:57:50Z"
+        },
+        {
+          "sha": "53056233574177bd1ab08312af6335958c61ce1a",
+          "message": "Revert \"Fix #4905\"",
+          "date": "2025-02-23T15:33:39Z"
+        },
+        {
+          "sha": "df73fe56f69864b00ecf0e2cdd48ef619cf19297",
+          "message": "Merge pull request #4907 from SwiftOldDriver/david/edit\n\nFix #4905",
+          "date": "2025-02-23T15:32:05Z"
+        },
+        {
+          "sha": "a6e5970fcd3f57137f280e759aff348247d48458",
+          "message": "Fix #4905\n\nfix word",
+          "date": "2025-02-23T12:21:44Z"
+        },
+        {
+          "sha": "2e3a9c828edd0a205502f767b96f5ffb8517dcd0",
+          "message": "feat: 新一期模版创建 & 部分内容挪到下一期",
+          "date": "2025-02-23T10:32:44Z"
+        },
+        {
+          "sha": "188cc94e36630f1c73c2ba0538ffd43041afc779",
+          "message": "refactor: 发布前整理",
+          "date": "2025-02-23T10:29:10Z"
+        },
+        {
+          "sha": "6360563ff07ea7527f1007c1ab47d034e595bc44",
+          "message": "Fix #4883",
+          "date": "2025-02-23T10:09:15Z"
+        },
+        {
+          "sha": "436f35f666d2ae7dbac989c1bd5e2a0d8dd8e984",
+          "message": "Fix #4873",
+          "date": "2025-02-23T08:43:27Z"
+        },
+        {
+          "sha": "338d870f32c3a684b7321886a3a943291f3f1277",
+          "message": "fix #4904",
+          "date": "2025-02-23T08:18:52Z"
+        },
+        {
+          "sha": "622c58e94802592db1bc7d4b7719d844628e762e",
+          "message": "fix #4896",
+          "date": "2025-02-23T06:39:41Z"
+        },
+        {
+          "sha": "f6f11dcc5e3cc153da26bbe513424c7906ea317f",
+          "message": "fixed #4903",
+          "date": "2025-02-23T04:51:22Z"
+        },
+        {
+          "sha": "703c5ae6da217984af4c8c81ef3856e850d2ec5b",
+          "message": "fix: #4906",
+          "date": "2025-02-23T01:45:24Z"
+        }
+      ],
+      "topics": [
+        "ios",
+        "mobile",
+        "objective-c",
+        "rss",
+        "swift",
+        "weekly"
+      ]
+    },
+    {
+      "name": "mangiucugna/json_repair",
+      "url": "https://github.com/mangiucugna/json_repair",
+      "commit_count": 5,
+      "summary": "� Fix JSON string repair in arrays",
+      "commits": [
+        {
+          "sha": "f18bca9503c7b0ee257278e6de5e7f8f16fa9856",
+          "message": "changed bibtex",
+          "date": "2025-02-23T15:54:36Z"
+        },
+        {
+          "sha": "31c596036bda23250cecfca85eb0c081535e0cf9",
+          "message": "update citation",
+          "date": "2025-02-23T15:50:29Z"
+        },
+        {
+          "sha": "3c473b81fdc6d6b6a7647cb88f7229f4c44df167",
+          "message": "[chore] move code around",
+          "date": "2025-02-23T15:49:15Z"
+        },
+        {
+          "sha": "3be8b673278d5f556dcdb5ebbd1234bb7722c9be",
+          "message": "Fix #100, the ability to repair strings like \"lorem \"ipsum\" sic\" was not working inside an array. Fixed the behavior and updated the tests.",
+          "date": "2025-02-23T11:23:46Z"
+        },
+        {
+          "sha": "d0ca5e55795524743a030eaa9815f1ddb9418241",
+          "message": "Update README.md",
+          "date": "2025-02-22T11:11:05Z"
+        }
+      ],
+      "topics": [
+        "deep-learning",
+        "gpt-4",
+        "json",
+        "llama3",
+        "llm",
+        "machine-learning",
+        "mistral",
+        "openai-api",
+        "parser",
+        "repair"
+      ]
+    },
+    {
+      "name": "lutzroeder/netron",
+      "url": "https://github.com/lutzroeder/netron",
+      "commit_count": 2,
+      "summary": "🔄 Update dependencies and metadata",
+      "commits": [
+        {
+          "sha": "55df205c8eb32857122ef19d4501b07789363a45",
+          "message": "Update onnx-metadata.json",
+          "date": "2025-02-23T15:40:58Z"
+        },
+        {
+          "sha": "e159e6905dc7ca36e4077aab2b7fd650072b6ec6",
+          "message": "Update to eslint 9.21.0",
+          "date": "2025-02-22T14:50:36Z"
+        }
+      ],
+      "topics": [
+        "ai",
+        "coreml",
+        "deep-learning",
+        "deeplearning",
+        "keras",
+        "machine-learning",
+        "machinelearning",
+        "ml",
+        "neural-network",
+        "numpy",
+        "onnx",
+        "pytorch",
+        "safetensors",
+        "tensorflow",
+        "tensorflow-lite",
+        "visualizer"
+      ]
+    },
+    {
+      "name": "omnivore-app/omnivore",
+      "url": "https://github.com/omnivore-app/omnivore",
+      "commit_count": 1,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "2ec1d6f58c3a3828142986bf46ac2879a810cd2c",
+          "message": "Initial prototype of the V3 manifest extension (#4357)\n\n* Initial prototype of the V3 manifest extension\n\n* Make sure the content script is only injected once\n\n* Implement addNote button\n\n* More separation work for tasks, implement archive and update note\n\n* Add back missing functionality, add guide to install Extensions\n\n* Revert v2 changes\n\n---------\n\nCo-authored-by: Thomas Rogers <Podginator@gmail.com>",
+          "date": "2025-02-23T15:35:41Z"
+        }
+      ],
+      "topics": [
+        "bookmarks",
+        "logseq",
+        "logseq-plugin",
+        "productivity",
+        "read-it-later",
+        "reader",
+        "reading"
+      ]
+    },
+    {
+      "name": "mkuthan/homelab-public",
+      "url": "https://github.com/mkuthan/homelab-public",
+      "commit_count": 2,
+      "summary": "🛠️ Add transport timeouts and Immich backup support",
+      "commits": [
+        {
+          "sha": "550843e6ace5e96a4401173ebd7fe2e7cec2ccc1",
+          "message": "fix: add transport timeouts to traefik configuration",
+          "date": "2025-02-23T15:36:12Z"
+        },
+        {
+          "sha": "8988e3716cd2138e4d20bab50c3e763299621efa",
+          "message": "feat: immich backup to external drive",
+          "date": "2025-02-23T07:43:55Z"
+        }
+      ],
+      "topics": [
+        "ansible",
+        "homelab",
+        "iaac",
+        "self-hosted",
+        "terraform"
+      ]
+    },
+    {
+      "name": "lakehq/sail",
+      "url": "https://github.com/lakehq/sail",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "arrow",
+        "big-data",
+        "data",
+        "datafusion",
+        "pyspark",
+        "python",
+        "rust",
+        "spark",
+        "sql"
+      ]
+    },
+    {
+      "name": "wader/fq",
+      "url": "https://github.com/wader/fq",
+      "commit_count": 3,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "9a5f54d74aa7bb684e7887abd936ef0cb7d5b279",
+          "message": "Merge pull request #1085 from wader/modernize\n\ngo: Run modernize",
+          "date": "2025-02-23T14:57:44Z"
+        },
+        {
+          "sha": "f5a4ea931f78bda0d45bb2c199baea148014074e",
+          "message": "go: Run modernize\n\ngo run golang.org/x/tools/gopls/internal/analysis/modernize/cmd/modernize@latest -fix -test ./...",
+          "date": "2025-02-23T13:37:25Z"
+        },
+        {
+          "sha": "25336804aa05518fc6f5121954818a7d16c684cc",
+          "message": "Merge pull request #1084 from wader/bump-gomod-golang-x-crypto-0.34.0\n\nUpdate gomod-golang-x-crypto to 0.34.0 from 0.33.0",
+          "date": "2025-02-22T19:38:13Z"
+        }
+      ],
+      "topics": [
+        "binary",
+        "cli",
+        "decode",
+        "go",
+        "golang",
+        "hexdump",
+        "jq",
+        "json",
+        "pcap",
+        "query",
+        "repl",
+        "tls",
+        "xml"
+      ]
+    },
+    {
+      "name": "teamgram/teamgram-server",
+      "url": "https://github.com/teamgram/teamgram-server",
+      "commit_count": 4,
+      "summary": "🔄 Updates",
+      "commits": [
+        {
+          "sha": "4f886e4bd55c60d6a4c8851ff263811ae4561402",
+          "message": "feat: updates",
+          "date": "2025-02-23T14:55:53Z"
+        },
+        {
+          "sha": "eaec3dd4c61c5482260dc0ab06ab19328b90f5b1",
+          "message": "Merge branch 'master' of https://github.com/teamgram/teamgram-server",
+          "date": "2025-02-23T14:09:17Z"
+        },
+        {
+          "sha": "23a8cf258a6a5411f3d1d1606396bf140af5ed58",
+          "message": "feat: updates",
+          "date": "2025-02-23T08:01:44Z"
+        },
+        {
+          "sha": "97342641f9f37dc704cfebdb8de704950df68d97",
+          "message": "Merge pull request #113 from dr0p-out/bugfix/android-sticker-logspam\n\nfix Get{,Featured}EmojiStickers and STICKER_ID_INVALID logspams",
+          "date": "2025-02-22T11:53:05Z"
+        }
+      ],
+      "topics": [
+        "chat",
+        "go",
+        "golang",
+        "im",
+        "im-server",
+        "messaging",
+        "messenger",
+        "mtproto",
+        "mtproto-server",
+        "telegram",
+        "telegram-server"
+      ]
+    },
+    {
+      "name": "lolcommits/lolcommits",
+      "url": "https://github.com/lolcommits/lolcommits",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "git",
+        "git-addons",
+        "humor",
+        "selfie",
+        "webcam"
+      ]
+    },
+    {
+      "name": "vroland/epdiy",
+      "url": "https://github.com/vroland/epdiy",
+      "commit_count": 0,
+      "summary": null,
+      "commits": []
+    },
+    {
+      "name": "bitbank2/bb_spi_lcd",
+      "url": "https://github.com/bitbank2/bb_spi_lcd",
+      "commit_count": 0,
+      "summary": null,
+      "commits": []
+    },
+    {
+      "name": "jina-ai/reader",
+      "url": "https://github.com/jina-ai/reader",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "llm",
+        "proxy"
+      ]
+    },
+    {
+      "name": "rust-embedded/awesome-embedded-rust",
+      "url": "https://github.com/rust-embedded/awesome-embedded-rust",
+      "commit_count": 7,
+      "summary": "🔗 Fix and update embedded Rust resource links",
+      "commits": [
+        {
+          "sha": "2027bc31d7aa5b9d1c834b277deda400610aa93d",
+          "message": "Merge pull request #479 from 9names/deadlink-triage\n\nDead and broken link cleanup",
+          "date": "2025-02-23T13:54:54Z"
+        },
+        {
+          "sha": "6b1c10a29b0fe677b8ac181f9be74b4d17a8388d",
+          "message": "Apply suggestions from code review\r\n\r\nFix linter complaint",
+          "date": "2025-02-23T13:52:44Z"
+        },
+        {
+          "sha": "f5207a1e8b933ed262fba9af5d9ddbaf1158a9cd",
+          "message": "Fix broken blue-pill & Nucleo links",
+          "date": "2025-02-23T06:33:39Z"
+        },
+        {
+          "sha": "a41a49a3cba1fdb2db7d69e0ceaf92fc42d6715f",
+          "message": "Use archive.org links for dead blog posts",
+          "date": "2025-02-23T06:29:36Z"
+        },
+        {
+          "sha": "fd92fae7eab94be53e1735607c19d2bc50166348",
+          "message": "Replace Sodaq One product page link with support page link\n\nThe store page on the website no longer exists, but a support\npage does - updated the link to point to something that might\nhelp someone understand what this product is.",
+          "date": "2025-02-23T06:10:34Z"
+        },
+        {
+          "sha": "367e9abdf8619ae486f92be1f3df189c9a918069",
+          "message": "Update link and add archive notice for esp8266",
+          "date": "2025-02-23T06:07:06Z"
+        },
+        {
+          "sha": "3506539288c533a9b2f90d0f628e2f8279ffb33a",
+          "message": "Update link for msp430g2553 PAC. Closes #260",
+          "date": "2025-02-23T06:01:56Z"
+        }
+      ],
+      "topics": [
+        "awesome",
+        "awesome-list",
+        "embedded",
+        "embedded-systems",
+        "libraries",
+        "rust"
+      ]
+    },
+    {
+      "name": "onlaj/Piano-LED-Visualizer",
+      "url": "https://github.com/onlaj/Piano-LED-Visualizer",
+      "commit_count": 2,
+      "summary": "🎹 Adjust MIDI note display logic",
+      "commits": [
+        {
+          "sha": "d216b60653308c15daa6ede9b354c41420916a35",
+          "message": "Update waitress package to v3.0.1",
+          "date": "2025-02-23T13:48:38Z"
+        },
+        {
+          "sha": "7271333f6bfe57479eacb9adb23a56d6dcfed194",
+          "message": "Display note numbers as (MIDI - 20) for frontend; add 20 on update to retain correct MIDI value",
+          "date": "2025-02-22T17:47:05Z"
+        }
+      ],
+      "topics": [
+        "led",
+        "midi",
+        "midi-device",
+        "piano",
+        "visualization",
+        "visualizer"
+      ]
+    },
+    {
+      "name": "dw-0/kiauh",
+      "url": "https://github.com/dw-0/kiauh",
+      "commit_count": 4,
+      "summary": "🛠️ Fix Moonraker deps parsing, release updates",
+      "commits": [
+        {
+          "sha": "9e0a8a008106f85f443215ae5982da6236f08806",
+          "message": "Release v5.1.3\n\nRelease v5.1.3",
+          "date": "2025-02-23T11:42:44Z"
+        },
+        {
+          "sha": "6082528628af1afb2f7f2c5c7a88fb9448dec44c",
+          "message": "Merge pull request #648 from Arksine/dev-v5-moonraker-deps-fix\n\nfix: add support for Moonraker's dependency requirement specifiers to V5",
+          "date": "2025-02-23T11:32:17Z"
+        },
+        {
+          "sha": "9e92e4a36a718f3800db5387ef7b4dbdd29a57c9",
+          "message": "fix: parse moonraker deps with requirement specifiers\n\nSigned-off-by:  Eric Callahan <arksine.code@gmail.com>",
+          "date": "2025-02-22T21:50:28Z"
+        },
+        {
+          "sha": "7e8f1f3d81e6ac3a82f0b5c3ab4f787f62bf2ab1",
+          "message": "Release v6.0.0-alpha.16\n\nMerge develop into master (Release v6.0.0-alpha.16)",
+          "date": "2025-02-22T15:25:49Z"
+        }
+      ],
+      "topics": [
+        "3d-printing",
+        "fluidd",
+        "klipper",
+        "klipperscreen",
+        "mainsail",
+        "moonraker",
+        "obico",
+        "raspberry-pi",
+        "telegram"
+      ]
+    },
+    {
+      "name": "daptin/daptin",
+      "url": "https://github.com/daptin/daptin",
+      "commit_count": 1,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "f00c7fe0414f133bc78084399f91714fc61c6eea",
+          "message": "allow setting CC and BCC for aws.mail.send",
+          "date": "2025-02-23T13:10:00Z"
+        }
+      ],
+      "topics": [
+        "cloud-storage",
+        "content-management",
+        "crud-apis",
+        "graphql",
+        "graphql-api",
+        "graphql-server",
+        "headless-cms",
+        "json-api",
+        "static-site"
+      ]
+    },
+    {
+      "name": "RVC-Boss/GPT-SoVITS",
+      "url": "https://github.com/RVC-Boss/GPT-SoVITS",
+      "commit_count": 5,
+      "summary": "🎙️ Support mel_band_roformer & sovits v3 lora training",
+      "commits": [
+        {
+          "sha": "e061e9d38e3d19e3bfe4f685ca6914b0c8134654",
+          "message": "Support for mel_band_roformer (#2078)\n\n* support for mel_band_roformer\n\n* Remove unnecessary audio channel judgments\n\n* remove context manager and fix path\n\n* Update webui.py\n\n* Update README.md",
+          "date": "2025-02-23T12:28:53Z"
+        },
+        {
+          "sha": "fbb9f21e531ec185538b54622370a87499ca853c",
+          "message": "Add files via upload",
+          "date": "2025-02-23T12:26:18Z"
+        },
+        {
+          "sha": "aa07216bba05f624c9aa50c04a9c6a66bf04c8be",
+          "message": "修复resume epoch数识别错，每次resume都要都训一轮的问题\n\n修复resume epoch数识别错，每次resume都要都训一轮的问题",
+          "date": "2025-02-23T07:09:22Z"
+        },
+        {
+          "sha": "514fb692db056a06ed012bc3a5bca2a5b455703e",
+          "message": " support sovits v3 lora training, 8G GPU memory is enough\n\n\r\nsupport sovits v3 lora training, 8G GPU memory is enough",
+          "date": "2025-02-23T02:46:14Z"
+        },
+        {
+          "sha": "e6a32e15b0025f7ff625c57c2c67645bab46b696",
+          "message": "support sovits v3 lora training, 8G GPU memory is enough\n\nsupport sovits v3 lora training, 8G GPU memory is enough",
+          "date": "2025-02-22T16:38:47Z"
+        }
+      ],
+      "topics": [
+        "text-to-speech",
+        "tts",
+        "vits",
+        "voice-clone",
+        "voice-cloneai",
+        "voice-cloning"
+      ]
+    },
+    {
+      "name": "stlink-org/stlink",
+      "url": "https://github.com/stlink-org/stlink",
+      "commit_count": 2,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "e788c5484917b7d27e205c2fc1119477253f79fc",
+          "message": "Merge pull request #1453 from arthurloukes/patch-1\n\nUpdate README.md",
+          "date": "2025-02-23T12:08:03Z"
+        },
+        {
+          "sha": "aa0a8ede80e9fa4fea6ede8f101e78e988746827",
+          "message": "Update README.md\n\nAdded link to release page text.",
+          "date": "2025-02-22T13:01:36Z"
+        }
+      ],
+      "topics": [
+        "arm",
+        "board",
+        "chip",
+        "cortex-m",
+        "embedded",
+        "gdb",
+        "linux",
+        "nucleo",
+        "nucleo-boards",
+        "programmer-boards",
+        "stlink",
+        "stlinkv2",
+        "stm32",
+        "toolset"
+      ]
+    },
+    {
+      "name": "ErikBjare/gptme",
+      "url": "https://github.com/ErikBjare/gptme",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "ai-agents",
+        "ai-assistant",
+        "anthropic",
+        "chatbot",
+        "chatgpt",
+        "cli",
+        "code-generation",
+        "llamacpp",
+        "llm",
+        "llm-agent",
+        "llm-apps",
+        "openai",
+        "openrouter",
+        "rag"
+      ]
+    },
+    {
+      "name": "luc-github/ESP3D",
+      "url": "https://github.com/luc-github/ESP3D",
+      "commit_count": 1,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "24924cd90f53d615066a94324645f1d14bb9f3e8",
+          "message": "Update README.md\n\nSigned-off-by: Luc <8822552+luc-github@users.noreply.github.com>",
+          "date": "2025-02-23T11:25:53Z"
+        }
+      ],
+      "topics": [
+        "3d-printer",
+        "arduino",
+        "cnc",
+        "esp32",
+        "esp8266",
+        "esp8285",
+        "firmware",
+        "grbl",
+        "marlin",
+        "repetier",
+        "smoothieware",
+        "wifi"
+      ]
+    },
+    {
+      "name": "rossmacarthur/crates.alfredworkflow",
+      "url": "https://github.com/rossmacarthur/crates.alfredworkflow",
+      "commit_count": 2,
+      "summary": "🛠️ Upgrade to latest `powerpack` in 0.6.1",
+      "commits": [
+        {
+          "sha": "72b49d016656ed6c585a9121ba5001fc7e0cb807",
+          "message": "This is 0.6.1",
+          "date": "2025-02-23T10:58:18Z"
+        },
+        {
+          "sha": "d602bf1adb842d825c6f7e77fd63bbc5c67c39c5",
+          "message": "Upgrade to latest `powerpack`",
+          "date": "2025-02-23T10:52:26Z"
+        }
+      ],
+      "topics": [
+        "alfred",
+        "alfred-workflow",
+        "crates-io",
+        "rust"
+      ]
+    },
+    {
+      "name": "antonmedv/fx",
+      "url": "https://github.com/antonmedv/fx",
+      "commit_count": 1,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "b39506ff7238bbf37db5f0763364e3ac4ba7e732",
+          "message": "Update README.md",
+          "date": "2025-02-23T10:52:44Z"
+        }
+      ],
+      "topics": [
+        "cli",
+        "command-line",
+        "json"
+      ]
+    },
+    {
+      "name": "BasedHardware/omi",
+      "url": "https://github.com/BasedHardware/omi",
+      "commit_count": 8,
+      "summary": "🤖 Improve persona UX and prompt clarity",
+      "commits": [
+        {
+          "sha": "a065ca5a93e10720bc5d88d6ceba84cfec816095",
+          "message": "make persona connections more clear and improve ux (#1865)\n\n\nhttps://github.com/user-attachments/assets/cbb354ad-1d82-44b6-9d1e-4437c6ab3550",
+          "date": "2025-02-23T09:37:38Z"
+        },
+        {
+          "sha": "7a79693d56ab15ec113af0928838604dce295674",
+          "message": "improve ux and make connections more clear",
+          "date": "2025-02-23T09:04:41Z"
+        },
+        {
+          "sha": "1f941f6e779cf9d28f3f6c28a4ab437d217350eb",
+          "message": "improve persona detail ux",
+          "date": "2025-02-23T09:02:46Z"
+        },
+        {
+          "sha": "9f02b91ed0795f7b3c0c748b2c631df225f42762",
+          "message": "improve prompt",
+          "date": "2025-02-23T09:01:14Z"
+        },
+        {
+          "sha": "75bf21f48901e105380ee64ad648c3037ce726fd",
+          "message": "improve x persona prompt (#1867)",
+          "date": "2025-02-23T06:40:06Z"
+        },
+        {
+          "sha": "b80d4b0fad3e61ecc9d4421965a58e96c384f9cc",
+          "message": "improve x persona prompt",
+          "date": "2025-02-23T06:37:54Z"
+        },
+        {
+          "sha": "d6a679ce89989c345e2e2a777030d88867206fdd",
+          "message": "make persona connections more clear and improve ux",
+          "date": "2025-02-22T17:25:16Z"
+        },
+        {
+          "sha": "0a41cd5aea731102ade72dfa8c747fbd642d2d19",
+          "message": "Personas twitter metadata (#1864)",
+          "date": "2025-02-22T16:47:24Z"
+        }
+      ],
+      "topics": [
+        "ai",
+        "app",
+        "bci",
+        "c",
+        "flutter",
+        "friend",
+        "mobile",
+        "necklace",
+        "nextjs",
+        "omi",
+        "personas",
+        "python",
+        "smartglasses",
+        "summary",
+        "transcription",
+        "wearable"
+      ]
+    },
+    {
+      "name": "JADE-Jerry/jcalendar",
+      "url": "https://github.com/JADE-Jerry/jcalendar",
+      "commit_count": 5,
+      "summary": "🔄 Version updates",
+      "commits": [
+        {
+          "sha": "9985e5a2b274f5c01febc9b2d2b0bd0b54caba81",
+          "message": "1.0.20",
+          "date": "2025-02-23T10:13:27Z"
+        },
+        {
+          "sha": "d5ef1d4a5ad3945e315a2ab199b7f5c4e28bdf1b",
+          "message": "1.0.20",
+          "date": "2025-02-23T09:54:26Z"
+        },
+        {
+          "sha": "2ed10fba8ecbe0c2dd269299c18098f49d5ff769",
+          "message": "1.0.19",
+          "date": "2025-02-23T08:58:48Z"
+        },
+        {
+          "sha": "d951c78711132933fb917ae0360b3a825627b9aa",
+          "message": "1.0.19",
+          "date": "2025-02-23T08:49:27Z"
+        },
+        {
+          "sha": "f6a319244c2556da087885dc0195de0c7e0f80f3",
+          "message": "1.0.18",
+          "date": "2025-02-21T02:22:21Z"
+        }
+      ]
+    },
+    {
+      "name": "go-critic/go-critic",
+      "url": "https://github.com/go-critic/go-critic",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "conventions",
+        "go",
+        "go-lintpack",
+        "golang",
+        "hacktoberfest",
+        "idiomatic-go",
+        "linter",
+        "lintpack",
+        "ruleguard",
+        "style-checker"
+      ]
+    },
+    {
+      "name": "moka-rs/moka",
+      "url": "https://github.com/moka-rs/moka",
+      "commit_count": 4,
+      "summary": "🛠️ Reorganize dirs & fix Clippy warning",
+      "commits": [
+        {
+          "sha": "e970c8404b2dfa0ad105f8a68e4bcc7815cdad5c",
+          "message": "Merge pull request #500 from moka-rs/reorg-sync-base\n\nRefactoring: Reorganize directory structure",
+          "date": "2025-02-23T09:13:41Z"
+        },
+        {
+          "sha": "5e8c1d67e0fac33425051cbcc835f9d23f2e1c10",
+          "message": "Reorganize directory structure\n\n- Move the modules under the `sync_base` module to the `sync` and `common` modules.",
+          "date": "2025-02-23T08:48:46Z"
+        },
+        {
+          "sha": "e7c25b0b35cdc98f63ce62eaf5ab45b678d68d2b",
+          "message": "Merge pull request #499 from moka-rs/fix-ci-2025-02-23\n\nFix a Clippy warning",
+          "date": "2025-02-23T08:43:43Z"
+        },
+        {
+          "sha": "e88001a10679fc1fde63bc137ed9d953b83ffd7d",
+          "message": "Fix a Clippy warning",
+          "date": "2025-02-23T08:15:50Z"
+        }
+      ],
+      "topics": [
+        "cache",
+        "concurrent-data-structure"
+      ]
+    },
+    {
+      "name": "m-bain/whisperX",
+      "url": "https://github.com/m-bain/whisperX",
+      "commit_count": 1,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "4db839018c2df845176fd9a383987e9299137779",
+          "message": "feat: add Tagalog (tl - Filipino) Phoneme-based ASR Model (#1067)",
+          "date": "2025-02-23T08:59:48Z"
+        }
+      ],
+      "topics": [
+        "asr",
+        "speech",
+        "speech-recognition",
+        "speech-to-text",
+        "whisper"
+      ]
+    },
+    {
+      "name": "ProjectPhysX/FluidX3D",
+      "url": "https://github.com/ProjectPhysX/FluidX3D",
+      "commit_count": 3,
+      "summary": "📄 Updated Readme and fixed macOS compilation",
+      "commits": [
+        {
+          "sha": "eff3b187c315f844c68d15fc3836ccb89397aa1a",
+          "message": "Minor cosmetics in Readme",
+          "date": "2025-02-23T08:33:57Z"
+        },
+        {
+          "sha": "273de7ab49e192d60a2b3e7fa8c3ac54e80d0a5a",
+          "message": "Added more benchmarks in Readme",
+          "date": "2025-02-23T07:48:33Z"
+        },
+        {
+          "sha": "3ea4022fcd2b89b6f872ec6cb3b4914eca33f7d1",
+          "message": "Fixed compiling on macOS with new OpenCL headers, added more benchmarsk in Readme",
+          "date": "2025-02-22T10:47:07Z"
+        }
+      ],
+      "topics": [
+        "benchmark",
+        "cfd",
+        "computational-fluid-dynamics",
+        "fluid-dynamics",
+        "fluid-simulation",
+        "fluid-solver",
+        "gpgpu",
+        "gpu",
+        "gpu-computing",
+        "high-performance-computing",
+        "hpc",
+        "interactive-visualization",
+        "lattice-boltzmann",
+        "lbm",
+        "opencl",
+        "physics",
+        "raytracing",
+        "scientific-computing",
+        "scientific-visualization",
+        "simulation"
+      ]
+    },
+    {
+      "name": "btc-ticker/btc-ticker",
+      "url": "https://github.com/btc-ticker/btc-ticker",
+      "commit_count": 3,
+      "summary": "🛠️ Fixes and improvements for BTC Ticker",
+      "commits": [
+        {
+          "sha": "b5c93054294499a0511aaf21b012bc41b83ef00b",
+          "message": "fix for py39",
+          "date": "2025-02-23T08:09:48Z"
+        },
+        {
+          "sha": "380a5ee7897597dc984db9fc6926fe7e8ee06c5b",
+          "message": "Aktualisieren von build_sdcard.sh",
+          "date": "2025-02-23T07:53:43Z"
+        },
+        {
+          "sha": "3271ade401cc9f0dcd7cd4d4396e0c58586206a0",
+          "message": "Improved rendering\n\nImage is automatically rendered with the help of piltext\nStart to refactor",
+          "date": "2025-02-22T19:51:26Z"
+        }
+      ],
+      "topics": [
+        "bitcoin",
+        "e-paper",
+        "mempool",
+        "raspberry-pi",
+        "raspbian",
+        "ticker"
+      ]
+    },
+    {
+      "name": "nextest-rs/nextest",
+      "url": "https://github.com/nextest-rs/nextest",
+      "commit_count": 5,
+      "summary": "� Dependency updates",
+      "commits": [
+        {
+          "sha": "0d4319549fa92f5f2ea24bd20053864f18737ef7",
+          "message": "[meta] dependency updates",
+          "date": "2025-02-23T07:18:44Z"
+        },
+        {
+          "sha": "6e16a89c7f1560640c5d283c525476deca103e8e",
+          "message": "chore(deps): update rust crate libc to 0.2.170 (#2181)\n\nThis PR contains the following updates:\n\n| Package | Type | Update | Change |\n|---|---|---|---|\n| [libc](https://redirect.github.com/rust-lang/libc) |\nworkspace.dependencies | patch | `0.2.169` -> `0.2.170` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>rust-lang/libc (libc)</summary>\n\n###\n[`v0.2.170`](https://redirect.github.com/rust-lang/libc/releases/tag/0.2.170)\n\n[Compare\nSource](https://redirect.github.com/rust-lang/libc/compare/0.2.169...0.2.170)\n\n##### Added\n\n- Android: Declare `setdomainname` and `getdomainname`\n[#&#8203;4212](https://redirect.github.com/rust-lang/libc/pull/4212)\n- FreeBSD: Add `evdev` structures\n[#&#8203;3756](https://redirect.github.com/rust-lang/libc/pull/3756)\n- FreeBSD: Add the new `st_filerev` field to `stat32`\n([#&#8203;4254](https://redirect.github.com/rust-lang/libc/pull/4254))\n- Linux: Add ` SI_*`` and `TRAP_\\*\\`\\` signal codes\n[#&#8203;4225](https://redirect.github.com/rust-lang/libc/pull/4225)\n- Linux: Add experimental configuration to enable 64-bit time in kernel\nAPIs, set by `RUST_LIBC_UNSTABLE_LINUX_TIME_BITS64`.\n[#&#8203;4148](https://redirect.github.com/rust-lang/libc/pull/4148)\n- Linux: Add recent socket timestamping flags\n[#&#8203;4273](https://redirect.github.com/rust-lang/libc/pull/4273)\n- Linux: Added new CANFD_FDF flag for the flags field of canfd_frame\n[#&#8203;4223](https://redirect.github.com/rust-lang/libc/pull/4223)\n- Musl: add CLONE_NEWTIME\n[#&#8203;4226](https://redirect.github.com/rust-lang/libc/pull/4226)\n- Solarish: add the posix_spawn family of functions\n[#&#8203;4259](https://redirect.github.com/rust-lang/libc/pull/4259)\n\n##### Deprecated\n\n- Linux: deprecate kernel modules syscalls\n[#&#8203;4228](https://redirect.github.com/rust-lang/libc/pull/4228)\n\n##### Changed\n\n- Emscripten: Assume version is at least 3.1.42\n[#&#8203;4243](https://redirect.github.com/rust-lang/libc/pull/4243)\n\n##### Fixed\n\n- BSD: Correct the definition of `WEXITSTATUS`\n[#&#8203;4213](https://redirect.github.com/rust-lang/libc/pull/4213)\n- Hurd: Fix CMSG_DATA on 64bit systems\n([#&#8203;4240](https://redirect.github.com/rust-lang/libc/pull/424))\n- NetBSD: fix `getmntinfo`\n([#&#8203;4265](https://redirect.github.com/rust-lang/libc/pull/4265)\n- VxWorks: Fix the size of `time_t`\n[#&#8203;426](https://redirect.github.com/rust-lang/libc/pull/426)\n\n##### Other\n\n- Add labels to FIXMEs\n[#&#8203;4230](https://redirect.github.com/rust-lang/libc/pull/4230),\n[#&#8203;4229](https://redirect.github.com/rust-lang/libc/pull/4229),\n[#&#8203;4237](https://redirect.github.com/rust-lang/libc/pull/4237)\n- CI: Bump FreeBSD CI to 13.4 and 14.2\n[#&#8203;4260](https://redirect.github.com/rust-lang/libc/pull/4260)\n- Copy definitions from core::ffi and centralize them\n[#&#8203;4256](https://redirect.github.com/rust-lang/libc/pull/4256)\n- Define c_char at top-level and remove per-target c_char definitions\n[#&#8203;4202](https://redirect.github.com/rust-lang/libc/pull/4202)\n- Port style.rs to syn and add tests for the style checker\n[#&#8203;4220](https://redirect.github.com/rust-lang/libc/pull/4220)\n\n</details>\n\n---\n\n### Configuration\n\n📅 **Schedule**: Branch creation - \"after 8pm,before 6am\" in timezone\nAmerica/Los_Angeles, Automerge - \"after 8pm,before 6am\" in timezone\nAmerica/Los_Angeles.\n\n🚦 **Automerge**: Enabled.\n\n♻ **Rebasing**: Whenever PR is behind base branch, or you tick the\nrebase/retry checkbox.\n\n🔕 **Ignore**: Close this PR and you won't be reminded about this update\nagain.\n\n---\n\n- [ ] <!-- rebase-check -->If you want to rebase/retry this PR, check\nthis box\n\n---\n\nThis PR has been generated by [Renovate\nBot](https://redirect.github.com/renovatebot/renovate).\n\n<!--renovate-debug:eyJjcmVhdGVkSW5WZXIiOiIzOS4xNzcuMCIsInVwZGF0ZWRJblZlciI6IjM5LjE3Ny4wIiwidGFyZ2V0QnJhbmNoIjoibWFpbiIsImxhYmVscyI6WyJkZXBlbmRlbmNpZXMiXX0=-->",
+          "date": "2025-02-23T05:51:43Z"
+        },
+        {
+          "sha": "683c02b33ce0f30789de753f87b0b5aee89de0df",
+          "message": "chore(deps): update rust crate owo-colors to 4.2.0 (#2179)",
+          "date": "2025-02-23T05:19:36Z"
+        },
+        {
+          "sha": "c50288c2d0d2fafff19a43a1e64f600bc4541f7f",
+          "message": "chore(deps): update taiki-e/install-action digest to eb454ba (#2180)\n\nThis PR contains the following updates:\n\n| Package | Type | Update | Change |\n|---|---|---|---|\n|\n[taiki-e/install-action](https://redirect.github.com/taiki-e/install-action)\n| action | digest | `6a4015d` -> `eb454ba` |\n\n---\n\n### Configuration\n\n📅 **Schedule**: Branch creation - \"after 8pm,before 6am\" in timezone\nAmerica/Los_Angeles, Automerge - \"after 8pm,before 6am\" in timezone\nAmerica/Los_Angeles.\n\n🚦 **Automerge**: Enabled.\n\n♻ **Rebasing**: Whenever PR is behind base branch, or you tick the\nrebase/retry checkbox.\n\n🔕 **Ignore**: Close this PR and you won't be reminded about this update\nagain.\n\n---\n\n- [ ] <!-- rebase-check -->If you want to rebase/retry this PR, check\nthis box\n\n---\n\nThis PR has been generated by [Renovate\nBot](https://redirect.github.com/renovatebot/renovate).\n\n<!--renovate-debug:eyJjcmVhdGVkSW5WZXIiOiIzOS4xNzcuMCIsInVwZGF0ZWRJblZlciI6IjM5LjE3Ny4wIiwidGFyZ2V0QnJhbmNoIjoibWFpbiIsImxhYmVscyI6WyJkZXBlbmRlbmNpZXMiXX0=-->",
+          "date": "2025-02-23T05:15:17Z"
+        },
+        {
+          "sha": "5509cfc07c4ae118bff30676fbeaf303b992236c",
+          "message": "chore(deps): update rust crate tar to 0.4.44 (#2178)\n\nThis PR contains the following updates:\n\n| Package | Type | Update | Change |\n|---|---|---|---|\n| [tar](https://redirect.github.com/alexcrichton/tar-rs) |\nworkspace.dependencies | patch | `0.4.43` -> `0.4.44` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>alexcrichton/tar-rs (tar)</summary>\n\n###\n[`v0.4.44`](https://redirect.github.com/alexcrichton/tar-rs/compare/0.4.43...0.4.44)\n\n[Compare\nSource](https://redirect.github.com/alexcrichton/tar-rs/compare/0.4.43...0.4.44)\n\n</details>\n\n---\n\n### Configuration\n\n📅 **Schedule**: Branch creation - \"after 8pm,before 6am\" in timezone\nAmerica/Los_Angeles, Automerge - \"after 8pm,before 6am\" in timezone\nAmerica/Los_Angeles.\n\n🚦 **Automerge**: Enabled.\n\n♻ **Rebasing**: Whenever PR is behind base branch, or you tick the\nrebase/retry checkbox.\n\n🔕 **Ignore**: Close this PR and you won't be reminded about this update\nagain.\n\n---\n\n- [ ] <!-- rebase-check -->If you want to rebase/retry this PR, check\nthis box\n\n---\n\nThis PR has been generated by [Renovate\nBot](https://redirect.github.com/renovatebot/renovate).\n\n<!--renovate-debug:eyJjcmVhdGVkSW5WZXIiOiIzOS4xNzYuNCIsInVwZGF0ZWRJblZlciI6IjM5LjE3Ni40IiwidGFyZ2V0QnJhbmNoIjoibWFpbiIsImxhYmVscyI6WyJkZXBlbmRlbmNpZXMiXX0=-->",
+          "date": "2025-02-22T05:51:46Z"
+        }
+      ],
+      "topics": [
+        "cargo-plugin",
+        "cargo-subcommand",
+        "flaky-tests",
+        "junit",
+        "nextest",
+        "rust",
+        "testing"
+      ]
+    },
+    {
+      "name": "datawhalechina/thorough-pytorch",
+      "url": "https://github.com/datawhalechina/thorough-pytorch",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "deep-learning",
+        "machine-learning",
+        "python",
+        "pytorch"
+      ]
+    },
+    {
+      "name": "CherryHQ/cherry-studio",
+      "url": "https://github.com/CherryHQ/cherry-studio",
+      "commit_count": 11,
+      "summary": "🚀 Enhance UI, add web search, and improve features",
+      "commits": [
+        {
+          "sha": "ce70c7239cfbac75e09f20328c613f7b877072b7",
+          "message": "chore(version): 1.0.0",
+          "date": "2025-02-23T07:10:10Z"
+        },
+        {
+          "sha": "c354537f30c3896afa94ef1b30575f881c0d2a36",
+          "message": "feat: Add Tavily dark mode logo and improve web search settings UI",
+          "date": "2025-02-23T07:10:01Z"
+        },
+        {
+          "sha": "fb6b0b0c974fcce88f0d9e5c9ab0d97930a00204",
+          "message": "refactor: Rename AssistantItemComponent to AssistantItem and update imports",
+          "date": "2025-02-23T06:30:17Z"
+        },
+        {
+          "sha": "fc59144b1d6beb4719104128325a79387aa6cf58",
+          "message": "fix:清空话题总是修复当前话题 (#2167)",
+          "date": "2025-02-23T06:26:31Z"
+        },
+        {
+          "sha": "cacd0a138704e9d3860e4c59f0fa4664fdb220ab",
+          "message": "feat: Improve web search UI and localization",
+          "date": "2025-02-23T06:05:47Z"
+        },
+        {
+          "sha": "af9763d142710526d36ba1dd8b3f1c0317ade720",
+          "message": "chore: Update Tavily core package and remove js-tiktoken dependency",
+          "date": "2025-02-22T15:20:32Z"
+        },
+        {
+          "sha": "b9402a83707062f6b2a472f2eb9d11306ee97b2f",
+          "message": "feat: add web search",
+          "date": "2025-02-22T14:26:59Z"
+        },
+        {
+          "sha": "97a08f00a397b50bffae93f994f756c0967a08f1",
+          "message": "chore(version): 0.9.30",
+          "date": "2025-02-22T22:46:39Z"
+        },
+        {
+          "sha": "4e20bd1ef8184fb1f4b9474d1de989af90a0e8e5",
+          "message": "feat: Enhance assistant emoji and popup UI interactions",
+          "date": "2025-02-22T22:34:50Z"
+        },
+        {
+          "sha": "5c2d9366888eb1126817d41852932fe245e5cdee",
+          "message": "feat: 添加Notion导出自动分页功能 (#2098)\n\n* fix: 长对话Notion导出失败(分页导出)\n\n* feat: 添加Notion导出自动分页设置",
+          "date": "2025-02-22T22:38:35Z"
+        },
+        {
+          "sha": "6b34aac26320888f0b2ecff8f913c77a2b4ba82b",
+          "message": "feat: Auto-select newly added knowledge base",
+          "date": "2025-02-22T15:17:30Z"
+        }
+      ],
+      "topics": [
+        "agent",
+        "anthropic",
+        "assistant",
+        "chatbot",
+        "chatbotai",
+        "electron",
+        "llm",
+        "openai"
+      ]
+    },
+    {
+      "name": "thepersonalaicompany/amurex",
+      "url": "https://github.com/thepersonalaicompany/amurex",
+      "commit_count": 2,
+      "summary": "📄 Update README and release v1.0.25",
+      "commits": [
+        {
+          "sha": "af96114ee77b0e2c037de54d8d2d2e2f1866bdf1",
+          "message": "Update README.md",
+          "date": "2025-02-23T06:26:14Z"
+        },
+        {
+          "sha": "3c7d2b60039dd1965533a6b1a123f2590dcd8fbf",
+          "message": "Release v1.0.25",
+          "date": "2025-02-20T08:39:13Z"
+        }
+      ],
+      "topics": [
+        "ai",
+        "chrome-extension",
+        "copilot",
+        "meetings",
+        "transcriptions"
+      ]
+    },
+    {
+      "name": "EdJoPaTo/mqttui",
+      "url": "https://github.com/EdJoPaTo/mqttui",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "cli",
+        "hacktoberfest",
+        "mqtt",
+        "mqtt-cli",
+        "mqtt-client",
+        "mqtt-explorer",
+        "mqtt-topic",
+        "terminal-based"
+      ]
+    },
+    {
+      "name": "ben-nour/SQL-tips-and-tricks",
+      "url": "https://github.com/ben-nour/SQL-tips-and-tricks",
+      "commit_count": 3,
+      "summary": "📄 Update README.md",
+      "commits": [
+        {
+          "sha": "a6535dda857e51a99107125b88d33b9e89534247",
+          "message": "Update README.md",
+          "date": "2025-02-23T05:16:32Z"
+        },
+        {
+          "sha": "c8174ff575b337d9963b3754267dcb42c7324559",
+          "message": "Update README.md\n\nUpdated some tips' single-line comments to multi-line comments for readability on Github mobile app.",
+          "date": "2025-02-23T05:01:30Z"
+        },
+        {
+          "sha": "cd1da3eb38a44fff7219154a467bd6c3e8db69dc",
+          "message": "Update README.md\n\nFixed typos",
+          "date": "2025-02-23T04:49:33Z"
+        }
+      ],
+      "topics": [
+        "mariadb",
+        "mysql",
+        "postgresql",
+        "snowflake",
+        "sql",
+        "sqlite",
+        "tips",
+        "tips-and-tricks"
+      ]
+    },
+    {
+      "name": "cnlohr/rv003usb",
+      "url": "https://github.com/cnlohr/rv003usb",
+      "commit_count": 1,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "ed6fab0924afd95b5331e90f9636f1bd9239ea65",
+          "message": "Move GP to 0x200003fc instead of 0x20000800 in the bootloader, allowing for access to more of RAM.\n\nAlso, there are now 4 free bytes of room before the USB interrupt if we want to do anything with it.",
+          "date": "2025-02-23T05:04:04Z"
+        }
+      ]
+    },
+    {
+      "name": "anthropics/anthropic-sdk-python",
+      "url": "https://github.com/anthropics/anthropic-sdk-python",
+      "commit_count": 0,
+      "summary": null,
+      "commits": []
+    },
+    {
+      "name": "sjpiper145/MakerSkillTree",
+      "url": "https://github.com/sjpiper145/MakerSkillTree",
+      "commit_count": 3,
+      "summary": "📂 Add files and update README",
+      "commits": [
+        {
+          "sha": "a0dcd4fec79c0e6a1ca656590b6225bbae994fb5",
+          "message": "Add files via upload",
+          "date": "2025-02-23T04:45:52Z"
+        },
+        {
+          "sha": "0410e65d57645523f0317bbfd8843a1c0c82278a",
+          "message": "Add files via upload",
+          "date": "2025-02-23T00:39:46Z"
+        },
+        {
+          "sha": "12d90786d75627de4773178d493e82a150069f81",
+          "message": "Update README.md",
+          "date": "2025-02-22T12:54:33Z"
+        }
+      ]
+    },
+    {
+      "name": "caksoylar/keymap-drawer",
+      "url": "https://github.com/caksoylar/keymap-drawer",
+      "commit_count": 9,
+      "summary": "📚 Refactor docs and layout handling",
+      "commits": [
+        {
+          "sha": "f5caf26d56a73687e146b6b232e0a73a9d1a3638",
+          "message": "docs: Improve physical layouts doc",
+          "date": "2025-02-23T04:21:44Z"
+        },
+        {
+          "sha": "431a078adbb58796b7076225aa26198d1a95fa69",
+          "message": "docs: Fix broken links and prefer site for image embeds",
+          "date": "2025-02-23T03:59:03Z"
+        },
+        {
+          "sha": "06f7d117fd7dccf38144bc41de3dee3e0b3a93af",
+          "message": "docs: Refactor physical layouts to separate page",
+          "date": "2025-02-23T03:18:28Z"
+        },
+        {
+          "sha": "d79a69530d8d2acda95134273af315faddf71b88",
+          "message": "docs: Reorganize physical layout categorization",
+          "date": "2025-02-23T01:52:17Z"
+        },
+        {
+          "sha": "57e56857da9c998a1f705cd7b6211598d4306336",
+          "message": "refactor: Rename qmk_layouts to extra_layouts",
+          "date": "2025-01-29T07:23:34Z"
+        },
+        {
+          "sha": "b15b4316a3fc609630eb3622deb63d1188d8e6cc",
+          "message": "feat: Allow specifying certain physical layout spec combinations",
+          "date": "2025-01-29T05:29:28Z"
+        },
+        {
+          "sha": "4f6c8e7c3c578057102fc86b566435756ea45b72",
+          "message": "feat: Add zmk_keyboard layout spec",
+          "date": "2025-01-29T04:43:37Z"
+        },
+        {
+          "sha": "2df66543831f21e299b50b264c7164b60cc7ef97",
+          "message": "refactor: convert layout_factory to Pydantic model",
+          "date": "2025-01-29T02:19:23Z"
+        },
+        {
+          "sha": "2d94eceb90cc42c2d80fbef15b642afac1ca2a55",
+          "message": "ci: Add install_version input\n\nFixes #154",
+          "date": "2025-02-02T21:49:12Z"
+        }
+      ],
+      "topics": [
+        "keyboard",
+        "keymap-drawer",
+        "keymaps",
+        "qmk",
+        "qmk-keymap",
+        "zmk"
+      ]
+    },
+    {
+      "name": "ripplebiz/MeshCore",
+      "url": "https://github.com/ripplebiz/MeshCore",
+      "commit_count": 0,
+      "summary": null,
+      "commits": []
+    },
+    {
+      "name": "pykeio/ort",
+      "url": "https://github.com/pykeio/ort",
+      "commit_count": 7,
+      "summary": "🔧 Fixes, updates, and refactors for ONNX Rust API",
+      "commits": [
+        {
+          "sha": "0539cd5473a75ee5c7f64bb011974e549eb9707d",
+          "message": "fix(candle,tract): new `OrtStatus` changes",
+          "date": "2025-02-23T04:19:55Z"
+        },
+        {
+          "sha": "de932b57fd4404977b74942defccd38a80828b27",
+          "message": "chore: update API ignore list",
+          "date": "2025-02-23T04:03:15Z"
+        },
+        {
+          "sha": "9b0d1ea1de50cdec3fa00b90ec21a965368e5b0d",
+          "message": "chore: mark `OrtStatusPtr` as `#[must_use]`\n\nluckily most cases where a status \"may\" leak were instances where an error state would never be returned to begin with, but this will be useful to guard from future Sleepy 2am Deca forgetting to add a ?",
+          "date": "2025-02-23T04:02:25Z"
+        },
+        {
+          "sha": "ca0ef4ed058fa59993e08008853abc70225aa987",
+          "message": "feat: update GPU device id after EP registration",
+          "date": "2025-02-23T03:59:12Z"
+        },
+        {
+          "sha": "3133a9322b5bd9364b54f99ff8ee3ca80b4e1254",
+          "message": "refactor: use rocm v2 registration",
+          "date": "2025-02-23T03:20:08Z"
+        },
+        {
+          "sha": "59cc310b00eda9ad8158d253bc3b96505b173cb7",
+          "message": "feat(training): 100% API coverage, support input value maps",
+          "date": "2025-02-23T02:43:56Z"
+        },
+        {
+          "sha": "d738b1757bb375c8f7150cf566fc5a9d2c88008a",
+          "message": "chore: start moving stuff off parcel",
+          "date": "2025-02-22T05:31:14Z"
+        }
+      ],
+      "topics": [
+        "ai",
+        "ai-training",
+        "fine-tuning",
+        "inference",
+        "machine-learning",
+        "onnx",
+        "onnxruntime",
+        "rust"
+      ]
+    },
+    {
+      "name": "espressif/arduino-esp32",
+      "url": "https://github.com/espressif/arduino-esp32",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "arduino",
+        "esp-idf",
+        "esp32",
+        "platformio"
+      ]
+    },
+    {
+      "name": "vial-kb/vial-qmk",
+      "url": "https://github.com/vial-kb/vial-qmk",
+      "commit_count": 0,
+      "summary": null,
+      "commits": []
+    },
+    {
+      "name": "lsd-rs/lsd",
+      "url": "https://github.com/lsd-rs/lsd",
+      "commit_count": 3,
+      "summary": "🛠️ Update dependencies, add .cmd and Jule icons",
+      "commits": [
+        {
+          "sha": "4d58400b60156f6ebdc9cbcb1808a0bd7cafe643",
+          "message": "Bump idna to 1.0 via url 2.5.4 due to vulnerability\n\nhttps://rustsec.org/advisories/RUSTSEC-2024-0421",
+          "date": "2025-01-03T15:08:04Z"
+        },
+        {
+          "sha": "db5d5b5032348d475a5300195affb583af4ce087",
+          "message": "Add support for `.cmd` file icons",
+          "date": "2025-01-15T17:28:15Z"
+        },
+        {
+          "sha": "1d872b7ba94ff4bb865b12a034efd33dd09ec44a",
+          "message": "feat: add Jule icon ()",
+          "date": "2025-01-15T13:48:17Z"
+        }
+      ],
+      "topics": [
+        "color",
+        "icons",
+        "ls",
+        "nerd-fonts",
+        "rust"
+      ]
+    },
+    {
+      "name": "xiaowine/szlcsc-help",
+      "url": "https://github.com/xiaowine/szlcsc-help",
+      "commit_count": 2,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "91de1f72c100e576f89aba26399c8c148c8897ca",
+          "message": "Merge pull request #7 from garywill/pr-sort\n\n排序json数据",
+          "date": "2025-02-23T02:27:54Z"
+        },
+        {
+          "sha": "38d23cf3964ee94dc04cb3c754c24832d2ea4230",
+          "message": "排序json数据",
+          "date": "2025-02-23T01:48:41Z"
+        }
+      ]
+    },
+    {
+      "name": "brookhong/Surfingkeys",
+      "url": "https://github.com/brookhong/Surfingkeys",
+      "commit_count": 1,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "e60dbf1d12a6aef41fa5210c0e251831cfaa8c12",
+          "message": "1.17.6\n\nFixed #2241 settings config file not loaded everytime in Firefox",
+          "date": "2025-02-23T02:18:33Z"
+        }
+      ],
+      "topics": [
+        "chrome",
+        "chromium",
+        "edge-extension",
+        "extension",
+        "firefox",
+        "firefox-addon",
+        "safari-extension",
+        "vim"
+      ]
+    },
+    {
+      "name": "HaoboGu/rmk",
+      "url": "https://github.com/HaoboGu/rmk",
+      "commit_count": 4,
+      "summary": "🔧 Fix esp32 BLE serial UUID",
+      "commits": [
+        {
+          "sha": "2d2c8c314f0ff5987510ee5f822d83c777c5cbb7",
+          "message": "Merge pull request #265 from hcabel/main",
+          "date": "2025-02-23T01:38:04Z"
+        },
+        {
+          "sha": "ce3a5eafc5f2e774b9b40fe183102afcc3b0ab0a",
+          "message": "Fix esp32 ble serial number UUID\n\nThe serial number string for esp32 BLE was stored in a charasteristic with the wrong UUID\n0x2a50 is for PnP ID",
+          "date": "2025-02-22T23:35:29Z"
+        },
+        {
+          "sha": "d8b3062207a3587d7982943d3b90a98fe0009a6d",
+          "message": "Fix esp32 ble serial number UUID\n\nThe serial number string for esp32 BLE was stored in a charasteristic with the wrong UUID\n0x2a50 is for PnP ID",
+          "date": "2025-02-22T10:51:10Z"
+        },
+        {
+          "sha": "f29548b38f7359bf1d08b4e057d81d502d0befbc",
+          "message": "Merge pull request #264 from PawelBis/deny-unknown-fields\n\nAdd #[serde(deny_unknown_fields)] to config",
+          "date": "2025-02-21T09:12:14Z"
+        }
+      ],
+      "topics": [
+        "cortex-m",
+        "embedded",
+        "esp32",
+        "firmware",
+        "keyboard",
+        "keyboard-firmware",
+        "nrf52",
+        "rp2040",
+        "rust",
+        "stm32",
+        "usb",
+        "usb-hid",
+        "wireless"
+      ]
+    },
+    {
+      "name": "1technophile/OpenMQTTGateway",
+      "url": "https://github.com/1technophile/OpenMQTTGateway",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "arduino",
+        "arduino-uno",
+        "ble",
+        "ble-beacons",
+        "bridge",
+        "esp32",
+        "esp8266",
+        "gateway",
+        "home-assistant",
+        "home-automation",
+        "lora",
+        "miflora",
+        "mqtt",
+        "nodemcu",
+        "openhab2",
+        "platformio",
+        "rcswitch",
+        "wemos-d1",
+        "xiaomi"
+      ]
+    },
+    {
+      "name": "janhq/cortex.cpp",
+      "url": "https://github.com/janhq/cortex.cpp",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "gguf",
+        "llamacpp",
+        "onnx",
+        "onnxruntime",
+        "tensorrt-llm"
+      ]
+    },
+    {
+      "name": "xinychen/awesome-latex-drawing",
+      "url": "https://github.com/xinychen/awesome-latex-drawing",
+      "commit_count": 3,
+      "summary": "📄 Update README and upload LaTeX examples",
+      "commits": [
+        {
+          "sha": "c5eaa10346e0cabd7a23c1282593407509263bc2",
+          "message": "Update README.md",
+          "date": "2025-02-23T01:14:48Z"
+        },
+        {
+          "sha": "0d0d9ad90f094972219767d2a7a6cca8bfae2480",
+          "message": "Update README.md",
+          "date": "2025-02-23T00:25:47Z"
+        },
+        {
+          "sha": "1b7cff4f8d8098b121022ff47680f2a2584633d1",
+          "message": "Upload LaTeX examples",
+          "date": "2025-02-23T00:15:47Z"
+        }
+      ],
+      "topics": [
+        "latex",
+        "machine-learning"
+      ]
+    },
+    {
+      "name": "tickstep/aliyunpan",
+      "url": "https://github.com/tickstep/aliyunpan",
+      "commit_count": 2,
+      "summary": "🔧 Fix upload part num issue & add logs",
+      "commits": [
+        {
+          "sha": "68f4c44a551f4547558c20a53bd1baec7d3c633d",
+          "message": "add more logs for upload",
+          "date": "2025-02-23T01:06:18Z"
+        },
+        {
+          "sha": "3aae75a46e342ec4fd019bf598cf064e23711ccf",
+          "message": "fix upload part num issue",
+          "date": "2025-02-22T15:08:21Z"
+        }
+      ],
+      "topics": [
+        "adrive",
+        "backup",
+        "linux",
+        "macos",
+        "sync",
+        "windows"
+      ]
+    },
+    {
+      "name": "pyocd/pyOCD",
+      "url": "https://github.com/pyocd/pyOCD",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "arm",
+        "cmsis-dap",
+        "cortex-debug",
+        "cortex-m",
+        "debug",
+        "embedded",
+        "gdb-server",
+        "jlink",
+        "mcu",
+        "microcontroller",
+        "pyocd",
+        "python",
+        "stlink"
+      ]
+    },
+    {
+      "name": "EspressoSystems/jellyfish",
+      "url": "https://github.com/EspressoSystems/jellyfish",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "plonk",
+        "rust",
+        "zero-knowledge-proofs"
+      ]
+    },
+    {
+      "name": "RoCry/git-stargazer",
+      "url": "https://github.com/RoCry/git-stargazer",
+      "commit_count": 0,
+      "summary": null,
+      "commits": []
+    },
+    {
+      "name": "openpnp/openpnp",
+      "url": "https://github.com/openpnp/openpnp",
+      "commit_count": 0,
+      "summary": null,
+      "commits": []
+    },
+    {
+      "name": "obmarg/cynic",
+      "url": "https://github.com/obmarg/cynic",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "gql",
+        "graphql",
+        "graphql-client",
+        "graphql-library",
+        "graphql-query",
+        "macros",
+        "rust"
+      ]
+    },
+    {
+      "name": "probe-rs/probe-rs",
+      "url": "https://github.com/probe-rs/probe-rs",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "arm",
+        "arm-cores",
+        "coresight",
+        "daplink",
+        "debug",
+        "debug-probes",
+        "jlink",
+        "probe-rs",
+        "riscv",
+        "rust",
+        "stlink"
+      ]
+    },
+    {
+      "name": "Byaidu/PDFMathTranslate",
+      "url": "https://github.com/Byaidu/PDFMathTranslate",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "chinese",
+        "document",
+        "edit",
+        "english",
+        "japanese",
+        "korean",
+        "latex",
+        "math",
+        "modify",
+        "obsidian",
+        "openai",
+        "pdf",
+        "pdf2zh",
+        "python",
+        "russian",
+        "translate",
+        "translation",
+        "zotero"
+      ]
+    },
+    {
+      "name": "gunthercox/ChatterBot",
+      "url": "https://github.com/gunthercox/ChatterBot",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "bot",
+        "chatbot",
+        "chatterbot",
+        "conversation",
+        "language",
+        "machine-learning",
+        "python"
+      ]
+    },
+    {
+      "name": "witnessmenow/ESP32-Cheap-Yellow-Display",
+      "url": "https://github.com/witnessmenow/ESP32-Cheap-Yellow-Display",
+      "commit_count": 0,
+      "summary": null,
+      "commits": []
+    },
+    {
+      "name": "todbot/circuitpython-tricks",
+      "url": "https://github.com/todbot/circuitpython-tricks",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "circuitpython",
+        "displayio",
+        "itsybitsy",
+        "itsybitsym4",
+        "pico",
+        "qtpy",
+        "raspberrypipico",
+        "rp2040",
+        "tips-and-tricks"
+      ]
+    }
+  ]
+}
