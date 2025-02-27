@@ -56,6 +56,9 @@ jobs:
     - name: Generate report
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+        # the ai summary will be disabled if the LLM_MODEL is not set or empty
+        LLM_MODEL: ${{ vars.LLM_MODEL }}
+        # only supports deepseek right now, could add more keys below
         DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         REPO_LIMIT: ${{ vars.REPO_LIMIT }}
         EMPTY_REPO_CONSECUTIVE_LIMIT: ${{ vars.EMPTY_REPO_CONSECUTIVE_LIMIT }}

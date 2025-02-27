@@ -7,19 +7,8 @@ from log import logger
 
 class ReportGenerator:
     def __init__(self, model: str = None, api_key: str = None):
-        self.model = model or os.getenv("LLM_MODEL", "deepseek/deepseek-chat")
-        try:
-            check = validate_environment(self.model)
-            if not check["keys_in_environment"]:
-                self.model = None
-                logger.warning(
-                    "LLM model not available, will use commit message as summary"
-                )
-        except Exception as e:
-            self.model = None
-            logger.warning(
-                f"Failed to initialize LLM model: {e}, will use commit message as summary"
-            )
+        self.model = model or os.getenv("LLM_MODEL") or None
+        logger.info(f"Report with LLM model: {self.model}")
 
     async def generate_repo_summary(
         self, repo_data: Dict, commits: List[Dict]
