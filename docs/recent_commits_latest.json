@@ -1,0 +1,3380 @@
+{
+  "total_repos_count": 107,
+  "active_repos_count": 107,
+  "total_commits_count": 320,
+  "repos": [
+    {
+      "name": "openshwprojects/OpenBK7231T_App",
+      "url": "https://github.com/openshwprojects/OpenBK7231T_App",
+      "commit_count": 3,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "30c12c69d904a7d106faa38c75749446fd3c6d6f",
+          "message": "update submodule OpenBK7231N",
+          "date": "2025-03-02T22:02:13Z"
+        },
+        {
+          "sha": "55e76b504a8abb799c7da01d267b39b46f7a3bc2",
+          "message": "PWM frequncy select and move freq code outside hal (#1554)\n\n* test\n\n* w\n\n* fx\n\n* fx\n\n* reapply to change pwm ffreq?\n\n* array",
+          "date": "2025-03-02T14:03:20Z"
+        },
+        {
+          "sha": "1cc06037485bd14718f5f187a00457a5a908762c",
+          "message": "Cmd Flags 64bit repair + webui (#1548)\n\n* flags 64bit cmd repair + webui\n\n* uint32\n\n* flags 0 webui strange char repair",
+          "date": "2025-03-01T05:17:38Z"
+        }
+      ],
+      "topics": [
+        "bk7231",
+        "bk7231n",
+        "bk7231t",
+        "bl602",
+        "home-assistant",
+        "iot",
+        "ln882h",
+        "mqtt",
+        "smart-home",
+        "tasmota",
+        "tuya",
+        "w600",
+        "w601",
+        "w800",
+        "w801",
+        "wifi",
+        "xr809"
+      ]
+    },
+    {
+      "name": "SCons/scons",
+      "url": "https://github.com/SCons/scons",
+      "commit_count": 11,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "86887ebde913d34522402919effcd22940eabf24",
+          "message": "minor cleanup of CHANGES.txt",
+          "date": "2025-03-02T22:26:50Z"
+        },
+        {
+          "sha": "fd2015cd0f9628c37c41599d4703fb207922eb99",
+          "message": "post release",
+          "date": "2025-03-02T22:21:45Z"
+        },
+        {
+          "sha": "9e0ea45f99fe3ee6976a19a3b66847c12b39eb70",
+          "message": "Merge pull request #4691 from SCons/rel_4.9.0\n\nRel 4.9.0",
+          "date": "2025-03-02T22:17:25Z"
+        },
+        {
+          "sha": "f6f2fd98b2a94871b506e517873af4d6faf04ed9",
+          "message": "updates",
+          "date": "2025-03-02T22:15:50Z"
+        },
+        {
+          "sha": "44064713db30617f0e01ebbc9224a2944763df1a",
+          "message": "Merge pull request #4690 from SCons/rel_4.9.0\n\nRel 4.9.0",
+          "date": "2025-03-02T22:15:12Z"
+        },
+        {
+          "sha": "99a8c86de1ce91d23b102520e185c54ebd968924",
+          "message": "minor tweaks to RELEASE.txt",
+          "date": "2025-03-02T21:43:13Z"
+        },
+        {
+          "sha": "0ac18d76365e812ea0302586dc33f58a80ca387a",
+          "message": "updates for release",
+          "date": "2025-03-02T21:29:17Z"
+        },
+        {
+          "sha": "66f8972b546e12e0b8bf31648a2a076d706daec0",
+          "message": "Updates for 4.9.0 release",
+          "date": "2025-03-02T21:22:15Z"
+        },
+        {
+          "sha": "aa3cbbf83f78425d94ff12c1d95683af2500ec05",
+          "message": "Regenerated docs for 4.9.0 release.",
+          "date": "2025-03-02T21:15:20Z"
+        },
+        {
+          "sha": "8807cc0ad833655cd1ca29da86e1037f597436a5",
+          "message": "Update NEXT_RELEASE to 4.9.0",
+          "date": "2025-03-02T21:12:34Z"
+        },
+        {
+          "sha": "c0572bdb48fba21a8518cc171836600e97ec42e1",
+          "message": "Merge pull request #4689 from mwichmann/test/fixture-dest\n\nFramework: fixture methods now handle lists for dstdir",
+          "date": "2025-02-28T19:34:29Z"
+        }
+      ],
+      "topics": [
+        "build-automation",
+        "build-tool",
+        "build-tools",
+        "hacktoberfest",
+        "python-3-6",
+        "python3",
+        "python310",
+        "python311",
+        "python312",
+        "python37",
+        "python38",
+        "python39",
+        "scons"
+      ]
+    },
+    {
+      "name": "Byaidu/PDFMathTranslate",
+      "url": "https://github.com/Byaidu/PDFMathTranslate",
+      "commit_count": 30,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "0d656a72fede9fd7cf41f4f5c786d4630f4ad957",
+          "message": "chore: Upgrade babeldoc dependency to version 0.1.22",
+          "date": "2025-03-02T22:17:47Z"
+        },
+        {
+          "sha": "2e0129712f79dd9aab560598853b3696dea79675",
+          "message": "feat: Extend language font mapping for Noto fonts",
+          "date": "2025-03-02T22:10:26Z"
+        },
+        {
+          "sha": "1a08abd3d823ea356a0ef197ab221cd0b5881e76",
+          "message": "ci: Update release drafter configuration with detailed asset descriptions",
+          "date": "2025-03-02T21:39:56Z"
+        },
+        {
+          "sha": "4fecac1bf347caf3bbc2bd3878c4b3ccc5d541c6",
+          "message": "ci: Refine release zip generation in GitHub Actions workflow",
+          "date": "2025-03-02T21:36:32Z"
+        },
+        {
+          "sha": "65b93fe236ddfd95a66d47e0429ed15eaafea25c",
+          "message": "ci: Enhance release artifact generation in GitHub Actions workflow",
+          "date": "2025-03-02T21:27:17Z"
+        },
+        {
+          "sha": "e4f252450cdcacf23511b5f71f7d2a4bff5bbca1",
+          "message": "Merge pull request #712 from awwaawwa/better-offline-assets\n\nfeat: enhance offline assets support and improve Windows build/test workflows",
+          "date": "2025-03-02T21:24:02Z"
+        },
+        {
+          "sha": "4b024fe100603dde684dbda0acf46d87773414e4",
+          "message": "ci: Fix repository condition in GitHub Actions workflows",
+          "date": "2025-03-02T21:19:59Z"
+        },
+        {
+          "sha": "10fe68de951a3e74939f52af4823c3726972a02e",
+          "message": "update",
+          "date": "2025-03-02T21:17:05Z"
+        },
+        {
+          "sha": "c8943fd072acdb6f0904b50675d7130b804d1aea",
+          "message": "ci: Add offline assets generation and cleanup in Windows workflow",
+          "date": "2025-03-02T21:16:46Z"
+        },
+        {
+          "sha": "f3de33b88aa6fcfacc4272bbcad92cd5498ec0fd",
+          "message": "ci: Modify fork-build workflow trigger configuration",
+          "date": "2025-03-02T21:12:43Z"
+        },
+        {
+          "sha": "af3a4cf4e4dacbafd8faf8bfe094ca07fe55412f",
+          "message": "ci: Adjust artifact compression level in Windows workflow",
+          "date": "2025-03-02T21:08:55Z"
+        },
+        {
+          "sha": "e5e167e4bc5092c93b051500b0b2cf6018b9fb27",
+          "message": "ci: Improve offline test result handling in Windows workflow",
+          "date": "2025-03-02T21:03:13Z"
+        },
+        {
+          "sha": "d9fa10a263fa5979174bf63a6eb8a33d1e511944",
+          "message": "ci: Configure uv dependency caching in Windows build workflow",
+          "date": "2025-03-02T20:57:27Z"
+        },
+        {
+          "sha": "dda17fa7c2cc2201eeb522ee773d0213661234b1",
+          "message": "ci: Replace site-packages symlink with direct copy in Windows build workflow",
+          "date": "2025-03-02T20:53:17Z"
+        },
+        {
+          "sha": "171192bd5a61edfba33f3a120af89fc65d1261b4",
+          "message": "ci: Improve site-packages symlink creation with robust error handling in Windows workflow",
+          "date": "2025-03-02T20:50:51Z"
+        },
+        {
+          "sha": "3be4ff72a870cf38da8abc3586b7e1795683c3c5",
+          "message": "ci: Optimize site-packages handling in Windows build workflow",
+          "date": "2025-03-02T20:49:04Z"
+        },
+        {
+          "sha": "582adaf194ee78c1d1cb4deb8de875c943d0d419",
+          "message": "ci: Enhance Windows build workflow with offline assets and test modes",
+          "date": "2025-03-02T20:45:34Z"
+        },
+        {
+          "sha": "3e9ecfa381bc2549901a0ffbcee066a47eb47df6",
+          "message": "ci: Add Visual C++ Redistributable download to Windows build workflow",
+          "date": "2025-03-02T20:42:05Z"
+        },
+        {
+          "sha": "8201eabb474c885d744f210fc5a8f985422ac047",
+          "message": "chore: Add BabelDOC installation and warmup in Dockerfile",
+          "date": "2025-03-02T20:40:45Z"
+        },
+        {
+          "sha": "89c79ad7cdd8d7a8ab551be8b60975f765b51caa",
+          "message": "refactor: Disable font download in Dockerfile and add warmup command",
+          "date": "2025-03-02T20:37:55Z"
+        },
+        {
+          "sha": "9dd0e0ea9913744937b4b503dec535188295c525",
+          "message": "ci: Add artifact upload for Windows executable without offline assets",
+          "date": "2025-03-02T20:32:32Z"
+        },
+        {
+          "sha": "0b93c98708d04b17a787a4ec1e4bd28171427f8e",
+          "message": "ci: Update GitHub Actions workflows for BabelDOC metadata and asset caching",
+          "date": "2025-03-02T20:28:04Z"
+        },
+        {
+          "sha": "799aeec97f214a68f9bd142f9e8d28ec683c5b73",
+          "message": "ci: Uncomment workflow_dispatch input for manual release triggering",
+          "date": "2025-03-02T20:24:59Z"
+        },
+        {
+          "sha": "fc232f6c2dc695bfa6276facdfb81bbb18bc2fd1",
+          "message": "ci: Enhance offline assets and cache cleanup in GitHub Actions workflow",
+          "date": "2025-03-02T20:18:24Z"
+        },
+        {
+          "sha": "8e1f61658a411d8788ac7d48e132f826d066dc36",
+          "message": "format",
+          "date": "2025-03-02T20:15:00Z"
+        },
+        {
+          "sha": "124398af93d692318d20a12593d1cb3e59bccaa9",
+          "message": "refactor: Disable verbose logging for external libraries",
+          "date": "2025-03-02T20:14:41Z"
+        },
+        {
+          "sha": "d5e125b3c52f00b23320347f682be96351efe620",
+          "message": "feat: Add logging to high-level module and PDF translation script",
+          "date": "2025-03-02T20:13:11Z"
+        },
+        {
+          "sha": "917a54e4902188f406fc76af81964a877365083b",
+          "message": "refactor: Improve argostranslate import warning message clarity",
+          "date": "2025-03-02T20:08:04Z"
+        },
+        {
+          "sha": "cdb7d524d56f55e7e688c469df57f0a89f8b84d2",
+          "message": "refactor: Improve font path resolution in high-level module",
+          "date": "2025-03-02T20:05:33Z"
+        },
+        {
+          "sha": "10c669559d8a9184ecbe5f6a0643b5403d598bee",
+          "message": "refactor: Simplify DocLayout model loading and font retrieval",
+          "date": "2025-03-02T20:04:16Z"
+        }
+      ],
+      "topics": [
+        "chinese",
+        "document",
+        "edit",
+        "english",
+        "japanese",
+        "korean",
+        "latex",
+        "math",
+        "modify",
+        "obsidian",
+        "openai",
+        "pdf",
+        "pdf2zh",
+        "python",
+        "russian",
+        "translate",
+        "translation",
+        "zotero"
+      ]
+    },
+    {
+      "name": "gunthercox/ChatterBot",
+      "url": "https://github.com/gunthercox/ChatterBot",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "bot",
+        "chatbot",
+        "chatterbot",
+        "conversation",
+        "language",
+        "machine-learning",
+        "python"
+      ]
+    },
+    {
+      "name": "esphome/esphome",
+      "url": "https://github.com/esphome/esphome",
+      "commit_count": 2,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "23687b2afd4e32865bea727673fba3ed84e418a9",
+          "message": "[tmp1075] fix component for TMP1075N (#8317)",
+          "date": "2025-03-02T15:10:18Z"
+        },
+        {
+          "sha": "f11ad9ad5b5c01712822670df6507f752abe926d",
+          "message": "[io_bus] Initial implementation (#8227)",
+          "date": "2025-02-28T03:04:36Z"
+        }
+      ],
+      "topics": [
+        "esp32",
+        "esp8266",
+        "hacktoberfest",
+        "home-assistant",
+        "home-automation",
+        "iot",
+        "mqtt",
+        "platformio",
+        "python",
+        "yaml"
+      ]
+    },
+    {
+      "name": "pykeio/ort",
+      "url": "https://github.com/pykeio/ort",
+      "commit_count": 3,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "490abd5ae4366dea7b8d8d57e47dca647c94188f",
+          "message": "feat: use alternative CoreML EP registration API",
+          "date": "2025-03-02T21:57:12Z"
+        },
+        {
+          "sha": "10a8d66bdfc5004a3c15c46b91afe4dd7843b2c4",
+          "message": "feat: azure execution provider",
+          "date": "2025-03-02T21:41:49Z"
+        },
+        {
+          "sha": "aaaef8dde9f7599858eb48d7207ec818887c5905",
+          "message": "config: update extension recommendations",
+          "date": "2025-03-02T21:41:24Z"
+        }
+      ],
+      "topics": [
+        "ai",
+        "ai-training",
+        "fine-tuning",
+        "inference",
+        "machine-learning",
+        "onnx",
+        "onnxruntime",
+        "rust"
+      ]
+    },
+    {
+      "name": "DraftShift/StealthChanger",
+      "url": "https://github.com/DraftShift/StealthChanger",
+      "commit_count": 2,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "bfe3f543bfb6611095d41ceb9cb8fe91998a17f4",
+          "message": "Fix Anthead backplate, was out by 1mm",
+          "date": "2025-03-02T21:44:54Z"
+        },
+        {
+          "sha": "c636e95b61ce7609db5e9c834463701b083720a6",
+          "message": "Spacer mod (#104)\n\n* renamed original spacer and added another\n\nrenamed sherpaminispacer to sherpaminispacerwithtab and added a variation sherpamininotab.\n\n* Spacer mod for anthead to use orbiter\n\nSpacer for orbiter extruder bolt spacing.",
+          "date": "2025-02-26T23:25:59Z"
+        }
+      ]
+    },
+    {
+      "name": "yannbertrand/macos-defaults",
+      "url": "https://github.com/yannbertrand/macos-defaults",
+      "commit_count": 1,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "cffe7117821a3c98b2588c960b54a11ac8a16436",
+          "message": ":memo: `mru-spaces` works on macOS Sequoia\n\n* Update docs/mission-control/mru-spaces.md\n\nCo-authored-by: Yann Bertrand <5855339+yannbertrand@users.noreply.github.com>",
+          "date": "2025-03-02T21:37:02Z"
+        }
+      ],
+      "topics": [
+        "hacktoberfest",
+        "macos",
+        "macos-commands",
+        "macos-defaults",
+        "macos-setup",
+        "vuepress"
+      ]
+    },
+    {
+      "name": "vi/websocat",
+      "url": "https://github.com/vi/websocat",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "cli",
+        "command-line",
+        "command-line-tool",
+        "curl",
+        "netcat",
+        "proxy",
+        "rfc-6455",
+        "socat",
+        "websocket-client",
+        "websocket-server",
+        "websockets"
+      ]
+    },
+    {
+      "name": "qmk/qmk_firmware",
+      "url": "https://github.com/qmk/qmk_firmware",
+      "commit_count": 5,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "cb6e1c1af54790e778062ba7203aa23370c263b0",
+          "message": "Add splitkb.com's Elora (#22557)\n\n* Add splitkb's Elora\n\n* WIP\n\n* Make requested changes\n\n* fix missing call to keyboard init user for elora\n\n* sync vial_qmk with qmk\n\n* Add fixes\n\n* Add encoder quadrature and update files\n\n* Update Readme\n\n* Implement changes\n\n* Remove encoder driver from keyboard.json\n\n* make requested changed\n\n* Implement changes and remove myriad_task as it wasn't actually doing anything.\n\n* Remove myriad.h from matrix.c\n\n* Simplify OLED code debug\n\n* Update RGB keycodes (qmk#24484)\n\n* remove rules.mk (qmk#23281)\n\n* Add matrix state sync\n\n---------\n\nCo-authored-by: NapOli1084 <10320176+NapOli1084@users.noreply.github.com>\nCo-authored-by: harveysch <126267034+harvey-splitkb@users.noreply.github.com>\nCo-authored-by: harvey <harvey@splitkb.com>\nCo-authored-by: VeyPatch <126267034+VeyPatch@users.noreply.github.com>",
+          "date": "2025-03-02T21:33:03Z"
+        },
+        {
+          "sha": "563eb6fdc9224a772d19e2d5714e903fa7c021c6",
+          "message": "[Keyboard] Valor Rev3  (#22581)\n\n* initial valor\n\n* update\n\n* fixup and move to info.json\n\n* clean up keymap\n\n* code review from lesshonor\n\n* Update keyboards/xelus/valor/rev3/readme.md\n\nCo-authored-by: Less/Rikki <86894501+lesshonor@users.noreply.github.com>\n\n* Update readme.md\n\n* Update keyboards/xelus/valor/rev3/rev3.c\n\nCo-authored-by: Drashna Jaelre <drashna@live.com>\n\n* Update rev3.c\n\n* Remove custom rev3.c\n\n* remove via keymap\n\n* remove empty rules.mk\n\n* Update keyboards/xelus/valor/rev3/keymaps/default/keymap.c\n\nCo-authored-by: jack <jack@pngu.org>\n\n---------\n\nCo-authored-by: Less/Rikki <86894501+lesshonor@users.noreply.github.com>\nCo-authored-by: Drashna Jaelre <drashna@live.com>\nCo-authored-by: Xelus22 <>\nCo-authored-by: jack <jack@pngu.org>",
+          "date": "2025-03-02T21:04:33Z"
+        },
+        {
+          "sha": "6c10839e3306521e5f0e0050a891c013b7a4f766",
+          "message": "Add Keychron C2 Pro V2 (#24900)\n\nSame changes as for C1 Pro V2",
+          "date": "2025-03-02T00:57:15Z"
+        },
+        {
+          "sha": "abea50c26e2bb26977146a1431e458a73bea7f39",
+          "message": "Add Keychron C1 Pro V2  (#24899)\n\n* Add C1 Pro V2\n\n* Remove default values for f401xC generic board definition\n\n* Update clang and copyright years\n\n* Add version description",
+          "date": "2025-03-02T00:48:59Z"
+        },
+        {
+          "sha": "acec6904d8097a1890df272e424c4d43ad8a6831",
+          "message": "Adding support for the VKR 94 (#24883)\n\n* Adding support for the VKR 94\n\n* Update keyboards/viktus/vkr94/keyboard.json\n\nCo-authored-by: Joel Challis <git@zvecr.com>\n\n* Delete keyboards/viktus/vkr94/config.h\n\n* Delete keyboards/viktus/vkr94/rules.mk\n\n* Update readme.md\n\n---------\n\nCo-authored-by: Joel Challis <git@zvecr.com>",
+          "date": "2025-03-01T22:24:15Z"
+        }
+      ],
+      "topics": [
+        "atmel-avr",
+        "c",
+        "c-plus-plus",
+        "clueboard",
+        "ergodox-ez",
+        "hacktoberfest",
+        "keyboard-firmware",
+        "keyboard-support",
+        "olkb",
+        "qmk"
+      ]
+    },
+    {
+      "name": "cline/cline",
+      "url": "https://github.com/cline/cline",
+      "commit_count": 10,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "6a2172e156f0a5343c8814747b1c2a0b5b7195c3",
+          "message": "Add gemini models to vertex",
+          "date": "2025-03-02T02:03:30Z"
+        },
+        {
+          "sha": "3ca529dc62010aa49b09a4dd06058d18a4dcc3ad",
+          "message": "feat: Vertex Gemini Flash 2.0 support (#1853)\n\n* feat: Vertex Gemini Flash 2.0 support\n\n* fix: Add changeset for PR\n\n* Moved gemini model\n\n* Resolve conflicts\n\n* Prettier fix\n\n---------\n\nCo-authored-by: Saoud Rizwan <7799382+saoudrizwan@users.noreply.github.com>",
+          "date": "2025-03-02T01:55:43Z"
+        },
+        {
+          "sha": "7728c0304cdf47790fecf7d27b76be534ab9bffe",
+          "message": "Add o3-mini support to openai compatible",
+          "date": "2025-03-02T01:35:04Z"
+        },
+        {
+          "sha": "f837ecefeb777db53007c78f716bc4372a7e835c",
+          "message": "Remove border color",
+          "date": "2025-03-02T00:51:28Z"
+        },
+        {
+          "sha": "2d5dcf6a14fefa0f0a51197ef2d54e1de0f3198b",
+          "message": "Add dcbartlett to codeowners",
+          "date": "2025-03-02T00:48:06Z"
+        },
+        {
+          "sha": "fcf673494990fa4f9eea32fa63ab5dfea2dcdf13",
+          "message": "feat(bedrock): Add APAC Support for Cross-Region Inference Profiles (#1913)\n\n* adding apac\n\n* Remove unreachable 'break' after return in case 'ap-'.\n\nCo-authored-by: ellipsis-dev[bot] <65095814+ellipsis-dev[bot]@users.noreply.github.com>\n\n* changeset\n\n* adding testing\n\n* revert\n\n* revart default model\n\n* revert package-lock\n\n* Remove unnecessary test\n\n---------\n\nCo-authored-by: ellipsis-dev[bot] <65095814+ellipsis-dev[bot]@users.noreply.github.com>\nCo-authored-by: Saoud Rizwan <7799382+saoudrizwan@users.noreply.github.com>",
+          "date": "2025-03-02T00:39:10Z"
+        },
+        {
+          "sha": "d44fd44a81159dd42a5e04f3d10c4092adc589cc",
+          "message": "Copy",
+          "date": "2025-03-02T00:04:59Z"
+        },
+        {
+          "sha": "d103f8ee62fab2089cc799e7b448eb3a317ad0ca",
+          "message": "feat: add asksage support (#2011)\n\n* feat: add asksage support\n\n* chore: create changeset for asksage support\n\n* Fix Typo\n\nFix Typo\n\n* chore: fix lint\n\n* Fixes\n\n* Validate asksage API key\n\n---------\n\nCo-authored-by: Dennis Bartlett <bartlett.dc.1@gmail.com>\nCo-authored-by: Saoud Rizwan <7799382+saoudrizwan@users.noreply.github.com>",
+          "date": "2025-03-01T23:20:58Z"
+        },
+        {
+          "sha": "3d34de490882cf083d3b80cf71dc40c8de42ae6b",
+          "message": "Everyone Gets a Timeout (#2018)\n\n* re-open clean PR; formatting changes\n\n* remove unnecessary comments\n\n* Revert system prompt changes\n\n* Remove vscode message after timeout\n\n* Create tidy-kings-ring.md\n\n---------\n\nCo-authored-by: Saoud Rizwan <7799382+saoudrizwan@users.noreply.github.com>",
+          "date": "2025-03-01T22:46:29Z"
+        },
+        {
+          "sha": "dcd275480ffd6d621acf698b992eda2b6938445f",
+          "message": "Update recommendation from Claude 3.5 to Claude 3.7 (#2036)\n\n* Update Claude 3.5 -> Claude 3.7 in error message/recommendation\n\n* Add changeset",
+          "date": "2025-03-01T22:22:18Z"
+        }
+      ]
+    },
+    {
+      "name": "browser-use/browser-use",
+      "url": "https://github.com/browser-use/browser-use",
+      "commit_count": 4,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "5b08613a27f24dced465d4bf69457d28571da0ee",
+          "message": "Fix:mutable default argument. (#901)",
+          "date": "2025-03-02T20:52:30Z"
+        },
+        {
+          "sha": "ba01fa48b99a5f97da888394cb9c66f6105ebd56",
+          "message": "Update quickstart.mdx (#904)\n\nfew typos",
+          "date": "2025-03-02T20:39:25Z"
+        },
+        {
+          "sha": "fcc5eb9dabbd7a80ab340aed711d648e39d1a328",
+          "message": "Update example in `examples/models/claude-3.7-sonnet.py` (#909)\n\nThe original example didn't do `load_dotenv()`. \r\n\r\nOnce you do that, it'll work as long as you have the `ANTHROPIC_API_KEY`.",
+          "date": "2025-03-02T20:34:35Z"
+        },
+        {
+          "sha": "1061b069e9d42e1fad7648b7510d0c65a12e2689",
+          "message": "Merge pull request #908 from browser-use/MagMueller-patch-2\n\nUpdate README.md",
+          "date": "2025-03-01T01:14:05Z"
+        }
+      ],
+      "topics": [
+        "ai-agents",
+        "ai-tools",
+        "browser-automation",
+        "llm",
+        "python"
+      ]
+    },
+    {
+      "name": "Diyshift/3D-Printer",
+      "url": "https://github.com/Diyshift/3D-Printer",
+      "commit_count": 2,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "42963c23c22227e7f21f6be821501dc51b242da7",
+          "message": "Update Readme.md\n\nAdded replimat kit vendor",
+          "date": "2025-03-02T20:49:07Z"
+        },
+        {
+          "sha": "847b80920d56be5e05ea209e9ed8cace09d4dece",
+          "message": "Add files via upload",
+          "date": "2025-03-02T20:25:23Z"
+        }
+      ]
+    },
+    {
+      "name": "guysoft/OctoPi",
+      "url": "https://github.com/guysoft/OctoPi",
+      "commit_count": 1,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "bf506863e3b8d7c5fc7b7e1026aa25c5dd33931a",
+          "message": "switch to modern OS dependencies for latest numpy versions",
+          "date": "2025-02-28T00:25:52Z"
+        }
+      ]
+    },
+    {
+      "name": "AugmentOS-Community/AugmentOS",
+      "url": "https://github.com/AugmentOS-Community/AugmentOS",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "activelook",
+        "conversational-ai",
+        "rayneo",
+        "smart-glasses",
+        "smartglasses",
+        "vuzix",
+        "vuzix-shield",
+        "vuzix-ultralite",
+        "wearable",
+        "wearables"
+      ]
+    },
+    {
+      "name": "biliup/biliup",
+      "url": "https://github.com/biliup/biliup",
+      "commit_count": 2,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "921fba7cf797e5f362f2c178294daf9821f2cb13",
+          "message": "fix非详细弹幕content丢失 (#1175)",
+          "date": "2025-03-02T20:10:42Z"
+        },
+        {
+          "sha": "b8ce9806590e389c9389a43b33eea0ae531e002e",
+          "message": "B站弹幕部分的参数兼容DanmakuFactory可识别用户名 (#1172)\n\n* B站弹幕部分的参数兼容DanmakuFactory可识别用户名\n\n* B站弹幕部分的参数兼容DanmakuFactory可识别用户名\n\n* B站弹幕部分的参数兼容DanmakuFactory可识别用户名",
+          "date": "2025-03-01T15:50:56Z"
+        }
+      ],
+      "topics": [
+        "bilibili",
+        "bilibiliupload",
+        "douyin",
+        "douyu",
+        "download",
+        "downloader",
+        "huya",
+        "twitch",
+        "youtube"
+      ]
+    },
+    {
+      "name": "grapeot/devin.cursorrules",
+      "url": "https://github.com/grapeot/devin.cursorrules",
+      "commit_count": 0,
+      "summary": null,
+      "commits": []
+    },
+    {
+      "name": "RooVetGit/Roo-Code",
+      "url": "https://github.com/RooVetGit/Roo-Code",
+      "commit_count": 28,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "773e5560db0a998ad09624e17be2bb9367f283b7",
+          "message": "Merge pull request #1312 from RooVetGit/count_tokens\n\nInfrastructure to support calling token count APIs, starting with Anthropic",
+          "date": "2025-03-02T19:46:34Z"
+        },
+        {
+          "sha": "7e62d34570583c3f2c7264da9e1b6ba502eb0b27",
+          "message": "PR cleanup",
+          "date": "2025-03-02T07:09:36Z"
+        },
+        {
+          "sha": "e8de7dea190b9d90ec5b7baa3c7fc64b4e66081c",
+          "message": "Merge remote-tracking branch 'origin/main' into count_tokens",
+          "date": "2025-03-02T06:59:32Z"
+        },
+        {
+          "sha": "8a1d66732ad04001fa8437ad49f337dcc9f91d8b",
+          "message": "Infrastructure to support calling token count APIs, starting with Anthropic",
+          "date": "2025-03-02T04:47:02Z"
+        },
+        {
+          "sha": "a2d441c5a08a3fe4bf176909c58fce385efba81c",
+          "message": "Merge pull request #1307 from RooVetGit/cte/dry-get-model\n\nDRY up getModel",
+          "date": "2025-03-02T06:04:43Z"
+        },
+        {
+          "sha": "9b646eb2bc47203a36592067113338036b9b72b1",
+          "message": "DRY up getModel",
+          "date": "2025-03-02T05:51:17Z"
+        },
+        {
+          "sha": "2c0b16261606bcf2d9d7b35f77f9d04ecb676d0d",
+          "message": "Merge pull request #1306 from RooVetGit/changeset-release/main\n\nChangeset version bump",
+          "date": "2025-03-02T05:21:05Z"
+        },
+        {
+          "sha": "609ba9cf8c1f04a4fbba5b62a551684a36efd836",
+          "message": "Update CHANGELOG.md",
+          "date": "2025-03-02T05:17:41Z"
+        },
+        {
+          "sha": "11387bdecde44aec84e9e19c26e604696e08d7f4",
+          "message": "Merge pull request #1304 from RooVetGit/support_read_only_modes_that_can_run_commands\n\nClearer instructions for read-only modes that can run commands",
+          "date": "2025-03-02T05:15:19Z"
+        },
+        {
+          "sha": "15a4c4c68cf61b11dae4f3851b715674df243c39",
+          "message": "Merge pull request #1305 from RooVetGit/cte/max-tokens-fix\n\nCustom max tokens fix for non-thinking models",
+          "date": "2025-03-02T05:13:51Z"
+        },
+        {
+          "sha": "108e97843fffc61301b4eeb049c280e81a9beb21",
+          "message": "Merge pull request #1303 from RooVetGit/cycle_custom_modes_too\n\nInclude custom modes in mode switching keyboard shortcut",
+          "date": "2025-03-02T05:13:35Z"
+        },
+        {
+          "sha": "41b0ddecb4024db697c2e41a6eb71849c7741b9b",
+          "message": "Clearer instructions for read-only modes that can run commands",
+          "date": "2025-03-02T05:02:09Z"
+        },
+        {
+          "sha": "8a8319d3b63b0b016158d39767480bb69c26df23",
+          "message": "Add changeset",
+          "date": "2025-03-02T05:06:40Z"
+        },
+        {
+          "sha": "62385ba4c76b1c555c6313b9bce7ed87ffbf5966",
+          "message": "Custom max tokens fix for non-thinking models",
+          "date": "2025-03-02T05:05:03Z"
+        },
+        {
+          "sha": "cd910c3435e978a0bf64854f2736c39bce1f09fd",
+          "message": "Include custom modes in mode switching keyboard shortcut",
+          "date": "2025-03-02T04:53:30Z"
+        },
+        {
+          "sha": "6ff88383a26037becfb871aaaa7e8fee8ea0295f",
+          "message": "Merge pull request #1298 from RooVetGit/changeset-release/main\n\nChangeset version bump",
+          "date": "2025-03-02T02:25:33Z"
+        },
+        {
+          "sha": "0a096097d536253b371ab8e187777e07b6c63752",
+          "message": "3.7.10",
+          "date": "2025-03-02T02:24:38Z"
+        },
+        {
+          "sha": "87aa4888fce966ec43b096e53a4be72a2a7d8df0",
+          "message": "Merge pull request #1299 from RooVetGit/3_7_10\n\nv3.7.10",
+          "date": "2025-03-02T01:49:02Z"
+        },
+        {
+          "sha": "fd4ce8fe6aa305e4f1e45e12d55aa748b3736288",
+          "message": "v3.7.10",
+          "date": "2025-03-02T01:48:25Z"
+        },
+        {
+          "sha": "00bf6a3b96d3e640aaef260924b15521f9f76004",
+          "message": "Merge pull request #1297 from RooVetGit/fix_mermaid\n\nAdd type='module' to webview script",
+          "date": "2025-03-02T01:47:03Z"
+        },
+        {
+          "sha": "e6a49ddc5c5154d82e9c20dbfe18d5dc99ee7ff2",
+          "message": "Add type='module' to webview script",
+          "date": "2025-03-02T01:42:10Z"
+        },
+        {
+          "sha": "d70c3e038ac78982c903c4d7aaf0f904bf1822c7",
+          "message": "Merge pull request #1270 from aheizi/feature/add-shortcut-to-switch-modes\n\nfeat: add shortcut to switch modes",
+          "date": "2025-03-01T23:52:56Z"
+        },
+        {
+          "sha": "22c8a683d83aa2dead0a63cac7c2c4b98ff4beaf",
+          "message": "Merge pull request #1296 from RooVetGit/mermaids\n\nMermaids",
+          "date": "2025-03-01T23:51:40Z"
+        },
+        {
+          "sha": "8c8210ef502ec36e80ada3029e0cd5cf3ad93501",
+          "message": "Merge pull request #1282 from ashktn/feat/vertex-gemini\n\nfeat: Add support for Gemini models on Vertex AI",
+          "date": "2025-03-01T23:48:54Z"
+        },
+        {
+          "sha": "45eef8e37f823d44816313f13bc69ad208119493",
+          "message": "Update snapshots",
+          "date": "2025-03-01T23:46:35Z"
+        },
+        {
+          "sha": "c8b72fa730b0c9a204167ed24b071b1ad0f05ce3",
+          "message": "Update ask prompt",
+          "date": "2025-03-01T23:19:16Z"
+        },
+        {
+          "sha": "65a2a2cbd16fd2f36f37ba5e675d9a11c899dfd7",
+          "message": "Update architect prompt",
+          "date": "2025-03-01T23:10:33Z"
+        },
+        {
+          "sha": "2a7edc9a4015803a15881c0e5f2350e9070e6298",
+          "message": "Add support for Mermaid diagrams",
+          "date": "2025-03-01T23:03:28Z"
+        }
+      ]
+    },
+    {
+      "name": "miguelgrinberg/microdot",
+      "url": "https://github.com/miguelgrinberg/microdot",
+      "commit_count": 4,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "c6b99b6d8117d4e40e16d5b953dbf4deb023d24d",
+          "message": "Documentation improvements",
+          "date": "2025-03-02T19:47:21Z"
+        },
+        {
+          "sha": "953dd9432122defe943f0637bbe7e01f2fc7743f",
+          "message": "Expose the Jinja environment as Template.jinja_env",
+          "date": "2025-03-02T11:53:54Z"
+        },
+        {
+          "sha": "68a53a7ae7abc3d320d8567e3dbdec5da3f8f7a5",
+          "message": "Update README #nolog",
+          "date": "2025-03-02T00:51:23Z"
+        },
+        {
+          "sha": "c92b5ae28222af5a1094f5d2f70a45d4d17653d5",
+          "message": "Redesigned the URL parser to allow for custom path components",
+          "date": "2025-03-02T00:47:54Z"
+        }
+      ],
+      "topics": [
+        "http",
+        "micropython",
+        "python",
+        "webapp",
+        "webserver"
+      ]
+    },
+    {
+      "name": "lutzroeder/netron",
+      "url": "https://github.com/lutzroeder/netron",
+      "commit_count": 2,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "f9069d39d35903d60f3823b3eedb40a7d5946a73",
+          "message": "Update openvino.js",
+          "date": "2025-03-02T19:14:55Z"
+        },
+        {
+          "sha": "051ff4e32bae6c30a57aa76de37d2b099001063d",
+          "message": "Update onnx-metadata.json",
+          "date": "2025-03-01T16:06:23Z"
+        }
+      ],
+      "topics": [
+        "ai",
+        "coreml",
+        "deep-learning",
+        "deeplearning",
+        "keras",
+        "machine-learning",
+        "machinelearning",
+        "ml",
+        "neural-network",
+        "numpy",
+        "onnx",
+        "pytorch",
+        "safetensors",
+        "tensorflow",
+        "tensorflow-lite",
+        "visualizer"
+      ]
+    },
+    {
+      "name": "meshtastic/python",
+      "url": "https://github.com/meshtastic/python",
+      "commit_count": 1,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "faa8064ccc7e93848d8602f5645ffe8e084f2a08",
+          "message": "protobufs: v2.6.0",
+          "date": "2025-03-02T19:14:20Z"
+        }
+      ],
+      "topics": [
+        "meshtastic",
+        "meshtastic-python"
+      ]
+    },
+    {
+      "name": "ggerganov/whisper.cpp",
+      "url": "https://github.com/ggerganov/whisper.cpp",
+      "commit_count": 2,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "fc7b1ee521739942dbe70ec2d2565b90fa0118cb",
+          "message": "fix: missing include common-whisper (#2858)",
+          "date": "2025-03-02T18:55:11Z"
+        },
+        {
+          "sha": "c42f67e2d2ed906555ca2222d0622d568cec8f0f",
+          "message": "ruby : follow audio library change (#2851)\n\n* Enable CPU\n\n* Follow audio lib change",
+          "date": "2025-02-28T06:09:02Z"
+        }
+      ],
+      "topics": [
+        "inference",
+        "openai",
+        "speech-recognition",
+        "speech-to-text",
+        "transformer",
+        "whisper"
+      ]
+    },
+    {
+      "name": "syncthing/syncthing-macos",
+      "url": "https://github.com/syncthing/syncthing-macos",
+      "commit_count": 3,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "79374e654c65d6c182e60f01d1b37184a6c2ba4a",
+          "message": ".github/workflows/generate-appcast.yml: Only run manually, remove periodic cron",
+          "date": "2025-03-02T18:54:20Z"
+        },
+        {
+          "sha": "b03008a2294089840a4468d8667e1dbcdc5d06d5",
+          "message": "cmd/update-release.py: Reset distVersion back to 1",
+          "date": "2025-03-02T18:49:33Z"
+        },
+        {
+          "sha": "c67c156cc09653cbd3a482ad97f647ad90f27143",
+          "message": "Do not lock default setting value of syncthing daemon executable path in bundle (#242)\n\nDo not lock executable path at the application bundle location. Fixes #228",
+          "date": "2025-03-02T18:48:01Z"
+        }
+      ],
+      "topics": [
+        "apple",
+        "backup",
+        "cloud-sync",
+        "file-sharing",
+        "file-sync",
+        "frugal",
+        "mac",
+        "macos",
+        "macosx",
+        "objective-c",
+        "osx",
+        "p2p",
+        "peer-to-peer",
+        "simple",
+        "swift",
+        "sync",
+        "sync-files",
+        "synchronization",
+        "syncthing"
+      ]
+    },
+    {
+      "name": "RasmusKoit/pipar",
+      "url": "https://github.com/RasmusKoit/pipar",
+      "commit_count": 3,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "cb1b583d78a8261f56747741921fa76f641e3b64",
+          "message": "push initial schema for t460s",
+          "date": "2025-03-02T18:53:46Z"
+        },
+        {
+          "sha": "ab7419226989583cd30e79af69d6a49fe0e0cc21",
+          "message": "updates the placement of keys",
+          "date": "2025-03-02T18:28:40Z"
+        },
+        {
+          "sha": "4fe2a14547ffc674eb5b39a990eb44526d0892c1",
+          "message": "fill zone improvements",
+          "date": "2025-03-01T20:06:21Z"
+        }
+      ]
+    },
+    {
+      "name": "pontusab/directories",
+      "url": "https://github.com/pontusab/directories",
+      "commit_count": 3,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "94fd771f4bdc63d8e3feefee695cbaae43f0d10b",
+          "message": "Merge pull request #197 from GLips/main",
+          "date": "2025-03-02T18:45:31Z"
+        },
+        {
+          "sha": "d23e7f50426ce53bbadd78f8d6ea482de893b436",
+          "message": "Add Figma MCP.",
+          "date": "2025-03-02T18:41:06Z"
+        },
+        {
+          "sha": "4088a347698bc85cc951ae527e810173427b9ce7",
+          "message": "Merge pull request #196 from ajur58/add-new-elixir-rule",
+          "date": "2025-02-28T22:25:53Z"
+        }
+      ]
+    },
+    {
+      "name": "BasedHardware/omi",
+      "url": "https://github.com/BasedHardware/omi",
+      "commit_count": 2,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "2071957002072979c6f4f344d6ece6fa24fe1efb",
+          "message": "Update Compile_firmware.mdx",
+          "date": "2025-03-02T03:35:13Z"
+        },
+        {
+          "sha": "ed709e850a463ca7450ab44ba74eec482ccfa88c",
+          "message": "Show firmware popup dialog (#1933)",
+          "date": "2025-03-01T11:43:16Z"
+        }
+      ],
+      "topics": [
+        "ai",
+        "app",
+        "bci",
+        "c",
+        "flutter",
+        "friend",
+        "mobile",
+        "necklace",
+        "nextjs",
+        "omi",
+        "personas",
+        "python",
+        "smartglasses",
+        "summary",
+        "transcription",
+        "wearable"
+      ]
+    },
+    {
+      "name": "CoretechR/OMOTE",
+      "url": "https://github.com/CoretechR/OMOTE",
+      "commit_count": 3,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "7e48659c4c9a2402363262d634d9bc1da4aebbc9",
+          "message": "replaced spaces with tab",
+          "date": "2025-03-02T18:35:49Z"
+        },
+        {
+          "sha": "f859d8b33c8215f6db94bb6b37866132653c6f8c",
+          "message": "addad badge for macos build",
+          "date": "2025-03-02T10:37:32Z"
+        },
+        {
+          "sha": "70077f2728fb7b53a63b01f0be8ed125c973bb10",
+          "message": "Merge pull request #96 from CoretechR/Rev5\n\nMerged Rev 5 software and hardware branch into main. \nFull list of changes: https://github.com/CoretechR/OMOTE/pull/96#issue-2846523854",
+          "date": "2025-03-02T10:28:08Z"
+        }
+      ],
+      "topics": [
+        "esp32",
+        "infrared",
+        "lvgl",
+        "remote",
+        "wifi"
+      ]
+    },
+    {
+      "name": "sharkdp/hexyl",
+      "url": "https://github.com/sharkdp/hexyl",
+      "commit_count": 1,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "79f7076b0275a6e2080e0309d5903e4c6446dc22",
+          "message": "Merge pull request #239 from ilmanzo/issue238\n\nFix issue #238",
+          "date": "2025-03-02T18:28:12Z"
+        }
+      ],
+      "topics": [
+        "binary-data",
+        "command-line",
+        "hexadecimal",
+        "rust",
+        "tool"
+      ]
+    },
+    {
+      "name": "schreibfaul1/ESP32-audioI2S",
+      "url": "https://github.com/schreibfaul1/ESP32-audioI2S",
+      "commit_count": 2,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "d1354e59ac133be3c033fe3925adc18dcd6405c3",
+          "message": "update comment",
+          "date": "2025-03-02T18:26:26Z"
+        },
+        {
+          "sha": "b664b97dc1ad0229d582c747f8721eee49771fae",
+          "message": "file loop removed",
+          "date": "2025-02-28T13:42:13Z"
+        }
+      ],
+      "topics": [
+        "aac",
+        "cs4344",
+        "esp32",
+        "flac",
+        "google-tts",
+        "i2s",
+        "m4a",
+        "max98357a",
+        "mp3",
+        "opus",
+        "pcm5102a",
+        "uda1334a",
+        "webradio"
+      ]
+    },
+    {
+      "name": "dora-rs/dora",
+      "url": "https://github.com/dora-rs/dora",
+      "commit_count": 2,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "ece88534788ca0195312a36a4312c5b06e42fca3",
+          "message": "Pin chrono version (#797)\n\nPin chrono version to fix CI/CD bug related to:\nhttps://github.com/apache/arrow-rs/issues/7196#issuecomment-2688702335",
+          "date": "2025-03-02T10:44:16Z"
+        },
+        {
+          "sha": "0edbcf25050eec242fa4ba36d4a4af2f397a1a73",
+          "message": "Pin chrono version",
+          "date": "2025-03-01T16:52:34Z"
+        }
+      ],
+      "topics": [
+        "dataflow",
+        "embodied-ai",
+        "low-latency",
+        "robotics",
+        "rust"
+      ]
+    },
+    {
+      "name": "merbanan/rtl_433",
+      "url": "https://github.com/merbanan/rtl_433",
+      "commit_count": 2,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "d422a7e66021c290afc983800a81d68011d626fd",
+          "message": "minor: Fix redefinition warning (closes #3216)",
+          "date": "2025-03-02T17:39:03Z"
+        },
+        {
+          "sha": "7a2b80f1604b9af80262a19074a46733ac7d24b9",
+          "message": "Fix negative temperatures on RainPoint-Soil (#3212)",
+          "date": "2025-02-28T09:38:55Z"
+        }
+      ],
+      "topics": [
+        "433mhz",
+        "rf",
+        "rtl-sdr",
+        "sdr",
+        "sensors",
+        "signal-processing"
+      ]
+    },
+    {
+      "name": "tauri-apps/wry",
+      "url": "https://github.com/tauri-apps/wry",
+      "commit_count": 6,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "8dfeb7650213fc10edbf7b03acc9a95107c7e342",
+          "message": "feat: add `Webview.reload` (#1500)\n\n* feat: add `Webview.reload` - first step MacOS\n\n* add linux and windows support\n\n* android support\n\n* change from minor to patch\n\n---------\n\nCo-authored-by: Lucas Nogueira <lucas@tauri.app>",
+          "date": "2025-03-02T17:29:24Z"
+        },
+        {
+          "sha": "94ecadbc73d6357484a4df7358c96e72111ce4be",
+          "message": "feat: add `WebViewBuilder.with_javascript_disabled` (#1496)\n\n* feat: add `WebViewBuilder.with_javascript_disabled` - (implement MacOS and iOS at first)\n\n* add windows support\n\n* add linux/webkitgtk support\n\n* add `changeset` file\n\n* update `wry` version in `Cargo.lock`\n\n(this was forgotten on `dev` branch, and my dev setup needs it)\n\n* change from minor to patch\n\n* use same pattern\n\n* add android impl\n\n---------\n\nCo-authored-by: Lucas Nogueira <lucas@tauri.app>",
+          "date": "2025-03-02T13:02:05Z"
+        },
+        {
+          "sha": "5120a5cc0fd4b9d1df32812d3df121c632821395",
+          "message": "fix(macos): fix race condition in wkwebview implementation of cookie fetching (#1486)\n\n* Fix hang in wkwebview implemenation of webview::cookies()\n\n* small cleanup\n\n* add change file\n\n---------\n\nCo-authored-by: Adam Charron <acharron@higherlogic.com>\nCo-authored-by: Lucas Nogueira <lucas@tauri.app>",
+          "date": "2025-03-02T13:01:48Z"
+        },
+        {
+          "sha": "cef818f63f36b9acfc4d31f17b5e9fe7c3058612",
+          "message": "fix(android): BorrowError crash when loading assets on Android (#1505)\n\n* fix(android): BorrowError crash when loading assets on Android\n\nThere is a race condition on the Android asset loading where the custom asset loading function is checked by the Java side while Rust is still setting it up, leading to a `already mutably borrowed: BorrowError` panic in the withAssetLoader function.\nLooks like moving the function setup to happen before triggering the webview creation fixes it.\n\n* use mutex",
+          "date": "2025-03-02T11:25:43Z"
+        },
+        {
+          "sha": "918599e1022d15b880e1eb2402c71e674a4f5ab1",
+          "message": "ci: Update lockfile on versioning PRs (#1508)",
+          "date": "2025-03-02T00:31:50Z"
+        },
+        {
+          "sha": "1e1f0f1992aba66f9f5d044b0c407f8a610f151b",
+          "message": "fix crate version in Cargo.lock (#1506)",
+          "date": "2025-02-28T19:19:08Z"
+        }
+      ]
+    },
+    {
+      "name": "AcademySoftwareFoundation/OpenShadingLanguage",
+      "url": "https://github.com/AcademySoftwareFoundation/OpenShadingLanguage",
+      "commit_count": 5,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "3a85f7a3c4f6b15fb074a0d2bb70f86dcfb95cef",
+          "message": "ci: improve clang-format check (#1950)\n\nci: improve clang-format\n\nMake a new run-clang-format.bash utility to issue the commands\nfor the right files. No \"build\" is requred, and the only dependencies\nwe need are the minimum it takes to run clang-format itself.\n\nThese changes reduce the approximate total elapsed time of a CI\nclang-format job from 8:00+ to under 0:30.\n\nSigned-off-by: Larry Gritz <lg@larrygritz.com>",
+          "date": "2025-03-02T05:05:33Z"
+        },
+        {
+          "sha": "6f2b3f6b4c1e94505254e97327aedf5b01519ddd",
+          "message": "int: Proper forwarding (#1923)\n\nProper forwarding (for C++20?)\n\nSigned-off-by: Larry Gritz <lg@larrygritz.com>",
+          "date": "2025-03-02T05:04:02Z"
+        },
+        {
+          "sha": "0043bf942163e2980aa727df7d72e46313f32d1f",
+          "message": "Re-remove device decoration from some osl_ functions (#1951)\n\nRecent PR 1852 (Free functions for texturing, point clouds, and trace)\nadded host/device decorations to certain `osl_` functions that\npreviously were replicated in OptiX-based renderers. This means that\nnow the ones in those renderers will be seen as duplicate symbols.\n\nThe more clear intent that we'd like to work towards is that all the\n`osl_` functions are meant to be \"internal\" to the liboslexec or the\nbitcode it provides, and the `rs_` functions are the customization\npoints that the renderer is expected to supply.\n\nExcept... a bunch of the `osl_` functions that set parameters for\nsubsequent texture and trace calls do not yet have `rs_` customization\npoints. So we're actually not quite ready to change things.\n\nTo unbreak, then, this PR removes the `__device__` decorations (so\nthey are again safe/expected for GPU renderers to override them).\nTo keep testshade/testrender working, we add copies of them to\ntestshade/testrender specifically.\n\nLike I said, eventually we'll add `rs_` customization points, and at\nthat point, we'll truly expect the `osl_` functions to be only supplied\nby oslexec itself and not the renderers.\n\nSigned-off-by: Larry Gritz <lg@larrygritz.com>",
+          "date": "2025-03-02T05:02:59Z"
+        },
+        {
+          "sha": "d7a48ed159f536be19906b16076860848ab9ead4",
+          "message": "fix: interpolated int attributes wrong for batch shading (#1949)\n\nFix issue #1929 with batched execution forcing interpolated integer arguments to be boolean when their default value is 0 or 1.\nIn actuality the renderer could assign any integer value, we update BatchedAnalysis to track the interpolated value as a write event\nwhich will disqualify forcing of boolean as well as ensure future writes are masked properly.\n\nAdded new lockgeom test that reproduces the issue and verifies its fixed.\n\n---------\n\nSigned-off-by: Alex M. Wells <alex.m.wells@intel.com>",
+          "date": "2025-03-02T05:02:30Z"
+        },
+        {
+          "sha": "c048a332c65979db9ca705d9d31ecdd7a67df87b",
+          "message": "build: Fix libclang link order (#1946)\n\nApparently, in LLVM 18, some things shifted between libraries and that\nrequires a slightly different link order. But only on Linux, or maybe\nonly with static libraries, so even though our Mac and Windows CI\ntests have used LLVM 18, it wasn't symptomatic there.\n\nWe didn't discover this earlier because we didn't actually test\nagainst LLVM 18 on any of the Linux CI runs. So we add that.\n\nAlso, to alleviate the pain in adjusting LLVM versions and often\nneeding to modify our build_llvm.bash script, I'm trying out a GHA\nmarketplace action KyleMayes/install-llvm-action, and it works well\nand saved me time, so we may switch to that for other cases over time\nas well.\n\nSigned-off-by: Larry Gritz <lg@larrygritz.com>",
+          "date": "2025-02-26T23:47:34Z"
+        }
+      ],
+      "topics": [
+        "c-plus-plus",
+        "computer-graphics",
+        "computer-language",
+        "llvm",
+        "open-shading-language",
+        "osl",
+        "shaders",
+        "shading-language",
+        "vfx"
+      ]
+    },
+    {
+      "name": "ml-explore/mlx-examples",
+      "url": "https://github.com/ml-explore/mlx-examples",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "mlx"
+      ]
+    },
+    {
+      "name": "probe-rs/probe-rs",
+      "url": "https://github.com/probe-rs/probe-rs",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "arm",
+        "arm-cores",
+        "coresight",
+        "daplink",
+        "debug",
+        "debug-probes",
+        "jlink",
+        "probe-rs",
+        "riscv",
+        "rust",
+        "stlink"
+      ]
+    },
+    {
+      "name": "NateScarlet/holiday-cn",
+      "url": "https://github.com/NateScarlet/holiday-cn",
+      "commit_count": 1,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "d623d19e67ec851c9be6346b17535b32092988db",
+          "message": "ci: add keep alive workflow",
+          "date": "2025-03-01T08:15:15Z"
+        }
+      ],
+      "topics": [
+        "china",
+        "crawling",
+        "data",
+        "holiday",
+        "natural-language-processing"
+      ]
+    },
+    {
+      "name": "geekan/MetaGPT",
+      "url": "https://github.com/geekan/MetaGPT",
+      "commit_count": 2,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "df9bc1858f7d396a7eef5d9718cab7587b63fd62",
+          "message": "Merge pull request #1732 from XiangJinyu/main\n\nUpdate SPO and AOT in README.md",
+          "date": "2025-03-02T16:48:39Z"
+        },
+        {
+          "sha": "1a1052f6b64a39efae44e86e2e6712c8f220e177",
+          "message": "Update README.md",
+          "date": "2025-03-02T16:44:46Z"
+        }
+      ],
+      "topics": [
+        "agent",
+        "gpt",
+        "hacktoberfest",
+        "llm",
+        "metagpt",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "CadQuery/cadquery",
+      "url": "https://github.com/CadQuery/cadquery",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "3d",
+        "brep",
+        "cad",
+        "dxf",
+        "modeling",
+        "occt",
+        "opencascade",
+        "parametric",
+        "python",
+        "step",
+        "stl"
+      ]
+    },
+    {
+      "name": "BerriAI/litellm",
+      "url": "https://github.com/BerriAI/litellm",
+      "commit_count": 9,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "54b7f17ca6757bfa3cea81ef4ab228875438accf",
+          "message": "fix(proxy_server.py): fix setting router redis cache, if cache enable… (#8859)\n\n* fix(proxy_server.py): fix setting router redis cache, if cache enabled on litellm_settings\n\nenables configurations like namespace to just work\n\n* fix(redis_cache.py): fix key for async increment, to use the set namespace\n\nprevents collisions if redis instance shared across environments\n\n* fix load tests on litellm release notes\n\n* fix caching on main branch (#8858)\n\n* fix(streaming_handler.py): fix is delta empty check to handle empty str\n\n* fix(streaming_handler.py): fix delta chunk on final response\n\n* [Bug]: Deepseek error on proxy after upgrading to 1.61.13-stable (#8860)\n\n* fix deepseek error\n\n* test_deepseek_provider_async_completion\n\n* fix get_complete_url\n\n* bump: version 1.61.17 → 1.61.18\n\n* bump: version 1.61.18 → 1.61.19\n\n* vertex ai anthropic thinking param support (#8853)\n\n* fix(vertex_llm_base.py): handle credentials passed in as dictionary\n\n* fix(router.py): support vertex credentials as json dict\n\n* test(test_vertex.py): allows easier testing\n\nmock anthropic thinking response for vertex ai\n\n* test(vertex_ai_partner_models/): don't remove \"@\" from model\n\nbreaks anthropic cost calculation\n\n* test: move testing\n\n* fix: fix linting error\n\n* fix: fix linting error\n\n* fix(vertex_ai_partner_models/main.py): split @ for codestral model\n\n* test: fix test\n\n* fix: fix stripping \"@\" on mistral models\n\n* fix: fix test\n\n* test: fix test\n\n---------\n\nCo-authored-by: Ishaan Jaff <ishaanjaffer0324@gmail.com>",
+          "date": "2025-03-02T16:39:06Z"
+        },
+        {
+          "sha": "a63eb58f1bf48831d95d90188cd9f5c4ca18904e",
+          "message": "fix(anthropic/chat/transformation.py): fix headers to be a set\n\navoid duplicates",
+          "date": "2025-03-02T16:36:29Z"
+        },
+        {
+          "sha": "bea30f550fa88a1c063d9bfea5aa6a179e208d20",
+          "message": "Fix prometheus metrics w/ custom metrics + Handle sending `image_url` as str to openai  (#8935)\n\n* fix(prometheus.py): fix prometheus team metric to handle custom metrics\n\n* fix(prometheus.py): fix prometheus metrics to handle custom metadata + team id\n\n* fix(gpt_transformation.py): handle image url being sent as str to openai\n\n* fix: fix unit testing\n\n* fix(o_series_transformation.py): support passing image url as string for o models as well\n\n* (UI) Error Logs improvements - Store Raw proxy server request for success and failure (#8917)\n\n* ui render error logs\n\n* add proxy_server_request to spend logs metadata\n\n* _add_proxy_server_request_to_metadata\n\n* proxy track cost callback fixes\n\n* _add_proxy_server_request_to_metadata\n\n* test spend logs\n\n* test_async_post_call_failure_hook\n\n* (UI) - Allow Internal Users to View their own logs (#8933)\n\n* ui fix leftnav, allow internal users to view their own logs\n\n* pass user_id in uiSpendLogs call\n\n* ui filter logs for internal user\n\n* fix internal users page\n\n* ui show correct message when store prompts is disabled\n\n* fix internal user logs\n\n* test_ui_view_spend_logs_with_user_id\n\n* test spend management endpoint\n\n* ui new build\n\n* Add `supports_pdf_input: true` for specific Bedrock Claude models (#8655)\n\n---------\n\nCo-authored-by: Ishaan Jaff <ishaanjaffer0324@gmail.com>\nCo-authored-by: Takashi Iwamoto <takashi.iwamoto@enechange.co.jp>",
+          "date": "2025-03-02T16:32:21Z"
+        },
+        {
+          "sha": "4418e6dd1455ab5023522d0e83a27f0c2265d78c",
+          "message": "build: merge branch",
+          "date": "2025-03-02T16:31:57Z"
+        },
+        {
+          "sha": "f63cf0030679fe1a43d03fb196e815a0f28dae92",
+          "message": "Add `supports_pdf_input: true` for specific Bedrock Claude models (#8655)",
+          "date": "2025-03-02T16:14:05Z"
+        },
+        {
+          "sha": "88b1e315c8ed3160e0d519e97b198591ca2bac45",
+          "message": "ui new build",
+          "date": "2025-03-02T01:52:14Z"
+        },
+        {
+          "sha": "df095b60226c68d09f4010e1d89d44c040dad69a",
+          "message": "(UI) - Allow Internal Users to View their own logs (#8933)\n\n* ui fix leftnav, allow internal users to view their own logs\n\n* pass user_id in uiSpendLogs call\n\n* ui filter logs for internal user\n\n* fix internal users page\n\n* ui show correct message when store prompts is disabled\n\n* fix internal user logs\n\n* test_ui_view_spend_logs_with_user_id\n\n* test spend management endpoint",
+          "date": "2025-03-02T01:26:02Z"
+        },
+        {
+          "sha": "1008da7c41c1de9595f823b85283d8ec0dc91866",
+          "message": "(UI) Error Logs improvements - Store Raw proxy server request for success and failure (#8917)\n\n* ui render error logs\n\n* add proxy_server_request to spend logs metadata\n\n* _add_proxy_server_request_to_metadata\n\n* proxy track cost callback fixes\n\n* _add_proxy_server_request_to_metadata\n\n* test spend logs\n\n* test_async_post_call_failure_hook",
+          "date": "2025-03-02T00:26:47Z"
+        },
+        {
+          "sha": "bc9b3e48473ef54970d29a07b277fc70baf7b57e",
+          "message": "(Bug fix) - don't log messages in `model_parameters` in StandardLoggingPayload (#8932)\n\n* define model param helper\n\n* use ModelParamHelper\n\n* get_standard_logging_model_parameters\n\n* fix code quality\n\n* get_standard_logging_model_parameters\n\n* StandardLoggingPayload\n\n* test_get_kwargs_for_cache_key\n\n* test_langsmith_key_based_logging\n\n* fix code qa\n\n* fix linting",
+          "date": "2025-03-01T21:39:45Z"
+        }
+      ],
+      "topics": [
+        "ai-gateway",
+        "anthropic",
+        "azure-openai",
+        "bedrock",
+        "gateway",
+        "langchain",
+        "llm",
+        "llm-gateway",
+        "llmops",
+        "openai",
+        "openai-proxy",
+        "vertex-ai"
+      ]
+    },
+    {
+      "name": "KurimuzonAkuma/pyrogram",
+      "url": "https://github.com/KurimuzonAkuma/pyrogram",
+      "commit_count": 4,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "7d1e5367e2a182ec7932e40ff7666207ff34090e",
+          "message": "Fix get_stories typehints",
+          "date": "2025-03-02T16:37:04Z"
+        },
+        {
+          "sha": "caad3b3fb6f13019295e868d2c867c7f03a5b805",
+          "message": "Add links support for get_stories",
+          "date": "2025-03-02T11:12:14Z"
+        },
+        {
+          "sha": "52c4fde5adb0c4dd7eb8bf7cade6e0fe4de2f11c",
+          "message": "Revert \"Remove sync support\"\n\nThis reverts commit 074f917327ac7579199db65f87b5a35e5a6391af.",
+          "date": "2025-03-01T11:37:59Z"
+        },
+        {
+          "sha": "65f43dd4a97bc974f421c8832c23964e6697f31b",
+          "message": "Attempt to fix handler is closed",
+          "date": "2025-02-28T21:38:17Z"
+        }
+      ]
+    },
+    {
+      "name": "sushi-labs/sushiswap",
+      "url": "https://github.com/sushi-labs/sushiswap",
+      "commit_count": 0,
+      "summary": null,
+      "commits": []
+    },
+    {
+      "name": "linux-can/can-utils",
+      "url": "https://github.com/linux-can/can-utils",
+      "commit_count": 9,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "da3914c4917f20a4d4fedc81c583decf961514bb",
+          "message": "Merge pull request #528 from marckleinebudde/canerrsim\n\ncanerrsim",
+          "date": "2025-03-02T16:19:38Z"
+        },
+        {
+          "sha": "18b1e7970acdc9fee5ef44b1bfe6b257ff66ea06",
+          "message": "Merge pull request #553 from olerem/j1939_vehicle_position\n\nJ1939 vehicle position",
+          "date": "2025-03-02T16:19:09Z"
+        },
+        {
+          "sha": "f1cea504a407543f7856461eee3eb61b975321f4",
+          "message": "Merge pull request #583 from yegorich/typos\n\nisobusfs: fix typos",
+          "date": "2025-03-02T16:09:17Z"
+        },
+        {
+          "sha": "900c7e9f6e37434194f02c440d5b0a4ca1f22f6f",
+          "message": "Merge pull request #584 from yegorich/fix-switch-case\n\nslcand.c: add the missing case colon",
+          "date": "2025-03-02T16:08:23Z"
+        },
+        {
+          "sha": "b208876e655fecbfe3175fe03e2bba095f364067",
+          "message": "slcand.c: add the missing case colon\n\nSigned-off-by: Yegor Yefremov <yegorslists@googlemail.com>",
+          "date": "2025-03-02T14:51:45Z"
+        },
+        {
+          "sha": "72a9fd8ccd7fc78f5e1347665300c9effca81789",
+          "message": "isobusfs: fix typos\n\nTypos were found with codespell.\n\nSigned-off-by: Yegor Yefremov <yegorslists@googlemail.com>",
+          "date": "2025-03-02T14:44:40Z"
+        },
+        {
+          "sha": "e448d542e8dcb441018e9b6bce1946d3d1cc4719",
+          "message": "github-actions: install libgps-dev where available",
+          "date": "2024-08-05T09:09:10Z"
+        },
+        {
+          "sha": "71b2aec834e74d57c643e7a6776f21a1448ef17a",
+          "message": "j1939-vehicle-position-srv: Introduce J1939 and NMEA 2000 Vehicle Position Server\n\nThis patch adds `j1939-vehicle-position-srv`, a server for sending\nvehicle position data over CAN using J1939 or NMEA 2000 protocols. It\nretrieves GPS data from gpsd or simulates data if gpsd is unavailable.\nBy default, it operates in J1939 profile but can switch to NMEA 2000\nwith the `-p nmea2000` option.\n\nUsage Examples:\n1. With gpsd:\n   j1939acd -r 64-95 -c /tmp/1122334455667789.jacd 1122334455667789 vcan0 &\n   j1939-vehicle-position-srv -i vcan0 -n 0x1122334455667789\n\n2. In simulation mode without gpsd:\n   j1939-vehicle-position-srv -i vcan0 -s -p nmea2000\n\nSigned-off-by: Oleksij Rempel <linux@rempel-privat.de>\n[Yegor: add CMakeLists.txt integration]\nCo-developed-by: Yegor Yefremov <yegorslists@googlemail.com>",
+          "date": "2024-07-24T09:40:35Z"
+        },
+        {
+          "sha": "a24bff8b08beebe8310cdea8cfa8600b05a4e4ca",
+          "message": "Merge pull request #582 from yegorich/clangd\n\nCMakeLists.txt: enable CMAKE_EXPORT_COMPILE_COMMANDS by default",
+          "date": "2025-03-01T15:47:48Z"
+        }
+      ],
+      "topics": [
+        "automotive",
+        "can-bus",
+        "industrial-automation",
+        "linux"
+      ]
+    },
+    {
+      "name": "lhndo/LH-Stinger",
+      "url": "https://github.com/lhndo/LH-Stinger",
+      "commit_count": 3,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "c5fec396c5107188da881f951f903baf93c22942",
+          "message": "specifying hardened drive gears and pairs qty",
+          "date": "2025-03-02T16:03:07Z"
+        },
+        {
+          "sha": "dc8acf1786a07e3075e6570d1019db886e81754a",
+          "message": "update",
+          "date": "2025-03-02T16:00:55Z"
+        },
+        {
+          "sha": "a7719abb157d804a51ed5868edc6bfc00ec2f735",
+          "message": "tweaking ECAS Hub tolerances",
+          "date": "2025-03-01T20:54:53Z"
+        }
+      ],
+      "topics": [
+        "3d-printer",
+        "3d-printing",
+        "engineering",
+        "fdm-3d-printing",
+        "technology"
+      ]
+    },
+    {
+      "name": "RfidResearchGroup/proxmark3",
+      "url": "https://github.com/RfidResearchGroup/proxmark3",
+      "commit_count": 4,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "af3a16b25c126b1420bd5ba76a834af67685e528",
+          "message": "text and style",
+          "date": "2025-03-02T15:45:01Z"
+        },
+        {
+          "sha": "beeec2385cad58c3833f0b2ae9f7becae4586336",
+          "message": "fm11rf08s_full pip8 style",
+          "date": "2025-03-02T15:41:14Z"
+        },
+        {
+          "sha": "5e018ea3b39abe953eee931991f91beca63e79e2",
+          "message": "fm11rf08s_recovery.py: fix it given the changes in the client and add some docstring",
+          "date": "2025-03-02T15:20:13Z"
+        },
+        {
+          "sha": "a75c7cc09342e0c1f972f5b66ca785b74649aca3",
+          "message": "Merge pull request #2765 from Donny-Guo/wiegand\n\nCorrect Bitlen Calculation and Refactor Wiegand Decoding",
+          "date": "2025-03-01T20:56:49Z"
+        }
+      ],
+      "topics": [
+        "125khz",
+        "clone",
+        "contactless",
+        "darkside",
+        "hitag2",
+        "iceman",
+        "iclass",
+        "iso14443a",
+        "iso14443b",
+        "iso15693",
+        "mifare",
+        "nfc",
+        "pm3",
+        "proxmark",
+        "proxmark3",
+        "rdv40",
+        "rfid",
+        "rrg",
+        "simulate",
+        "sniffer"
+      ]
+    },
+    {
+      "name": "lakehq/sail",
+      "url": "https://github.com/lakehq/sail",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "arrow",
+        "big-data",
+        "data",
+        "datafusion",
+        "pyspark",
+        "python",
+        "rust",
+        "spark",
+        "sql"
+      ]
+    },
+    {
+      "name": "shorepine/tulipcc",
+      "url": "https://github.com/shorepine/tulipcc",
+      "commit_count": 20,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "1bdb93742dfe2590f7f682fc737cec048c7cb47d",
+          "message": "Merge pull request #534 from shorepine/upweb3\n\ndeploying Tulip Web",
+          "date": "2025-03-02T15:14:39Z"
+        },
+        {
+          "sha": "9b28bfeaa5de4d823e37e51a563ee4beaf98196f",
+          "message": "deploying Tulip Web",
+          "date": "2025-03-02T15:14:25Z"
+        },
+        {
+          "sha": "cdc474eff94f90fb2d3c0cb2d7345971c1eb3acd",
+          "message": "Merge pull request #533 from shorepine/upamy12\n\nupping amy",
+          "date": "2025-03-02T15:13:34Z"
+        },
+        {
+          "sha": "7293d38e927a10412ea00080ed9f8c8fbf8a6a26",
+          "message": "upping amy",
+          "date": "2025-03-02T15:13:15Z"
+        },
+        {
+          "sha": "ede200adfc5255d4d017c95d37482d6d509ff9bf",
+          "message": "Merge pull request #532 from shorepine/examples2\n\ndeploying Tulip Web",
+          "date": "2025-03-02T14:25:02Z"
+        },
+        {
+          "sha": "ac0a65629899b89618a47857a69115ef9346f51e",
+          "message": "deploying Tulip Web",
+          "date": "2025-03-02T14:24:44Z"
+        },
+        {
+          "sha": "3f77ef3b946dac58bc4959ab32d7c0cee18ed7aa",
+          "message": "Merge pull request #531 from shorepine/webselect\n\nprevent safari from selecting page",
+          "date": "2025-03-02T13:43:51Z"
+        },
+        {
+          "sha": "352d0e578fca624c01849120b2e56c16a30c11fb",
+          "message": "deploying Tulip Web",
+          "date": "2025-03-02T13:43:32Z"
+        },
+        {
+          "sha": "a72736c5786b2566fd64dc040af4ede38248c6bf",
+          "message": "stopping safari from selecting page during grippie",
+          "date": "2025-03-02T13:43:19Z"
+        },
+        {
+          "sha": "0df99e49deb98d1d95ec80211e03a7ffcfad3af4",
+          "message": "Merge pull request #530 from shorepine/upweb2\n\ndeploying Tulip Web",
+          "date": "2025-03-02T13:19:06Z"
+        },
+        {
+          "sha": "567391093b1c306ad4bbd4ea98609fec8e68bdc7",
+          "message": "deploying Tulip Web",
+          "date": "2025-03-02T13:18:58Z"
+        },
+        {
+          "sha": "282f7a523c03d7f4573f407e7fc9e8e6e3ad91fa",
+          "message": "Merge pull request #529 from shorepine/upweb\n\ndeploying Tulip Web",
+          "date": "2025-03-02T13:17:16Z"
+        },
+        {
+          "sha": "05f6a2bad898f0b974c589e44970fba1a0baad96",
+          "message": "deploying Tulip Web",
+          "date": "2025-03-02T13:17:09Z"
+        },
+        {
+          "sha": "118f21d9710b8f6ad311fd38eb114a533fbf8a82",
+          "message": "Merge pull request #528 from shorepine/hide_task_bar\n\nonly hide task bar if set explicitly",
+          "date": "2025-03-02T13:16:41Z"
+        },
+        {
+          "sha": "bd30c553a69f14c4733b8560ad5ed7f5d3315b99",
+          "message": "only hide task bar if set explicitly",
+          "date": "2025-03-02T13:16:26Z"
+        },
+        {
+          "sha": "1d2223259410d2049bf8d37f713f50f0439a9e91",
+          "message": "Merge pull request #527 from shorepine/termios\n\nmacos desktop control-D quits and restores termios",
+          "date": "2025-03-02T12:54:49Z"
+        },
+        {
+          "sha": "046fb218a6786700b1c700f64dfe54856b38da65",
+          "message": "fixing dpwe's issue with termios",
+          "date": "2025-03-02T12:54:01Z"
+        },
+        {
+          "sha": "62eb07643ca4e19b8e6bd99a3ab4f6da739ca6eb",
+          "message": "Merge pull request #526 from shorepine/rootdir\n\ndeploying Tulip Web",
+          "date": "2025-03-02T00:06:02Z"
+        },
+        {
+          "sha": "d6819d47316585b572a08f533635c590ad3b3895",
+          "message": "deploying Tulip Web",
+          "date": "2025-03-02T00:05:56Z"
+        },
+        {
+          "sha": "b9d0d65e150d6f907e0380ef98f94a5156e3f7b5",
+          "message": "Merge pull request #525 from shorepine/resizeablecodemirror\n\nresizeablecodemirror",
+          "date": "2025-03-01T21:34:21Z"
+        }
+      ],
+      "topics": [
+        "computer",
+        "esp32",
+        "hardware",
+        "micropython",
+        "music",
+        "portable",
+        "python",
+        "synthesizer"
+      ]
+    },
+    {
+      "name": "arendst/Tasmota",
+      "url": "https://github.com/arendst/Tasmota",
+      "commit_count": 3,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "72520e074363fc8c5b090d25af1a512d7892b685",
+          "message": "Bump version v14.5.0.2",
+          "date": "2025-03-02T15:17:07Z"
+        },
+        {
+          "sha": "aed82dc8b2e8f53a9649e25de2549b5c58cbcdec",
+          "message": "Platform 20250330 (#23088)\n\n* Platform 2025.03.30 Tasmota Arduino Core 3.1.3.250302 based on IDF 5.3.2.250228\r\n\r\n* Arduino core 3.1.3.250302",
+          "date": "2025-03-02T15:04:56Z"
+        },
+        {
+          "sha": "2e35a2ab936d873f9c235232e77785f6e29c95f6",
+          "message": "some fixes and formatting (#23084)",
+          "date": "2025-03-01T14:11:35Z"
+        }
+      ],
+      "topics": [
+        "arduino",
+        "automation",
+        "esp32",
+        "esp8266",
+        "firmware",
+        "iot",
+        "knx",
+        "mqtt",
+        "ota",
+        "smart-home",
+        "sonoff",
+        "tasmota",
+        "tuya"
+      ]
+    },
+    {
+      "name": "OpenEPaperLink/OpenEPaperLink",
+      "url": "https://github.com/OpenEPaperLink/OpenEPaperLink",
+      "commit_count": 1,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "cce5f56d67dfdd77822c1da62a8b4a91905d2b9f",
+          "message": "Bug fix of LilyGo init",
+          "date": "2025-03-02T15:09:00Z"
+        }
+      ]
+    },
+    {
+      "name": "obmarg/cynic",
+      "url": "https://github.com/obmarg/cynic",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "gql",
+        "graphql",
+        "graphql-client",
+        "graphql-library",
+        "graphql-query",
+        "macros",
+        "rust"
+      ]
+    },
+    {
+      "name": "zmkfirmware/zmk",
+      "url": "https://github.com/zmkfirmware/zmk",
+      "commit_count": 3,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "241ff39556b3685c9344c4c22fd9a655af8eb3ba",
+          "message": "chore(main): release 0.2.1 (#2851)",
+          "date": "2025-03-02T14:45:12Z"
+        },
+        {
+          "sha": "f20e6ea7594b49eef1e3acc017529073a0409962",
+          "message": "fix(behaviors): Proper comma separated device list (#2850)\n\nProperly generate the comma separated list of devs in caps word/\nkey repeat.",
+          "date": "2025-03-02T13:49:07Z"
+        },
+        {
+          "sha": "fadafc77593858222bd6e43b7d2249727eba64b3",
+          "message": "chore(main): release 0.2.0 (#2693)",
+          "date": "2025-03-01T18:29:58Z"
+        }
+      ],
+      "topics": [
+        "bluetooth",
+        "hacktoberfest",
+        "keyboard",
+        "keyboard-firmware",
+        "mechanical-keyboard",
+        "wireless",
+        "zephyr",
+        "zmk"
+      ]
+    },
+    {
+      "name": "onlaj/Piano-LED-Visualizer",
+      "url": "https://github.com/onlaj/Piano-LED-Visualizer",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "led",
+        "midi",
+        "midi-device",
+        "piano",
+        "visualization",
+        "visualizer"
+      ]
+    },
+    {
+      "name": "google/wasefire",
+      "url": "https://github.com/google/wasefire",
+      "commit_count": 3,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "4f1f02d46d245c519746d1f5ac8a771449118fbf",
+          "message": "Make sure we use edition 2024 for all crates (#766)",
+          "date": "2025-03-02T14:36:25Z"
+        },
+        {
+          "sha": "4d584e57fdea9d76ca3b8eedd269298399a1c29d",
+          "message": "Upgrade all dependencies (#765)",
+          "date": "2025-03-02T13:45:23Z"
+        },
+        {
+          "sha": "9a0d568b16121af304a8ff84d6b540f0c0672501",
+          "message": "Disable unused-crate-dependencies when using -Zbuild-std (#764)\n\nThis avoids false positives until\nhttps://github.com/rust-lang/rust/issues/122105 is fixed. We anyway run\nsimilar commands without `-Zbuild-std` in CI which should catch most if\nnot all unused crate dependencies.",
+          "date": "2025-03-02T11:50:08Z"
+        }
+      ],
+      "topics": [
+        "embedded",
+        "firmware",
+        "framework",
+        "iot",
+        "rust",
+        "security",
+        "wasm"
+      ]
+    },
+    {
+      "name": "zesterer/flume",
+      "url": "https://github.com/zesterer/flume",
+      "commit_count": 1,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "02eda72e14d6805beb3b27559b8e066f8464f490",
+          "message": "Merge pull request #161 from zh-jq-b/fastrand\n\nuse fastrand instead of nanorand",
+          "date": "2025-03-02T13:46:47Z"
+        }
+      ],
+      "topics": [
+        "channel",
+        "concurrency",
+        "rust"
+      ]
+    },
+    {
+      "name": "mkuthan/homelab-public",
+      "url": "https://github.com/mkuthan/homelab-public",
+      "commit_count": 3,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "dad328ccece5832b6e66e22f82e6f2922c1acbb0",
+          "message": "feat: jellyfin",
+          "date": "2025-03-02T13:16:48Z"
+        },
+        {
+          "sha": "56dd1ec008170638f207a37d89a89764d7afd35a",
+          "message": "fix: motion mask for frigate",
+          "date": "2025-03-02T06:59:57Z"
+        },
+        {
+          "sha": "dbfb0b6edda8a82cded53ac9e3c665dba9f746b8",
+          "message": "feat: update IoT documentation with new Solis Datalogger model",
+          "date": "2025-03-01T08:18:37Z"
+        }
+      ],
+      "topics": [
+        "ansible",
+        "homelab",
+        "iaac",
+        "self-hosted",
+        "terraform"
+      ]
+    },
+    {
+      "name": "CherryHQ/cherry-studio",
+      "url": "https://github.com/CherryHQ/cherry-studio",
+      "commit_count": 19,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "b974f8537ff2604cbb1796938cb717bc0a7bccc2",
+          "message": "chore(version): 1.0.4",
+          "date": "2025-03-02T13:35:49Z"
+        },
+        {
+          "sha": "c32e17968e2b5c8c43a8efd01b027aacc8f5d760",
+          "message": "fix: Adjust UI styling for consistent font sizes and layout spacing",
+          "date": "2025-03-02T13:35:30Z"
+        },
+        {
+          "sha": "cf09d1d44d4ece715c78fbf999397eacca0471f9",
+          "message": "chore(version): 1.0.3",
+          "date": "2025-03-02T12:54:41Z"
+        },
+        {
+          "sha": "ad39d8774d581974fccbcd4e2f835f987ca5c21d",
+          "message": "refactor: Improve Ellipsis component and usage (#2603)\n\n* refactor: Improve Ellipsis component and usage\n\n- Modify Ellipsis component to use children instead of text prop\n- Add support for multi-line and single-line ellipsis with styled-components\n- Update KnowledgeContent to use new Ellipsis component structure\n- Enhance ClickableSpan styling for better text truncation\n\n* fix: Improve text wrapping in Ellipsis component\n\nAdd overflow-wrap: break-word to ensure long words are properly truncated in multi-line ellipsis\n\n* refactor: Improve link and tooltip rendering in KnowledgeContent\n\n- Wrap links with ClickableSpan for better interaction and styling\n- Adjust Tooltip and Ellipsis placement for improved readability\n- Remove unnecessary inline styling for links in ItemInfo\n\n---------\n\nCo-authored-by: lizhixuan <zhixuan.li@banosuperapp.com>",
+          "date": "2025-03-02T12:43:56Z"
+        },
+        {
+          "sha": "687f140a5cd99612c23590d5a7c660f57b8e7aed",
+          "message": "docs: Add comprehensive documentation for KnowledgeService concurrent processing mechanism\n\n- Created detailed technical documentation explaining the KnowledgeService's task queue and workload management\n- Added JSDoc comment to KnowledgeService.ts to provide high-level overview\n- Documented key aspects of concurrent task processing, including workload evaluation, task state management, and resource optimization strategies",
+          "date": "2025-03-02T12:36:13Z"
+        },
+        {
+          "sha": "1b09bb47bf9bcc3025ae5d0d3d3faedfa01bc484",
+          "message": "feat: Improve file upload for the knowledge base (#2544)\n\n* feat: Improve file upload for the knowledge base\n\n* feat: Improve file upload for the knowledge base\n\n* feat: Improve file upload for the knowledge base\n\n---------\n\nCo-authored-by: 亢奋猫 <kangfenmao@qq.com>",
+          "date": "2025-03-02T12:15:51Z"
+        },
+        {
+          "sha": "808b4575033465536c140082b3942c4afba2a99e",
+          "message": "feat: Add Zhihu mini app to the platform\n\n- Added Zhihu (知乎直答) mini app logo\n- Updated minapps configuration to include Zhihu mini app\n- Modified store migration to enable Zhihu mini app by default",
+          "date": "2025-03-02T12:10:45Z"
+        },
+        {
+          "sha": "92e054569ceac76abe8317eeeca60d0ea4ef1d29",
+          "message": "feat: Add Cici mini app and update mini apps grid layout\n\n- Added Cici mini app logo in WebP format\n- Updated mini apps grid to display 8 columns instead of 6\n- Updated store migration to include Cici in enabled mini apps\n- Updated Cici app logo import path",
+          "date": "2025-03-02T12:06:35Z"
+        },
+        {
+          "sha": "2f22e68559bbe37eddea69f2a7082edb71d42042",
+          "message": "chore: revert test code",
+          "date": "2025-03-01T16:34:18Z"
+        },
+        {
+          "sha": "53a8628fab01067d6f569f71e1158fc1d43cf533",
+          "message": "feat: added cici for mini app",
+          "date": "2025-03-01T16:26:16Z"
+        },
+        {
+          "sha": "df045036747f6b1a0b5eddb0f78dcc992051ae56",
+          "message": "feat: add you.com miniapp",
+          "date": "2025-03-02T06:22:38Z"
+        },
+        {
+          "sha": "1fe74fa753d84e09cd63e334d2abb086b7dcc9d8",
+          "message": "feat: add Civil Engineer assistant (#2640)",
+          "date": "2025-03-02T11:57:44Z"
+        },
+        {
+          "sha": "55a9be2fa5c01d387c542e70cde015fad2617d01",
+          "message": "feat: Add KaTeX copy-tex and mhchem support",
+          "date": "2025-03-02T08:34:53Z"
+        },
+        {
+          "sha": "fdf4821d568bf3ceba4044dd244fc3bcbf336d02",
+          "message": "fix: Fix app quit exceptionally on MacOS's full screen mode add Add Escape key support for exiting fullscreen mode",
+          "date": "2025-02-28T07:23:21Z"
+        },
+        {
+          "sha": "84e6caa846862b1e8dee83e9919c7be4b0aa6fcc",
+          "message": "refactor: Extract StyleSheetManager into a separate context component\n\n- Move StyleSheetManager logic from App.tsx to a new dedicated context component\n- Simplify App.tsx by importing the new StyleSheetManager\n- Preserve existing prop validation and filtering logic",
+          "date": "2025-03-02T11:51:20Z"
+        },
+        {
+          "sha": "ed96940e82f30c93d0fda8839419e0f6cb87c671",
+          "message": "fix: Improve metrics completion tokens handling",
+          "date": "2025-03-02T11:41:06Z"
+        },
+        {
+          "sha": "1c60375d71c92a2b572140d3c59f5c2f0d11639c",
+          "message": "fix: fix bug of metrics missing",
+          "date": "2025-03-02T03:51:11Z"
+        },
+        {
+          "sha": "f91caff7ec4ba96b8013267097ac21bd8a1b41b1",
+          "message": "feat: Conditionally render reasoning effort control for reasoning models",
+          "date": "2025-03-02T01:23:39Z"
+        },
+        {
+          "sha": "11bd55701c3fd21034d6c64dc7475527d0d7066b",
+          "message": "revert: some proxy errors in main process (#2294)",
+          "date": "2025-03-01T15:17:44Z"
+        }
+      ],
+      "topics": [
+        "agent",
+        "anthropic",
+        "assistant",
+        "chatbot",
+        "chatbotai",
+        "electron",
+        "llm",
+        "openai"
+      ]
+    },
+    {
+      "name": "SwiftOldDriver/iOS-Weekly",
+      "url": "https://github.com/SwiftOldDriver/iOS-Weekly",
+      "commit_count": 5,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "aa4bcf475f09496c32d57b86171fe84e34e9a9d2",
+          "message": "refactor:325 整理 & 326 创建",
+          "date": "2025-03-02T13:29:36Z"
+        },
+        {
+          "sha": "3f817654b5537b93b43941615565e9dc5b6dc51d",
+          "message": "Update #325-2025.03.03.md",
+          "date": "2025-03-02T02:33:16Z"
+        },
+        {
+          "sha": "d1b5361ddf7aa4a6146515794863d9b4ce5ff69f",
+          "message": "Update #325-2025.03.03.md",
+          "date": "2025-03-02T02:32:53Z"
+        },
+        {
+          "sha": "310b0e251c5bfff76416ffcdbe6049367d89b3f1",
+          "message": "fixed #4912",
+          "date": "2025-03-02T02:32:12Z"
+        },
+        {
+          "sha": "d89753316725ef5a71ebbd6c5652d717f7c7ee88",
+          "message": "fix #4913",
+          "date": "2025-03-01T22:40:39Z"
+        }
+      ],
+      "topics": [
+        "ios",
+        "mobile",
+        "objective-c",
+        "rss",
+        "swift",
+        "weekly"
+      ]
+    },
+    {
+      "name": "ophub/amlogic-s9xxx-armbian",
+      "url": "https://github.com/ophub/amlogic-s9xxx-armbian",
+      "commit_count": 7,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "3b5a0ca4623a0f66bbae37e3cd86b8c32b1c9243",
+          "message": "Adjust Actions options",
+          "date": "2025-03-02T12:56:03Z"
+        },
+        {
+          "sha": "7920f785b71fb1ff1b640f68f2ac2c2547342a0f",
+          "message": "Adjust the Actions options",
+          "date": "2025-03-02T05:17:51Z"
+        },
+        {
+          "sha": "883ebeff345ba4d1ba7d9b27804b8b3c10c17da9",
+          "message": "Update the kernel configuration to the latest version",
+          "date": "2025-03-02T05:05:22Z"
+        },
+        {
+          "sha": "e1fe12a931909e3fec18eac2b0b549133e369a3b",
+          "message": "Add contributor for Smart-Am60(rk3588): dy008",
+          "date": "2025-03-02T04:56:55Z"
+        },
+        {
+          "sha": "1e675c69cd5088aa40d2c1fc3d253504581073d9",
+          "message": "Add Smart-Am60(rk3588) device link",
+          "date": "2025-03-02T04:51:45Z"
+        },
+        {
+          "sha": "9a28380a2d9092254af5f601f839fe0e5c85c09d",
+          "message": "Adjusting default settings",
+          "date": "2025-03-02T04:44:17Z"
+        },
+        {
+          "sha": "a1c28a2ee75a38ed6a23dd1946060449c18317d7",
+          "message": "Merge pull request #2817 from dy008/main\n\nADD SMART-AM60 SUPPORT",
+          "date": "2025-03-02T04:10:46Z"
+        }
+      ],
+      "topics": [
+        "a311d",
+        "allwinner",
+        "amlogic",
+        "armbian",
+        "debian",
+        "rockchip",
+        "s905",
+        "s905d",
+        "s905w",
+        "s905x",
+        "s905x2",
+        "s905x3",
+        "s912",
+        "s922x",
+        "ubuntu"
+      ]
+    },
+    {
+      "name": "quoid/userscripts",
+      "url": "https://github.com/quoid/userscripts",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "safari",
+        "safari-app-extension",
+        "safari-extension",
+        "swift",
+        "userscript",
+        "userscript-editor",
+        "web-extension"
+      ]
+    },
+    {
+      "name": "progrium/darwinkit",
+      "url": "https://github.com/progrium/darwinkit",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "appkit",
+        "apple",
+        "apple-apis",
+        "bindings",
+        "bridge",
+        "cgo",
+        "cocoa",
+        "coremidi",
+        "coreml",
+        "go",
+        "golang",
+        "ios",
+        "libobjc",
+        "mac",
+        "macos",
+        "macos-application",
+        "native-apps",
+        "objc-runtime",
+        "objective-c",
+        "webkit"
+      ]
+    },
+    {
+      "name": "wasmi-labs/wasmi",
+      "url": "https://github.com/wasmi-labs/wasmi",
+      "commit_count": 3,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "2695cc18345866c36967343f0d3d54e02067ea1c",
+          "message": "Update dependencies (#1374)\n\n* update dependencies\n\n* update wasm-tools dependencies\n\n* update wasmtime to v30\n\n* update rand 0.8.5 -> 0.9.0\n\n* update WASI dependencies from v29 to v30",
+          "date": "2025-03-02T11:41:57Z"
+        },
+        {
+          "sha": "ba997e80c4015a561aa6f1a03c95d3b7e5ff7be8",
+          "message": "Bump MSRV to Rust 1.82 (#1375)\n\n* bump MSRV to 1.82\n\n* apply clippy suggestion\n\n* apply another clippy suggetion with repeat_n",
+          "date": "2025-03-02T11:30:25Z"
+        },
+        {
+          "sha": "0be373ca47676133de075dda41797e3d4e8e3c56",
+          "message": "Update CI `fuzz` job Rust `nightly` version (#1376)\n\nupdate CI fuzz job nightly version",
+          "date": "2025-03-02T11:23:21Z"
+        }
+      ],
+      "topics": [
+        "interpreter",
+        "runtime",
+        "rust",
+        "vm",
+        "wasm",
+        "webassembly"
+      ]
+    },
+    {
+      "name": "unslothai/unsloth",
+      "url": "https://github.com/unslothai/unsloth",
+      "commit_count": 2,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "3a0d3d58d2c31d9d04bab2d712b59bb75a1e2e3b",
+          "message": "Added Python version warning to Windows Install Section (#1872)\n\nI spent half a day on the wrong Python version, so I am adding this big, red sign.",
+          "date": "2025-03-02T11:48:21Z"
+        },
+        {
+          "sha": "bda3978287da90c452ba18c3345228829ad09dcc",
+          "message": "Fix Layernorm when num_cols not a power of 2 (#1867)\n\n* fix\n\n* Update layernorm.py\n\n---------\n\nCo-authored-by: Daniel Han <danielhanchen@gmail.com>",
+          "date": "2025-03-01T22:23:22Z"
+        }
+      ],
+      "topics": [
+        "deepseek",
+        "deepseek-r1",
+        "fine-tuning",
+        "finetuning",
+        "gemma",
+        "gemma2",
+        "llama",
+        "llama3",
+        "llm",
+        "llms",
+        "lora",
+        "mistral",
+        "phi3",
+        "qlora",
+        "unsloth"
+      ]
+    },
+    {
+      "name": "tealdeer-rs/tealdeer",
+      "url": "https://github.com/tealdeer-rs/tealdeer",
+      "commit_count": 1,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "c6de583c46c8cbd10fab570785ea1c05773876fe",
+          "message": "Only create a single temporary directory in integration tests (#411)",
+          "date": "2025-03-02T11:03:09Z"
+        }
+      ],
+      "topics": [
+        "hacktoberfest",
+        "rust",
+        "tldr"
+      ]
+    },
+    {
+      "name": "lemon24/reader",
+      "url": "https://github.com/lemon24/reader",
+      "commit_count": 2,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "167b21a820b10901e26b3aa587c0c5c8c7d4bcb0",
+          "message": "Parser fixture works with make_reader fixture.",
+          "date": "2025-03-02T10:47:22Z"
+        },
+        {
+          "sha": "e7b293b105f44651bb1da56b0f4ce7d1393fd957",
+          "message": "Parser fixture.",
+          "date": "2025-02-28T07:34:09Z"
+        }
+      ],
+      "topics": [
+        "atom-feed",
+        "feed",
+        "feed-aggregator",
+        "feed-reader",
+        "json-feed",
+        "library",
+        "podcast",
+        "podcast-aggregator",
+        "podcast-client",
+        "podcast-fetcher",
+        "podcatcher",
+        "python",
+        "python-library",
+        "rss",
+        "rss-aggregator",
+        "rss-feed",
+        "rss-reader",
+        "twitter"
+      ]
+    },
+    {
+      "name": "xinnan-tech/xiaozhi-esp32-server",
+      "url": "https://github.com/xinnan-tech/xiaozhi-esp32-server",
+      "commit_count": 2,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "effd79b4651af4c7b4d559862232acdd3b1a9967",
+          "message": "Tts302 (#170)\n\n* feat: add 302.ai TTS integration (#166)\n\n* update:将tts_302ai tts合并到doubao tts\n\n---------\n\nCo-authored-by: Junsen <66542771+Huang-junsen@users.noreply.github.com>\nCo-authored-by: hrz <1710360675@qq.com>",
+          "date": "2025-03-02T08:59:25Z"
+        },
+        {
+          "sha": "bc531652e92d1891efa028af2c6b16d46f5ffa18",
+          "message": "音乐播放功能添加p3文件格式支持，添加文件目录(含子目录)扫描和文件列表刷新功能 (#157)\n\nCo-authored-by: hrz <1710360675@qq.com>",
+          "date": "2025-03-01T09:57:43Z"
+        }
+      ],
+      "topics": [
+        "dify",
+        "esp32",
+        "xiaozhi-esp32"
+      ]
+    },
+    {
+      "name": "ProjectPhysX/FluidX3D",
+      "url": "https://github.com/ProjectPhysX/FluidX3D",
+      "commit_count": 2,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "f7f8015c144d06d199fa14316791620b54927f7e",
+          "message": "Added more benchmarks in Readme",
+          "date": "2025-03-02T10:23:47Z"
+        },
+        {
+          "sha": "5a59222a2d0e8083c7cdea48363e59fb3cd2ac54",
+          "message": "Updated OpenCL-Wrapper",
+          "date": "2025-03-01T13:19:02Z"
+        }
+      ],
+      "topics": [
+        "benchmark",
+        "cfd",
+        "computational-fluid-dynamics",
+        "fluid-dynamics",
+        "fluid-simulation",
+        "fluid-solver",
+        "gpgpu",
+        "gpu",
+        "gpu-computing",
+        "high-performance-computing",
+        "hpc",
+        "interactive-visualization",
+        "lattice-boltzmann",
+        "lbm",
+        "opencl",
+        "physics",
+        "raytracing",
+        "scientific-computing",
+        "scientific-visualization",
+        "simulation"
+      ]
+    },
+    {
+      "name": "life4/deal",
+      "url": "https://github.com/life4/deal",
+      "commit_count": 16,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "2c87d80a09d54e7ec89f2b543a0237794b7c63ec",
+          "message": "bump version",
+          "date": "2025-03-02T09:46:39Z"
+        },
+        {
+          "sha": "a9714c630712edcac238d26edab831463071da92",
+          "message": "Merge pull request #138 from TheDSCPL/patch-1\n\nPython 3.12.9 support",
+          "date": "2025-03-02T09:45:36Z"
+        },
+        {
+          "sha": "346dbae1cd6a1042be2d128aa065a73dee18da46",
+          "message": "actualize tests for 3.12",
+          "date": "2025-03-02T09:41:28Z"
+        },
+        {
+          "sha": "9b4af0501d2ae9a529e3df21d1bdb674554a0075",
+          "message": "Merge branch 'master' into patch-1",
+          "date": "2025-03-02T09:40:14Z"
+        },
+        {
+          "sha": "00cc3155e63121a4987177d4e7a610b5acbf8af3",
+          "message": "Merge pull request #139 from life4/fix-mypy\n\nFix new mypy errors",
+          "date": "2025-03-02T09:36:55Z"
+        },
+        {
+          "sha": "a654fc87b33d7cc8471f031e4cb387ed2a7b9c3c",
+          "message": "disable 3.12 on CI",
+          "date": "2025-03-02T09:33:03Z"
+        },
+        {
+          "sha": "28b9811246e025eab01bd55f5cfcc2e2b0d36f31",
+          "message": "enable CI for 3.12",
+          "date": "2025-03-02T09:31:18Z"
+        },
+        {
+          "sha": "cf3ca02208513fdf0659a65b061a59d675edb4fe",
+          "message": "allow backslash",
+          "date": "2025-03-02T09:30:56Z"
+        },
+        {
+          "sha": "76520ba03eb793834ceb37bd68db9778823f20cf",
+          "message": "hit 100% coverage",
+          "date": "2025-03-02T09:28:16Z"
+        },
+        {
+          "sha": "8ff6ec89a6b855c9deb421b98e973b06fbf4ab6c",
+          "message": "actualize test_fuzz_propagate",
+          "date": "2025-03-02T09:18:30Z"
+        },
+        {
+          "sha": "96859cf3111af877d107dedca71ce5b081ba01f4",
+          "message": "drop ast.Num",
+          "date": "2025-03-02T09:12:57Z"
+        },
+        {
+          "sha": "d2b72c4270e540c2864efe2127c4101200c07ffc",
+          "message": "fix remaining mypy errors",
+          "date": "2025-03-02T09:09:30Z"
+        },
+        {
+          "sha": "fa6ed8a55be9e290f9820745bc5383d500d89bba",
+          "message": "replace partial with closures",
+          "date": "2025-03-02T08:58:32Z"
+        },
+        {
+          "sha": "7e06c090eeaeb8a69a3d5fd8723fe539bba79469",
+          "message": "drop ast.Str",
+          "date": "2025-03-02T08:47:45Z"
+        },
+        {
+          "sha": "b6123d1c12b832f5bceec86fa25b7e065f7d546c",
+          "message": "fix source lookup for lambda in py 3.12",
+          "date": "2025-03-02T08:37:56Z"
+        },
+        {
+          "sha": "0e525caef2e2a784c5b0eee2f5a931a68f905d80",
+          "message": "Fix test_main.py\n\nFailing test:\r\n\r\n```\r\n    def test_unknown_command(capsys):\r\n        result = main(argv=['unknown', 'a1', 'a2'], commands=dict(fake=FakeCommand))\r\n        assert result == 2\r\n        captured = capsys.readouterr()\r\n        exp = \"invalid choice: 'unknown' (choose from 'fake')\"\r\n>       assert exp in captured.err\r\nE       assert \"invalid choice: 'unknown' (choose from 'fake')\" in \"usage: python3 -m deal [-h] {fake} ...\\npython3 -m deal: error: argument {fake}: invalid choice: 'unknown' (choose from fake)\\n\"\r\nE        +  where \"usage: python3 -m deal [-h] {fake} ...\\npython3 -m deal: error: argument {fake}: invalid choice: 'unknown' (choose from fake)\\n\" = CaptureResult(out='', err=\"usage: python3 -m deal [-h] {fake} ...\\npython3 -m deal: error: argument {fake}: invalid choice: 'unknown' (choose from fake)\\n\").err\r\n\r\ntests/test_cli/test_main.py:27: AssertionError\r\n```",
+          "date": "2025-03-02T00:00:33Z"
+        }
+      ],
+      "topics": [
+        "contracts",
+        "contracts-programming",
+        "dbc",
+        "deal",
+        "decorators",
+        "design-by-contract",
+        "flake8",
+        "functional-programming",
+        "hacktoberfest",
+        "interface",
+        "invariant",
+        "linter",
+        "mypy",
+        "property-based-testing",
+        "python",
+        "pythonic",
+        "refinement-types",
+        "testing",
+        "typing",
+        "validation"
+      ]
+    },
+    {
+      "name": "ripplebiz/MeshCore",
+      "url": "https://github.com/ripplebiz/MeshCore",
+      "commit_count": 0,
+      "summary": null,
+      "commits": []
+    },
+    {
+      "name": "sharkdp/fd",
+      "url": "https://github.com/sharkdp/fd",
+      "commit_count": 1,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "fe51550687896d61b09bf055a6b033211a15e803",
+          "message": "Merge pull request #1680 from sharkdp/dependabot/cargo/etcetera-0.9.0\n\nbuild(deps): bump etcetera from 0.8.0 to 0.9.0",
+          "date": "2025-03-02T09:08:20Z"
+        }
+      ],
+      "topics": [
+        "cli",
+        "command-line",
+        "filesystem",
+        "hacktoberfest",
+        "regex",
+        "rust",
+        "search",
+        "terminal",
+        "tool"
+      ]
+    },
+    {
+      "name": "deepinsight/insightface",
+      "url": "https://github.com/deepinsight/insightface",
+      "commit_count": 2,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "e1b98a31c25520fa042769b8bfc34b65e205e555",
+          "message": "Update README.md",
+          "date": "2025-03-02T09:08:35Z"
+        },
+        {
+          "sha": "bd6d9c8a3bffd888a6541c0944189a3187a3d1c6",
+          "message": "Merge pull request #2731 from BVishal-Geek/fix-macos-installation\n\nFix macOS installation: Add LLVM check & logging in setup.py",
+          "date": "2025-03-01T05:15:23Z"
+        }
+      ],
+      "topics": [
+        "age-estimation",
+        "arcface",
+        "face-alignment",
+        "face-detection",
+        "face-recognition",
+        "mxnet",
+        "oneflow",
+        "paddlepaddle",
+        "pytorch",
+        "retinaface"
+      ]
+    },
+    {
+      "name": "windowsair/wireless-esp8266-dap",
+      "url": "https://github.com/windowsair/wireless-esp8266-dap",
+      "commit_count": 1,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "9a808da330434180a92b6cb287a4b2399c2759a9",
+          "message": "feat(dap): Add dedicated gpio support for esp32c3",
+          "date": "2025-03-02T06:59:49Z"
+        }
+      ],
+      "topics": [
+        "cmsis-dap",
+        "esp-idf",
+        "esp32",
+        "esp32c3",
+        "esp32s3",
+        "esp8266",
+        "wifi"
+      ]
+    },
+    {
+      "name": "nextest-rs/nextest",
+      "url": "https://github.com/nextest-rs/nextest",
+      "commit_count": 4,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "c9b456d68d5208e5bdfb9599e6e5e42ac75f86ca",
+          "message": "chore(deps): update taiki-e/install-action digest to 3c8fc6e (#2199)\n\nThis PR contains the following updates:\n\n| Package | Type | Update | Change |\n|---|---|---|---|\n|\n[taiki-e/install-action](https://redirect.github.com/taiki-e/install-action)\n| action | digest | `0b63bc8` -> `3c8fc6e` |\n\n---\n\n### Configuration\n\n📅 **Schedule**: Branch creation - \"after 8pm,before 6am\" in timezone\nAmerica/Los_Angeles, Automerge - \"after 8pm,before 6am\" in timezone\nAmerica/Los_Angeles.\n\n🚦 **Automerge**: Enabled.\n\n♻ **Rebasing**: Whenever PR is behind base branch, or you tick the\nrebase/retry checkbox.\n\n🔕 **Ignore**: Close this PR and you won't be reminded about this update\nagain.\n\n---\n\n- [ ] <!-- rebase-check -->If you want to rebase/retry this PR, check\nthis box\n\n---\n\nThis PR has been generated by [Renovate\nBot](https://redirect.github.com/renovatebot/renovate).\n\n<!--renovate-debug:eyJjcmVhdGVkSW5WZXIiOiIzOS4xODUuMCIsInVwZGF0ZWRJblZlciI6IjM5LjE4NS4wIiwidGFyZ2V0QnJhbmNoIjoibWFpbiIsImxhYmVscyI6WyJkZXBlbmRlbmNpZXMiXX0=-->",
+          "date": "2025-03-02T08:19:05Z"
+        },
+        {
+          "sha": "7cf9bb7d6f214990a3947a651fa49cf3d616ceb7",
+          "message": "chore(deps): update rust crate insta to 1.42.2 (#2198)\n\nThis PR contains the following updates:\n\n| Package | Type | Update | Change |\n|---|---|---|---|\n| [insta](https://insta.rs/)\n([source](https://redirect.github.com/mitsuhiko/insta)) |\nworkspace.dependencies | patch | `1.42.1` -> `1.42.2` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>mitsuhiko/insta (insta)</summary>\n\n###\n[`v1.42.2`](https://redirect.github.com/mitsuhiko/insta/blob/HEAD/CHANGELOG.md#1422)\n\n[Compare\nSource](https://redirect.github.com/mitsuhiko/insta/compare/1.42.1...1.42.2)\n\n- Support other indention characters than spaces in inline snapshots.\n[#&#8203;679](https://redirect.github.com/mitsuhiko/insta/issues/679)\n- Fix an issue where multiple targets with the same root would cause too\nmany pending snapshots to be reported.\n[#&#8203;730](https://redirect.github.com/mitsuhiko/insta/issues/730)\n- Hide `unseen` option in CLI, as it's pending deprecation.\n[#&#8203;732](https://redirect.github.com/mitsuhiko/insta/issues/732)\n- Stop `\\t` and `\\x1b` (ANSI color escape) from causing snapshots to be\nescaped.\n[#&#8203;715](https://redirect.github.com/mitsuhiko/insta/issues/715)\n- Improved handling of inline snapshots within `allow_duplicates! { ..\n}`.\n[#&#8203;712](https://redirect.github.com/mitsuhiko/insta/issues/712)\n\n</details>\n\n---\n\n### Configuration\n\n📅 **Schedule**: Branch creation - \"after 8pm,before 6am\" in timezone\nAmerica/Los_Angeles, Automerge - \"after 8pm,before 6am\" in timezone\nAmerica/Los_Angeles.\n\n🚦 **Automerge**: Enabled.\n\n♻ **Rebasing**: Whenever PR is behind base branch, or you tick the\nrebase/retry checkbox.\n\n🔕 **Ignore**: Close this PR and you won't be reminded about this update\nagain.\n\n---\n\n- [ ] <!-- rebase-check -->If you want to rebase/retry this PR, check\nthis box\n\n---\n\nThis PR has been generated by [Renovate\nBot](https://redirect.github.com/renovatebot/renovate).\n\n<!--renovate-debug:eyJjcmVhdGVkSW5WZXIiOiIzOS4xODUuMCIsInVwZGF0ZWRJblZlciI6IjM5LjE4NS4wIiwidGFyZ2V0QnJhbmNoIjoibWFpbiIsImxhYmVscyI6WyJkZXBlbmRlbmNpZXMiXX0=-->",
+          "date": "2025-03-02T04:51:38Z"
+        },
+        {
+          "sha": "24edbe8ac91f1888b1bbb7c3c7a62b3edafad589",
+          "message": "chore(deps): update eifinger/setup-uv action to v5.3.1 (#2197)\n\nThis PR contains the following updates:\n\n| Package | Type | Update | Change |\n|---|---|---|---|\n| [eifinger/setup-uv](https://redirect.github.com/eifinger/setup-uv) |\naction | patch | `v5.3.0` -> `v5.3.1` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>eifinger/setup-uv (eifinger/setup-uv)</summary>\n\n###\n[`v5.3.1`](https://redirect.github.com/astral-sh/setup-uv/releases/tag/v5.3.1):\n🌈 - Fix issues with GHES and HTTP proxies\n\n[Compare\nSource](https://redirect.github.com/eifinger/setup-uv/compare/v5.3.0...v5.3.1)\n\n#### Changes\n\nThis release fixes some issues when this action was used behind a HTTP\nproxy or with GHES.\nIf you have been seeing `ENOTFOUND` or timeout errors, this release\nshould fix that.\n\nA huge thank you to everyone who helped investigating this and testing\nthe fixes:\n\n-   [@&#8203;siryessuhr](https://redirect.github.com/siryessuhr)\n-   [@&#8203;my1e5](https://redirect.github.com/my1e5)\n-   [@&#8203;dennis-m-e](https://redirect.github.com/dennis-m-e)\n-   [@&#8203;PaarthShah](https://redirect.github.com/PaarthShah)\n\n#### 🐛 Bug fixes\n\n- Always fall back to anonymous download\n[@&#8203;eifinger](https://redirect.github.com/eifinger)\n([#&#8203;304](https://redirect.github.com/eifinger/setup-uv/issues/304))\n\n#### 🧰 Maintenance\n\n- chore: update known checksums for 0.6.3\n@&#8203;[github-actions\\[bot\\]](https://redirect.github.com/apps/github-actions)\n([#&#8203;300](https://redirect.github.com/eifinger/setup-uv/issues/300))\n\n#### 📚 Documentation\n\n- 📚 Document automatically enabled cache on GitHub-hosted runners\n[@&#8203;jerr0328](https://redirect.github.com/jerr0328)\n([#&#8203;302](https://redirect.github.com/eifinger/setup-uv/issues/302))\n\n#### ⬆️ Dependency updates\n\n- bump dependencies\n[@&#8203;eifinger](https://redirect.github.com/eifinger)\n([#&#8203;308](https://redirect.github.com/eifinger/setup-uv/issues/308))\n- Bump peter-evans/create-pull-request from 7.0.6 to 7.0.7\n@&#8203;[dependabot\\[bot\\]](https://redirect.github.com/apps/dependabot)\n([#&#8203;299](https://redirect.github.com/eifinger/setup-uv/issues/299))\n\n</details>\n\n---\n\n### Configuration\n\n📅 **Schedule**: Branch creation - \"after 8pm,before 6am\" in timezone\nAmerica/Los_Angeles, Automerge - \"after 8pm,before 6am\" in timezone\nAmerica/Los_Angeles.\n\n🚦 **Automerge**: Enabled.\n\n♻ **Rebasing**: Whenever PR is behind base branch, or you tick the\nrebase/retry checkbox.\n\n🔕 **Ignore**: Close this PR and you won't be reminded about this update\nagain.\n\n---\n\n- [ ] <!-- rebase-check -->If you want to rebase/retry this PR, check\nthis box\n\n---\n\nThis PR has been generated by [Renovate\nBot](https://redirect.github.com/renovatebot/renovate).\n\n<!--renovate-debug:eyJjcmVhdGVkSW5WZXIiOiIzOS4xODUuMCIsInVwZGF0ZWRJblZlciI6IjM5LjE4NS4wIiwidGFyZ2V0QnJhbmNoIjoibWFpbiIsImxhYmVscyI6WyJkZXBlbmRlbmNpZXMiXX0=-->",
+          "date": "2025-03-02T04:35:31Z"
+        },
+        {
+          "sha": "5ed9fb228a3a121e4cfbf9dec955aa7d98841386",
+          "message": "chore(deps): update taiki-e/install-action digest to 0b63bc8 (#2196)\n\nThis PR contains the following updates:\n\n| Package | Type | Update | Change |\n|---|---|---|---|\n|\n[taiki-e/install-action](https://redirect.github.com/taiki-e/install-action)\n| action | digest | `dccf3df` -> `0b63bc8` |\n\n---\n\n### Configuration\n\n📅 **Schedule**: Branch creation - \"after 8pm,before 6am\" in timezone\nAmerica/Los_Angeles, Automerge - \"after 8pm,before 6am\" in timezone\nAmerica/Los_Angeles.\n\n🚦 **Automerge**: Enabled.\n\n♻ **Rebasing**: Whenever PR is behind base branch, or you tick the\nrebase/retry checkbox.\n\n🔕 **Ignore**: Close this PR and you won't be reminded about this update\nagain.\n\n---\n\n- [ ] <!-- rebase-check -->If you want to rebase/retry this PR, check\nthis box\n\n---\n\nThis PR has been generated by [Renovate\nBot](https://redirect.github.com/renovatebot/renovate).\n\n<!--renovate-debug:eyJjcmVhdGVkSW5WZXIiOiIzOS4xODUuMCIsInVwZGF0ZWRJblZlciI6IjM5LjE4NS4wIiwidGFyZ2V0QnJhbmNoIjoibWFpbiIsImxhYmVscyI6WyJkZXBlbmRlbmNpZXMiXX0=-->",
+          "date": "2025-03-01T05:33:36Z"
+        }
+      ],
+      "topics": [
+        "cargo-plugin",
+        "cargo-subcommand",
+        "flaky-tests",
+        "junit",
+        "nextest",
+        "rust",
+        "testing"
+      ]
+    },
+    {
+      "name": "amitness/learning",
+      "url": "https://github.com/amitness/learning",
+      "commit_count": 1,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "d5c44f847e5b42d977d5ac250ca8e6a4c17a78c1",
+          "message": "Update: February 2025",
+          "date": "2025-03-02T07:41:19Z"
+        }
+      ],
+      "topics": [
+        "deep-learning",
+        "generative-ai",
+        "learning-resources",
+        "llms",
+        "machine-learning",
+        "nlp",
+        "python"
+      ]
+    },
+    {
+      "name": "EthicalML/awesome-production-machine-learning",
+      "url": "https://github.com/EthicalML/awesome-production-machine-learning",
+      "commit_count": 5,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "0d007b9a5c23012eda8bc014a782ab115fee256b",
+          "message": "Revert \"unify metadata and feature into model, data, experiment management se…\" (#634)\n\nThis reverts commit 0179c873cca3c122fb7c38dc17841106874f5b19.",
+          "date": "2025-03-02T06:43:59Z"
+        },
+        {
+          "sha": "c7f5719a015602b647ccc6b3852d26d74e309cdc",
+          "message": "add RagaAI Catalyst",
+          "date": "2025-03-02T04:43:26Z"
+        },
+        {
+          "sha": "7806d45a1ee03e2faa36870e5868b0cdff3f317f",
+          "message": "add Langtrace",
+          "date": "2025-03-02T03:48:07Z"
+        },
+        {
+          "sha": "0179c873cca3c122fb7c38dc17841106874f5b19",
+          "message": "unify metadata and feature into model, data, experiment management section (#633)",
+          "date": "2025-03-02T02:25:04Z"
+        },
+        {
+          "sha": "774b2b89428ad98f249f4a75c8233f55c46ea0b8",
+          "message": "add more agentic framework",
+          "date": "2025-03-01T17:08:52Z"
+        }
+      ],
+      "topics": [
+        "awesome",
+        "awesome-list",
+        "data-mining",
+        "deep-learning",
+        "explainability",
+        "interpretability",
+        "large-scale-machine-learning",
+        "large-scale-ml",
+        "machine-learning",
+        "machine-learning-operations",
+        "ml-operations",
+        "ml-ops",
+        "mlops",
+        "privacy-preserving",
+        "privacy-preserving-machine-learning",
+        "privacy-preserving-ml",
+        "production-machine-learning",
+        "production-ml",
+        "responsible-ai"
+      ]
+    },
+    {
+      "name": "cerebroapp/cerebro",
+      "url": "https://github.com/cerebroapp/cerebro",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "cerebro",
+        "electron",
+        "launcher",
+        "search"
+      ]
+    },
+    {
+      "name": "TelegramPlayGround/pyrogram",
+      "url": "https://github.com/TelegramPlayGround/pyrogram",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "hacktoberfest",
+        "mtproto",
+        "pyrogram",
+        "telegram-api"
+      ]
+    },
+    {
+      "name": "tsl0922/EPD-nRF51",
+      "url": "https://github.com/tsl0922/EPD-nRF51",
+      "commit_count": 2,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "d05e7ab94cdffd329fc1f6b4e9c8e9ddfc8800de",
+          "message": "remove UBYTE/UWORD/UDOUBLE",
+          "date": "2025-03-02T06:03:29Z"
+        },
+        {
+          "sha": "1cbe6579c02d9581a66da3cce7c0c9c6df56892f",
+          "message": "fix month display overflow",
+          "date": "2025-03-02T03:11:37Z"
+        }
+      ],
+      "topics": [
+        "ble",
+        "bluetooth",
+        "e-ink",
+        "nrf51",
+        "nrf51822"
+      ]
+    },
+    {
+      "name": "Altinity/clickhouse-backup",
+      "url": "https://github.com/Altinity/clickhouse-backup",
+      "commit_count": 2,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "8de8227f592d2597fa414ba4710cb9151089f584",
+          "message": "fix TestIntegrationSFTPAuthKey\n\nSigned-off-by: Slach <bloodjazman@gmail.com>",
+          "date": "2025-03-02T05:51:24Z"
+        },
+        {
+          "sha": "899ffb0b83151835242ba9dd8705d7dc9abc8d81",
+          "message": "fix integration_test.go for EMBEDDED storage\n\nSigned-off-by: Slach <bloodjazman@gmail.com>",
+          "date": "2025-03-01T18:34:01Z"
+        }
+      ],
+      "topics": [
+        "azblob",
+        "backup",
+        "clickhouse",
+        "clickhouse-backup",
+        "clickhousedump",
+        "dump",
+        "ftp",
+        "gcs",
+        "s3",
+        "sftp"
+      ]
+    },
+    {
+      "name": "taichi-dev/taichi",
+      "url": "https://github.com/taichi-dev/taichi",
+      "commit_count": 2,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "0972859e7eb5aa284e44496f321f59182c2b19b3",
+          "message": "[doc] Fix typo in README.md (#8612)",
+          "date": "2025-03-02T05:37:47Z"
+        },
+        {
+          "sha": "05421b249c2dca9f097f61544bda11147a2af2c4",
+          "message": "[ci] Fixing releasing (#8651)",
+          "date": "2025-03-02T04:22:53Z"
+        }
+      ],
+      "topics": [
+        "computer-graphics",
+        "differentiable-programming",
+        "gpu",
+        "gpu-programming",
+        "sparse-computation",
+        "taichi"
+      ]
+    },
+    {
+      "name": "jscad/OpenJSCAD.org",
+      "url": "https://github.com/jscad/OpenJSCAD.org",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "2d-design",
+        "3d-design",
+        "3mf",
+        "amf",
+        "csg",
+        "dxf",
+        "hacktoberfest",
+        "javascript",
+        "jscad",
+        "modular",
+        "monorepo",
+        "obj",
+        "openjscad",
+        "stl",
+        "svg",
+        "x3d"
+      ]
+    },
+    {
+      "name": "gojue/ecapture",
+      "url": "https://github.com/gojue/ecapture",
+      "commit_count": 3,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "98359fc7265bb8086bc0c52c4bcc27d356a679eb",
+          "message": "fix: #739 the tuple to be unreachable. (#741)\n\nWhen the destroyed event.ConnDataEvent event is received, after a delay of 3 second, the quintile information is cleaned up.",
+          "date": "2025-03-02T05:02:18Z"
+        },
+        {
+          "sha": "12c144db88baf435c5aaefa7b4115b34a3d4d890",
+          "message": "improve: handle COMPRESSION_ERROR to reduce the error log displayed (#745)",
+          "date": "2025-03-02T05:02:01Z"
+        },
+        {
+          "sha": "da4dc1e06db740594f51bb80113674b5c3e70661",
+          "message": "improve: provide opts to set the truncate size in text mode to reduce memory cost (#731)",
+          "date": "2025-03-02T05:01:30Z"
+        }
+      ],
+      "topics": [
+        "android",
+        "android-https-capture",
+        "ebpf",
+        "ebpf-go",
+        "ebpf-tc",
+        "ebpf-uprobe",
+        "golang",
+        "https",
+        "linux",
+        "network-capture",
+        "security-audit",
+        "ssl",
+        "ssldump",
+        "tcpdump",
+        "tls"
+      ]
+    },
+    {
+      "name": "espressif/arduino-esp32",
+      "url": "https://github.com/espressif/arduino-esp32",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "arduino",
+        "esp-idf",
+        "esp32",
+        "platformio"
+      ]
+    },
+    {
+      "name": "speaches-ai/speaches",
+      "url": "https://github.com/speaches-ai/speaches",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "docker",
+        "docker-compose",
+        "faster-whisper",
+        "openai-api",
+        "openai-whisper",
+        "openai-whisper-translation",
+        "transcription",
+        "whisper",
+        "whisper-ai"
+      ]
+    },
+    {
+      "name": "xiaowine/szlcsc-help",
+      "url": "https://github.com/xiaowine/szlcsc-help",
+      "commit_count": 0,
+      "summary": null,
+      "commits": []
+    },
+    {
+      "name": "malmeloo/FindMy.py",
+      "url": "https://github.com/malmeloo/FindMy.py",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "airtag",
+        "find-my",
+        "openhaystack"
+      ]
+    },
+    {
+      "name": "thepersonalaicompany/amurex",
+      "url": "https://github.com/thepersonalaicompany/amurex",
+      "commit_count": 3,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "90427130f93b4f2e7eb3b56d4b5c965ff487b015",
+          "message": "Add a release script",
+          "date": "2025-03-02T02:43:33Z"
+        },
+        {
+          "sha": "b8d544336c153ea6b71681efd9fce9bf55930666",
+          "message": "Release v1.0.26",
+          "date": "2025-03-02T02:41:37Z"
+        },
+        {
+          "sha": "eaee5e2516758e521a669504b0543e4ffe0a2e94",
+          "message": "fix: real time captions bug (#118)\n\n* oh lord please forgive me and help me solve this bug\n\n* fix transcript saving",
+          "date": "2025-03-02T00:07:10Z"
+        }
+      ],
+      "topics": [
+        "ai",
+        "chrome-extension",
+        "copilot",
+        "meetings",
+        "transcriptions"
+      ]
+    },
+    {
+      "name": "ErikBjare/gptme",
+      "url": "https://github.com/ErikBjare/gptme",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "ai-agents",
+        "ai-assistant",
+        "anthropic",
+        "chatbot",
+        "chatgpt",
+        "cli",
+        "code-generation",
+        "llamacpp",
+        "llm",
+        "llm-agent",
+        "llm-apps",
+        "openai",
+        "openrouter",
+        "rag"
+      ]
+    },
+    {
+      "name": "1technophile/OpenMQTTGateway",
+      "url": "https://github.com/1technophile/OpenMQTTGateway",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "arduino",
+        "arduino-uno",
+        "ble",
+        "ble-beacons",
+        "bridge",
+        "esp32",
+        "esp8266",
+        "gateway",
+        "home-assistant",
+        "home-automation",
+        "lora",
+        "miflora",
+        "mqtt",
+        "nodemcu",
+        "openhab2",
+        "platformio",
+        "rcswitch",
+        "wemos-d1",
+        "xiaomi"
+      ]
+    },
+    {
+      "name": "sjpiper145/MakerSkillTree",
+      "url": "https://github.com/sjpiper145/MakerSkillTree",
+      "commit_count": 9,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "954d6690f70cf53bc817bd2ae540c580bd72678f",
+          "message": "Add files via upload",
+          "date": "2025-03-02T00:58:44Z"
+        },
+        {
+          "sha": "593e11b0e9de61f2cd73ced62a4eac0c1a9d7f6e",
+          "message": "Delete Inkscape Skill Tree/Inkscape.txt",
+          "date": "2025-03-02T00:50:43Z"
+        },
+        {
+          "sha": "b3d616a155da59738a9bf4cec7d11aae5695311f",
+          "message": "Add files via upload",
+          "date": "2025-03-02T00:50:25Z"
+        },
+        {
+          "sha": "d17762cee46cfc31bf458cd962f33c92586814b9",
+          "message": "Create Inkscape.txt",
+          "date": "2025-03-02T00:50:05Z"
+        },
+        {
+          "sha": "a4f78dbc923ff7fc85d71a789cf2ce650acf2a25",
+          "message": "Update README.md",
+          "date": "2025-03-02T00:49:42Z"
+        },
+        {
+          "sha": "a223bf9e14f3361ba59721dc4064d3a7498f2afa",
+          "message": "Delete Wiki Building Skill Tree/Wiki.txt",
+          "date": "2025-03-02T00:40:46Z"
+        },
+        {
+          "sha": "f9caa864f5eccb72a6c1c4f5435b42a371f2d5d2",
+          "message": "Add files via upload",
+          "date": "2025-03-02T00:40:33Z"
+        },
+        {
+          "sha": "3edab812ced783a98c7a3996ab7b9a05f87fd698",
+          "message": "Create Wiki.txt",
+          "date": "2025-03-02T00:40:21Z"
+        },
+        {
+          "sha": "ffe04e1ce88a124ba683a61df9335dc642ef0ec4",
+          "message": "Update README.md",
+          "date": "2025-03-01T10:21:42Z"
+        }
+      ]
+    },
+    {
+      "name": "EspressoSystems/jellyfish",
+      "url": "https://github.com/EspressoSystems/jellyfish",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "plonk",
+        "rust",
+        "zero-knowledge-proofs"
+      ]
+    },
+    {
+      "name": "urob/zmk-config",
+      "url": "https://github.com/urob/zmk-config",
+      "commit_count": 1,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "0c8dc7a9bd60a691acd1d1af5ecb1b70405b98dd",
+          "message": "Bump ZMK to version 0.2",
+          "date": "2025-03-02T00:22:16Z"
+        }
+      ],
+      "topics": [
+        "corneish-zen",
+        "keyboard-layout",
+        "nix",
+        "zmk",
+        "zmk-config"
+      ]
+    },
+    {
+      "name": "andrewyng/aisuite",
+      "url": "https://github.com/andrewyng/aisuite",
+      "commit_count": 0,
+      "summary": null,
+      "commits": []
+    },
+    {
+      "name": "mediar-ai/screenpipe",
+      "url": "https://github.com/mediar-ai/screenpipe",
+      "commit_count": 2,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "a11678f9b532a4b7bca28afa0c86eaaa673ee510",
+          "message": "Update release-app.yml (#1514)\n\n* Update release-app.yml\n\nupdates bun version\n\n* Update release-app.yml",
+          "date": "2025-03-01T23:53:03Z"
+        },
+        {
+          "sha": "bc2234709e58509ce5fd78423f581aa46a1342c3",
+          "message": "add browser url to search pipe for windows, force discord handle and source code on pipe registration",
+          "date": "2025-03-01T20:30:28Z"
+        }
+      ],
+      "topics": [
+        "agents",
+        "agi",
+        "ai",
+        "computer-vision",
+        "llm",
+        "machine-learning",
+        "ml",
+        "multimodal",
+        "vision"
+      ]
+    },
+    {
+      "name": "espressif/esp-idf",
+      "url": "https://github.com/espressif/esp-idf",
+      "commit_count": 0,
+      "summary": null,
+      "commits": []
+    },
+    {
+      "name": "eth-brownie/brownie",
+      "url": "https://github.com/eth-brownie/brownie",
+      "commit_count": 2,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "a630a7ed25879cb653a880ea20fdad20c565015f",
+          "message": "chore: fix typos (#1804)\n\n* typo fix\n\n* typo fix",
+          "date": "2025-03-01T23:21:29Z"
+        },
+        {
+          "sha": "af94724db40e846e49aff977ab14da0de5c4c255",
+          "message": "fix: Broken links (#1803)\n\n* fix broken links install.rst\n\n* fix broken link CHANGELOG.md",
+          "date": "2025-03-01T23:20:04Z"
+        }
+      ],
+      "topics": [
+        "ethereum",
+        "solidity",
+        "vyper",
+        "web3py"
+      ]
+    },
+    {
+      "name": "Kiln-AI/Kiln",
+      "url": "https://github.com/Kiln-AI/Kiln",
+      "commit_count": 6,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "cdaa05095e3507bbe1f21d653a90f0551027b9a1",
+          "message": "Merge pull request #232 from Kiln-AI/build_checksums\n\nBuild checksums",
+          "date": "2025-03-01T23:10:58Z"
+        },
+        {
+          "sha": "5d888b64bff8a536c641e0960f14db5f92e8c30f",
+          "message": "Another fix for MacOS checksums. Checksum before deleting the dir, and move the tar process into github action",
+          "date": "2025-03-01T23:03:14Z"
+        },
+        {
+          "sha": "33159b169566e29eff8c089e7e45024b683f3d6b",
+          "message": "Perf improvements\n\nWindows: only do the 2 files we distribute, since they are also signed.\n\nMacOS requires post-signing so we want to checksum all. But it's super slow. Use MD5 instead and filter the giant pointless botocore data directory.",
+          "date": "2025-03-01T22:54:52Z"
+        },
+        {
+          "sha": "f090933a348dfe194a4a24896223506eafcc9a19",
+          "message": "Try fixes for checksum to windows, and move to sha2",
+          "date": "2025-03-01T22:42:01Z"
+        },
+        {
+          "sha": "d4a4c64170e935ad9dfa7e65cd87dc034f2a18fc",
+          "message": "Add a checksum print to our offical builds. Not sure this will work, so testing in a branch.",
+          "date": "2025-03-01T22:34:07Z"
+        },
+        {
+          "sha": "c6366ca5e313121ff2b7099056fe18b9832ebb5b",
+          "message": "Pre-populate the eval config task description in the UI",
+          "date": "2025-03-01T20:01:04Z"
+        }
+      ],
+      "topics": [
+        "ai",
+        "chain-of-thought",
+        "collaboration",
+        "dataset-generation",
+        "fine-tuning",
+        "machine-learning",
+        "macos",
+        "ml",
+        "ollama",
+        "openai",
+        "prompt",
+        "prompt-engineering",
+        "python",
+        "rlhf",
+        "synthetic-data",
+        "windows"
+      ]
+    },
+    {
+      "name": "dune3d/dune3d",
+      "url": "https://github.com/dune3d/dune3d",
+      "commit_count": 2,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "e493dd8d06a3ed44ed2419805e94c40afa7b6166",
+          "message": "editor: default export filename to document filename\n\nchangelog: Enhancements/Editor: default export filename to document filename if it hasn't been exported before\n\nfixes #157",
+          "date": "2025-03-01T19:53:38Z"
+        },
+        {
+          "sha": "5228c2319130cd687a97b324bddc45cc6b1524af",
+          "message": "desktop file: fix category",
+          "date": "2025-03-01T18:22:18Z"
+        }
+      ]
+    },
+    {
+      "name": "Planetable/Planet",
+      "url": "https://github.com/Planetable/Planet",
+      "commit_count": 2,
+      "summary": null,
+      "commits": [
+        {
+          "sha": "bfa6966a3faab8089f97a0b5110c1784807d17b2",
+          "message": "Test a thread optimization for publishing",
+          "date": "2025-03-01T22:52:32Z"
+        },
+        {
+          "sha": "d3f0bd6a893f4d9a1674023b3d29e0ef570aed98",
+          "message": "Update version for the next Insider build",
+          "date": "2025-03-01T00:04:06Z"
+        }
+      ],
+      "topics": [
+        "blog",
+        "ens",
+        "ipfs",
+        "ipns",
+        "kubo",
+        "macos",
+        "static-site-generator",
+        "swiftui",
+        "web3"
+      ]
+    },
+    {
+      "name": "RoCry/git-stargazer",
+      "url": "https://github.com/RoCry/git-stargazer",
+      "commit_count": 0,
+      "summary": null,
+      "commits": []
+    },
+    {
+      "name": "vacanza/holidays",
+      "url": "https://github.com/vacanza/holidays",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "calendar",
+        "gsoc",
+        "gsoc2025",
+        "holiday",
+        "holiday-api",
+        "holiday-calculation",
+        "python"
+      ]
+    },
+    {
+      "name": "dchristl/macless-haystack",
+      "url": "https://github.com/dchristl/macless-haystack",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "esp32",
+        "findmy",
+        "openhaystack"
+      ]
+    },
+    {
+      "name": "electrikmilk/cherri",
+      "url": "https://github.com/electrikmilk/cherri",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "apple",
+        "apple-shortcuts",
+        "compiler",
+        "go",
+        "golang",
+        "ios",
+        "ios-shortcuts",
+        "macos",
+        "programming-language",
+        "siri-shortcuts"
+      ]
+    },
+    {
+      "name": "confident-ai/deepeval",
+      "url": "https://github.com/confident-ai/deepeval",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "evaluation-framework",
+        "evaluation-metrics",
+        "llm-evaluation",
+        "llm-evaluation-framework",
+        "llm-evaluation-metrics"
+      ]
+    },
+    {
+      "name": "bits-and-blooms/bitset",
+      "url": "https://github.com/bits-and-blooms/bitset",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "bitset",
+        "go"
+      ]
+    },
+    {
+      "name": "Automattic/simplenote-macos",
+      "url": "https://github.com/Automattic/simplenote-macos",
+      "commit_count": 0,
+      "summary": null,
+      "commits": []
+    },
+    {
+      "name": "panva/jose",
+      "url": "https://github.com/panva/jose",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "browser",
+        "bun",
+        "cloudflare-workers",
+        "deno",
+        "hacktoberfest",
+        "jose",
+        "jsonwebtoken",
+        "jwa",
+        "jwe",
+        "jwk",
+        "jwks",
+        "jws",
+        "jwt",
+        "node"
+      ]
+    },
+    {
+      "name": "eggsworks/le-oeuf",
+      "url": "https://github.com/eggsworks/le-oeuf",
+      "commit_count": 0,
+      "summary": null,
+      "commits": []
+    },
+    {
+      "name": "EdJoPaTo/mqttui",
+      "url": "https://github.com/EdJoPaTo/mqttui",
+      "commit_count": 0,
+      "summary": null,
+      "commits": [],
+      "topics": [
+        "cli",
+        "hacktoberfest",
+        "mqtt",
+        "mqtt-cli",
+        "mqtt-client",
+        "mqtt-explorer",
+        "mqtt-topic",
+        "terminal-based"
+      ]
+    }
+  ]
+}
