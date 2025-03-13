@@ -77,19 +77,6 @@ jobs:
         path: reports/
         key: report-cache-${{ github.run_id }}
     
-    - name: Create Release
-      uses: softprops/action-gh-release@v2
-      env:
-        GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
-      with:
-        name: "Activity Report ${{ env.TODAY }}"
-        tag_name: ${{ env.TODAY }}
-        body_path: ${{ steps.generate_report.outputs.report_file }}
-        files: |
-          ${{ steps.generate_report.outputs.report_file }}
-          ${{ steps.generate_report.outputs.report_json_file }}
-          reports/feed.json
-
     - name: Create latest symbolic links
       run: |
         cp ${{ steps.generate_report.outputs.report_json_file }} reports/recent_commits_latest.json
@@ -100,17 +87,21 @@ jobs:
         cp reports/recent_commits_latest.json docs/recent_commits_latest.json
         cp reports/recent_commits_latest.md docs/recent_commits_latest.md
 
-    - name: Upload latest reports
+    - name: Update release
       uses: softprops/action-gh-release@v2
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
       with:
+        name: "Activity Report ${{ env.TODAY }}"
         tag_name: latest
+        body_path: ${{ steps.generate_report.outputs.report_file }}
         files: |
+          ${{ steps.generate_report.outputs.report_file }}
+          ${{ steps.generate_report.outputs.report_json_file }}
+          reports/feed.json
           reports/recent_commits_latest.json
           reports/recent_commits_latest.md
-          reports/feed.json
-        prerelease: true
+        prerelease: false
 
     - name: Force update pages branch
       run: |
