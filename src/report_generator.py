@@ -165,11 +165,11 @@ If nothing meaningful, just return `NONE`.
                     '</div>'
                 ])
             # description
-            if repo.get("description"):
-                content_lines.append(f"### {repo['description']}\n")
+            if description := repo.get("description"):
+                content_lines.append(f"### {description}\n")
                 content_html_lines.extend([
                     '<div class="repo-description">',
-                    f"<h4>{repo['description']}</h4>",
+                    f"<h4>{description}</h4>",
                     "</div>",
                 ])
 
