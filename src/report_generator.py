@@ -104,6 +104,7 @@ If nothing meaningful, just return `NONE`.
                 "url": repo["html_url"],
                 "commit_count": len(commits),
                 "summary": summary,
+                "description": repo.get("description"),
                 "commits": simple_commits,
             }
             if repo["topics"]:
@@ -162,6 +163,14 @@ If nothing meaningful, just return `NONE`.
                     '<div class="repo-summary">',
                     f"<h3>{repo['summary']}</h3>",
                     '</div>'
+                ])
+            # description
+            if repo.get("description"):
+                content_lines.append(f"### {repo['description']}\n")
+                content_html_lines.extend([
+                    '<div class="repo-description">',
+                    f"<h4>{repo['description']}</h4>",
+                    "</div>",
                 ])
 
             # Start commits section
