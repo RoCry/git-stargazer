@@ -1,15 +1,14 @@
 import logging
 import os
 
-# Configure logging
 logger = logging.getLogger("stargazer")
-logger.setLevel(os.environ.get("LOGLEVEL", "INFO"))
 
-if not logger.handlers:
+
+def configure_logging() -> None:
+    logger.setLevel(os.environ.get("LOGLEVEL", "INFO"))
+    if logger.handlers:
+        return
     handler = logging.StreamHandler()
-    formatter = logging.Formatter(
-        "%(asctime)s - %(levelname)s - [%(name)s] %(message)s"
-    )
-    handler.setFormatter(formatter)
+    handler.setFormatter(logging.Formatter("%(asctime)s - %(levelname)s - [%(name)s] %(message)s"))
     logger.addHandler(handler)
     logger.propagate = False

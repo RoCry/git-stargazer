@@ -31,13 +31,13 @@ jobs:
       run: |
         uv sync --all-extras --dev
 
-    - name: Restore commit timestamps cache
+    - name: Restore commit watermarks
       uses: actions/cache/restore@v4
       with:
-        path: commit_timestamps.json
-        key: commit-timestamps-${{ github.run_id }}
+        path: watermarks.json
+        key: commit-watermarks-v2-${{ github.run_id }}
         restore-keys: |
-          commit-timestamps-
+          commit-watermarks-v2-
 
     - name: Restore report cache
       uses: actions/cache/restore@v4
@@ -56,8 +56,8 @@ jobs:
     - name: Generate report
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
-        # the ai summary will be disabled if the LLM_MODEL is not set or empty
-        LLM_MODEL: ${{ vars.LLM_MODEL }}
+        # Summaries are disabled when no summarizer model is configured.
+        SUMMARIZER_MODEL: ${{ vars.SUMMARIZER_MODEL }}
         # only supports deepseek right now, could add more keys below
         DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         REPO_LIMIT: ${{ vars.REPO_LIMIT }}
@@ -65,11 +65,11 @@ jobs:
       run: uv run src/main.py
       id: generate_report
     
-    - name: Save commit timestamps cache
+    - name: Save commit watermarks
       uses: actions/cache/save@v4
       with:
-        path: commit_timestamps.json
-        key: commit-timestamps-${{ github.run_id }}
+        path: watermarks.json
+        key: commit-watermarks-v2-${{ github.run_id }}
     
     - name: Save report cache
       uses: actions/cache/save@v4

@@ -1,15 +1,15 @@
 # Git Stargazer
 
-Git Stargazer automatically tracks and reports activity in your starred GitHub repositories, helping you stay updated with projects you're interested in through daily reports and RSS feeds.
+Git Stargazer automatically tracks and reports activity in your starred GitHub repositories, helping you stay updated through daily reports and a JSON Feed.
 
 ## Features
 
 - 📊 Daily activity reports for your starred repositories
 - 📝 Reports in JSON and Markdown formats with commit summaries
-- 📡 RSS feed for easy monitoring
+- 📡 JSON Feed for easy monitoring
 - 🤖 Bot activity filtering
 - 🎯 Configurable repository limits and time windows
-- ⚡ Intelligent caching for optimal GitHub API usage
+- ⚡ Durable watermarks and conditional requests for efficient GitHub API usage
 
 ## Quick Start
 
@@ -17,12 +17,13 @@ Git Stargazer automatically tracks and reports activity in your starred GitHub r
 2. Set up required secrets:
    - Go to Settings > Secrets and variables > Actions
    - Add `RELEASE_TOKEN`: A GitHub Personal Access Token with `repo` scope
-   - Add `DEEPSEEK_API_KEY`: (Optional) For AI-powered commit summaries
+   - Add `DEEPSEEK_API_KEY`: (Optional) For model-backed commit summaries
 
 3. Configure variables (optional):
    - Go to Settings > Secrets and variables > Actions > Variables
    - `REPO_LIMIT`: Maximum repositories to fetch (default: 100)
    - `EMPTY_REPO_CONSECUTIVE_LIMIT`: Stop after this many consecutive empty repos
+   - `SUMMARIZER_MODEL`: Model used for summaries; leave unset to disable summaries
 
 ## Automated Reports
 
@@ -40,7 +41,7 @@ Reports are automatically generated:
 
 - **Markdown Report**: Human-readable activity summary grouped by repository topics
 - **JSON Report**: Structured data for programmatic use
-- **RSS Feed**: Subscribe to updates in your favorite RSS reader
+- **JSON Feed**: Subscribe to updates in your favorite feed reader
 
 ## Contributing
 
