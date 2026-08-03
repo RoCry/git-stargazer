@@ -315,7 +315,7 @@ async def test_ci_outputs_preserve_workflow_contract(tmp_path: Path, monkeypatch
         github_output=github_output,
     )
     async with GitHubClient("token", transport=httpx.MockTransport(handler)) as transport:
-        await run_daily(
+        artifacts = await run_daily(
             config,
             transport=transport,
             commit_feed=CommitFeed(
@@ -327,8 +327,8 @@ async def test_ci_outputs_preserve_workflow_contract(tmp_path: Path, monkeypatch
             published_at=NOW,
         )
 
-    assert github_output.read_text() == (
-        "report_file=reports/recent_commits_2026-07-17.md\n"
-        "report_json_file=reports/recent_commits_2026-07-17.json\n"
-        "feed_file=reports/feed.json\n"
-    )
+    assert github_output.read_text() == "report_date=2026-07-17\n"
+
+    reports = tmp_path / "reports"
+    assert (reports / "recent_commits_latest.md").read_text() == artifacts.markdown
+    assert (reports / "recent_commits_latest.json").read_text() == artifacts.report_path.read_text()

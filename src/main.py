@@ -1,9 +1,9 @@
 import asyncio
 import os
-from datetime import date, datetime, timezone
+from datetime import datetime, timezone
 
 from commit_feed import CommitFeed
-from config import Config
+from config import REPORT_TIMEZONE, Config
 from dotenv import load_dotenv
 from github_client import GitHubClient
 from log import configure_logging
@@ -26,7 +26,7 @@ async def run(config: Config) -> None:
 def main() -> None:
     load_dotenv()
     configure_logging()
-    config = Config.from_environment(os.environ, default_date=date.today())
+    config = Config.from_environment(os.environ, default_date=datetime.now(REPORT_TIMEZONE).date())
     asyncio.run(run(config))
 
 

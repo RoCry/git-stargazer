@@ -2,37 +2,28 @@ name: Generate Starred Repos Report
 
 on:
   schedule:
-    - cron: '30 22 * * *'  # Run daily at 6:30am UTC+8
-  workflow_dispatch:  # Allow manual trigger
-  # push:
-  #   branches:
-  #     - master
+    - cron: '30 22 * * *'  # Daily at 6:30 Asia/Shanghai
+  workflow_dispatch:
 
 jobs:
   generate-report:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      
+
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v7
       with:
         token: ${{ secrets.RELEASE_TOKEN }}
 
     - name: Install uv
-      uses: astral-sh/setup-uv@v5
-    
-    - name: "Set up Python"
-      uses: actions/setup-python@v5
-      with:
-        python-version-file: "pyproject.toml"
-    
+      uses: astral-sh/setup-uv@v9
+
     - name: Install dependencies
-      run: |
-        uv sync --all-extras --dev
+      run: uv sync --frozen --no-dev
 
     - name: Restore commit watermarks
-      uses: actions/cache/restore@v4
+      uses: actions/cache/restore@v6
       with:
         path: watermarks.json
         key: commit-watermarks-v2-${{ github.run_id }}
@@ -40,20 +31,15 @@ jobs:
           commit-watermarks-v2-
 
     - name: Restore report cache
-      uses: actions/cache/restore@v4
+      uses: actions/cache/restore@v6
       with:
         path: reports/
         key: report-cache-${{ github.run_id }}
         restore-keys: |
           report-cache-
-    
-    - name: Set TODAY variable
-      id: set_date
-      run: |
-        echo "TODAY=$(TZ=Asia/Shanghai date +'%Y-%m-%d')" >> $GITHUB_ENV
-        echo "TODAY=$(TZ=Asia/Shanghai date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
 
     - name: Generate report
+      id: generate_report
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
         # Summaries are disabled when no summarizer model is configured.
@@ -62,53 +48,46 @@ jobs:
         DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         REPO_LIMIT: ${{ vars.REPO_LIMIT }}
         EMPTY_REPO_CONSECUTIVE_LIMIT: ${{ vars.EMPTY_REPO_CONSECUTIVE_LIMIT }}
-      run: uv run src/main.py
-      id: generate_report
-    
-    - name: Save commit watermarks
-      uses: actions/cache/save@v4
-      with:
-        path: watermarks.json
-        key: commit-watermarks-v2-${{ github.run_id }}
-    
-    - name: Save report cache
-      uses: actions/cache/save@v4
-      with:
-        path: reports/
-        key: report-cache-${{ github.run_id }}
-    
-    - name: Create latest symbolic links
-      run: |
-        cp ${{ steps.generate_report.outputs.report_json_file }} reports/recent_commits_latest.json
-        cp ${{ steps.generate_report.outputs.report_file }} reports/recent_commits_latest.md
+      run: uv run --no-sync src/main.py
 
-    - name: Copy latest reports to docs
-      run: |
-        cp reports/recent_commits_latest.json docs/recent_commits_latest.json
-        cp reports/recent_commits_latest.md docs/recent_commits_latest.md
-
+    # The release carries only current renderings (ADR-0002); dated assets
+    # once accumulated to GitHub's 1000-assets-per-release cap and broke runs.
     - name: Update release
-      uses: softprops/action-gh-release@v2
+      uses: softprops/action-gh-release@v3
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
       with:
-        name: "Activity Report ${{ env.TODAY }}"
+        name: "Activity Report ${{ steps.generate_report.outputs.report_date }}"
         tag_name: latest
-        body_path: ${{ steps.generate_report.outputs.report_file }}
+        body_path: reports/recent_commits_latest.md
         files: |
-          ${{ steps.generate_report.outputs.report_file }}
-          ${{ steps.generate_report.outputs.report_json_file }}
-          reports/feed.json
-          reports/recent_commits_latest.json
           reports/recent_commits_latest.md
-        prerelease: false
+          reports/recent_commits_latest.json
+          reports/feed.json
+        overwrite_files: true
 
-    - name: Force update pages branch
+    # Caches are saved only after a successful publish (ADR-0003): if the
+    # release step fails, watermarks roll back and the commits are refetched
+    # and published on the next run instead of being silently dropped.
+    - name: Save commit watermarks
+      uses: actions/cache/save@v6
+      with:
+        path: watermarks.json
+        key: commit-watermarks-v2-${{ github.run_id }}
+
+    - name: Save report cache
+      uses: actions/cache/save@v6
+      with:
+        path: reports/
+        key: report-cache-${{ github.run_id }}
+
+    - name: Publish latest report to pages branch
       run: |
+        cp reports/recent_commits_latest.json reports/recent_commits_latest.md docs/
         git branch -D pages || true
         git checkout -b pages
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         git add docs/recent_commits_latest.json docs/recent_commits_latest.md
-        git commit -m "Update reports for ${{ env.TODAY }}" || exit 0
+        git commit -m "Update reports for ${{ steps.generate_report.outputs.report_date }}" || exit 0
         git push origin pages --force

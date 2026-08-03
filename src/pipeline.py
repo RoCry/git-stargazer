@@ -38,6 +38,8 @@ async def run_daily(
 ) -> RunArtifacts:
     report_path = report_dir / f"recent_commits_{config.report_date.isoformat()}.json"
     markdown_path = report_dir / f"recent_commits_{config.report_date.isoformat()}.md"
+    latest_report_path = report_dir / "recent_commits_latest.json"
+    latest_markdown_path = report_dir / "recent_commits_latest.md"
     feed_path = report_dir / "feed.json"
     existing_report = _load_report(report_path)
     excluded_names = {str(repo["name"]) for repo in existing_report["repos"]} if existing_report else set()
@@ -88,18 +90,16 @@ async def run_daily(
     feed = render_json_feed(report, published_at=published_at)
 
     report_dir.mkdir(parents=True, exist_ok=True)
-    report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+    report_json = json.dumps(report, ensure_ascii=False, indent=2)
+    report_path.write_text(report_json, encoding="utf-8")
     markdown_path.write_text(markdown, encoding="utf-8")
+    latest_report_path.write_text(report_json, encoding="utf-8")
+    latest_markdown_path.write_text(markdown, encoding="utf-8")
     feed_path.write_text(json.dumps(feed, ensure_ascii=False, indent=2), encoding="utf-8")
-    _write_ci_outputs(
-        config,
-        report_path=report_path,
-        markdown_path=markdown_path,
-        feed_path=feed_path,
-    )
+    _write_ci_outputs(config)
     _cleanup_old_reports(
         report_dir,
-        excluded={report_path, markdown_path},
+        excluded={report_path, markdown_path, latest_report_path, latest_markdown_path, feed_path},
         dry_run=not config.is_ci,
     )
 
@@ -122,21 +122,13 @@ def _load_report(path: Path) -> dict[str, Any] | None:
     return report
 
 
-def _write_ci_outputs(
-    config: Config,
-    *,
-    report_path: Path,
-    markdown_path: Path,
-    feed_path: Path,
-) -> None:
+def _write_ci_outputs(config: Config) -> None:
     if not config.is_ci:
         return
     if config.github_output is None:
         raise ValueError("GITHUB_OUTPUT environment variable is required in CI")
     with config.github_output.open("a", encoding="utf-8") as output:
-        output.write(f"report_file={markdown_path}\n")
-        output.write(f"report_json_file={report_path}\n")
-        output.write(f"feed_file={feed_path}\n")
+        output.write(f"report_date={config.report_date.isoformat()}\n")
 
 
 def _cleanup_old_reports(

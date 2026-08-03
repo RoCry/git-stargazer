@@ -33,9 +33,11 @@ Reports are automatically generated:
 
 ### Viewing Reports
 
-- Latest report: Available at the "latest" release tag
-- Daily archives: Check the "Releases" section
+- Latest report: the "latest" release — its body is the current day's report, with `recent_commits_latest.md`, `recent_commits_latest.json`, and `feed.json` as assets
+- JSON Feed: subscribe to `https://github.com/<owner>/git-stargazer/releases/download/latest/feed.json`
 - GitHub Pages: View reports on your fork's GitHub Pages
+
+The release holds only the current renderings; history lives in your feed reader (see `docs/adr/0002`).
 
 ### Report Formats
 

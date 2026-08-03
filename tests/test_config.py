@@ -62,12 +62,14 @@ def test_config_fails_fast_without_github_token() -> None:
         Config.from_environment({}, default_date=date(2026, 7, 17))
 
 
-def test_ci_config_fails_fast_without_report_date() -> None:
-    with pytest.raises(ValueError, match="TODAY environment variable is required"):
-        Config.from_environment(
-            {"GITHUB_TOKEN": "secret", "GITHUB_ACTIONS": "true"},
-            default_date=date(2026, 7, 17),
-        )
+def test_ci_config_falls_back_to_default_date_without_today() -> None:
+    config = Config.from_environment(
+        {"GITHUB_TOKEN": "secret", "GITHUB_ACTIONS": "true", "GITHUB_OUTPUT": "/tmp/github-output"},
+        default_date=date(2026, 7, 17),
+    )
+
+    assert config.report_date == date(2026, 7, 17)
+    assert config.is_ci
 
 
 def test_imports_do_not_resolve_configuration() -> None:

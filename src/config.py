@@ -4,6 +4,10 @@ from collections.abc import Mapping
 from dataclasses import dataclass
 from datetime import date
 from pathlib import Path
+from zoneinfo import ZoneInfo
+
+# The report day is the user's local calendar day, not the runner's.
+REPORT_TIMEZONE = ZoneInfo("Asia/Shanghai")
 
 
 @dataclass(frozen=True, slots=True)
@@ -29,9 +33,6 @@ class Config:
 
         is_ci = bool(environment.get("GITHUB_ACTIONS"))
         report_date_value = environment.get("TODAY")
-        if not report_date_value and is_ci:
-            raise ValueError("TODAY environment variable is required")
-
         repo_limit_value = environment.get("REPO_LIMIT", "").strip()
         empty_streak_value = environment.get("EMPTY_REPO_CONSECUTIVE_LIMIT", "").strip()
         github_output_value = environment.get("GITHUB_OUTPUT")
